@@ -1,3 +1,11 @@
+# # Abordagens:
+
+- semáforo while true
+- unsupervised para agrupamento
+- 
+
+# # Roadmap
+
 - 1 - acessar os dados  <!-- resolver o #2 primeiro? -->
  
 - 2 - pesquisar referências para escolher um framework de labeling
@@ -41,3 +49,4 @@
 - 7 - estudo comparativo
 
 - 8 - trabalhos futuros
+
