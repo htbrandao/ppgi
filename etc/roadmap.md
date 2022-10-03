@@ -2,7 +2,7 @@
 
 - semáforo while true
 - unsupervised para agrupamento
-- 
+  - modelo Circumplexo de Russel
 
 # # Roadmap
 
