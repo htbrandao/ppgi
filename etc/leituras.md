@@ -1,2 +1,0 @@
-- [A Knowledge-Based Recommendation System That Includes Sentiment Analysis and Deep Learning](https://ieeexplore.ieee.org/document/8445585)
-- 
