@@ -1,3 +1,3 @@
 # TODO & FIXME
 
-- mover .etc/* para ./teoria
+- mover .etc/* para .teoria/
