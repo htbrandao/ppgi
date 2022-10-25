@@ -4,4 +4,4 @@
 - Brazilian Portuguese emotional speech corpus analysis @ https://www.gov.br/cti/pt-br/publicacoes/producao-cientifica/seminario-pci/xi_seminario_pci-2021/pdf/seminario-2021_paper_29.pdf
 - END-TO-END SPEECH RECOGNITION APPLIED TO BRAZILIAN
 PORTUGUESE USING DEEP LEARNING @ http://www.pee.ufrj.br/mwg-internal/de5fs23hu73ds/progress?id=ynpPt7kh6WfQgOdd36Ib7avR6tKN6V-l8iTIWXdw74o,&dl
-- 
+- StrengthNet: Deep Learning-based Emotion Strength Assessment for Emotional Speech Synthesis @ https://arxiv.org/abs/2110.03156
