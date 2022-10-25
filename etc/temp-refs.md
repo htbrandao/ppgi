@@ -6,3 +6,6 @@
 PORTUGUESE USING DEEP LEARNING @ http://www.pee.ufrj.br/mwg-internal/de5fs23hu73ds/progress?id=ynpPt7kh6WfQgOdd36Ib7avR6tKN6V-l8iTIWXdw74o,&dl
 - StrengthNet: Deep Learning-based Emotion Strength Assessment for Emotional Speech Synthesis @ https://arxiv.org/abs/2110.03156
 - Musical Genre Classification with Convolutional Neural Networks @ https://towardsdatascience.com/musical-genre-classification-with-convolutional-neural-networks-ff04f9601a74
+- https://developer.apple.com/documentation/accelerate/visualizing_sound_as_an_audio_spectrogram
+- https://developer.apple.com/documentation/accelerate/computing_the_mel_spectrum_using_linear_algebra
+- 
