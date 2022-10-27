@@ -8,4 +8,9 @@ PORTUGUESE USING DEEP LEARNING @ http://www.pee.ufrj.br/mwg-internal/de5fs23hu73
 - Musical Genre Classification with Convolutional Neural Networks @ https://towardsdatascience.com/musical-genre-classification-with-convolutional-neural-networks-ff04f9601a74
 - https://developer.apple.com/documentation/accelerate/visualizing_sound_as_an_audio_spectrogram
 - https://developer.apple.com/documentation/accelerate/computing_the_mel_spectrum_using_linear_algebra
+- The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology @ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/
+- Russell’s (1980) Circumplex Models @ https://psu.pb.unizin.org/psych425/chapter/circumplex-models/
+- O afeto sob a perspectiva do circumplexo: evidências de validade de construto @ http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005
+- All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework @ https://www.cse.iitb.ac.in/~pb/papers/ieee-toac-sa.pdf
+	- A Multi-task Ensemble Framework for Emotion, Sentiment and Intensity Prediction @ https://arxiv.org/abs/1808.01216
 - 
