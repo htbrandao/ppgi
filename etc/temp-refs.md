@@ -20,6 +20,6 @@ PORTUGUESE USING DEEP LEARNING @ http://www.pee.ufrj.br/mwg-internal/de5fs23hu73
 - UNSUPERVISED LEARNING APPROACH TO FEATURE ANALYSIS FOR AUTOMATIC SPEECH EMOTION RECOGNITION@ http://labsites.rochester.edu/air/publications/eskimez2018unsupervised.pdf
 - Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder @ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjUpOOR54P7AhXOupUCHRf4BW4QFnoECAsQAQ&url=https%3A%2F%2Fwww.mdpi.com%2F2079-9292%2F10%2F17%2F2086%2Fpdf-vor&usg=AOvVaw2v1k9G3XnHqMWDkWOL8wdR
 - Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms @ https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9
-- Survey of Deep Representation Learning for Speech Emotion Recognition @ https://www.semanticscholar.org/paper/Survey-of-Deep-Representation-Learning-for-Speech-Latif-Rana/368e0844bbd3feb5ab17a271ad1663ca5a6fb7e7
+- [ler!!!] Survey of Deep Representation Learning for Speech Emotion Recognition @ https://www.semanticscholar.org/paper/Survey-of-Deep-Representation-Learning-for-Speech-Latif-Rana/368e0844bbd3feb5ab17a271ad1663ca5a6fb7e7
 - Emotion classification from speech signal based on empirical mode decomposition and non-linear features @ https://d-nb.info/1232071765/34
 - 
