@@ -13,4 +13,8 @@ PORTUGUESE USING DEEP LEARNING @ http://www.pee.ufrj.br/mwg-internal/de5fs23hu73
 - O afeto sob a perspectiva do circumplexo: evidências de validade de construto @ http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005
 - All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework @ https://www.cse.iitb.ac.in/~pb/papers/ieee-toac-sa.pdf
 	- A Multi-task Ensemble Framework for Emotion, Sentiment and Intensity Prediction @ https://arxiv.org/abs/1808.01216
+- Music emotion recognition based on segment-level two-stage learning @ https://link.springer.com/content/pdf/10.1007/s13735-022-00230-z.pdf
+- Emotion Recognition from Speech: An Unsupervised Learning Approach @ https://www.atlantis-press.com/journals/ijcis/125945494/view
+- Deep Learning Techniques for Speech Emotion Recognition, from Databases to Models @ https://www.mdpi.com/1424-8220/21/4/1249
+- A voice-based real-time emotion detection technique using recurrent neural network empowered feature modelling @ https://link.springer.com/content/pdf/10.1007/s11042-022-13363-4.pdf
 - 
