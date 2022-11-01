@@ -1,4 +1,4 @@
-# Bolsa pesquisador
+# # Bolsa pesquisador
 
 - Eixo temático 17:
 
@@ -15,7 +15,7 @@
 <br><br>
 
 
-# # Checklist
+# # Checklist inscrição
 
 doc | ok
 --- | ----------------------------------- 
