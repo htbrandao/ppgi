@@ -128,14 +128,29 @@ making CNNs spatially invariant. Hinton et al. (Hinton et al., 2011) observed th
 
 </details>
 
-
 ___
-5. [MEL Spectrogram](https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53) -> [???]()
+5. [MEL Spectrogram](https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53)
 
 <details>
 <summary>[...]</summary>
 
+`#fundteo`
 
+"A signal is a variation in a certain quantity over time. For audio, the quantity that varies is air pressure. How do we capture this information digitally? We can take samples of the air pressure over time. The rate at which we sample the data can vary, but is most commonly 44.1kHz, or 44,100 samples per second. What we have captured is a waveform for the signal, and this can be interpreted, modified, and analyzed with computer software."
+
+"An audio signal is comprised of several single-frequency sound waves. When taking samples of the signal over time, we only capture the resulting amplitudes. The Fourier transform is a mathematical formula that allows us to decompose a signal into it’s individual frequencies and the frequency’s amplitude. In other words, it converts the signal from the time domain into the frequency domain. The result is called a spectrum."
+
+"The fast Fourier transform (FFT) is an algorithm that can efficiently compute the Fourier transform. It is widely used in signal processing. I will use this algorithm on a windowed segment of our example audio."
+
+"Short-time Fourier transform. The FFT is computed on overlapping windowed segments of the signal, and we get what is called the spectrogram."
+
+"You can think of a spectrogram as a bunch of FFTs stacked on top of each other. It is a way to visually represent a signal’s loudness, or amplitude, as it varies over time at different frequencies. There are some additional details going on behind the scenes when computing the spectrogram. The y-axis is converted to a log scale, and the color dimension is converted to decibels (you can think of this as the log scale of the amplitude). This is because humans can only perceive a very small and concentrated range of frequencies and amplitudes."
+
+"Studies have shown that humans do not perceive frequencies on a linear scale. We are better at detecting differences in lower frequencies than higher frequencies. For example, we can easily tell the difference between 500 and 1000 Hz, but we will hardly be able to tell a difference between 10,000 and 10,500 Hz, even though the distance between the two pairs are the same. In 1937, Stevens, Volkmann, and Newmann proposed a unit of pitch such that equal distances in pitch sounded equally distant to the listener. This is called the mel scale. We perform a mathematical operation on frequencies to convert them to the mel scale."
+
+"A mel spectrogram is a spectrogram where the frequencies are converted to the mel scale. I know, right? Who would’ve thought? What’s amazing is that after going through all those mental gymnastics to try to understand the mel spectrogram, it can be implemented in only a couple lines of code."
+
+"1. We took samples of air pressure over time to digitally represent an audio signal; 2. We mapped the audio signal from the time domain to the frequency domain using the fast Fourier transform, and we performed this on overlapping windowed segments of the audio signal; 3. We converted the y-axis (frequency) to a log scale and the color dimension (amplitude) to decibels to form the spectrogram; 4.We mapped the y-axis (frequency) onto the mel scale to form the mel spectrogram."
 
 </details>
 
@@ -145,7 +160,38 @@ ___
 <details>
 <summary>[...]</summary>
 
+`#intro`
 
+"Depression diagnosis and treatment has been inaccessible in many parts of the world due to financial costs, privacy concerns and a severe shortage of psychiatrists. This scarcity is worsened in low-income countries which have a psychiatrist to population ratio 210 times lower than that of countries with better economies [2]. As a result, up to two-thirds of all depression cases are left undiagnosed and thus
+untreated [3]. Untreated depression can ruin quality of life by causing loss of sleep, concentration, and happiness."
+
+`#fundteo`
+
+"We applied mel-spectrogram to extract relevant features from the audio. Three types of encoders were tested i.e. 1D CNN, 1D CNN-LSTM, and 1D CNN-GRU. After tuning hyperparameters systematically, we found that 1D CNN-GRU encoder with a kernel size of 5 and 15 seconds of recording data appeared to have the best performance with F1 score of 0.75, precision of 0.64, and recall of 0.92"
+
+"Depression is defined by the American Psychiatric Association as a common mental disorder that causes sadness and loss of interest in activities which were once enjoyed by the individual [4][62]."
+
+"Conventionally, mental disorders including depression are diagnosed manually by psychiatrists. Current methods consist of interviews and questionnaires (such as PHQ-2 [8], PHQ-8 [9] and PHQ-9 [10]) designed to diagnose this type of disorder. Results from these surveys will be analyzed by psychiatrists who subsequently conduct an one-on-one interview with the patient. During the interview, psychiatrists search for markers related to depression in patients’ speech e.g. emotional display, reasonings, and inconsistencies [25]."
+
+"Currently, there has been an integration of Artificial Intelligence (AI) in various fields of medical analysis [26][27][28][29][30], but not many were practically used in psychological disorders detection. Skills developed by psychiatrists for instance speech pattern analysis can be 3 learned and mastered by AI. Therefore, AI has become a promising alternative to manual depression detection."
+
+"Speech is an act of expressing ideas and emotion by vocalization [31]. It is also an indispensable component for communication between individuals inside human society. As for communication, another element called “language” has been used along with speech. Language is the way to express thought through a distinct set of symbols, dialects, or sounds (speech). Language understanding can be acquired by a comprehensive study of vocal patterns and alphabets. Humans are capable of identifying as well as expressing speech and languages; meanwhile, machines do not have the ability to do so."
+
+"For automatic speech recognition (ASR), the system will process vocal data (speech) into digital signals suitable for AI training and analysis [32]. Speakers have unique voice patterns due to the variation of personalities and body structure. Accordingly, ASR uses criteria such as speech size and speaking styles to classify voice samples into groups. Spectrograms and chroma feature techniques may potentially enhance the system in organizing voices [33]. Both techniques extract and present relevant features to the system, enabling the system to conduct more complex classification and evaluation [34][38][42][52]. The methods provided above allow AI to effectively perform speech and emotions recognition"
+
+"A range of research has been conducted in the field of speech classification and recognition. In 2013, Li Deng and colleagues [35] presented an overview of ‘‘New Types of Deep Neural Network Learning for Speech Recognition and Related Applications,’’ which is a collection of studies related to sound technologies."
+
+"Research conducted in 2018 [41] demonstrated deep learning networks’ ability to detect mood disorders (unipolar depression and bipolar disorder)."
+
+"Another approach to use DNNs in psychological disorders analysis was made in 2018. Tuka Alhanai et al. [42] utilized Long-Short Term Memory (LSTM) neural networks to differentiate depression patients from ordinary people during an emotional talking environment."
+
+"Techniques for feature extraction such as Mel-Spectrograms have been used extensively in the field of speech recognition systems [44][45][46][47]"
+
+"In many speech recognition projects, the analysis focuses on the distribution of acoustic patterns over time [43][48][51][58]"
+
+`#motiv`
+
+"Furthermore, depression is also the leading cause of disability worldwide [5]. From a socioeconomic standpoint, depressed individuals lose up to 4 more hours of productive work per week compared to their healthy counterparts [6]. This can have devastating impacts on both the individual’s livelihood and the overall economic output which is estimated to cost $210.5 billion per year globally [7]. Therefore, it is crucial to make depression diagnosis more accessible to mitigate these consequences on society as well as individuals."
 
 </details>
 
