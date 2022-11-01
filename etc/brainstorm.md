@@ -12,11 +12,10 @@
   - clusterizar VERBO e inferir intensidade de acordo com Circumplexo de Russel
 
 
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
 
 
 # # Roadmap
