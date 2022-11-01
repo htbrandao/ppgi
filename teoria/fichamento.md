@@ -54,7 +54,7 @@ ___
 </details>
 
 ___
-3. [Accurate Emotion Strength Assessment for Seen and Unseen Speech Based on Data-Driven Deep Learning](https://arxiv.org/abs/2206.07229) -> [International Speech Communication Association](https://www.isca-speech.org/archive/pdfs/interspeech_2022/liu22i_interspeech.pdf)   
+3. [Accurate Emotion Strength Assessment for Seen and Unseen Speech Based on Data-Driven Deep Learning](https://arxiv.org/abs/2206.07229) -> [ISCA](https://www.isca-speech.org/archive/pdfs/interspeech_2022/liu22i_interspeech.pdf)   
 
 <details>
 <summary>[...]</summary>
@@ -87,12 +87,44 @@ sequence X, the CNN based acoustic encoder aims to extract a high-level feature 
 </details>
 
 ___
-4. [Emotional Speaker Identification using a Novel Capsule Nets Model](https://arxiv.org/abs/2201.02994) -> [???]()
+4. [Emotional Speaker Identification using a Novel Capsule Nets Model](https://arxiv.org/abs/2201.02994) -> [sciencedirect](https://www.sciencedirect.com/science/article/abs/pii/S0957417421017498)
 
 <details>
 <summary>[...]</summary>
 
+`#intro`
 
+"Speaker recognition models trained on neutral speech fail to correctly identify speakers under emotional stress. Although considerable advancements in speaker identification have been made using convolutional neural networks (CNN), CNNs cannot exploit the spatial association between low-level features."
+
+"Noisy environments or the speaker’s emotional, can affect the performance of such techniques (Bashirpour & Geravanchizadeh, 2018). The performance of these approaches is reduced significantly when the speech samples are obtained under suboptimal conditions, e.g., an emotional environment (J. H. L. Hansen & Patil, 2007), where the speech samples are emotional or highly expressive (Ghiurcau et al., 2011; Parthasarathy et al., 2017). Speech samples obtained under circumstances where the speaker is not influenced by any kind of emotion is referred to as ‘neutral’ speech samples, while those under any kind of emotion (such as happy, sad, anger and so on) are referred to as emotional speech. Emotional speech varies the acoustic features extracted from the samples."
+
+"Human speech is more frequently emotional or expressive, which alters the speech characteristics of a speaker."
+
+`#fundteo`
+
+"CNN uses a pooling operation, which makes them insensitive to the spatial information of the input features, i.e., the position information of features in the time-frequency axis. The pooling function makes the CNN invariant and results in losing certain features."
+
+"The increasing popularity of deep learning based techniques (J. et al., 2015; Nassif et al., 2019; Variani et al., 2014) in speech processing has motivated researchers to use convolutional neural networks (CNN) for SI (Lukic et al., 2016). However, CNN use a pooling operation, which makes them insensitive to the spatial information of the input features, i.e., the position information of features in the time-frequency axis. The pooling function makes the CNN invariant and results in losing certain features, which leads to the need for an extensive amount of training data to compensate the loss. However, acquiring sufficient amounts of training data can be difficult in practical application (Kwabena Patrick et al., 2019)."
+
+"Meftah et al. (Meftah et al., 2020) exploited linearly spaced spectrograms to distinguish emotional speakers in Arabic and English using a fusion of a convolutional neural network and the long short-term memory architecture, and they based their study on the KSU Emotions, EPST, WEST POINT, and TIMIT databases."
+
+"Despite the popularity of using CNNs to extract high level features, it has been found that the kernel-based convolution operation in a CNN can fail to capture certain features or its spatial information (Kwabena Patrick et al., 2019). In addition, the pooling operation renders them incapable of recognizing the spatial hierarchies between features."
+
+"CNNs are partially responsible for the increase of interest in deep learning models in recent years (Bunrit et al., 2019; Lukic et al., 2016). Convolutional layers, which form the first layers of a classical CNN, facilitate the extraction of features by applying variable-sized filters to the input to form feature maps using the convolution process. Multiple convolution kernels or filters are often applied and may be followed by the pooling operation, which helps to ensure that semantically similar features are merged to a single feature. Although this helps down-sampling, it also results in
+making CNNs spatially invariant. Hinton et al. (Hinton et al., 2011) observed that multiple layers of such down-sampling can lead to loss of spatial information and suggested the idea of “capsules” to characterize an entity, where neurons comprising a capsule capture both the spatial information and existence probability of the features into a vector."
+
+"MFCCs have been the go-to feature since their introduction in the 1980s and have been utilized extensively in many speech and speaker recognition studies (Tirumala et al., 2017). Computing MFCCs is a straightforward process, as shown in Fig. 2. This process begins by slicing audio samples into sliding frames of width 25 ms, resulting in statistically stationary signals. This is followed by discrete Fourier analysis of the frames to extract the frequency information"
+
+`#motiv`
+
+"Identifying an emotional speaker has numerous applications, e.g., identifying a person from emotional (anger or panic) speech samples during a crime investigation, identifying and assisting people in panic at emergency helpline centers and assessing the stress or frustration of callers at customer centers."
+
+
+`#contrib`
+
+"Previous studies have focused on analyzing speaker identification under different emotional and stressful environments to realize optimal performance in robust human–computer interactions (Alluri et al., 2017; Fragopanagos & Taylor, 2005; Senthil Raja & Dandapat, 2010; S. Wu et al., 2011). Some studies (Scherer et al., 2000; T. Wu et al., 2005) have used emotional speech samples from speakers to train the model to improve speaker identification performance; however, this is not a feasible solution for practical applications."
+
+"Ghiurcau et al. (Ghiurcau et al., 2011) studied the negative impact of the emotional state of a speaker on the performance of SI systems using the GMM. In a later study, they compared the results to those obtained using an SVM classifier on the Berlin speech database and concluded that models trained on neutral speech produced poor results on speech samples collected in an emotional environment. The results obtained varied with emotion (with anger and happiness scoring the least). The results were found to improve vastly when emotional speech was included in training, although this is not practical solution. Wu et al. (Zhaohui et al., 2006) explored ways to enhance speaker identification by studying techniques to alter prosodic features and utilizing the same to adapt the features from emotional speech."
 
 </details>
 
