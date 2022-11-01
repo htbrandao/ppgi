@@ -6,4 +6,5 @@
 
 # TODO & FIXME
 
-- mover .etc/* para .teoria/
+- [ ] inscrição bolsa pesquisador @ 04/11/2022
+- [ ] pré-dissertação para qualify @ 31/12/2022
