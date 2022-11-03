@@ -196,21 +196,27 @@ untreated [3]. Untreated depression can ruin quality of life by causing loss of 
 </details>
 
 ___
-7. [Automated Sex Classification of Children's Voices and Changes in Differentiating Factors with Age](https://arxiv.org/abs/2209.13112) -> [???]()
+7. [Automated Sex Classification of Children's Voices and Changes in Differentiating Factors with Age](https://arxiv.org/abs/2209.13112)
 
 <details>
 <summary>[...]</summary>
 
 
+`#fundteo`
+
+"It is known that children’s voice attributes are age dependent28. Therefore, any successful models of sex classification in children are likely to be sensitive to the speaker’s age. The most important factor that influences children’s voice attributes is puberty29,30, which usually starts between ages 8 and 13 years in girls and between ages 9 and 15 years in boys31,32."
 
 </details>
 
 ___
-8. [Language Independent Emotion Quantification using Non linear Modelling of Speech](https://arxiv.org/abs/2102.06003) -> [???]()
+8. [Language Independent Emotion Quantification using Non linear Modelling of Speech](https://arxiv.org/abs/2102.06003)
 
 <details>
 <summary>[...]</summary>
 
+`#intro`
+
+"Emotion is a psychological state related with the sensory system brought on by hormonal changes differently connected with contemplations, sentiments, social reactions, and a level of joy or disappointment. This hormonal changes cause audibly distinguishable features in speech and visibly distinct features in facial expressions. This audio-visual communication helps people to perceive each other’s emotion. Audio signal, including both speech and music, in general are inherently complex and few non-linear studies have been conducted to understand the underlying complexity and non-linearity of these signals and their manifestation in the human brain [1-12]. This underlying complex nature of audio signals makes emotion recognition a troublesome task for a machine. The motivation behind emotion recognition framework is to utilize feeling related learning so that human machine correspondence will be improved [13]"
 
 
 </details>
@@ -221,27 +227,37 @@ ___
 <details>
 <summary>[...]</summary>
 
-
-
-</details>
-
-___
-10. [A Fine-tuned Wav2vec 2.0/HuBERT Benchmark For Speech Emotion Recognition, Speaker Verification and Spoken Language Understanding](https://arxiv.org/abs/2111.02735) -> [???]()
-
-<details>
-<summary>[...]</summary>
-
-
+> n/a
 
 </details>
 
 ___
-11. [Improving Automatic Emotion Recognition from speech using Rhythm and Temporal feature](https://arxiv.org/abs/1303.1761) -> [???]()
+10. [A Fine-tuned Wav2vec 2.0/HuBERT Benchmark For Speech Emotion Recognition, Speaker Verification and Spoken Language Understanding](https://arxiv.org/abs/2111.02735)
 
 <details>
 <summary>[...]</summary>
 
+`#fundteo`
 
+"In speech domain, excellent self-supervised models are emerging [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+
+"In the field of Speech Emotion Recognition (SER), Speaker Verification (SV) and Spoken Language Understanding (SLU), it is still vague whether self-supervised models can produce better performance compared with traditional supervised models (spectral features + CNN-based feature extraction + RNN/Transformer based time series modeling) [12, 13, 14, 15, 16]. However, meaningful attempts have been made in some previous works, which we will introduce below"
+
+</details>
+
+___
+11. [Improving Automatic Emotion Recognition from speech using Rhythm and Temporal feature](https://arxiv.org/abs/1303.1761)
+
+<details>
+<summary>[...]</summary>
+
+`#fundteo`
+
+"The most commonly used acoustic features in literature are related to MFCC’s and prosody features like pitch, intensity and speaking rate"
+
+"Extracting valuable features is another challenging task in the emotion recognition system. Mel frequency cepstral coefficients (MFCC) are one of the important features used in speech signal processing. Initially designed for speech recognition tasks they often give excellent performance in emotion detection tasks as well [13]."
+
+"An artificial neural network (ANN), usually called "neural network" (NN), is a mathematical model or computational model that tries to simulate the structure and/or functional aspects of biological neural networks. It consists of an interconnected group of artificial neurons and processes information using a connectionist approach to computation [14]."
 
 </details>
 
@@ -251,7 +267,48 @@ ___
 <details>
 <summary>[...]</summary>
 
+`#intro`
 
+"O reconhecimento de emoção em fala é uma linha de pesquisa dentro da Inteligência Artificial (IA), que consiste nas tarefas de reconhecimento e classificação da reação afetiva de um indivíduo [1]. O estudo das emoções e a maneira pelas quais as entendemos e as representamos no contexto computacional formam a área de conhecimento denominada Computação Afetiva [2]. "
+
+"A aplicação de modelos estatísticos e de algoritmos de aprendizagem de máquina, do inglês machine learning (ML), vem sendo um dos possíveis caminhos para realizar tarefas de reconhecimento de emoção na fala desde o final do século XX [6] [7]. Entretanto, conseguir identificar o estado emocional de um sujeito não é uma tarefa trivial, visto que demanda uma apurada capacidade de percepção. Em seu contexto original, os interlocutores utilizam várias informações visuais, auditivas, semânticas e metalinguísticas [8]"
+
+"As emoções também têm papel importante na comunicação humana. No contexto natural, utilizamos várias informações do ambiente para conseguirmos detectar emoções em suas expressões. Assim, é seguro afirmar que a fala é um dos elementos relevantes ao se tentar observar quais emoções estão sendo expressadas por um interlocutor. Nesse contexto, existem trabalhos que afirmam que emoções são expressas diferentemente pela fala humana e que ouvintes são capazes de corretamente inferir o estado emocional de um interlocutor apenas com a informação da voz [8]."
+
+`#fundteo`
+
+"Diversos estudos foram realizados para o entendimento de quais fatores são relevantes para o reconhecimento de emoção [8] [9]. Dentre essas pesquisas, cabe citar o trabalho de Scherer (1995) [8], que apresenta evidências de que emoções são expressas diferentemente pela fala humana e que ouvintes são capazes de corretamente inferir o estado emocional de um interlocutor apenas com a informação da voz."
+
+"Uma das principais consiste na inexistência de um consenso sobre a definição teórica das emoções [10], de modo que as características mais importantes para a distinção entre emoções ainda não são claras. Além disso, aspectos como a variabilidade das frases faladas por pessoas diferentes adiciona outro nível de dificuldade na distinção de emoções, pois características específicas da voz de um indivíduo, como sotaque e ritmo da fala, alteram os resultados das features comumente extraídas da voz [9], tais como as prosódicas e MFCC (Mel-Frequency Cepstral Coefficients), utilizadas em trabalhos da literatura relacionada [6] [11] [12]. Adicionalmente, existem trabalhos [13] que apontam que a linguagem falada é um dos aspectos que influenciam diretamente no processo de reconhecimento de emoção."
+
+"A literatura relacionada apresenta diversas propostas de modelos para a realização da tarefa de reconhecimento de emoção na fala. Trabalhos como Dellaert et al. (1996) [6], Kwon et al. (2003) [7] e Pan, Shen (2012) [11], utilizam modelos mais tradicionais de IA, tais como K-nearest Neighbors (KNN), Support Vector Machines (SVM) e Hidden Markov Models (HMM). Em Dellaert et al. (1996) [6], são utilizadas apenas features prosódicas para o modelo, com o intuito de reconhecer emoções somente pelas características fonéticas e linguísticas do som. Já em Kwon et al. (2003) [7] e Pan, Shen (2012) [11], são incorporadas as features MFCC aos modelos, que, a partir deste momento, tornou-se a feature predominante em trabalhos da área. Contudo, Dellaert et al. (1996) [6], Kwon et al. (2003) [7] e Pan, Shen (2012) [11] utilizam, ainda, modelos de ML mais simplórios, como o HMM, o KNN e o SVM. O próximo avanço das pesquisas analisadas é apresentado nos trabalhos de Han, Yu, Tanshev (2014) [12] e Abdel-Hamid et al. (2014) [16], no qual é introduzida a utilização de modelos de DL. A partir deste ponto, os trabalhos divergem entre si quanto à exploração de modelos com arquiteturas cada vez mais robustas, como no caso de [17] e [18], que utilizam modelos híbridos 1 para a classificação de emoções na voz"
+
+"Adicionalmente, ressalta-se que nenhum dos trabalhos relacionados treina modelos com base em dados de voz na língua portuguesa do Brasil, e, tendo em vista as evidências [13] dos impactos da linguagem no
+processo de expressão de emoção em voz, em função, por exemplo, da presença de aspectos congruentes aos regionalismos e ritmos de fala, evidencia-se a importância de trabalhos que explorem reconhecimento de emoção em voz com enfoque na língua portuguesa."
+
+"A base de dados de voz VERBO [21] utiliza o formato .wav, que não realiza compressão do som digital, sendo, dessa forma, o formato digital mais próximo da expressão natural do som."
+
+"Existem trabalhos que demonstram que é possível inferir a emoção expressada por uma representação digital 5 de uma fala, com diferentes técnicas de inteligência artificial [11] [12] [17]. Assim, são
+confirmadas duas suposições importantes para este trabalho: (i) É possível inferir o estado emocional de um interlocutor apenas com a informação da fala; e (ii) é possível solucionar a tarefa de reconhecimento de emoção na voz por técnicas de IA."
+
+"Uma das formas de se organizar o conjunto de emoções é observada no Modelo Circumplexo, introduzido por Russel em [22]"
+
+"A aplicação de modelos estatísticos e de algoritmos de aprendizagem de máquina para o reconhecimento da fala vem sendo discutida em trabalhos acadêmicos desde o final do século XX [27] [28]. A utilização destes para o reconhecimento de emoção na fala também tem trabalhos datados do mesmo período [6] [7], porém ganharam mais espaço apenas nos últimos anos, em especial de 2012 a 2020 [11] [12] [17] [18] [19] [20]. Apesar da popularização recente do tema, pouco foi publicado acerca do assunto em âmbito nacional, de forma que a pesquisa de Neto et al.(2018) [21] é tomada como a única referência brasileira, sendo esta utilizada para adquirir a base de dados de voz em português."
+
+"Para superar o estado-da-arte de algoritmos tradicionais de DL nesta base, como um único modelo LSTM (Long-Short Term Memory) ou CNN, os pesquisadores sugerem a extração de ambos os aspectos verbais e não verbais da fala para classificação, o que seria possível utilizando uma arquitetura híbrida: uma CNN para extração das features e uma LSTM (Long-Short Term Memory) para classificação. O modelo híbrido superou o resultado dos modelos tradicionais de DL. Outra pesquisa neste viés é a de Zhao, Mao e Chen (2019) [18]."
+
+"Diferentemente de [17] e [18], que sugerem a aplicação de modelos híbridos CNN-LSTM, o DEEP propõe uma arquitetura composta por classificadores CNN especialistas para cada emoção, com o intuito de não
+propagar os erros, como pode ocorrer ao se colocar modelos sequencialmente. Na busca de novas metodologias, o DEEP também converge com [19] e [20] na exploração de entradas diferentes das tradicionais, que contém somente features prosódicas e MFCC. Ao contrário de [19], que incorpora entradas de texto, e [20], que incorpora entradas de imagem dos espectogramas, o DEEP acrescenta uma nova feature de áudio,
+as cromáticas, estas que carregam consigo características tonais do som, visando otimizar o processo que exigiria a adição de modelos para a conversão de voz em áudio e imagem. Além dos fatores mencionados, o DEEP também se diferencia de [17], [18] [19] e [20], por ser o único modelo treinado para o reconhecimento de emoção na fala em língua portuguesa."
+
+"Adicionalmente, adotamos como objetivo realizar a tarefa de reconhecimento de emoção na fala com o conjunto de dados na língua portuguesa, por não terem sido encontrados trabalhos na literatura que tenham realizado esta tarefa. Tal objetivo só é possível devido à recente publicação do trabalho de Neto, José e Filho (2018) [21] que contempla a construção de uma base de dados de emoção na voz em língua portuguesa, o VERBO. Por se tratar de uma base de dados nova, o estudo dos ganhos de performance da arquitetura proposta exige, também, a comparação dos resultados com o de arquiteturas tradicionais de um único modelo treinados na mesma base, no caso, utilizando-se de apenas um classificador CNN."
+
+"MFCC : Além de ser uma das formas de representação espectral do som, é uma das features mais aplicada para tarefas de reconhecimento de fala [30] [31] e de emoção na fala [11] [7];. Os MFCCs são compostos por um conjunto de coeficientes, que coletivamente formam um MFC, Mel-Frequency Cepstrum, que é uma representação da densidade espectral a curto prazo de um som. Para obter estes coeficientes, é realizado o processo chamado de Mel-Frequency Wrapping. Sua ideia é de transformar a saída da FFT em uma instância de uma escala Mel [32], que é uma escala construída baseada em tons que são perceptivelmente  equidistantes ao ouvido humano. Após o processo de Mel-Frequency Wrapping, aplicamos a Transformada Discreta de Cosseno nos resultados obtidos do passo anterior. O objetivo desse passo é obter o Cepstrum [33], que é utilizado para investigar estruturas e obter informação sobre fala em um espectro."
+
+"Cromáticas: A feature cromática é composta por doze classes tonais. A combinação das informações relacionadas ao tom de um som é chamada de HPCP (Harmonic Pitch Class Profiles), que descreve as características tonais do som. Tal feature utilizada para análise musical, por exemplo, um método computacional para improvisação musical por meio da detecção automática da escala de acordes [34]. A
+decisão de aplicá-la para a tarefa de reconhecimento de voz foi pautada na tonalidade da voz que auxiliou a distinguir as emoções, principalmente considerando a diferença tonal da expressão de uma emoção por cada ator e atriz, diferente dos trabalhos da literatura que não a utilizam."
+
+"Prosódicas: A feature prosódica relaciona-se às características fonéticas e linguísticas do som, as quais se associam com elementos interligados da fala, ao contrário de segmentos fonéticos individuais. Tal feature utilizada em sistemas de reconhecimento de voz [6] [11] para informar sobre aspectos tais como entonação, tremulação, estresse e ritmo. Com essa feature é possível compreender a sonoridade, a tremulação e a afinação do discurso humano, padrões presentes no espectro sonoro que auxiliaram no treinamento do modelo."
 
 </details>
 
@@ -261,7 +318,7 @@ ___
 <details>
 <summary>[...]</summary>
 
-
+> citar como trabalho relacionado
 
 </details>
 
@@ -271,7 +328,7 @@ ___
 <details>
 <summary>[...]</summary>
 
-
+> pulei
 
 </details>
 
@@ -281,6 +338,9 @@ ___
 <details>
 <summary>[...]</summary>
 
+`#fundteo`
+
+"Emotions have also been studied, but in a limited extent, such as by asking specific questions and judging on the basis of replies, or an analysis done only on short one-lined headlines or a few others [1], [2], [3], all of which depended on the manual annotation of the training dataset of a small size and limited scope."
 
 
 </details>
@@ -554,3 +614,9 @@ ___
     - https://link.springer.com/content/pdf/10.3758/BRM.42.1.74.pdf
     - https://www.isca-speech.org/archive_v0/sp2008/papers/sp08_717.pdf
     - https://clf.unige.ch/files/3314/4102/7366/14_Peres_153-169.pdf
+    - https://link.springer.com/article/10.1007/s13278-018-0505-2
+    - https://aclanthology.org/W14-6905.pdf
+    - https://link.springer.com/article/10.1007/s10772-011-9125-1
+    - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8805181
+    - https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf
+    - https://www.sciencedirect.com/science/article/abs/pii/S0957417415005229
