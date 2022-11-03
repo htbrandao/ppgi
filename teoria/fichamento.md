@@ -2,6 +2,12 @@
 
 <br>
 
+- Título?
+    - BRAVO - **B**razilian-portuguese Emotional Intensity **R**ecognition **A**ssistant for **VO**ice
+    - BRAVO-EI - **B**razilian-portuguese **R**ecognition **A**ssistant for **Vo**ice: **E**motional **I**ntensity
+
+<br>
+
 TAGS: `intro, just, alinhamento, motivação, obesp, obgeral, fundteo, analise, etica, result, contrib`.
 
 <br>
@@ -222,7 +228,7 @@ ___
 </details>
 
 ___
-9. [Voice Conversion Based on Cross-Domain Features Using Variational Auto Encoders](https://arxiv.org/abs/1808.09634) -> [???]()
+9. [Voice Conversion Based on Cross-Domain Features Using Variational Auto Encoders](https://arxiv.org/abs/1808.09634)
 
 <details>
 <summary>[...]</summary>
@@ -262,7 +268,7 @@ ___
 </details>
 
 ___
-12. [DEEP: Uma arquitetura para reconhecer emoção com base no espectro sonoro da voz de falantes da língua portuguesa](https://bdm.unb.br/bitstream/10483/27583/1/2020_GabrielCampos_LucasMoutinho_tcc.pdf) -> [???]()
+12. [DEEP: Uma arquitetura para reconhecer emoção com base no espectro sonoro da voz de falantes da língua portuguesa](https://bdm.unb.br/bitstream/10483/27583/1/2020_GabrielCampos_LucasMoutinho_tcc.pdf)
 
 <details>
 <summary>[...]</summary>
@@ -313,7 +319,7 @@ decisão de aplicá-la para a tarefa de reconhecimento de voz foi pautada na ton
 </details>
 
 ___
-13. [A Knowledge-Based Recommendation System That Includes Sentiment Analysis and Deep Learning](https://ieeexplore.ieee.org/document/8445585) -> [???]()
+13. [A Knowledge-Based Recommendation System That Includes Sentiment Analysis and Deep Learning](https://ieeexplore.ieee.org/document/8445585)
 
 <details>
 <summary>[...]</summary>
@@ -323,7 +329,7 @@ ___
 </details>
 
 ___
-14. [Emotion intensity detection for social media data](https://www.semanticscholar.org/paper/Emotion-intensity-detection-for-social-media-data-Mashal-Asnani/b28f0916e14c65af4d5f6ec0a3584251b78dc513) -> [???]()
+14. [Emotion intensity detection for social media data](https://www.semanticscholar.org/paper/Emotion-intensity-detection-for-social-media-data-Mashal-Asnani/b28f0916e14c65af4d5f6ec0a3584251b78dc513)
 
 <details>
 <summary>[...]</summary>
@@ -333,7 +339,7 @@ ___
 </details>
 
 ___
-15. [Emotion Detection and Analysis on Social Media](https://arxiv.org/abs/1901.08458) -> [???]()
+15. [Emotion Detection and Analysis on Social Media](https://arxiv.org/abs/1901.08458)
 
 <details>
 <summary>[...]</summary>
@@ -346,12 +352,23 @@ ___
 </details>
 
 ___
-16. [The paradoxical role of emotional intensity in the perception of vocal affect](https://www.nature.com/articles/s41598-021-88431-0) -> [???]()
+16. [The paradoxical role of emotional intensity in the perception of vocal affect](https://www.nature.com/articles/s41598-021-88431-0) -> [VIVAE](https://zenodo.org/record/4066235#.Y2FyG99v-Ul)
 
 <details>
 <summary>[...]</summary>
 
+`#motiv`
 
+"Vocalizations including laughter, cries, moans, or screams constitute a potent source of information about the affective states of others. It is typically conjectured that the higher the intensity of the
+expressed emotion, the better the classification of affective information"
+
+"Whether conveyed by the face, body, or voice, expressions of emotion are ubiquitous. The inferred meaning of the expressions is, generally speaking, substantially aligned with the affective content expressed, and it is intuitive to suggest that the stronger the expressed affective state the more clear-cut the inferred emotional meaning. Indeed, a body of research suggests that high-intensity emotion expressions are better ‘recognized’ [1–5]"
+
+"This generalization has been challenged by the discovery of perceptual ambiguity for facial [10,11] and vocal [12] expressions of peak emotional intensity. In the latter study, vocalizations of extreme positive valence could not be disambiguated from extreme negative valence. Moreover, these authors demonstrated a trend opposite the predicted relation for peak intense positive situations: the reactions of real-life lottery winners were rated more negatively as hedonic intensity (in this case cued by the prize sum) increased. They argue that peak emotion expression is inherently ambiguous and reliant on contextual information [12–14]."
+
+"The research on the ambiguity of intense expressions is intriguing, but key issues lack sufficient evidence to refine our theoretical understanding. The studies on peak emotion elegantly contrast positive and negative affect. As such, one aspect of affective experience (i.e., valence) is hard to differentiate. Valence along with arousal are thought to constitute essential building blocks of coreaffect15,16. Hence, its compromised perceptual representation invites the speculation that peak intense vocalizations do not convey any affective meaning. But it is not known whether arousal, an equally fundamental property of affect, is similarly indistinctive. Moreover, the data raise the question whether individual emotions of the same or opposing valence can be differentiated, or if only peak positive affect is unidentifiable."
+
+"Though valence and arousal are equally fundamental in emotion theoretical frameworks, it is implausible to assume that the human voice does not signal physical activation or arousal in the most extreme instances of emotion. In fact, from an ethological perspective, a perceptual representation of arousal as well as the specific intensity of the emotional state seem essential, even when overall valence and the specific type of emotion cannot be identified. To address specifically the influence of emotional intensity on emotion perception, we use nonverbal vocalizations from a newly developed database, the Variably Intense Vocalizations of Affect and Emotion Corpus (VIVAE)."
 
 </details>
 
@@ -361,27 +378,50 @@ ___
 <details>
 <summary>[...]</summary>
 
+`#fundteo`
 
+"In the scientific literature are presented numerous attempts to classify the emotions and set boundaries between emotions, affect, and mood [18–21]. From the prospective of automated emotion
+recognition and evaluation, the most convenient classification is presented in [3,22]. According to the latter classification, main terms defined as follows: (i) “emotion” is a response of the organism to a particular stimulus (person, situation or event); Usually it is an intense, short duration experience and the person is typically well aware of it; (ii) “affect” is a result of the effect caused by emotion and includes their dynamic interaction; (iii) “feeling” is always experienced in relation to a particular object of which the person is aware; its duration depends on the length of time that the representation of the object remains active in the person’s mind; (iv) “mood” tends to be subtler, longer lasting, less intensive, more in the background, but it can affect affective state of a person to positive or negative direction"
+
+"According to the research performed by Feidakis, Daradoumis and Cabella [21] where the classification of emotions based on fundamental models is presented, exist 66 emotions which can be
+divided into two groups: ten basic emotions (anger, anticipation, distrust, fear, happiness, joy, love, sadness, surprise, trust) and 56 secondary emotions. To evaluate such a huge amount of emotions, it
+is extremely difficult, especially if automated recognition and evaluation is required. Moreover, similar emotions can have overlapping parameters, which are measured. To handle this issue, the majority of studies of emotion evaluation focuse s on other classification s [3,21], which include dimensions of emotions, in most cases valence (activation—negative/positive) and arousal (high/low) [23,24], and analyses only basic emotions which can be defined more easily. A majority of researches use variations of Russel’s circumplex model of emotions (Figure 1) which provides a distribution of basic emotions in two-dimensional space in respect of valence and a"
+
+"According to [36,37], each emotion can be evaluated by analyzing five main components of emotion (Behavioral tendencies, physiological reactions, motor expressions cognitive appraisals and
+subjective feelings) but only the first four can be evaluated automatically and can give indications about the emotional state of an user during an interaction, without interrupting it. Subjective feelings
+usually evaluated only using self-assessment techniques."
 
 </details>
 
 ___
-18. [Emotion Intensity and its Control for Emotional Voice Conversion](https://arxiv.org/abs/2201.03967) -> [???]()
+18. [Emotion Intensity and its Control for Emotional Voice Conversion](https://arxiv.org/abs/2201.03967)
 
 <details>
 <summary>[...]</summary>
 
+`#fundteo`
 
+"Previous emotional voice conversion studies mainly focus on learning a feature mapping between different emotion types. Most of them, model the mappings of spectral and prosody parameters with a Gaussian mixture model (GMM) [21], [22], sparse representation [23], or hidden Markov model (HMM) [24]. Recent deep learning methods such as deep neural networks (DNN) [25], [26] and deep bi-directional long-short-term memory network (DBLSTM) [27] have advanced the state-of-the-art. New techniques using generative adversarial network (GAN)-based [28], [29], [30] or auto-encoder-based models [31], [32], [33] make it possible for non-parallel training."
+
+"Emotion intensity can affect our perception of emotions [46]. For example, happy can be perceived as happy or elation, which are similar in voice quality but different in intensity [9]. Thus, correlating the emotion intensity to the loudness of the voice is a rather oversimplification. Emotion intensity can be observed in various acoustic cues, not only in speech energy but also in speech rate and  fundamental frequency [12]. The differences in these cue levels could be larger between different intensities of the same emotion than between different emotions [46]."
+
+`#motiv`
+
+"Below, we summarise the gaps in the literature of emotional voice conversion that we aim to address in this paper. 1) There are very few studies on emotion intensity control, which is crucial to achieving emotional intelligence; 2) Despite the tremendous potential, emotion intensity control is still not a well-explored research direction for emotional voice conversion; 3) There is a lack of focus on modelling prosody style to achieve improved emotion intensity control; 4) Feasibility of using a pre-trained speech emotion recognizer as an emotion supervisor for EVC training poses tremendous potential but is not well understood."
+
+"To model emotion intensity, one of the difficulties is the lack of annotated intensity labels. Inspired by the idea of attribute [93] in computer vision, we regard emotion intensity as an attribute of the emotional speech. Combining the emotion representations with the intensity information allows the framework to jointly learn abundant emotion styles and intensity levels from any emotional speech database."
 
 </details>
 
 ___
-19. [Emotional Intensity Level Analysis of Speech Emotional Intensity Estimation](https://www.esann.org/sites/default/files/proceedings/2021/ES2021-118.pdf) -> [???]()
+19. [Emotional Intensity Level Analysis of Speech Emotional Intensity Estimation](https://www.esann.org/sites/default/files/proceedings/2021/ES2021-118.pdf)
 
 <details>
 <summary>[...]</summary>
 
+`#motiv`
 
+"Intensity estimation has a lot of potential applications for human-robot interaction, patient monitoring, security surveillance and entertainment. If it is not possible to read the intensity of emotions during speech input, the possibility that responses given when humans and machines communicate are greatly misunderstood cannot be eliminated. In order to avoid such situations, research on how to better estimate emotional intensity has been conducted."
 
 </details>
 
@@ -391,27 +431,40 @@ ___
 <details>
 <summary>[...]</summary>
 
+`#intro`
 
+"Speech is the most popular way to communicate with others in daily life and is largely used for emotional expression [1]. Speech can carry two types of information, literal information and relative information [2]. The literal information highlights direct meaning, and relative information means the implicit messages such as emotion contained in the speech [3]. Speech is always a potential source of the emotional state of a person. In the computational intelligence or machine learning (ML) domain, Speech Emotion Recognition (SER) is known as the task of determining and classifying the emotional features of speech. SER has consistently faced challenging ML issues due to the complexity of speech signals [2]."
+
+
+`#fundteo`
+
+"he efficiency of emotional features obtained from speech significantly impacts SER performance [3]. Various DL models based on neural networks have been investigated for SER [4], which include Deep Belief Networks (DBN) [3], Convolutional Neural Network (CNN) [1,4], Recurrent Neural Network (RNN) [5] and Long Short-Term Memory (LSTM) network [5]. Prominent existing methods employ different feature ex-
+traction and signal transformation methods on speech signals, and then DL methods are applied to the transformed signal for emotion classification."
+
+"A remarkable observation from the existing SER studies is those only considered emotion categorization from speech signals regardless of the intensity that belongs to it [6]. Emotion intensity (e.g., Normal, Strong) for a particular emotional expression (e.g., sad, angry) has a crucial impact. In case of being very sad/angry, a person may fall into serious disruptive activity."
 
 </details>
 
 ___
-21. [Brazilian Portuguese emotional speech corpus analysis](https://www.gov.br/cti/pt-br/publicacoes/producao-cientifica/seminario-pci/xi_seminario_pci-2021/pdf/seminario-2021_paper_29.pdf) -> [???]() 
+21. [Brazilian Portuguese emotional speech corpus analysis](https://www.gov.br/cti/pt-br/publicacoes/producao-cientifica/seminario-pci/xi_seminario_pci-2021/pdf/seminario-2021_paper_29.pdf)
 
 <details>
 <summary>[...]</summary>
 
+`#fundteo`
 
+"The voice emotion recognition database (VERBO, NETO 2018) is the first speech emotion corpus in Brazilian Portuguese language. This acted database is recorded with 12 professional
+Brazilian actors (6 females and 6 males) and contains 5 long sentences, 2 short sentences, 2 questions, and 5 nonsense phrases, summing to 14 phrases, in a way to include all the Portuguese linguistic phonemes. It follows a discrete emotional model containing six basic emotions: anger (167), disgust (167), fear (166), happy (166), sad (167), surprise (167) and seventh one is neutral (167) comprising total 1167 utterances."
 
 </details>
 
 ___
-22. [END-TO-END SPEECH RECOGNITION APPLIED TO BRAZILIAN PORTUGUESE USING DEEP LEARNING](http://www.pee.ufrj.br/mwg-internal/de5fs23hu73ds/progress?id=ynpPt7kh6WfQgOdd36Ib7avR6tKN6V-l8iTIWXdw74o,&dl) -> [???]()
+22. [END-TO-END SPEECH RECOGNITION APPLIED TO BRAZILIAN PORTUGUESE USING DEEP LEARNING](http://www.pee.ufrj.br/mwg-internal/de5fs23hu73ds/progress?id=ynpPt7kh6WfQgOdd36Ib7avR6tKN6V-l8iTIWXdw74o,&dl)()
 
 <details>
 <summary>[...]</summary>
 
-
+> pulei
 
 </details>
 
@@ -421,27 +474,29 @@ ___
 <details>
 <summary>[...]</summary>
 
+`#motiv`
 
-
-</details>
-
-___
-24. [Musical Genre Classification with Convolutional Neural Networks](https://towardsdatascience.com/musical-genre-classification-with-convolutional-neural-networks-ff04f9601a74) -> [???]()
-
-<details>
-<summary>[...]</summary>
-
-
+"The emotion strength of synthesized speech can be controlled flexibly using a strength descriptor, which is obtained by an emotion attribute ranking function. However, a trained ranking function on specific data has poor generalization, which limits its applicability for more realistic cases. Emotional speech synthesis (ESS), such as emotional text-to-speech, emotional voice conversion, etc., seeks to generate expressive speech with a desired emotion category. Note that the control of emotion strength in an utterance is the key to emotion rendering. Specifically, the emotion strength of synthesized speech can be controlled flexibly using a predefined strength descriptor."
 
 </details>
 
 ___
-25. [The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/) -> [???]()
+24. [Musical Genre Classification with Convolutional Neural Networks](https://towardsdatascience.com/musical-genre-classification-with-convolutional-neural-networks-ff04f9601a74)
 
 <details>
 <summary>[...]</summary>
 
+> pulei
 
+</details>
+
+___
+25. [The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/)
+
+<details>
+<summary>[...]</summary>
+
+> leitura particular
 
 </details>
 
@@ -451,37 +506,46 @@ ___
 <details>
 <summary>[...]</summary>
 
-
-
-</details>
-
-___
-27. [O afeto sob a perspectiva do circumplexo: evidências de validade de construto](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005) -> [???]()
-
-<details>
-<summary>[...]</summary>
-
-
+> leitura particular
 
 </details>
 
 ___
-28. [All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework](https://www.cse.iitb.ac.in/~pb/papers/ieee-toac-sa.pdf) -> [???]()
+27. [O afeto sob a perspectiva do circumplexo: evidências de validade de construto](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005)
 
 <details>
 <summary>[...]</summary>
 
+`#fundteo`
 
+"O afeto, para Russell (1980), é compreendido por meio do circumplexo (Figura 1). Suas dimensões são bipolares e ortogonais, sendo nomeadas de valência (prazer ou desprazer) e ativação percebida (alta ou baixa). O circumplexo é uma estrutura ordenada em que todos os testes apresentam um mesmo nível de complexidade e diferem em termos do tipo de habilidade que eles medem. Quando um construto pode ser representado por um circumplexo, sua matriz de correlações apresenta um padrão de correlações fortes perto da diagonal e, conforme as correlações se afastam da diagonal, elas ficam mais fracas, até que voltam a ficar fortes. Esse padrão de correlações repete-se em toda a matriz, e, por isso, pontos próximos no circumplexo são correlacionados fortemente (Guttman, 1954). A dimensão valência está relacionada à codificação do ambiente como prazeroso ou desprazeroso. Para o estímulo em um determinado momento, o sujeito pode atribuir um significado: bom ou ruim; útil ou prejudicial; recompensador ou ameaçador (Barrett, 2006). A ativação, por sua vez, é a dimensão da experiência que corresponde à mobilização ou energia dispensada; ou seja, é representada por um continuum, desde a baixa ativação, representada por sono, até a ativação alta, representada pela excitação (Russell & Barrett, 1999). Estados afetivos que são próximos no circumplexo representam uma combinação similar de valência e ativação percebida; já estados afetivos posicionados diametricamente longe um do outro diferem em termos de valência e ativação (Russell, 1980). Assim, as quatro variáveis alocadas diagonalmente não são dimensões, mas ajudam a definir os quadrantes no espaço do circumplexo (Russell, 1980)."
+
+"Com base nos modelos teóricos analisados, as combinações das dimensões geraram seis categorias: afeto positivo com ativação alta (eufórico, entusiasmado); afeto positivo com ativação moderada (gratificante, satisfeito); afeto positivo com ativação baixa (sereno, calmo); afeto negativo com ativação alta (chateado, em sofrimento); afeto negativo com ativação moderada (miserável, descontente); e afeto negativo com ativação baixa (letárgico, depressivo) (Carroll et al., 1999). Essas dimensões foram posteriormente adaptadas por Yik et al. (2011) em um novo modelo, o 12-PAC (12-Point Affect Circumplex). Nesse modelo, o afeto pode ser mensurado por meio de 12 pontos concernentes às combinações entre valência e ativação."
 
 </details>
 
 ___
-29. [A Multi-task Ensemble Framework for Emotion, Sentiment and Intensity Prediction](https://arxiv.org/abs/1808.01216) -> [???]()
+28. [All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework](https://www.cse.iitb.ac.in/~pb/papers/ieee-toac-sa.pdf)
 
 <details>
 <summary>[...]</summary>
 
+`#fundteo`
 
+"ny organization does not wish to lose their valuable customers. They can keep track of the emotions and sentiments of their customers over a period of time. If the unpleasant emotions or sentiments are being expressed by a customer on a regular basis, the organization can act in a timely manner to address his/her concerns. On the other hand, if the emotions and sentiments are pleasant, the organization 
+can ride on the positive feedback of their customers to analyze and forecast their economic situation with more confidence. The classification of emotions and sentiments into coarse-grained classes does not always reflect exact state of opinion of a user, hence, do not serve the purpose completely. Recently, the attention has been shifted towards fine-grained analysis on the dimensional scale [10], [11], [12], [13], [14]. Arousal or intensity defines the degree of emotion and sentiment felt by the user and often differs on a case-to-case basis. Within a single class (e.g., Sadness) some emotions are gentle (e.g.,  ‘I lost my favorite pen today.’) while others can be severe (e.g., ‘my uncle died from cancer today...RIP’). Similarly, some sentiments are gentler than others within the same polarity, e.g., ‘happy to see you again’ v/s ‘can’t wait to see you again’."
+
+"Following the trends of emotion intensity prediction, researchers have also focused on predicting the intensity score for sentiment [35], [36], [37], [38]. Balahur et al [35] studied the behavior of sentiment intensity for text summarization. Authors in [37] proposed semi-supervised technique that used sentiment bearing word embeddings to produce a continuous ranking among adjectives that share common semantics. In another work [38], authors proposed a stacked ensemble technique for sentiment intensity prediction in financial do main. Traditional techniques, e.g., boosting [39], bagging [40], voting (weighted, majority) [41] etc. are some of the common choices for constructing ensemble [42], [43], [44]. Akhtar et al. [45] proposed an ensemble technique based on Particle Swarm Optimization (PSO) to solve the problem of aspect based sentiment analysis."
+
+</details>
+
+___
+29. [A Multi-task Ensemble Framework for Emotion, Sentiment and Intensity Prediction](https://arxiv.org/abs/1808.01216)
+
+<details>
+<summary>[...]</summary>
+
+> pré-print do #28
 
 </details>
 
@@ -491,26 +555,50 @@ ___
 <details>
 <summary>[...]</summary>
 
-
-
-</details>
-
-___
-31. [Emotion Recognition from Speech: An Unsupervised Learning Approach](https://www.atlantis-press.com/journals/ijcis/125945494/view) -> [???]()
-
-<details>
-<summary>[...]</summary>
-
-
+> pulei
 
 </details>
 
 ___
-32. [Deep Learning Techniques for Speech Emotion Recognition, from Databases to Models](https://www.mdpi.com/1424-8220/21/4/1249) -> [???]()
+31. [Emotion Recognition from Speech: An Unsupervised Learning Approach](https://www.atlantis-press.com/journals/ijcis/125945494/view)
 
 <details>
 <summary>[...]</summary>
 
+`#fundteo`
+
+"Clustering techniques can be inventoried following several criteria, whether they are hierarchical, partition-based, density/neighborhood-based or model-based [8]. Obviously clustering was less used than classification for emotion recognition, since most works deal with labeled databases. However, in a big data context, unsupervised recognition methods can prove more useful, since labeling a huge quantity of expressive speech data would be a tedious and expensive task. For instance, self-organizing maps (SOMs) were used by Szekely et al. to detect emotions in audiobooks [40], based on articulatory features. Also, hierarchical K-means were used by Eyben et al. to detect emotions in a corpus dedicated for expressive speech synthesis, using prosodic and acoustic features [31]. It should be noted that, since clusters do not necessarily correspond to classes, a “vector quantization” approach is usually used, whereby the number of clusters is overestimated, and subsequently the detected clusters are grouped into classes; methods based on this type of approach can even be competitive with entirely supervised approaches, with theoretical guarantees [41], and can be easily used in a semi-supervised context (partially labeled data). Experiments have shown that in clustering the choice of features is more important for the final accuracy than in classification, where the generalization power of the classifier and the direct minimization of a loss function could mask the irrelevance or the aberrance of some features"
+
+</details>
+
+___
+32. [Deep Learning Techniques for Speech Emotion Recognition, from Databases to Models](https://www.mdpi.com/1424-8220/21/4/1249)
+
+<details>
+<summary>[...]</summary>
+
+`#fundteo`
+
+"Due to the importance of SER in human–computer interaction and the development of artificial intelligence systems, there are multiple other recent publications and surveys on SER. In this section, we review the most recent studies related to the current work. In 2018, Swain et al. [49] reviewed studies between 2000 and 2017 on SER systems based on three perspectives: database, feature extraction, and classifiers. The research has an extensive section on databases and feature extraction; however, only traditional machine learning methods have been considered as classifying tool, and the authors are
+regretting neural networks and deep learning approaches. A year after, Khalil et al. [50] reviewed discrete approaches in SER using deep learning. Several deep learning approaches, including deep neural networks (DNNs), convolutional neural networks (CNNs), recurrent neural networks (RNNs), and autoencoder, have been mentioned along with some of their limitations and strengths in the study. However,
+the research is not addressing the accessible approaches to overcome weaknesses. Very recently, Anjali et al. [51] published a review as a summary of speech emotion detection methods. A brief discussion of various features used in speech emotion recognition and review of methods used for this purpose from 2009 to 2018 has been provided in the re-search. The drawback of the paper is the depth of analysis. Yet, it can be considered a start point. In 2020, Basu et al. [52] published a brief review on the importance of speech emotion datasets and features, noise reduction; ultimately, they analyze the significance  of different classification approaches, including SVM and HMM. The strength of the research is the identification of several features related to speech emotion recognition; however, its weakness is the leak of more modern methods’ investigation and briefly mentions convolutional and recurrent neural networks as a deep learning method. In contributions to the other published surveys, this research provides a thorough study of significant databases and deep learning discrete approaches in SER. The reason for not focusing on the other older techniques is recent progress in neural networks and, more specifically, deep learning. Based on the best of our knowledge, this study is the first survey in SER focusing on deep learning along with unified experimental results that proposes approaches to enhance the available methods’ results."
+
+> Emotional Speech Databases comparison
+
+> Emotion Recognition Methods evolution/history
+
+"Transfer learning can overcome the cross-domain’ challenge of SER, i.e., test corpora does not match train corpora. Song et al. [90] utilize transfer learning in cross-corpus speech emotion recognition task practicing dimension reduction and Maximum Mean discrepancy embedding optimization to get two adjacent latent feature spaces for the source and target corpora and SVM as classifier method. The experiment has been done utilizing EMO-DB with five emotion categories as source corpus and a Chinese emotion dataset with the same emotion categories as the test corpus"
+
+"In older studies, most of the methods were based on signal processing and traditional machine learning methods such as SVM. However, more recently, researchers are focusing on deep learning and neural networks improvement, which is directly related to the progress and advancement of hardware and software that allows researchers to employ and tune sophisticated networks such as LSTM, GAN, and VAE."
+
+> A brief comparison of all the algorithms reviewed, containing features and methods
+
+"The surge of new research on convolutional neural networks shows that they are capable of better solving the problem of emotion recognition by having higher low-level and short-term discriminative capabilities. The incorporation of LSTM networks and the introduction of deep convolutional LSTM structures has helped to take the solution to a new level and to give the network long-term memory to be able to identify long-term paralinguistic patterns. They have also shown higher capabilities of speaker-independent emotion recognition"
+
+`#motiv`
+
+"Automatic SER helps smart speakers and virtual assistants to understand their users better, especially when they recognize dubious meaning words. For example, the term “really” can be used to question a fact or emphasize and stress out a statement in both positive and negative ways. Read the following sentences in different ways: “I really liked having that tool.” The same application can help translate  from one language to another, especially as other languages have different ways of projecting emotions through speech [7]. SER is also beneficial in online interactive tutorials and courses. Understanding
+the student’s emotional state will help the machine decide how to present the rest of the course contents [8]. Speech emotion recognition can also be very instrumental in vehicles safety features. It can recognize the driver’s state of mind and help prevent accidents and disasters [8]. Another related application is in therapy sessions; by employing SER, therapists will understand their patients’ state and possibly underlying hidden emotions as well [9]. It has been proven that in stressful and noisy environments like aircraft cockpits, the application of SER can significantly help to increase the performance of automatic speech recognition systems [10]. The service industry and e-commerce can utilize speech emotion recognition in call centers to give early alerts to customer service and supervisors of the caller’s state of mind [11]. "
 
 
 </details>
