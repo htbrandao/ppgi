@@ -2,12 +2,6 @@
 
 <br>
 
-- Título?
-    - BRAVO - **B**razilian-portuguese Emotional Intensity **R**ecognition **A**ssistant for **VO**ice
-    - BRAVO-EI - **B**razilian-portuguese **R**ecognition **A**ssistant for **Vo**ice: **E**motional **I**ntensity
-
-<br>
-
 TAGS: `intro, just, alinhamento, motivação, obesp, obgeral, fundteo, analise, etica, result, contrib`.
 
 <br>
@@ -456,6 +450,10 @@ ___
 "The voice emotion recognition database (VERBO, NETO 2018) is the first speech emotion corpus in Brazilian Portuguese language. This acted database is recorded with 12 professional
 Brazilian actors (6 females and 6 males) and contains 5 long sentences, 2 short sentences, 2 questions, and 5 nonsense phrases, summing to 14 phrases, in a way to include all the Portuguese linguistic phonemes. It follows a discrete emotional model containing six basic emotions: anger (167), disgust (167), fear (166), happy (166), sad (167), surprise (167) and seventh one is neutral (167) comprising total 1167 utterances."
 
+> https://thescipub.com/pdf/jcssp.2018.1420.1430.pdf
+
+    "The database was validated by a panel of expert judges and we achieved an agreement rate of 76% using the content validity index and substantial agreement rate of 65% using Fleiss’ Kappa. In addition, an accuracy of 0.76 was achieved and it was possible to observe that the emotions anger and happiness were more easy to recognize showing 0.85 and 0.83 of f1-score, respectively, whereas the disgust and surprise emotions were the most difficult showing 0.67 and 0.68, respectively."
+
 </details>
 
 ___
@@ -609,7 +607,7 @@ ___
 <details>
 <summary>[...]</summary>
 
-
+> pulei
 
 </details>
 
@@ -619,47 +617,112 @@ ___
 <details>
 <summary>[...]</summary>
 
+`#intro`
 
+"Emotions are a vital part of social interactions. Designing computational models to recognize emotions is key to an automatic understanding of social interactions. In recent years, researchers have developed automatic emotion recognition systems using different data modalities, including physiological signals [1], facial expressions and body gestures [2], and speech [3]."
+
+`#fundteo`
+
+"The scarcity of emotional speech data is a bottleneck of developing automatic speech emotion recognition (ASER) systems. One way to alleviate this issue is to use unsupervised feature learning techniques
+to learn features from the widely available general speech and use these features to train emotion classifiers."
+
+"One way to alleviate the data lacking issue is to transfer knowledge learned from unlabeled data or data in other related tasks (source tasks) to the task at hand (target task) [5]. One technique is
+unsupervised feature learning, which does not utilize the label information but aims to learn robust features that can capture the intrinsic structures of the data. These features are also often discriminative to train better classification models for the target task [6,7]. For ASER, the most natural and available data sources are general speech."
 
 </details>
 
 ___
-35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjUpOOR54P7AhXOupUCHRf4BW4QFnoECAsQAQ&url=https%3A%2F%2Fwww.mdpi.com%2F2079-9292%2F10%2F17%2F2086%2Fpdf-vor&usg=AOvVaw2v1k9G3XnHqMWDkWOL8wdR) -> [???]()
+35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.mdpi.com/2079-9292/10/17/2086)
+
+<details>
+<summary>[...]</summary>
+
+`#fundteo`
+
+"Applying the unsupervised learning method into speech features and implemented speech emotion recognition. We proposed to adapt multiple autoencoders for feature extraction and utilize a convolutional  neutral network for classification, which were combined to analyze the influence on speech emotion recognition result. "
+
+</details>
+
+___
+36. [Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms](https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9)
+
+<details>
+<summary>[...]</summary>
+
+`#fundteo`
+
+"Feature selection techniques can be categorized based on labelling of the data as supervised, unsupervised and semi-supervised. In supervised feature selection, the data is labelled feature evaluation process. If the data is huge, labelling of the data is costly and a tedious task. Unsupervised feature selection can overcom e these drawbacks of supervised approaches. But this is more difficult than supervised ones since it does not have labelled data and still its result can be good even without any prior knowledge. The evaluation of feature selection meth ods can be further classified into four types, i.e., filter, wrapper, embedded, hybrid and ensemble feature selection"
+
+</details>
+
+___
+37. [Survey of Deep Representation Learning for Speech Emotion Recognition](https://www.semanticscholar.org/paper/Survey-of-Deep-Representation-Learning-for-Speech-Latif-Rana/368e0844bbd3feb5ab17a271ad1663ca5a6fb7e7)
+
+<details>
+<summary>[...]</summary>
+
+`#fundteo`
+
+> citar como trabalho relacionado
+
+Model | Characteristics
+----- | ---------------
+DNNs    | Good for learning a hierarchy of representations. They can learn  invariant and discriminative representations. Features learntby DNNs are more generalised compared to traditional methods.
+CNNs    | Good for learning both low-level as well as high-level representation from emotional speech. RNNs Good for sequential modelling. They can learn temporal structures from speech suitable for emotion classification.
+AEs     | Powerful unsupervised representation learning models that  encode the emotional speech data in sparse and compressed representations.
+VAEs    |Stochastic variational inference and learning model. Popular in learning disentangled emotional representations from speech.
+GANs    | A Game-theoretical framework that is useful for data generation and is robust to overfitting. They can learn disentangled representations that are very suitable for SER.
+
+"LSTM/GRU-RNNs combined with CNNs are very popular and suitable for capturing emotional attributes in a supervised way."
+
+"Emotions are context-dependent, and Transformers can better capture temporal contexts compared to RNNs. This encourages SER researchers to utilise Transformers in their studies."
+
+> Review of different SER databases
+
+> Comparing attributes of different deep representation learning techniques.
+
+</details>
+
+___
+38. [Emotion classification from speech signal based on empirical mode decomposition and non-linear features](https://d-nb.info/1232071765/34)
+
+<details>
+<summary>[...]</summary>
+
+> pulei
+
+</details>
+
+___
+39. [Emotion recognition from speech: a review](https://www.sci.brooklyn.cuny.edu/~levitan/nlp-psych/papers/koolagudi12.pdf)
 
 <details>
 <summary>[...]</summary>
 
 
-
 </details>
 
 ___
-36. [Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms](https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9) -> [???]()
+40. [Speech Emotion Recognition Using Deep Learning Techniques: A Review](https://ieeexplore.ieee.org/abstract/document/8805181)
 
 <details>
 <summary>[...]</summary>
 
-
-
 </details>
 
 ___
-37. [Survey of Deep Representation Learning for Speech Emotion Recognition](https://www.semanticscholar.org/paper/Survey-of-Deep-Representation-Learning-for-Speech-Latif-Rana/368e0844bbd3feb5ab17a271ad1663ca5a6fb7e7) -> [???]()
+41. [Emotion Recognition and Detection Methods: A Comprehensive Survey](https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf)
 
 <details>
 <summary>[...]</summary>
 
-
-
 </details>
 
 ___
-38. [Emotion classification from speech signal based on empirical mode decomposition and non-linear features](https://d-nb.info/1232071765/34) -> [???]()
+42. [New approach in quantification of emotional intensity from the speech signal: emotional temperature](https://flab.k.hosei.ac.jp/pukiwiki/index.php?plugin=attach&pcmd=open&file=1-s2.0-S0957417415005229-main.pdf&refer=Hirano)
 
 <details>
 <summary>[...]</summary>
-
-
 
 </details>
 
@@ -671,7 +734,7 @@ ___
 
 Dataset | URL
 ------- | ---
-VERBO   | https://github.com/jrtorresneto/VERBO-emotional-speech-dataset
+VERBO   | https://github.com/jrtorresneto/VERBO-emotional-speech-dataset; https://thescipub.com/pdf/jcssp.2018.1420.1430.pdf
 VIVAE   | https://zenodo.org/record/4066235#.Y2FyG99v-Ul
 
 
@@ -704,7 +767,3 @@ ___
     - https://clf.unige.ch/files/3314/4102/7366/14_Peres_153-169.pdf
     - https://link.springer.com/article/10.1007/s13278-018-0505-2
     - https://aclanthology.org/W14-6905.pdf
-    - https://link.springer.com/article/10.1007/s10772-011-9125-1
-    - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8805181
-    - https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf
-    - https://www.sciencedirect.com/science/article/abs/pii/S0957417415005229
