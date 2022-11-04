@@ -37,6 +37,7 @@ O resultado potencial deste trabalho poderia ser aplicado das seguintes formas, 
 Sabendo que uma das estratégias corporativas é ser o Banco com a plataforma de negócios e serviços mais relevantes para o cliente, proporcionando a melhor experiência, a proposta deste trabalho vai diretamente de encontro à essa ideia.
 
 > https://behavioralsignals.com/
+
 > Pesquisar o alinhamento na intranet e com Esio.
 
 
@@ -68,8 +69,8 @@ ___
 - 5.1 Identificação das principais etapas e atividades a serem realizadas durante a pesquisa, bem como de suas datas de conclusão
 
 ___
-- 6. Referências bibliográficas
-
+6. Referências bibliográficas
+```
 [A] P. Lieberman, “The evolution of human speech: Its anatomical and neural bases” Current anthropology, vol. 48, no. 1, pp. 39–66, 2007.
 [B] C. Kramsch, “Language and culture,” AILA review, vol. 27, no. 1, pp. 30–55, 2014.
 [C] E. Sapir, Language: An introduction to the study of speech. Harcourt, Brace, 1921
@@ -132,7 +133,7 @@ international speech communication association. 2014.
 [X1]
 [Y1]
 [Z1]
-
+```
 ___
 7. Sugestão de livro para ajudar na elaboração do projeto
-7.1. Projeto de Pesquisa - Métodos Qualitativo, quantitativo e misto do autor John W. Creswell.
+- i. Goodfellow et al. Deep Learning. An MIT Press book. 2016. Disponível em: https://www.deeplearningbook.org/
