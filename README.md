@@ -18,6 +18,6 @@ BRAVO: **B**razilian-portuguese Emotional Intensity **R**ecognition **A**ssistan
     - [x] fichamento
     - [x] redigir pré-projeto
 - [ ] pré-dissertação para qualify @ 31/12/2022
-    - [ ] pré-projeto BOL22014
+    - [x] pré-projeto BOL22014
     - [ ] expandir anteior para a banca
-- [ ] consolidar ano e qnt de citação das referências
+- [x] consolidar ano e qnt de citação das referências

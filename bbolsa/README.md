@@ -20,8 +20,8 @@
 doc | ok
 --- | ----------------------------------- 
 inscrilão TAO BOL22014				| x
-certificado de inglês				| ???
-projeto de dissertação				| ???
+certificado de inglês				| --
+projeto de dissertação				| x
 ficha de inscrição					| x
 termo de compromisso				| x
 termo de cessão direitos autorais	| x
