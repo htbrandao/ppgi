@@ -16,3 +16,17 @@ Notebook | Descrição
 02_modelagem.ipynb    | Modelos de classificação vanilla
 03_hyperoptm.ipynb    | Técnicas para otimização e melhora do desempenho dos modelos
 04_comparacao.ipynb   | Análise comparativa dos modelos
+
+<br>
+
+# TODO & FIXME
+
+- 
+- 
+- 
+
+# OBS
+
+- 
+- 
+
