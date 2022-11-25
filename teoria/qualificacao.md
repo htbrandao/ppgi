@@ -77,7 +77,7 @@
     - 5.6 Comparativo entre meu trabalho e os outros
 
 ## # 6- Trabalho proposto:
-    - 6.1 BRAVO:
+    - 6.1 BRAVO: **B**razilian-portuguese Emotional Intensity **R**ecognition **A**ssistant for **VO**ice
         - 6.1.1 Proposta
         - 6.1.2 Definição
             - 6.1.2.1 Características
