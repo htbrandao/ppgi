@@ -26,7 +26,7 @@ II are that the data is processed without any consideration of temporal features
 
 "Toronto emotional speech set (TESS) [49]"
 
-![](img/1.jpg)
+![](img/1.JPG)
 
 "The model can be applied within an intelligent virtual personal assistant to improve the user experience while combining the user request and emotion to provide the appropriate service"
 
