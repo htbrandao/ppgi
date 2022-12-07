@@ -226,26 +226,23 @@ expression of texts, such as anger, disgust, fear, happiness, sadness, and surpr
 ___
 ## 15. [Emotion Detection and Analysis on Social Media](https://arxiv.org/abs/1901.08458)
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
+"Emotions are described as intense feelings that are directed at something or someone in response to internal or external events having a particular significance for the individual."
 
 ___
-## 16. [The paradoxical role of emotional intensity in the perception of vocal affect](https://www.nature.com/articles/s41598-021-88431-0) -> [VIVAE](https://zenodo.org/record/4066235#.Y2FyG99v-Ul)
+## 16. [The paradoxical role of emotional intensity in the perception of vocal affect](https://www.nature.com/articles/s41598-021-88431-0) -> [Nature](https://www.nature.com/articles/s41598-021-88431-0) += [VIVAE](https://zenodo.org/record/4066235#.Y2FyG99v-Ul)
 
+"Whether conveyed by the face, body, or voice, expressions of emotion are ubiquitous. Te inferred meaning of the
+expressions is, generally speaking, substantially aligned with the afective content expressed, and it is  intuitive to suggest that the stronger the expressed afective state the more clear-cut the inferred emotional meaning. Indeed, a body of research suggests that high-intensity emotion expressions are better ‘recognized’ [1, 2, 3, 4, 5]."
 
+""
 
+""
+
+""
+
+""
+
+""
 
 ___
 ## 17. [Human Emotion Recognition: Review of Sensors and Methods ](https://www.mdpi.com/1424-8220/20/3/592) -> [???]()
