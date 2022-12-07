@@ -154,18 +154,80 @@ ___
 ___
 ## 11. [Improving Automatic Emotion Recognition from speech using Rhythm and Temporal feature](https://arxiv.org/abs/1303.1761)
 
+"Automatic emotion recognition from speech signal has become a major research topic in the field of  Human computer Interaction (HCI) in the recent times due to its many potential applications. It is being applied to growingnumber of areas such as humanoid robots, car industry, call centers, mobile communication, computer tutorial applications etc. [1]."
 
-
+"The most commonly used acoustic features in literature are related to MFCC’s and prosody features like pitch,
+intensity and speaking rate .In addition to these features we exploit a set of loudness features which are extracted byusing bark filter bank as described by Zwicker[2]."
 
 ___
 ## 12. [DEEP: Uma arquitetura para reconhecer emoção com base no espectro sonoro da voz de falantes da língua portuguesa](https://bdm.unb.br/bitstream/10483/27583/1/2020_GabrielCampos_LucasMoutinho_tcc.pdf)
 
+"O reconhecimento de emoção em fala é uma linha de pesquisa dentro da Inteligência Artificial (IA), que consiste nas tarefas de reconhecimento e classificação da reação afetiva de um indivíduo [1]."
 
+"O estudo das emoções e a maneira pelas quais as entendemos e as representamos no contexto computacional formam a área de conhecimento denominada Computação Afetiva [2]."
 
+" Historicamente, o campo de estudo de IA foi construído com base em conceitos de como a aprendizagem humana funciona [3]."
+
+"A aplicação de modelos estatísticos e de algoritmos de aprendizagem de máquina, do inglês machine learning (ML), vem sendo um dos possíveis caminhos para realizar tarefas de reconhecimento de emoção na fala desde o final do século XX [6] [7]"
+
+"Dentre essas pesquisas, cabe citar o trabalho de Scherer (1995) [8], que apresenta evidências de que emoções são expressas diferentemente pela fala humana e que ouvintes são capazes de corretamente inferir o estado emocional de um interlocutor apenas com a informação da voz"
+
+"Existem trabalhos [13] que apontam que a linguagem falada é um dos aspectos que influenciam diretamente no processo de reconhecimento de emoção."
+
+"O aumento da capacidade de processamento dos computadores e o avanço das tecnologias de cloud computing mitigaram o custo computacional de técnicas mais complexas de ML, como as de Deep Learning (DL) [14], esta que engloba técnicas de aprendizagem de máquina que exploram uma grande quantidade de dados ao identificar padrões de maneira profunda [15]. Esse fator favorece a utilização de técnicas de Deep Leaning em problemas cujas características relevantes não são facilmente reconhecíveis, como visão computacional, processamento de linguagem natural e reconhecimento automático de emoção na fala."
+
+"A literatura relacionada apresenta diversas propostas de modelos para a realização da tarefa de reconhecimento de emoção na fala. Trabalhos como Dellaert et al. (1996) [6], Kwon et al. (2003) [7] e Pan, Shen (2012) [11], utilizam modelos mais tradicionais de IA, tais como K-nearest Neighbors (KNN), Support Vector Machines (SVM) e Hidden Markov Models (HMM). Em Dellaert et al. (1996) [6], são utilizadas apenas features prosódicas para o modelo, com o intuito de reconhecer emoções somente pelas características fonéticas e linguísticas do som. Já em Kwon et al. (2003) [7] e Pan, Shen (2012) [11], são incorporadas as features MFCC aos modelos, que, a partir deste momento, tornou-se a feature predominante em trabalhos da área. Contudo, Dellaert et al. (1996) [6], Kwon et al. (2003) [7] e Pan, Shen (2012) [11] utilizam, ainda, modelos de ML mais simplórios, como o HMM, o KNN e o SVM."
+
+"base de dados de emoção na voz em língua portuguesa VERBO [21]"
+
+"Uma das formas de se organizar o conjunto de emoções é observada no Modelo Circumplexo, introduzido por Russel em [22]"
+
+"Aprendizagem de Máquina (ML) é uma subárea de estudos de IA, definida [23] como o campo de estudos de agentes inteligentes. Os agentes inteligentes são módulos que recebem alguma informação do ambiente e tomam ações baseadas nas informações recebidas."
+
+"A aplicação de ML tem como objetivo construir algoritmos que otimizem uma métrica de performance definida, pelo uso de dados de exemplos ou experiências prévias [24]. No seu núcleo, técnicas de ML utilizam métodos estatísticos e modelos matemáticos para construir inferências ou generalizações baseadas nos exemplos de treinamento."
+
+"O termo Rede Neural deriva historicamente das tentativas de modelar e representar o processo de aquisição de conhecimento por computador, baseando-se no processo biológico de aprendizagem [25]."
+
+"A aplicação de modelos estatísticos e de algoritmos de aprendizagem de máquina para o reconhecimento da fala vem sendo discutida em trabalhos acadêmicos desde o final do século XX [27] [28]. A utilização destes para o reconhecimento de emoção na fala também tem trabalhos datados do mesmo período [6] [7], porém ganharam mais espaço apenas nos últimos anos, em especial de 2012 a 2020 [11] [12] [17] [18] [19] [20]."
+
+"Dada a necessidade de exploração de modelos mais robustos, na bibliografia mais recente, alguns trabalhos optam por estudar o impacto de algoritmos de DL no reconhecimento de emoção na voz [12] [16]. Na pesquisa de Han, Yu e Tashev (2014) [12], objetiva a procura de modelos mais apropriados para a tarefa de reconhecimento de emoção na fala, que possam superar os considerados estado-da-arte da época, entre estes os SVM. Nesta busca, foram obtidos resultados que sugerem que a utilização de redes neurais, como as DNNs (Deep Neural Networks), alcança acurácias 20% melhores em comparação aos demais modelos de aprendizagem de máquina, como as SVM e as HMM."
+
+"Percebe-se em ambas pesquisas [17] [18] que a aplicação de arquiteturas mais robustas, como as híbridas, pode acarretar em ganhos de performance quando comparados a um único modelo de DL."
+
+![](img/2.JPG)
+
+"Tal objetivo só é possível devido à recente publicação do trabalho de Neto, José e Filho (2018) [21] que contempla a construção de uma base de dados de emoção na voz em língua portuguesa, o VERBO."
+
+"MFCC: Além de ser uma das formas de representação espectral do som, é uma das features mais aplicada para tarefas de reconhecimento de fala [30] [31] e de emoção na fala [11] [7]. Os MFCCs são compostos por um conjunto de coeficientes, que coletivamente formam um MFC, Mel-Frequency Cepstrum, que é uma representação da densidade espectral a curto prazo de um som. Para obter estes coeficientes, é realizado o processo chamado de Mel-Frequency Wrapping. Sua ideia é de transformar a saída da FFT em uma instância de uma escala Mel [32],"
+
+"Prosódicas: A feature prosódica relaciona-se às características fonéticas e linguísticas do som, as quais se associam com elementos interligados da fala, ao contrário de segmentos fonéticos individuais. Tal feature utilizada em sistemas de reconhecimento de voz [6] [11] para informar sobre aspectos tais como entonação, tremulação, estresse e ritmo. Com essa feature é possível compreender a sonoridade, a tremulação e a afinação do discurso humano, padrões presentes no espectro sonoro que auxiliaram no treinamento do modelo."
 
 ___
-## 13. [A Knowledge-Based Recommendation System That Includes Sentiment Analysis and Deep Learning](https://ieeexplore.ieee.org/document/8445585)
+## 13. [A Knowledge-Based Recommendation System That Includes Sentiment Analysis and Deep Learning](https://sci-hub.se/10.1109/tii.2018.2867174) -> [IEEE Transactions on Industrial Informatics](https://ieeexplore.ieee.org/document/8445585)
 
+"Most of the studies about health systems [11]–[13] use sensor devices to detect mental disorders"
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
 
 
 
@@ -347,6 +409,7 @@ ___
 
 ___
 ## 44. [Emotion Recognition and Depression Diagnosis by Acoustic and Visual Features: A Multimodal Approach](https://sci-hub.se/10.1145/2661806.2661816) -> [Association for Computing Machinery](https://dl.acm.org/doi/abs/10.1145/2661806.2661816) ++
+
 ___
 
 <br><br>
@@ -370,17 +433,23 @@ tristeza / --       | [x]   | [ ]   |
 -- / pain           | [ ]   | [x]   |
 -- / achievement    | [ ]   | [x]   |
 
+___
 
+<br><br>
+
+- REFS adicionais:
+    - https://ieeexplore.ieee.org/abstract/document/9892110 
+    - https://link.springer.com/content/pdf/10.3758/BRM.42.1.74.pdf
+    - https://www.isca-speech.org/archive_v0/sp2008/papers/sp08_717.pdf
+    - https://clf.unige.ch/files/3314/4102/7366/14_Peres_153-169.pdf
+    - https://link.springer.com/article/10.1007/s13278-018-0505-2
+    - https://aclanthology.org/W14-6905.pdf
 
 
 ___
 
 <br><br>
 
-- REFS adicionais:
-    - https://ieeexplore.ieee.org/abstract/document/9892110; 
-    - https://link.springer.com/content/pdf/10.3758/BRM.42.1.74.pdf
-    - https://www.isca-speech.org/archive_v0/sp2008/papers/sp08_717.pdf
-    - https://clf.unige.ch/files/3314/4102/7366/14_Peres_153-169.pdf
-    - https://link.springer.com/article/10.1007/s13278-018-0505-2
-    - https://aclanthology.org/W14-6905.pdf
+## TODO:
+- tabelar features e arquiteturas
+- 
