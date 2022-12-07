@@ -207,40 +207,38 @@ ___
 
 "Most of the studies about health systems [11]–[13] use sensor devices to detect mental disorders"
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
+"The sentiment analysis helps industries to formulate marketing strategies, support after-sale services [29], develop health monitoring system, RS [3]"
 
 ___
-## 14. [Emotion intensity detection for social media data](https://www.semanticscholar.org/paper/Emotion-intensity-detection-for-social-media-data-Mashal-Asnani/b28f0916e14c65af4d5f6ec0a3584251b78dc513)
+## 14. [Emotion intensity detection for social media data](https://sci-hub.se/10.1109/iccmc.2017.8282664) -> [International Conference on Computing Methodologies and Communication (ICCMC)](https://ieeexplore.ieee.org/abstract/document/8282664)
 
+"Emotion impacts our daily lives and is also important in all aspects of our daily living. It influences our social relations, memories and even day-to-day decision making"
 
+"Emotion is a strong feeling which derives from one’s method of forming judgment about circumstances,
+event or relationships with others .Emotions are complex. The study of emotion in psychology started
+in the 1970s and till date many different theories have being proposed, studied and scrutinized"
 
+"Emotion classification is a task wherein the aim is to detect and recognize types of feelings through the
+expression of texts, such as anger, disgust, fear, happiness, sadness, and surprise. Emotion detection may have different applications such as finding out how happy the citizens are, providing better services to an individual and suggestions in helping an individual who is in anxiety which can be identified through the outgoing texts and emails. Many authors have done noteworthy work in this field."
+
+"Emotion intensity becomes crucial when we want to compare sentences having the same emotion category. In this case, we can use the intensity of each word to compute the overall intensity of the sentence. Words having the same meaning can be used either to enhance or diminish the emotion intensity of a sentence. So far the field of detecting emotion intensity remains less explored but sentiment intensity is been considered for research[9-11] which will further pave way for detection of emotion intensity."
 
 ___
 ## 15. [Emotion Detection and Analysis on Social Media](https://arxiv.org/abs/1901.08458)
 
+""
 
+""
+
+""
+
+""
+
+""
+
+""
+
+""
 
 
 ___
