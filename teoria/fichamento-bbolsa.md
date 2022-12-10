@@ -1,4 +1,5 @@
-# Fichamento PPGI
+# Fichamento @ bbolsa
+
 1. [Speech Emotion Recognition using Supervised Deep Recurrent System for Mental Health Monitoring](https://arxiv.org/abs/2208.12812)
 
 `#intro`
