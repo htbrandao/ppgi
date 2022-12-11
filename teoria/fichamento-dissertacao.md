@@ -232,20 +232,54 @@ ___
 ## 16. [The paradoxical role of emotional intensity in the perception of vocal affect](https://www.nature.com/articles/s41598-021-88431-0) -> [Nature](https://www.nature.com/articles/s41598-021-88431-0) += [VIVAE](https://zenodo.org/record/4066235#.Y2FyG99v-Ul)
 
 "Whether conveyed by the face, body, or voice, expressions of emotion are ubiquitous. Te inferred meaning of the
-expressions is, generally speaking, substantially aligned with the afective content expressed, and it is  intuitive to suggest that the stronger the expressed afective state the more clear-cut the inferred emotional meaning. Indeed, a body of research suggests that high-intensity emotion expressions are better ‘recognized’ [1, 2, 3, 4, 5]."
+expressions is, generally speaking, substantially aligned with the afective content expressed, and it is  intuitive to suggest that the stronger the expressed afective state the more clear-cut the inferred emotional meaning. Indeed, a body of research suggests that high-intensity emotion expressions are better ‘recognized’ [1,2,3,4,5]."
 
-""
+"The discovery of perceptual ambiguity for facial [10,11] and vocal [12] expressions of peak emotional intensity. In the latter study, vocalizations of extreme positive valence could not be disambiguated from extreme negative valence. Moreover, these authors demonstrated a trend opposite the predicted relation for peak intense positive situations: the reactions of real-life lottery winners were rated more negatively as hedonic intensity (in this case cued by the prize sum) increased. Tey argue that peak emotion expression is inherently ambiguous and reliant on contextual information [12–14]"
 
-""
+"It is unclear whether ambiguity is specifc to peak emotion, or if afective expressions are generally
+more ambiguous than previously thought [12,13]."
 
-""
+"Tough valence and arousal are equally fundamental in emotion theoretical frameworks, it is implausible
+to assume that the human voice does not signal physical activation or arousal in the most extreme instances of
+emotion. In fact, from an ethological perspective, a perceptual representation of arousal as well as the specifc
+intensity of the emotional state seem essential, even when overall valence and the specifc type of emotion cannot be identifed."
 
-""
+"Tree experiments show that listeners are remarkably good at inferring meaning from variably intense nonverbal
+vocalizations. Yet their ability to do so is afected by the expressed emotional intensity. We demonstrate a complex relationship between intensity and inferred afective state. Whereas both intensity and arousal are perceived coherently over the range of expressed intensities, the facilitatory efect of increasing intensity on classifying valence and emotion category plateaus at strong emotions. Remarkably, peak emotions are the most ambiguous of all. We call this the ‘emotion intensity paradox’. Our results suggest that value (i.e., valence and emotion category) cannot be retrieved easily from peak emotion expressions. However, arousal and emotion intensity are clearly perceivable in peak expressions."
 
-""
+"In line with previous research [3,4], the data underscore that emotion intensity constitutes a prominent property of vocal emotion communication."
+
+"Low intensity expressions were frequently confused, and the least accurately classifed were peak intensity expressions. Te higher ambiguity of peak states was refected in both lower valence and lower emotion classifcation accuracy. At the most extreme instances of emotion, the evaluation of ‘afective semantics’, i.e., valence and emotion type, is constrained by an ambiguous perceptual representation. We fnd that peak emotion is not per se ambiguous. Arousal and intensity of emotion expressions are perceived clearly across the range of expressed intensities, including peak emotion (e.g. Fig. 4). Notably, we fnd that the intensity of the expressions is accurately perceived even if other afective features, such as valence and emotion category, prove ambiguous. In other words, for a given expression, despite the unreliable identifcation of the afective semantics, the relevance of the signal is readily perceived, through the unambiguous representation of arousal and intensity."
+
+"Taken together, extremely intense expressions seem to convey less information on the polarity (positive or
+negative, triumph or anger)"
 
 ___
-## 17. [Human Emotion Recognition: Review of Sensors and Methods ](https://www.mdpi.com/1424-8220/20/3/592) -> [???]()
+## 17. [Human Emotion Recognition: Review of Sensors and Methods ](https://www.mdpi.com/1424-8220/20/3/592) -> ++
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
 
 
 
