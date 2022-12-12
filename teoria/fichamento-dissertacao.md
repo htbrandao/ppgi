@@ -472,47 +472,21 @@ ___
 ___
 ## 44. [Emotion Recognition and Depression Diagnosis by Acoustic and Visual Features: A Multimodal Approach](https://sci-hub.se/10.1145/2661806.2661816) -> [Association for Computing Machinery](https://dl.acm.org/doi/abs/10.1145/2661806.2661816) ++
 
-___
-
-<br><br>
-
-Dataset | URL
-------- | ---
-VERBO   | https://github.com/jrtorresneto/VERBO-emotional-speech-dataset; https://thescipub.com/pdf/jcssp.2018.1420.1430.pdf
-VIVAE   | https://zenodo.org/record/4066235#.Y2FyG99v-Ul
-
-<br><br>
-
-Emoção              | VERBO | VIVAE | [x]
-------------------- | ----- | ----- | ----
-alegria / pleasure  | [x]   | [x]   | alegria
-nojo / --           | [x]   | [ ]   |
-medo / fear         | [x]   | [x]   | medo
-neutro / --         | [x]   | [ ]   |
-raiva / anger       | [x]   | [x]   | raiva
-surpresa / surprise | [x]   | [x]   | surpresa
-tristeza / --       | [x]   | [ ]   |
--- / pain           | [ ]   | [x]   |
--- / achievement    | [ ]   | [x]   |
 
 ___
-
 <br><br>
 
-- REFS adicionais:
-    - https://ieeexplore.ieee.org/abstract/document/9892110 
-    - https://link.springer.com/content/pdf/10.3758/BRM.42.1.74.pdf
-    - https://www.isca-speech.org/archive_v0/sp2008/papers/sp08_717.pdf
-    - https://clf.unige.ch/files/3314/4102/7366/14_Peres_153-169.pdf
-    - https://link.springer.com/article/10.1007/s13278-018-0505-2
-    - https://aclanthology.org/W14-6905.pdf
-
+- https://ieeexplore.ieee.org/abstract/document/9892110 
+- https://link.springer.com/content/pdf/10.3758/BRM.42.1.74.pdf
+- https://www.isca-speech.org/archive_v0/sp2008/papers/sp08_717.pdf
+- https://clf.unige.ch/files/3314/4102/7366/14_Peres_153-169.pdf
+- https://link.springer.com/article/10.1007/s13278-018-0505-2
+- https://aclanthology.org/W14-6905.pdf
 
 ___
-
 <br><br>
 
-## Agrupar:
+## TODO:
 - features vs. arquiteturas
 - surveys
 - 
