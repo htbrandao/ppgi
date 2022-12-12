@@ -314,8 +314,23 @@ ___
 ___
 ## 20. [Recognition of Emotion with Intensity from Speech Signal Using 3D Transformed Feature and Deep Learning](https://www.mdpi.com/2079-9292/11/15/2362) -> [???]()
 
+"Speech is the most popular way to communicate with others in daily life and is largely used for emotional expression [1]. Speech can carry two types of information, literal information and relative information [2]. The literal information highlights direct meaning, and relative information means the implicit messages such as emotion contained in the speech [3]. Speech is always a potential source of the emotional state of a person. In the computational intelligence or machine learning (ML) domain, Speech Emotion Recognition (SER) is known as the task of determining and classifying the emotional features of speech. SER has consistently faced challenging ML issues due to the complexity of speech signals [2]."
 
+"A remarkable observation from the existing SER studies is those only considered emotion categorization from speech signals regardless of the intensity that belongs to it [6]. Emotion intensity (e.g., Normal, Strong) for a particular emotional expression (e.g., sad, angry) has a crucial impact. In case of being very sad/angry, a person may fall into serious disruptive activity. In some cases, strong-disgusting activity is the pre-action towards the suicidal event"
 
+"SER is a trending research area introduced two decades ago [7]. Several innovative strategies have been introduced to enhance the performance of SER. The two fundamental phases of SER are feature extraction and emotion classification. In the feature extraction phase, it can be a manually created feature or a learned feature using DLs [8,9]"
+
+"Pioneer SER methods are investigated using traditional ML algorithms [7], including Random Forest (RF) [10], Decision Tree (DT) [11], Naïve Bayes (NB) [12], Support Vector Machines (SVM) [13], Hidden Markov Model (HMM) [14], K-Nearest Neighbors (K-NN) [15] and Gradient Boosting Classifier [16]. The Ensemble Random Forest to Trees (ERF-Trees) [11] algorithm was introduced to extract essential emotion features from a small dataset. The algorithm combines the advantages of RF and DT by reducing the limitations and error rates of those traditional algorithms separately"
+
+"Recently, DL-based approaches have been shown to perform well in SER tasks, where embedded feature extraction in DL methods is a significant property for better performance. Based on the input signals, the DL-based methods may be categorized into two terms: raw speech signals and transformed speech signals.
+
+    - Using raw speech signals, Zhao et al. [20] introduced a 1D CNN-LSTM network for SER. Latif et al. [21] also employed several DL models on raw speech. Several modified DL models are also observed for SER, including capsule neural network [22], 3D CNN-LSTM model [10], 3D CNN using k-means clustering [8], 2D CNN with a self-attention dilated residual network [9], Spiking Neural Network (SNN) [23], convolutional capsule (Conv-Cap) and bi-directional gated recurrent unit (BiGRU) [24], attention-LSTM-attention [25], Bi-GRU with attention mechanism [26], CNN with a capsule neural network (Caps Net) [13], temporal CNN with self-attention transfer network (SATN) [27], 1D CNN based on the multi-learning trick (MLT) [14], cascaded denoising CNN (Dn-CNN) [28], and a pre-trained deep CNN model with attention [29]. The learning features are the main attraction of different DL-based SER methods.
+
+    - Several DL models with transformed speech features are investigated for SER for better recognition performance. Chen et al. [30] investigated a Deep CNN model containing two CNN blocks with two fully connected (FC) layers. Each CNN block contains a convolution layer (CL), ReLU activation layer, and max-pooling layer [20]. The first block CL contains 128 feature maps, and the second block CL contains 64 future maps. Each feature map uses a 5 × 5 kernel size with a single stride, and the max-pooling layer holds a 2 × 2 kernel with two strides. Finally, two FC layers were connected with the soft-max classifier. Mustaqeem and Kwon [4] introduced a model with seven CNN FB and an FC layer with soft-max activation. Every FB of the model has a CL layer, a BN layer, and ELU activation. The kernel size for the first CL was 7 × 7, the second CL layer was 5 × 5, and the last five CLs were 3 × 3. Zhao et al. [20] proposed a hybrid CNN-LSTM model with four CNN feature blocks (FB) with a single LSTM. Each FB contains a CL, an ELU activation layer, a batch normalization (BN) layer, and a max-pooling layer"
+
+"For the speech signal transformation, to generate features appropriate for the DL model to recognize emotion from it, three popular signal transformation methods are considered in this study: MFCC [1], STFT [2], and Chroma STFT [32]."
+
+"The RAVDESS dataset"
 
 ___
 ## 21. [Brazilian Portuguese emotional speech corpus analysis](https://www.gov.br/cti/pt-br/publicacoes/producao-cientifica/seminario-pci/xi_seminario_pci-2021/pdf/seminario-2021_paper_29.pdf)
@@ -367,8 +382,7 @@ ___
 ___
 ## 29. [A Multi-task Ensemble Framework for Emotion, Sentiment and Intensity Prediction](https://arxiv.org/abs/1808.01216)
 
-
-
+> ref #28
 
 ___
 ## 30. [Music emotion recognition based on segment-level two-stage learning](https://link.springer.com/content/pdf/10.1007/s13735-022-00230-z.pdf) -> [???]()
