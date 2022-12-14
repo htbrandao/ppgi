@@ -462,8 +462,7 @@ ___
 ___
 ## 34. [UNSUPERVISED LEARNING APPROACH TO FEATURE ANALYSIS FOR AUTOMATIC SPEECH EMOTION RECOGNITION](http://labsites.rochester.edu/air/publications/eskimez2018unsupervised.pdf) -> [IEEE](https://ieeexplore.ieee.org/abstract/document/8462685)
 
-
-
+"Unsupervised feature learning has been rarely explored in ASER beyond autoencoders (AE) [8] and denoising autoencoders (DAE) [6]. AE and DAE aim to learn features that are good for the reconstruction of the input. More advanced techniques, such as variational autoencoders (VAE) [9] and generative adversarial networks (GAN) [10], do not aim to reconstruct the input, but aim to generate data that come from the same distribution as the input. This relaxation tends to put more emphasis on the modeling of intrinsic structures of the data during feature learning [7, 9, 10]."
 
 ___
 ## 35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.mdpi.com/2079-9292/10/17/2086) -> [???]()
@@ -553,8 +552,15 @@ ___
 
 ## TODO:
 
+- refs TODO
 - tabular das refs:
-    ano | dataset (lang) | abordagem | arquitetura | features | target | o que pode ter faltado (e.g.: cross-corpus)
-
-- surveys
+    - ano
+    - dataset (lang)
+    - abordagem
+    - arquitetura
+    - features
+    - target
+    - o que pode ter faltado (e.g.: cross-corpus)
+    - 
+- tabela refs das refs vs surveys
 - 
