@@ -392,7 +392,7 @@ ___
 > pulei
 
 ___
-## 31. [Emotion Recognition from Speech: An Unsupervised Learning Approach](https://www.atlantis-press.com/journals/ijcis/125945494/view) -> [???]()
+## 31. [Emotion Recognition from Speech: An Unsupervised Learning Approach](https://www.atlantis-press.com/journals/ijcis/125945494/view)
 
 "Nowadays applications are more and more interactive, which requires an optimal human–machine interaction. One of the most obvious ways to achieve this goal is spoken communication. Since a few decades, speech processing has registered considerable progress in different applications, such as speech recognition, synthesis and enhancement, source separation, etc"
 
@@ -455,13 +455,12 @@ corpora and SVM as classifier method"
 "Another point that we can improve the robustness of SER models is to create models that classify continuous speech emotions. For this reason, we can design architectures that are keeping a sliding window and measure the emotional content of the slide and decide based on that."
 
 ___
-## 33. [A voice-based real-time emotion detection technique using recurrent neural network empowered feature modelling](https://link.springer.com/content/pdf/10.1007/s11042-022-13363-4.pdf) -> [???]()
+## 33. [A voice-based real-time emotion detection technique using recurrent neural network empowered feature modelling](https://link.springer.com/content/pdf/10.1007/s11042-022-13363-4.pdf)
 
-
-
+> n/a
 
 ___
-## 34. [UNSUPERVISED LEARNING APPROACH TO FEATURE ANALYSIS FOR AUTOMATIC SPEECH EMOTION RECOGNITION](http://labsites.rochester.edu/air/publications/eskimez2018unsupervised.pdf) -> [???]()
+## 34. [UNSUPERVISED LEARNING APPROACH TO FEATURE ANALYSIS FOR AUTOMATIC SPEECH EMOTION RECOGNITION](http://labsites.rochester.edu/air/publications/eskimez2018unsupervised.pdf) -> [IEEE](https://ieeexplore.ieee.org/abstract/document/8462685)
 
 
 
@@ -524,18 +523,30 @@ ___
 ## 44. [Emotion Recognition and Depression Diagnosis by Acoustic and Visual Features: A Multimodal Approach](https://sci-hub.se/10.1145/2661806.2661816) -> [Association for Computing Machinery](https://dl.acm.org/doi/abs/10.1145/2661806.2661816) ++
 
 
-___
-<br><br>
 
-- https://ieeexplore.ieee.org/abstract/document/9892110 
-- https://link.springer.com/content/pdf/10.3758/BRM.42.1.74.pdf
-- https://www.isca-speech.org/archive_v0/sp2008/papers/sp08_717.pdf
-- https://clf.unige.ch/files/3314/4102/7366/14_Peres_153-169.pdf
-- https://link.springer.com/article/10.1007/s13278-018-0505-2
-- https://aclanthology.org/W14-6905.pdf
-- https://e-tarjome.com/storage/panel/fileuploads/2019-03-05/1551778408_E10738-e-tarjome.pdf
-- https://sci-hub.se/10.2307/27857503
-- https://sci-hub.se/10.1016/j.patcog.2010.09.020
+
+___
+## 45. [Survey on speech emotion recognition: Features, classification schemes, and databases](https://sci-hub.se/10.1016/j.patcog.2010.09.020) -> []https://www.sciencedirect.com/science/article/abs/pii/S0031320310004619)
+
+
+
+
+___
+## 46. [Evaluating deep learning architectures for Speech Emotion Recognition](https://e-tarjome.com/storage/panel/fileuploads/2019-03-05/1551778408_E10738-e-tarjome.pdf) -> [Elsevier](https://www.sciencedirect.com/science/article/abs/pii/S089360801730059X)
+
+
+
+
+___
+## 47. [Emotion detection from text and speech: a survey](https://sci-hub.se/10.1007/s13278-018-0505-2) -> [Springer](https://link.springer.com/article/10.1007/s13278-018-0505-2)
+
+
+
+
+___
+## 48. [Improvements in Brazilian Portuguese Speech Emotion Recognition and its extension to Latin Corpora]() -> [IEEE](https://ieeexplore.ieee.org/document/9892110)
+
+
 
 ___
 <br><br>
