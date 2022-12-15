@@ -32,6 +32,23 @@ Wani et al. [30] and Lotfidereshgi et al. [31] are examples of using the scenari
 
 "The significance of the proposed model is that it does not require any additional data preprocessing due to the 1DCNN that behaves to extract the features from the speech signal."
 
+### 1.1
+
+""
+
+""
+
+""
+
+### 1.3
+
+### 1.5
+
+### 1.6
+
+### 1.7
+
+
 ___
 ## 2. [Depression Recognition using Remote Photoplethysmography from Facial Videos](https://arxiv.org/abs/2206.04399)
 
@@ -465,31 +482,78 @@ ___
 "Unsupervised feature learning has been rarely explored in ASER beyond autoencoders (AE) [8] and denoising autoencoders (DAE) [6]. AE and DAE aim to learn features that are good for the reconstruction of the input. More advanced techniques, such as variational autoencoders (VAE) [9] and generative adversarial networks (GAN) [10], do not aim to reconstruct the input, but aim to generate data that come from the same distribution as the input. This relaxation tends to put more emphasis on the modeling of intrinsic structures of the data during feature learning [7, 9, 10]."
 
 ___
-## 35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.mdpi.com/2079-9292/10/17/2086) -> [???]()
+## 35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.mdpi.com/2079-9292/10/17/2086)
 
+"Speech carries a speaker’s semantic information and contains the emotional information the speaker wants to convey [1]. The same text may express opposite meanings in different emotional contexts. Emotional interaction is an indispensable part of human social activities, while emotional intelligence plays an important part in human computer interaction (HCI) [2]. The emotional states affect human interaction, such as facial expression [3,4], body posture [5], communication content [6], and speech mannerisms [7]. Influenced by multimodal features, recognizing emotions is vital to develop an automatic speech emotion recognition system for understanding of these interactions, and various speech recognition for pronunciation training and learning
+are developed [8,9]."
 
+"SER is an emerging field where quantities of researchers developed various techniques and approaches to strengthen this area [15]. Most research pays attention to making use of certain common speech signals for emotional identification. In the recent years, with the development of deep learning, many approaches are developed and employed for feature detection and emotional classification. However, challenges still exist, especially when lacking enough speech data, it is difficult to make a fair judgement with limited datasets."
 
+"Some researchers have noticed and focused on identifying features through various approaches especially with unsupervised learning techniques [16,17]. Unsupervised feature learning aims to use a large number of unlabeled data to train and extract features. A common method is the autoencoder method [18,19], which usually reduces the dimensions of the input information and reconstructs the information according to the reduced features, which tries to restore the input information."
+
+"We attempt to transform the speech information into the corresponding spectrogram, use a convolutional neural network to extract features widely and effectively, then transfer the pre-trained autoencoder model to
+target datasets for further studies"
 
 ___
-## 36. [Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms](https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9) -> [???]()
+## 36. [Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms](https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9)
 
-
-
+> n/a
 
 ___
-## 37. [Survey of Deep Representation Learning for Speech Emotion Recognition](https://www.semanticscholar.org/paper/Survey-of-Deep-Representation-Learning-for-Speech-Latif-Rana/368e0844bbd3feb5ab17a271ad1663ca5a6fb7e7) -> [???]()
+## 37. [Survey of Deep Representation Learning for Speech Emotion Recognition](https://www.semanticscholar.org/paper/Survey-of-Deep-Representation-Learning-for-Speech-Latif-Rana/368e0844bbd3feb5ab17a271ad1663ca5a6fb7e7) -> [IEEE](https://ieeexplore.ieee.org/document/9543566)
 
+""
 
+""
 
+""
+
+""
+
+""
+
+""
+
+""
 
 ___
 ## 38. [Emotion classification from speech signal based on empirical mode decomposition and non-linear features](https://d-nb.info/1232071765/34) -> [???]()
 
 
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
 
 
 ___
 ## 39. [Emotion recognition from speech: a review](https://www.sci.brooklyn.cuny.edu/~levitan/nlp-psych/papers/koolagudi12.pdf) -> [???]()
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
 
 
 
@@ -497,11 +561,45 @@ ___
 ___
 ## 40. [Speech Emotion Recognition Using Deep Learning Techniques: A Review](https://ieeexplore.ieee.org/abstract/document/8805181) -> [???]()
 
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
 
 
 
 ___
 ## 41. [Emotion Recognition and Detection Methods: A Comprehensive Survey](https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf) -> [???]()
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
 
 
 
@@ -509,11 +607,47 @@ ___
 ___
 ## 42. [New approach in quantification of emotional intensity from the speech signal: emotional temperature](https://flab.k.hosei.ac.jp/pukiwiki/index.php?plugin=attach&pcmd=open&file=1-s2.0-S0957417415005229-main.pdf&refer=Hirano) -> [???]()
 
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
 
 
 
 ___
 ## 43. [Emotional speech recognition: Resources, features, and methods](https://sci-hub.se/10.1016/j.specom.2006.04.003) -> [Speech Communication](https://www.sciencedirect.com/science/article/abs/pii/S0167639306000422) ++
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
 
 
 
@@ -521,11 +655,39 @@ ___
 ___
 ## 44. [Emotion Recognition and Depression Diagnosis by Acoustic and Visual Features: A Multimodal Approach](https://sci-hub.se/10.1145/2661806.2661816) -> [Association for Computing Machinery](https://dl.acm.org/doi/abs/10.1145/2661806.2661816) ++
 
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
 
 
 
 ___
 ## 45. [Survey on speech emotion recognition: Features, classification schemes, and databases](https://sci-hub.se/10.1016/j.patcog.2010.09.020) -> []https://www.sciencedirect.com/science/article/abs/pii/S0031320310004619)
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
 
 
 
@@ -533,17 +695,57 @@ ___
 ___
 ## 46. [Evaluating deep learning architectures for Speech Emotion Recognition](https://e-tarjome.com/storage/panel/fileuploads/2019-03-05/1551778408_E10738-e-tarjome.pdf) -> [Elsevier](https://www.sciencedirect.com/science/article/abs/pii/S089360801730059X)
 
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
 
 
 
 ___
 ## 47. [Emotion detection from text and speech: a survey](https://sci-hub.se/10.1007/s13278-018-0505-2) -> [Springer](https://link.springer.com/article/10.1007/s13278-018-0505-2)
 
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
 
 
 
 ___
 ## 48. [Improvements in Brazilian Portuguese Speech Emotion Recognition and its extension to Latin Corpora]() -> [IEEE](https://ieeexplore.ieee.org/document/9892110)
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
+
+""
 
 
 
@@ -562,5 +764,4 @@ ___
     - target
     - o que pode ter faltado (e.g.: cross-corpus)
     - 
-- tabela refs das refs vs surveys
 - 
