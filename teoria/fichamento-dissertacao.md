@@ -386,7 +386,7 @@ ___
 ___
 ## 27. [O afeto sob a perspectiva do circumplexo: evidências de validade de construto](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005) ++
 
-> TODO: voltar
+> TODO: valência e ativação <=> {prazer, desprazer} e {vigor e quietude}
 
 ___
 ## 28. [All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework](https://www.cse.iitb.ac.in/~pb/papers/ieee-toac-sa.pdf)
