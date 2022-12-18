@@ -547,26 +547,33 @@ ___
 ___
 ## 40. [Speech Emotion Recognition Using Deep Learning Techniques: A Review](https://ieeexplore.ieee.org/abstract/document/8805181) -> [IEEE](https://ieeexplore.ieee.org/abstract/document/8805181)
 
-""
+"Emotion recognition from speech has evolved from being a niche to an important component for Human-Computer
+Interaction (HCI) [1]–[3]. These systems aim to facilitate the natural interaction with machines by direct voice interaction instead of using traditional devices as input to understand verbal content and make it easy for human listeners to react [4]–[6]. Determining the emotional state of humans is an idiosyncratic task and may be used as a standard for any emotion recognition model [11]."
 
-""
+"Deep Learning has been considered as an emerging research field in machine learning and has gained more attention in recent years [18]."
 
-""
+"On the other hand, recurrent architectures such as Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) are much effective in speech-based classification such as natural language processing (NLP) and SER [18]."
 
-""
+![](img/10_1.JPG)
 
-""
+![](img/10_2.JPG)
 
-""
+![](img/10_3.JPG)
 
-""
+![](img/10_4.JPG)
 
-""
+"For SER, many deep learning algorithms have been developed [79]–[84]. However, there exist meaningful prospects
+and fertile ground for future research opportunities not only in SER but many other domains [85]–[87]. The layer-wise structure of neural networks adaptively learns features from available raw data hierarchically [88], [89]."
 
-""
+"Convolutional Neural Network (CNN) also uses the layerwise structure and can categorize the seven universal emotions from the defined speech spectrograms [111]. In [114], a technique for SER that is based on spectrograms and deep CNN is presented. The model consists of three fully connected convolutional layers for extracting emotional features from the spectrogram images of the speech signal."
 
+"The tendency of DNNs to learning the specific features from various auditory emotion recognition systems is analyzed in [117]."
 
+![](img/10_5.JPG)
 
+"A hybrid deep learning modality may inherit the underlying properties of RNN with CNN, with convolutional levels
+implanted with RNN [94], [105], [118]. This enables the model to obtain both frequency and temporal dependency
+in a given speech signal."
 
 ___
 ## 41. [Emotion Recognition and Detection Methods: A Comprehensive Survey](https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf) -> [???]()
