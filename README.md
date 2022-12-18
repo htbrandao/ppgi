@@ -7,18 +7,3 @@
 <br><br>
 
 BRAVO: **B**razilian-portuguese Emotional Intensity **R**ecognition **A**ssistant for **VO**ice
-
-<br><br>
-
-# TODO & FIXME
-
-- [ ] organizar repo
-    - [x] ~mover `etc/*` para `teoria/`~
-- [x] inscrição bolsa pesquisador @ 04/11/2022
-    - [x] fichamento
-    - [x] redigir pré-projeto
-- [ ] pré-dissertação para qualify @ 31/12/2022
-    - [x] pré-projeto BOL22014
-    - [ ] expandir anterior para a banca
-        - [ ] refazer fichamento utilizando os itens da estrutura
-- [x] consolidar ano e qnt de citação das referências
