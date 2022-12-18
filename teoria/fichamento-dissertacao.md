@@ -1,6 +1,6 @@
 # Fichamento @ dissertação
 
-## 1. [Speech Emotion Recognition using Supervised Deep Recurrent System for Mental Health Monitoring](https://arxiv.org/abs/2208.12812) -> ++
+## 1. [Speech Emotion Recognition using Supervised Deep Recurrent System for Mental Health Monitoring](https://arxiv.org/abs/2208.12812) ++
 
 "Mental health is one of the crucial health aspects that must be monitored and treated for better physical health and a safer community and social life [1]."
 
@@ -502,22 +502,38 @@ ___
 ___
 ## 37. [Survey of Deep Representation Learning for Speech Emotion Recognition](https://www.semanticscholar.org/paper/Survey-of-Deep-Representation-Learning-for-Speech-Latif-Rana/368e0844bbd3feb5ab17a271ad1663ca5a6fb7e7) -> [IEEE](https://ieeexplore.ieee.org/document/9543566)
 
-""
+"Studies report that linguistic messages are rather unreliable means to predict and analyse human affective behaviour [1] because linguistic content is languagedependent, and the generalisation of emotions for multiple
+languages is very difficult to achieve.  People often choose different words to express emotion, making it hard to anticipate a speaker’s word choice and the associated affective expressions."
 
-""
+"The paralinguistic content of speech, on the other hand, provides an immense body of acoustic features that can
+be used to encode the emotional state of the speaker. These acoustic features are reliable indicators of basic emotions and have been explored by different machine learning (ML) [2][3][4] as well as deep learning (DL) models [5][6][7][8] for speech emotion recognition (SER)."
 
-""
+"For decades, Mel frequency cepstral coefficients (MFCCs) [18] has been used as the principal set of features for SER and other speech analysis tasks. The four steps involved in the extraction of MFCCs are: (1) computation of the Fourier transform, (2) projection of the powers of the spectrum onto the Mel scale, (3) taking the logarithm of the Mel frequencies, and (4) applying discrete cosine transformation (DCT) or other suited transformations for compressed representations. It is found that the last step loses information and destroys spatial relations; therefore, it is usually omitted, which results in the LogMel spectrum, a popular feature used by the speech community. It is also the most popular feature to train DL networks in the speech domain"
 
-""
+"Studies show that deep architectures can learn more complex relationships that greatly help improve performance
+[22]"
 
-""
+"In contrast to fully connected DNNs, the training process of CNNs is more straightforward due to fewer parameters [49]. CNNs are powerful at extracting low-level representations at the initial layers, and high-level features (textures and semantics) in the higher layers [50]."
 
-""
+"Recurrent neural networks (RNNs) [52], [53] introduce recurrent connections within layers to enable parameters
+sharing across time. They create a memory in the network by using the information from all previous inputs."
 
-""
+"Convolutional neural networks (CNNs) are also popular for emotional representation learning in SER [5], [125]–[128]. They can learn more generalised features from speech compared to DNNs, and other feature-based approaches [50]."
+
+![](img/8_1.JPG)
+
+![](img/8_2.JPG)
+
+"Researchers achieved promising results using CNNs and CNN-RNNs to learn low-level speech representations from raw waveforms, allowing a network to capture important emotional  haracteristics better. However, the proper design of the feature extraction block is crucial to achieving this goal [50]. However, raw speech as input to deep models requires enormous data to achieve competitive performance. Researchers use data augmentation techniques to meet the data requirement [50], [225]. Log-Mel features and spectrograms are considered popular choices to alleviate this problem as they need less processing, fewer data samples, and training to achieve state-of-the-art classification performance compared to setups where raw audio is used"
+
+"LSTM/GRU-RNN-based architectures are mostly applied due to their ability to capture temporal context. However, RNNs use computationally expensive back-propagation through time (BPTT) [226] to learn temporal dependencies by sequentially processing the speech signal."
+
+"The SER research community is increasingly shifting its focus to designing systems using raw speech or input features that have minimal human knowledge dependency"
+
+"LSTM/GRU-RNNs combined with CNNs are very popular and suitable for capturing emotional attributes in a supervised way"
 
 ___
-## 38. [Emotion classification from speech signal based on empirical mode decomposition and non-linear features](https://d-nb.info/1232071765/34) -> [???]()
+## 38. [Emotion classification from speech signal based on empirical mode decomposition and non-linear features](https://link.springer.com/content/pdf/10.1007/s40747-021-00295-z.pdf?pdf=button%20sticky) -> [Springer](https://link.springer.com/article/10.1007/s40747-021-00295-z)
 
 
 ""
@@ -675,7 +691,7 @@ ___
 
 
 ___
-## 45. [Survey on speech emotion recognition: Features, classification schemes, and databases](https://sci-hub.se/10.1016/j.patcog.2010.09.020) -> []https://www.sciencedirect.com/science/article/abs/pii/S0031320310004619)
+## 45. [Survey on speech emotion recognition: Features, classification schemes, and databases](https://sci-hub.se/10.1016/j.patcog.2010.09.020) -> [](https://www.sciencedirect.com/science/article/abs/pii/S0031320310004619)
 
 ""
 
@@ -754,9 +770,12 @@ ___
 
 ## TODO:
 
-- refs TODO
-- tabular das refs:
+- se for só axviv, não citar
+- 
+- tabular minhas refs:
+    - qnt citações
     - ano
+    - syrvey s/n
     - dataset (lang)
     - abordagem
     - arquitetura
@@ -764,4 +783,81 @@ ___
     - target
     - o que pode ter faltado (e.g.: cross-corpus)
     - 
+- refs das refs
+- refs TODO
 - 
+
+___
+<br><br>
+
+    Conteúdo
+
+    1 Introdução
+    1.1 Voz
+    1.2 Fala
+    1.3 Emoção
+    1.4 Intensidade
+    1.5 Aprendizado de M ́aquina
+    1.5.1 Benchmark
+    1.6 Ideia (motivação)
+
+    2 Descrição do Problema
+    2.1 Definição
+    2.2 Objetivos
+    2.2.1 Geral
+    2.2.2 Espef ́ıfico
+    2.3 Metodologia
+    2.4 Estrutura do trabalho
+
+    3 Justificativa
+    3.1 Importâcia da pesquisa
+    3.2 Voz
+    3.3 Emoção
+    3.4 Intensidade
+    3.5 Poss ́ıveis  ́areas de atuação
+    3.6 Trabalhos correlatos
+    3.7 Poss ́ıveis ganhos
+
+    4 Fundamentação Teórica
+    4.1 Emoção
+    4.2 Dados
+    4.3 Pré-processamento
+    4.3.1 Sinal
+    4.3.2 Transformação
+    4.3.3 Espectrograma
+    4.4 Modelagem
+    4.4.1 Supervisionado
+    4.4.2 N ̃ao supervisionado
+    4.4.3 Outras
+    4.4.4 Comparativo
+    4.5 Machine Learning
+    4.6 Deep Learning
+    4.6.1 Caracter ́ısticas comuns
+    4.6.2 NN
+    4.6.3 CNN
+    4.6.4 RNN
+    4.6.5 Transfer Learning
+    4.7 Métricas
+
+    5 Revisão Bibliográfica
+    5.1 Voz
+    5.2 Emoç̃oes
+    5.3 Intensidade
+    5.4 Dados utilizados
+    5.5 Abordagens
+    5.6 Dados utilizados
+    5.6.1 VERBO
+    5.6.2 VIVAE
+    5.7 Evolução Hist ́orica
+    5.8 Comparativo: BRAVO
+
+    6 Trabalho Proposto
+    6.1 Proposta
+    6.2 Definição
+    6.2.1 Características
+    6.3 Funcionamento
+    6.4 Aplicabilidade
+    6.5 Viabilidade
+
+    7 Cronograma
+    7.1 Próximos passos
