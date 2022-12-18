@@ -535,47 +535,17 @@ sharing across time. They create a memory in the network by using the informatio
 ___
 ## 38. [Emotion classification from speech signal based on empirical mode decomposition and non-linear features](https://link.springer.com/content/pdf/10.1007/s40747-021-00295-z.pdf?pdf=button%20sticky) -> [Springer](https://link.springer.com/article/10.1007/s40747-021-00295-z)
 
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
+"Emotion analysis from the auditory signal of humans has become more prominent research due to (a) the availability of fast computing systems, (b) the effectiveness of various signal processing algorithms, and (c) the acoustic differences in speech signals that are naturally embedded in various emotional situations"
 
 ___
-## 39. [Emotion recognition from speech: a review](https://www.sci.brooklyn.cuny.edu/~levitan/nlp-psych/papers/koolagudi12.pdf) -> [???]()
+## 39. [Emotion recognition from speech: a review](https://www.sci.brooklyn.cuny.edu/~levitan/nlp-psych/papers/koolagudi12.pdf)
 
-""
+![](img/9_1.JPG)
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
-
+![](img/9_2.JPG)
 
 ___
-## 40. [Speech Emotion Recognition Using Deep Learning Techniques: A Review](https://ieeexplore.ieee.org/abstract/document/8805181) -> [???]()
+## 40. [Speech Emotion Recognition Using Deep Learning Techniques: A Review](https://ieeexplore.ieee.org/abstract/document/8805181) -> [IEEE](https://ieeexplore.ieee.org/abstract/document/8805181)
 
 ""
 
