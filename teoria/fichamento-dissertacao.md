@@ -1,6 +1,6 @@
 # Fichamento @ dissertação
 
-## 1. [Speech Emotion Recognition using Supervised Deep Recurrent System for Mental Health Monitoring](https://arxiv.org/abs/2208.12812) ++
+## 1. [Speech Emotion Recognition using Supervised Deep Recurrent System for Mental Health Monitoring](https://arxiv.org/abs/2208.12812) -> [???]()
 
 "Mental health is one of the crucial health aspects that must be monitored and treated for better physical health and a safer community and social life [1]."
 
@@ -50,12 +50,12 @@ Wani et al. [30] and Lotfidereshgi et al. [31] are examples of using the scenari
 
 
 ___
-## 2. [Depression Recognition using Remote Photoplethysmography from Facial Videos](https://arxiv.org/abs/2206.04399)
+## 2. [Depression Recognition using Remote Photoplethysmography from Facial Videos](https://arxiv.org/abs/2206.04399) -> [???]()
 
 > n/a
 
 ___
-## 3. [Accurate Emotion Strength Assessment for Seen and Unseen Speech Based on Data-Driven Deep Learning](https://arxiv.org/abs/2206.07229) -> [ISCA](https://www.isca-speech.org/archive/pdfs/interspeech_2022/liu22i_interspeech.pdf) ++
+## 3. [Accurate Emotion Strength Assessment for Seen and Unseen Speech Based on Data-Driven Deep Learning](https://arxiv.org/abs/2206.07229) -> [ISCA](https://www.isca-speech.org/archive/pdfs/interspeech_2022/liu22i_interspeech.pdf)
 
 "Accurate emotion classification of speech and assessment of its strength are essential to profile human behaviors, which has many potential applications, such as human-robot interface,
 human-machine dialogue, and social media. In recent years, there is an increasing interest in emotion control in expressive speech synthesis, such as emotional text-to-speech, emotional voice conversion, where accurate control of emotional strength in speech becomes critically important."
@@ -107,7 +107,7 @@ conditions, e.g., an emotional environment (J. H. L. Hansen & Patil, 2007), wher
 "The CapsNet model proposed by Sabour et al. (Sabour et al., 2017) comprises two parts. The first part includes two convolutional layers with the final layer restructured to form the primary capsule layer followed by the digit capsule layer with capsules of 16 dimensions. The second part comprises a decoder network made of three fullyconnected (FC) layers"
 
 ___
-## 5. [MEL Spectrogram](https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53)
+## 5. [MEL Spectrogram](https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53) -> [???]()
 
 "A signal is a variation in a certain quantity over time. For audio, the quantity that varies is air pressure. How do we capture this information digitally? We can take samples of the air pressure over time. The rate at which we sample the data can vary, but is most commonly 44.1kHz, or 44,100 samples per second. What we have captured is a waveform for the signal, and this can be interpreted, modified, and analyzed with computer software."
 
@@ -126,7 +126,7 @@ ___
 "1. We took samples of air pressure over time to digitally represent an audio signal; 2. We mapped the audio signal from the time domain to the frequency domain using the fast Fourier transform, and we performed this on overlapping windowed segments of the audio signal; 3. We converted the y-axis (frequency) to a log scale and the color dimension (amplitude) to decibels to form the spectrogram; 4.We mapped the y-axis (frequency) onto the mel scale to form the mel spectrogram."
 
 ___
-## 6. [Automatic Detection of Depression from Stratified Samples of Audio Data](https://arxiv.org/abs/2111.10783)
+## 6. [Automatic Detection of Depression from Stratified Samples of Audio Data](https://arxiv.org/abs/2111.10783) -> [???]()
 
 "Depression is defined by the American Psychiatric Association as a common mental disorder that causes sadness and loss of interest in activities which were once enjoyed by the individual [4][62]."
 
@@ -143,31 +143,31 @@ ___
 "Techniques for feature extraction such as Mel-Spectrograms have been used extensively in the field of speech recognition systems [44][45][46][47]. Mel spectrogram is a non-linear transformation of frequency based on the waveform of the audio samples [48]. Mel-spectrograms are calculated based on logarithmic frequency spacing and frequency amplitude. On the spectrogram, magnitude will indicate the amplitude of the extracted frequencies [49][50]. However, when portrayed on a Mel-Spectrogram, the values representing amplitudes of each frequency domain (features) at a given time interval are often too subtle to distinguish. "
 
 ___
-## 7. [Automated Sex Classification of Children's Voices and Changes in Differentiating Factors with Age](https://arxiv.org/abs/2209.13112)
+## 7. [Automated Sex Classification of Children's Voices and Changes in Differentiating Factors with Age](https://arxiv.org/abs/2209.13112) -> [???]()
 
 > n/a
 
 ___
-## 8. [Language Independent Emotion Quantification using Non linear Modelling of Speech](https://arxiv.org/abs/2102.06003)
+## 8. [Language Independent Emotion Quantification using Non linear Modelling of Speech](https://arxiv.org/abs/2102.06003) -> [???]()
 
 "Emotion is a psychological state related with the sensory system brought on by hormonal changes differently connected with contemplations, sentiments, social reactions, and a level of joy or disappointment. This hormonal changes cause audibly distinguishable features in speech and visibly distinct features in facial expressions. This audio-visual communication helps people to perceive each other’s emotion. Audio signal, including both speech and music, in general are inherently complex and few non-linear studies have been conducted to understand the underlying complexity and nonlinearity of these signals and their manifestation in the human brain [1-12]. This underlying complex nature of audio signals makes emotion recognition a troublesome task for a machine. The motivation behind emotion recognition framework is to utilize feeling related learning so that human machine
 correspondence will be improved [13]"
 
 ___
-## 9. [Voice Conversion Based on Cross-Domain Features Using Variational Auto Encoders](https://arxiv.org/abs/1808.09634)
+## 9. [Voice Conversion Based on Cross-Domain Features Using Variational Auto Encoders](https://arxiv.org/abs/1808.09634) -> [???]()
 
 
 > n/a
 
 ___
-## 10. [A Fine-tuned Wav2vec 2.0/HuBERT Benchmark For Speech Emotion Recognition, Speaker Verification and Spoken Language Understanding](https://arxiv.org/abs/2111.02735)
+## 10. [A Fine-tuned Wav2vec 2.0/HuBERT Benchmark For Speech Emotion Recognition, Speaker Verification and Spoken Language Understanding](https://arxiv.org/abs/2111.02735) -> [???]()
 
 "In speech domain, excellent self-supervised models are emerging [1, 2, 3, 4, 5, 6, 7, 8, 9]"
 
 "The three most widely used and most representative datasets were chosen in our experiments, which are IEMOCAP for SER, VoxCeleb1 for SV and SLURP for SLU"
 
 ___
-## 11. [Improving Automatic Emotion Recognition from speech using Rhythm and Temporal feature](https://arxiv.org/abs/1303.1761)
+## 11. [Improving Automatic Emotion Recognition from speech using Rhythm and Temporal feature](https://arxiv.org/abs/1303.1761) -> [???]()
 
 "Automatic emotion recognition from speech signal has become a major research topic in the field of  Human computer Interaction (HCI) in the recent times due to its many potential applications. It is being applied to growingnumber of areas such as humanoid robots, car industry, call centers, mobile communication, computer tutorial applications etc. [1]."
 
@@ -237,7 +237,7 @@ expression of texts, such as anger, disgust, fear, happiness, sadness, and surpr
 "Emotion intensity becomes crucial when we want to compare sentences having the same emotion category. In this case, we can use the intensity of each word to compute the overall intensity of the sentence. Words having the same meaning can be used either to enhance or diminish the emotion intensity of a sentence. So far the field of detecting emotion intensity remains less explored but sentiment intensity is been considered for research[9-11] which will further pave way for detection of emotion intensity."
 
 ___
-## 15. [Emotion Detection and Analysis on Social Media](https://arxiv.org/abs/1901.08458)
+## 15. [Emotion Detection and Analysis on Social Media](https://arxiv.org/abs/1901.08458) -> [???]()
 
 "Emotions are described as intense feelings that are directed at something or someone in response to internal or external events having a particular significance for the individual."
 
@@ -264,7 +264,7 @@ emotion. In fact, from an ethological perspective, a perceptual representation o
 "Taken together, extremely intense expressions seem to convey less information on the polarity (positive or negative, triumph or anger)"
 
 ___
-## 17. [Human Emotion Recognition: Review of Sensors and Methods ](https://www.mdpi.com/1424-8220/20/3/592) ++
+## 17. [Human Emotion Recognition: Review of Sensors and Methods ](https://www.mdpi.com/1424-8220/20/3/592) -> [???]()
 
 "In the scientific literature are presented numerous attempts to classify the emotions and set boundaries between emotions, affect, and mood [18–21]. From the prospective of automated emotion recognition and evaluation, the most convenient classification is presented in [3,22]. According to the latter classification, main terms defined as follows:
 
@@ -291,7 +291,7 @@ ___
 "The term Valence refers to the feel of the person that transforms from positive to negative, pleasant to unpleasant. The term Arousal refers to amount of anticipation transforming from calm to excited. Valence can be considered in two different manner – intrinsic attractiveness and aversiveness (Positive and Negative). The  level of arousal can be expressed as high or low. High arousal refers to the high energetic state and low arousal refers to state of tiredness or immobility. The combination of these four factors gives different emotions. Such that positive/high arousal (happy), positive/low arousal (pleasant), negative/high arousal (anger and fear), negative/low arousal (sad) [164]"
 
 ___
-## 18. [Emotion Intensity and its Control for Emotional Voice Conversion](https://arxiv.org/abs/2201.03967)
+## 18. [Emotion Intensity and its Control for Emotional Voice Conversion](https://arxiv.org/abs/2201.03967) -> [???]()
 
 "Emotional Voice Conversion (EVC) is a technique that seeks to manipulate the emotional state of an utterance while keeping other vocal states unchanged [1]. It allows for the projection of the desired emotion into the  synthesized voice. Emotional voice conversion poses a tremendous potential for human-computer interaction, such as enabling emotional intelligence into a dialogue system [2], [3], [4]."
 
@@ -322,14 +322,14 @@ ___
 "Unlike emotional speech databases, there are abundant speech databases for TTS [102], [103], [104] with a neutral tone."
 
 ___
-## 19. [Emotional Intensity Level Analysis of Speech Emotional Intensity Estimation](https://www.esann.org/sites/default/files/proceedings/2021/ES2021-118.pdf) ++
+## 19. [Emotional Intensity Level Analysis of Speech Emotional Intensity Estimation](https://www.esann.org/sites/default/files/proceedings/2021/ES2021-118.pdf) -> [???]()
 
 "Intensity estimation has a lot of potential applications for human-robot interaction, patient monitoring, security surveillance and entertainment. If it is not possible to read the intensity of emotions during speech input, the possibility that responses given when humans and machines communicate are greatly misunderstood cannot be eliminated."
 
 "Speech data from an online gaming voice chat corpus with emotional labels (OGVC) [2]"
 
 ___
-## 20. [Recognition of Emotion with Intensity from Speech Signal Using 3D Transformed Feature and Deep Learning](https://www.mdpi.com/2079-9292/11/15/2362) ++
+## 20. [Recognition of Emotion with Intensity from Speech Signal Using 3D Transformed Feature and Deep Learning](https://www.mdpi.com/2079-9292/11/15/2362) -> [???]()
 
 "Speech is the most popular way to communicate with others in daily life and is largely used for emotional expression [1]. Speech can carry two types of information, literal information and relative information [2]. The literal information highlights direct meaning, and relative information means the implicit messages such as emotion contained in the speech [3]. Speech is always a potential source of the emotional state of a person. In the computational intelligence or machine learning (ML) domain, Speech Emotion Recognition (SER) is known as the task of determining and classifying the emotional features of speech. SER has consistently faced challenging ML issues due to the complexity of speech signals [2]."
 
@@ -350,7 +350,7 @@ ___
 "The RAVDESS dataset"
 
 ___
-## 21. [Brazilian Portuguese emotional speech corpus analysis](https://www.gov.br/cti/pt-br/publicacoes/producao-cientifica/seminario-pci/xi_seminario_pci-2021/pdf/seminario-2021_paper_29.pdf)
+## 21. [Brazilian Portuguese emotional speech corpus analysis](https://www.gov.br/cti/pt-br/publicacoes/producao-cientifica/seminario-pci/xi_seminario_pci-2021/pdf/seminario-2021_paper_29.pdf) -> [???]()
 
 "Spectral, prosodic, temporal are widely reported feature types known as acoustic or local features. Prosodic features (eg. stress, intonation, rhythm) reveal how speech signals are perceptible to humans. Correlation between prosodic features and different emotions is found to be helpful in SER analysis. Temporal features (eg. intensity, amplitude envelope) inform changes in the signal over time. Energy and intensity can be derived from variation in amplitude of speech signal which varies per emotion. Spectral features (eg. spectrogram, various cepstral features) are obtained through transforming signal from time domain to frequency domain. Time-frequency transform of a log-spectrum is known as cepstrum."
 
@@ -364,32 +364,32 @@ ___
 > algumas refs pra fund. teo caso necessário
 
 ___
-## 23. [StrengthNet: Deep Learning-based Emotion Strength Assessment for Emotional Speech Synthesis](https://arxiv.org/abs/2110.03156)
+## 23. [StrengthNet: Deep Learning-based Emotion Strength Assessment for Emotional Speech Synthesis](https://arxiv.org/abs/2110.03156) -> [???]()
 
 > ref #3
 
 ___
-## 24. [Musical Genre Classification with Convolutional Neural Networks](https://towardsdatascience.com/musical-genre-classification-with-convolutional-neural-networks-ff04f9601a74)
+## 24. [Musical Genre Classification with Convolutional Neural Networks](https://towardsdatascience.com/musical-genre-classification-with-convolutional-neural-networks-ff04f9601a74) -> [???]()
 
 > pulei
 
 ___
-## 25. [The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/) ++
+## 25. [The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/) -> [???]()
 
 > TODO: voltar
 
 ___
-## 26. [Russell’s (1980) Circumplex Models](https://psu.pb.unizin.org/psych425/chapter/circumplex-models/)
+## 26. [Russell’s (1980) Circumplex Models](https://psu.pb.unizin.org/psych425/chapter/circumplex-models/) -> [???]()
 
 > TODO: voltar
 
 ___
-## 27. [O afeto sob a perspectiva do circumplexo: evidências de validade de construto](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005) ++
+## 27. [O afeto sob a perspectiva do circumplexo: evidências de validade de construto](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005) -> [???]()
 
 > TODO: valência e ativação <=> {prazer, desprazer} e {vigor e quietude}
 
 ___
-## 28. [All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework](https://www.cse.iitb.ac.in/~pb/papers/ieee-toac-sa.pdf)
+## 28. [All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework](https://www.cse.iitb.ac.in/~pb/papers/ieee-toac-sa.pdf) -> [???]()
 
 "Emotion [1] and sentiment [3] are closely related and are often been used incorrectly in a similar sense. According to Munezero et al. [4], emotions and sentiments differ on the scale of duration on which they are experienced. Emotions are usually shorter in duration, whereas sentiments are more stable and valid for longer period of time [5]. Also, sentiments are normally expressed towards a target entity, whereas emotions are not always target-centric [6]"
 
@@ -398,18 +398,18 @@ ___
 "The classification of emotions and sentiments into coarsegrained classes does not always reflect exact state of opinion of a user, hence, do not serve the purpose completely. Recently, the attention has been shifted towards fine-grained analysis on the dimensional scale [10], [11], [12], [13], [14]. Arousal or intensity defines the degree of emotion and sentiment felt by the user and often differs on a case-to-case basis. Within a single class (e.g., Sadness) some emotions are gentle (e.g., ‘I lost my favorite pen today.’) while others can be evere (e.g., ‘my uncle died from cancer today...RIP’). Similarly, some sentiments are gentler than others within the same polarity, e.g., ‘happy to see you again’ v/s ‘can’t wait to see you again’."
 
 ___
-## 29. [A Multi-task Ensemble Framework for Emotion, Sentiment and Intensity Prediction](https://arxiv.org/abs/1808.01216)
+## 29. [A Multi-task Ensemble Framework for Emotion, Sentiment and Intensity Prediction](https://arxiv.org/abs/1808.01216) -> [???]()
 
 > ref #28
 
 ___
-## 30. [Music emotion recognition based on segment-level two-stage learning](https://link.springer.com/content/pdf/10.1007/s13735-022-00230-z.pdf)
+## 30. [Music emotion recognition based on segment-level two-stage learning](https://link.springer.com/content/pdf/10.1007/s13735-022-00230-z.pdf) -> [???]()
 
 
 > pulei
 
 ___
-## 31. [Emotion Recognition from Speech: An Unsupervised Learning Approach](https://www.atlantis-press.com/journals/ijcis/125945494/view)
+## 31. [Emotion Recognition from Speech: An Unsupervised Learning Approach](https://www.atlantis-press.com/journals/ijcis/125945494/view) -> [???]()
 
 "Nowadays applications are more and more interactive, which requires an optimal human–machine interaction. One of the most obvious ways to achieve this goal is spoken communication. Since a few decades, speech processing has registered considerable progress in different applications, such as speech recognition, synthesis and enhancement, source separation, etc"
 
@@ -434,7 +434,7 @@ ___
 "[17] [52] [53]"
 
 ___
-## 32. [Deep Learning Techniques for Speech Emotion Recognition, from Databases to Models](https://www.mdpi.com/1424-8220/21/4/1249)
+## 32. [Deep Learning Techniques for Speech Emotion Recognition, from Databases to Models](https://www.mdpi.com/1424-8220/21/4/1249) -> [???]()
 
 "Speech emotion recognition can also be very instrumental in vehicles’ safety features. It can recognize the driver’s state of mind and help prevent accidents and disasters [8]. Another related application is in therapy sessions; by employing SER, therapists will understand their patients’ state and possibly underlying hidden emotions as well [9]. It has been proven that in stressful and noisy environments like aircraft cockpits,
 the application of SER can significantly help to increase the performance of automatic speech recognition systems [10]. The service industry and e-commerce can utilize speech emotion recognition in call centers to give early alerts to customer service and supervisors of the caller’s state of mind [11]. In addition, speech emotion recognition has been suggested to be implemented in interactive movies to understand viewers’ emotions. The interactive film could then go along different routes and have different endings [12]."
@@ -472,7 +472,7 @@ corpora and SVM as classifier method"
 "Another point that we can improve the robustness of SER models is to create models that classify continuous speech emotions. For this reason, we can design architectures that are keeping a sliding window and measure the emotional content of the slide and decide based on that."
 
 ___
-## 33. [A voice-based real-time emotion detection technique using recurrent neural network empowered feature modelling](https://link.springer.com/content/pdf/10.1007/s11042-022-13363-4.pdf)
+## 33. [A voice-based real-time emotion detection technique using recurrent neural network empowered feature modelling](https://link.springer.com/content/pdf/10.1007/s11042-022-13363-4.pdf) -> [???]()
 
 > n/a
 
@@ -482,7 +482,7 @@ ___
 "Unsupervised feature learning has been rarely explored in ASER beyond autoencoders (AE) [8] and denoising autoencoders (DAE) [6]. AE and DAE aim to learn features that are good for the reconstruction of the input. More advanced techniques, such as variational autoencoders (VAE) [9] and generative adversarial networks (GAN) [10], do not aim to reconstruct the input, but aim to generate data that come from the same distribution as the input. This relaxation tends to put more emphasis on the modeling of intrinsic structures of the data during feature learning [7, 9, 10]."
 
 ___
-## 35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.mdpi.com/2079-9292/10/17/2086)
+## 35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.mdpi.com/2079-9292/10/17/2086) -> [???]()
 
 "Speech carries a speaker’s semantic information and contains the emotional information the speaker wants to convey [1]. The same text may express opposite meanings in different emotional contexts. Emotional interaction is an indispensable part of human social activities, while emotional intelligence plays an important part in human computer interaction (HCI) [2]. The emotional states affect human interaction, such as facial expression [3,4], body posture [5], communication content [6], and speech mannerisms [7]. Influenced by multimodal features, recognizing emotions is vital to develop an automatic speech emotion recognition system for understanding of these interactions, and various speech recognition for pronunciation training and learning
 are developed [8,9]."
@@ -495,7 +495,7 @@ are developed [8,9]."
 target datasets for further studies"
 
 ___
-## 36. [Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms](https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9)
+## 36. [Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms](https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9) -> [???]()
 
 > n/a
 
@@ -538,7 +538,7 @@ ___
 "Emotion analysis from the auditory signal of humans has become more prominent research due to (a) the availability of fast computing systems, (b) the effectiveness of various signal processing algorithms, and (c) the acoustic differences in speech signals that are naturally embedded in various emotional situations"
 
 ___
-## 39. [Emotion recognition from speech: a review](https://www.sci.brooklyn.cuny.edu/~levitan/nlp-psych/papers/koolagudi12.pdf)
+## 39. [Emotion recognition from speech: a review](https://www.sci.brooklyn.cuny.edu/~levitan/nlp-psych/papers/koolagudi12.pdf) -> [???]()[]
 
 ![](img/9_1.JPG)
 
@@ -576,29 +576,25 @@ implanted with RNN [94], [105], [118]. This enables the model to obtain both fre
 in a given speech signal."
 
 ___
-## 41. [Emotion Recognition and Detection Methods: A Comprehensive Survey](https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf) -> [???]()
+## 41. [Emotion Recognition and Detection Methods: A Comprehensive Survey](https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf) -> [IEC](https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf)
 
-""
+"As John McCarthy said, the science of Artificial Intelligence aims at making intelligent machines [1]. It is an interdisciplinary field [2] [3] overlapping with the fields of robotics, emotion recognition, data mining, human computer interaction to name a few. The two main fields dealing with making computers capable of sensing human emotions are Human Computer Interaction (HCI) and Affective Computing. Affective computing [4] [5] is a science under which methods are being developed that can not only replicate but also process, identify and understand human emotions"
 
-""
+"Emotions are a vital part of human lives which play an integral role in how humans
+perceive and understand things [7] [8] [9] [10]."
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
-
+"Emotions play an important role in human sphere of life [79]"
 
 ___
-## 42. [New approach in quantification of emotional intensity from the speech signal: emotional temperature](https://flab.k.hosei.ac.jp/pukiwiki/index.php?plugin=attach&pcmd=open&file=1-s2.0-S0957417415005229-main.pdf&refer=Hirano) -> [???]()
+## 42. [New approach in quantification of emotional intensity from the speech signal: emotional temperature](https://flab.k.hosei.ac.jp/pukiwiki/index.php?plugin=attach&pcmd=open&file=1-s2.0-S0957417415005229-main.pdf&refer=Hirano) -> [ELSEVIER]](https://www.sciencedirect.com/science/article/abs/pii/S0957417415005229)
+
+"The automatic SER systems identify the emotional state of human from the speech signal. In the state-of-art many researches are focused on the use of SER in applications of HCI for the real-world. One potential application is the detection of the emotional state in telephone call-center conversations, providing feedback to an operator or supervisor for monitoring purposes, or enter a specific mode designed to resolve problems"
+
+"In the field of diagnostic and therapeutic tools, the SER systems can give support to traditional methods for treatment of mental disorders trough game-oriented interfaces with spoken interaction [Kostoulas et al., 2012](https://www.sciencedirect.com/science/article/abs/pii/S0957417412005908), detect mental illness using speech as
+a predictor of depression, suicidality and mood transitions [Cummins et al., 2015](https://www.sciencedirect.com/science/article/abs/pii/S0167639315000369) [Karam et al., 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5019119/); and may assistant in early diagnosis of patients with Parkinson’s disease [Zhao, Rudzicz, Carvalho, MárquezChin, & Livingstone, 2014](https://ieeexplore.ieee.org/abstract/document/6854516) and Alzheimer’s disease [Lopez-de-Ipiña et al., 2013](https://link.springer.com/article/10.1007/s12559-013-9229-9)."
+
+___
+## 43. [Emotional speech recognition: Resources, features, and methods](https://sci-hub.se/10.1016/j.specom.2006.04.003) -> [Speech Communication](https://www.sciencedirect.com/science/article/abs/pii/S0167639306000422)
 
 ""
 
@@ -622,31 +618,7 @@ ___
 
 
 ___
-## 43. [Emotional speech recognition: Resources, features, and methods](https://sci-hub.se/10.1016/j.specom.2006.04.003) -> [Speech Communication](https://www.sciencedirect.com/science/article/abs/pii/S0167639306000422) ++
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
-
-
-___
-## 44. [Emotion Recognition and Depression Diagnosis by Acoustic and Visual Features: A Multimodal Approach](https://sci-hub.se/10.1145/2661806.2661816) -> [Association for Computing Machinery](https://dl.acm.org/doi/abs/10.1145/2661806.2661816) ++
+## 44. [Emotion Recognition and Depression Diagnosis by Acoustic and Visual Features: A Multimodal Approach](https://sci-hub.se/10.1145/2661806.2661816) -> [Association for Computing Machinery](https://dl.acm.org/doi/abs/10.1145/2661806.2661816)
 
 ""
 
