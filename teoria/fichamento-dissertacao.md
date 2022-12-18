@@ -48,6 +48,9 @@ Wani et al. [30] and Lotfidereshgi et al. [31] are examples of using the scenari
 
 ### 1.7
 
+...
+
+### 1.49
 
 ___
 ## 2. [Depression Recognition using Remote Photoplethysmography from Facial Videos](https://arxiv.org/abs/2206.04399) -> [???]()
@@ -596,123 +599,39 @@ a predictor of depression, suicidality and mood transitions [Cummins et al., 201
 ___
 ## 43. [Emotional speech recognition: Resources, features, and methods](https://sci-hub.se/10.1016/j.specom.2006.04.003) -> [Speech Communication](https://www.sciencedirect.com/science/article/abs/pii/S0167639306000422)
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
-
+> n/a
 
 ___
 ## 44. [Emotion Recognition and Depression Diagnosis by Acoustic and Visual Features: A Multimodal Approach](https://sci-hub.se/10.1145/2661806.2661816) -> [Association for Computing Machinery](https://dl.acm.org/doi/abs/10.1145/2661806.2661816)
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
-
+"The Support Vector Machine (SVM) learned by the Sequential Minimal Optimization (SMO) algorithm [23] has
+been deployed for solving the affect and the depression regression tasks."
 
 ___
-## 45. [Survey on speech emotion recognition: Features, classification schemes, and databases](https://sci-hub.se/10.1016/j.patcog.2010.09.020) -> [](https://www.sciencedirect.com/science/article/abs/pii/S0031320310004619)
+## 45. [Survey on speech emotion recognition: Features, classification schemes, and databases](https://sci-hub.se/10.1016/j.patcog.2010.09.020) -> [Elsevier](https://www.sciencedirect.com/science/article/abs/pii/S0031320310004619)
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
-
+> survey de 2011. muito citada. sem datasets em pt-br
 
 ___
 ## 46. [Evaluating deep learning architectures for Speech Emotion Recognition](https://e-tarjome.com/storage/panel/fileuploads/2019-03-05/1551778408_E10738-e-tarjome.pdf) -> [Elsevier](https://www.sciencedirect.com/science/article/abs/pii/S089360801730059X)
+ 
+"The proposed model is a deep multi-layered neural network. We experiment with several neural network architectures as presented in Section 6. It is important to note that the model is able to deal with utterances of variable length, independent of the choice of architecture since the model predicts p(yt|x), ∀t ∈
+{1, . . . , T }: this only requires the target frame xt and past l and future r context frames, which are fixed prior. Since emotions manifest in speech in a slow manner, one may not necessarily predict the class of every single frame in an utterance or speech stream but may rely on predicting the class of a frame sampled every few frames, depending on application requirements. The output of the model may be aggregated over the entire utterance to perform utterance-level classification if desired."
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
-
+"Experiments conducted illuminate how feed-forward and recurrent neural network architectures and their variants could be employed for paralinguistic speech recognition, particularly emotion recognition. Convolutional Neural Networks (ConvNets) demonstrated better discriminative performance compared to other architectures. As a result of our exploration, the proposed SER system which relies on minimal speech processing and end-to-end deep learning, in a framebased formulation, yields state-of-the-art results on the IEMOCAP
+database for speaker-independent SER."
 
 ___
 ## 47. [Emotion detection from text and speech: a survey](https://sci-hub.se/10.1007/s13278-018-0505-2) -> [Springer](https://link.springer.com/article/10.1007/s13278-018-0505-2)
 
-""
+![](img/11.JPG)
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
-
+"Consider amount of research is going on about emotion detection, but a very small number of researchers are concentrating on intensity of the detected emotion. Each emotion may have diferent intensity level and detecting the intensity of an emotion can be benefcial for emotion analysis. For example, if a person writes “I am sad” or “I want to end my life, there is nothing left for me”, then the existing systems will label both of these declarations as ‘sad’ emotions. However, in reality, the intensity of sadness in both statements is diferent—the former represents normal sadness while the other refects severe depression or suicidal emotion."
 
 ___
 ## 48. [Improvements in Brazilian Portuguese Speech Emotion Recognition and its extension to Latin Corpora]() -> [IEEE](https://ieeexplore.ieee.org/document/9892110)
 
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-""
-
-
+> sem acesso
 
 ___
 <br><br>
@@ -720,20 +639,22 @@ ___
 ## TODO:
 
 - se for só axviv, não citar
-- 
-- tabular minhas refs:
-    - qnt citações
+- arrumar os links `fonte -> og` para o parser e soltar em .bib
+    - revisar título das revistas/journals
+    - parser
+- [tabular](pesquisa-bib-dissert.xlsx) minhas refs:
+    - qnt citações google
     - ano
-    - syrvey s/n
-    - dataset (lang)
-    - abordagem
-    - arquitetura
-    - features
-    - target
-    - o que pode ter faltado (e.g.: cross-corpus)
+    - syrvey: s/n
+    - lang
+    - abordagem: sup, unsup
+    - arquitetura: ml, dnn, cnn, rnn, etc
+    - features: ...
+    - target: emoção, intensidade, ...?
+    - cross-corpus: s/n
     - 
-- refs das refs
 - refs TODO
+- ?? refs das refs
 - 
 
 ___
