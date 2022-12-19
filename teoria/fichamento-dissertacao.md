@@ -589,7 +589,7 @@ perceive and understand things [7] [8] [9] [10]."
 "Emotions play an important role in human sphere of life [79]"
 
 ___
-## 42. [New approach in quantification of emotional intensity from the speech signal: emotional temperature](https://flab.k.hosei.ac.jp/pukiwiki/index.php?plugin=attach&pcmd=open&file=1-s2.0-S0957417415005229-main.pdf&refer=Hirano) -> [ELSEVIER]](https://www.sciencedirect.com/science/article/abs/pii/S0957417415005229)
+## 42. [New approach in quantification of emotional intensity from the speech signal: emotional temperature](https://flab.k.hosei.ac.jp/pukiwiki/index.php?plugin=attach&pcmd=open&file=1-s2.0-S0957417415005229-main.pdf&refer=Hirano) -> [ELSEVIER](https://www.sciencedirect.com/science/article/abs/pii/S0957417415005229)
 
 "The automatic SER systems identify the emotional state of human from the speech signal. In the state-of-art many researches are focused on the use of SER in applications of HCI for the real-world. One potential application is the detection of the emotional state in telephone call-center conversations, providing feedback to an operator or supervisor for monitoring purposes, or enter a specific mode designed to resolve problems"
 
