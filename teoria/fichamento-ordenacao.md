@@ -1,73 +1,414 @@
 # ORDENAÇÃO DO FICHAMENTO
 
-Conteúdo
+## 1 Introdução
 
-1 Introdução
 1.1 Voz
+
+> pesquisar um artigo bom sobre voz (apenas para definir)
+
+___
 1.2 Fala
+
+- 1p3: "Speech is the primary form of communication and emotional expression [5]. From childhood, even before being able to speak correct words, children express their emotions in their ununderstandable talks, such as their happiness and confusion. Juvenile, adults, and elderly individuals also express their emotions in their speech. All individuals express common emotions such as happy, sad, angry, happy, worry, fear, and neutral in their speech. However, different spoken languages produce differences in how these emotions are expressed in the speech tone and voice [6], [7]."
+
+- 4p4: "Human speech is more frequently emotional or expressive, which alters the speech characteristics of a speaker. These deviations in speech characteristics from neutral speech adversely affect model performance in the presence of such emotions (D. Li et al., 2005; Nassif et al., 2021)."
+
+- 6p3: "Speech is an act of expressing ideas and emotion by vocalization [31]. It is also an indispensable component for communication between individuals inside human society. As for communication, another element called “language” has been used along with speech. Language is the way to express thought through a distinct set of symbols, dialects, or sounds (speech). Language understanding can be acquired by a comprehensive study of vocal patterns and alphabets. Humans are capable of identifying as well as expressing speech and languages; meanwhile, machines do not have the ability to do so."
+
+
+___
 1.3 Emoção
+
+- 1p10: "Personal emotion is one of the most significant indicators of mental health normality and issues."
+
+- 8p1: "Emotion is a psychological state related with the sensory system brought on by hormonal changes differently connected with contemplations, sentiments, social reactions, and a level of joy or disappointment. This hormonal changes cause audibly distinguishable features in speech and visibly distinct features in facial expressions. This audio-visual communication helps people to perceive each other’s emotion. Audio signal, including both speech and music, in general are inherently complex and few non-linear studies have been conducted to understand the underlying complexity and nonlinearity of these signals and their manifestation in the human brain [1-12]. This underlying complex nature of audio signals makes emotion recognition a troublesome task for a machine. The motivation behind emotion recognition framework is to utilize feeling related learning so that human machine
+correspondence will be improved [13]"
+
+___
 1.4 Intensidade
-1.5 Aprendizado de M ́aquina
+
+- 16p1: "Whether conveyed by the face, body, or voice, expressions of emotion are ubiquitous. Te inferred meaning of the expressions is, generally speaking, substantially aligned with the afective content expressed, and it is  intuitive to suggest that the stronger the expressed afective state the more clear-cut the inferred emotional meaning. Indeed, a body of research suggests that high-intensity emotion expressions are better ‘recognized’ [1,2,3,4,5]."
+
+
+___
+1.5 Aprendizado de Máquina
+
+- 6p2: "Currently, there has been an integration of Artificial Intelligence (AI) in various fields of medical analysis [26][27][28][29][30], but not many were practically used in psychological disorders detection. Skills developed by psychiatrists for instance speech pattern analysis can be 3 learned and mastered by AI. Therefore, AI has become a promising alternative to manual depression detection."
+
+
+___
 1.5.1 Benchmark
+
+
+
+
+___
 1.6 Ideia (motivação)
 
-2 Descrição do Problema
+- 1p2: "According to the World Health Organization (WHO), during the first year of the COVID-19 pandemic, depression and anxiety disorders have increased by 25% globally, especially among young people and women. Due to late or unreceived mental care, the number of related suicide has increased as well. The number of suicides has exceeded 700,000, meaning one person every 40 seconds dies by suicidal action related to a mental disorder [3]."
+
+- 1p4: "There are several mental disorders that can be identified from individual’s emotion changes [9], [10] such as depression disorder [11], [12], stress disorder [13], [14], and anxiety (worry/fear) disorders [15], [16]. Early diagnostic of mental disorders allows the individual to recieve the correct treatment and prevent sever illensses and even protect fom suicidal action [17], [18]."
+
+
+___
+
+## 2 Descrição do Problema
+
 2.1 Definição
+
+
+
+
+___
 2.2 Objetivos
+
+
+
+
+___
 2.2.1 Geral
-2.2.2 Espef ́ıfico
+
+
+
+
+___
+2.2.2 Específico
+
+
+
+
+___
 2.3 Metodologia
+
+
+
+
+___
 2.4 Estrutura do trabalho
 
-3 Justificativa
-3.1 Importâcia da pesquisa
-3.2 Voz
-3.3 Emoção
-3.4 Intensidade
-3.5 Poss ́ıveis  ́areas de atuação
-3.6 Trabalhos correlatos
-3.7 Poss ́ıveis ganhos
 
-4 Fundamentação Teórica
-4.1 Emoção
+
+
+___
+
+## 3 Justificativa
+
+3.1 Importâcia da pesquisa
+
+- 1p1: "Mental health is one of the crucial health aspects that must be monitored and treated for better physical health and a safer community and social life [1]."
+
+- 1p6: "Speech emotion recognition is one of the complex problems to solve as the emotional expression is tightly reliant on the spoken language, dialect, accent, and individuals’ cultural background. In addition, the audio signal itself preserves the spatial and temporal features of the speech. There have been several attempts to solve the speech emotion recognition problem."
+
+
+___
+3.2 Voz
+
+
+
+
+___
+3.3 Emoção
+
+- 14p1: "Emotion impacts our daily lives and is also important in all aspects of our daily living. It influences our social relations, memories and even day-to-day decision making"
+
+- 3p1: "Accurate emotion classification of speech and assessment of its strength are essential to profile human behaviors, which has many potential applications, such as human-robot interface, human-machine dialogue, and social media. In recent years, there is an increasing interest in emotion control in expressive speech synthesis, such as emotional text-to-speech, emotional voice conversion, where accurate control of emotional strength in speech becomes critically important."
+
+
+
+___
+3.4 Intensidade
+
+- 4p5: "Nonetheless, recognizing the emotional aspect with linguistic statements is essential to establish a proper communication link in human–computer interfaces (Picard, 1999). However, this is a difficult problem when humans can also fail to accurately recognize emotion in a speech sample. Thus, speaker identification under stressful or emotional conditions is a challenging area of research."
+
+- 14p4: "Emotion intensity becomes crucial when we want to compare sentences having the same emotion category. In this case, we can use the intensity of each word to compute the overall intensity of the sentence. Words having the same meaning can be used either to enhance or diminish the emotion intensity of a sentence. So far the field of detecting emotion intensity remains less explored but sentiment intensity is been considered for research[9-11] which will further pave way for detection of emotion intensity."
+
+- 16p2: "The discovery of perceptual ambiguity for facial [10,11] and vocal [12] expressions of peak emotional intensity. In the latter study, vocalizations of extreme positive valence could not be disambiguated from extreme negative valence. Moreover, these authors demonstrated a trend opposite the predicted relation for peak intense positive situations: the reactions of real-life lottery winners were rated more negatively as hedonic intensity (in this case cued by the prize sum) increased. Tey argue that peak emotion expression is inherently ambiguous and reliant on contextual information [12–14]"
+
+- 16p3: "It is unclear whether ambiguity is specifc to peak emotion, or if afective expressions are generally more ambiguous than previously thought [12,13]."
+
+___
+3.5 Possíveis areas de atuação
+
+- 1p5: "Intelligent Virtual Personal Assistants (IVA) [19], [20] is a software agent that can perform services for an individual based on processing users’ questions or commands via text or voice, depending on the IVA design and purpose. Several studies address the effect of the IVA devices on individuals’ social life [24], marketing [25], and social communication [26]. However, there are few studies on  the user behavior while using intelligent virtual personal assistant devices to improve the user experience. Yang et al. [27] attempted to understand how to improve the IVA user experience by investigating the relationship between perceived enjoyment, perceived usefulness, and productrelated characteristics using a user survey. Coskun et al. also used questionnaire data to address the factors affecting IVA user experience [28]"
+
+- 4p1: "Speaker recognition has received increasing attention recently with increasing demands in various applications, e.g., security systems, biometric authentication, criminal investigation, and customer care (Alsharhan & Ramsay, 2019; B. Chen & Chen, 2013; Jahangir et al., 2021). Although we do not give significant consideration to the human capability of discriminating speakers using their voices alone, it has been proven to be an integral part of human–computer interactions and has been studied consistently (Shahin et al., 2021, 2022)"
+
+- 4p2: "Several studies have proposed speaker identification techniques that have made significant contributions in the field (Farrell et al., 1994; Praveen Kumar et al., 2018); however, various conditions, e.g., noisy environments or the speaker’s emotional, can affect the performance of such techniques (Bashirpour & Geravanchizadeh, 2018). The performance of these approaches is reduced significantly when the speech samples are obtained under suboptimal
+conditions, e.g., an emotional environment (J. H. L. Hansen & Patil, 2007), where the speech samples are emotional or highly expressive (Ghiurcau et al., 2011; Parthasarathy et al., 2017)."
+
+- 13p2: "The sentiment analysis helps industries to formulate marketing strategies, support after-sale services [29], develop health monitoring system, RS [3], among others"
+
+
+
+
+___
+3.6 Trabalhos correlatos
+
+
+
+
+___
+3.7 Possíveis ganhos
+
+- 17p5: "Intelligent machines with empathy for humans are sure to make the world a better place."
+
+
+___
+
+## 4 Fundamentação Teórica
+
+4.1 Emoção e Intensidade
+
+- 12p10: "Uma das formas de se organizar o conjunto de emoções é observada no Modelo Circumplexo, introduzido por Russel em [22]"
+
+- 16p4:"Tough valence and arousal are equally fundamental in emotion theoretical frameworks, it is implausible to assume that the human voice does not signal physical activation or arousal in the most extreme instances of emotion. In fact, from an ethological perspective, a perceptual representation of arousal as well as the specifc intensity of the emotional state seem essential, even when overall valence and the specifc type of emotion cannot be identifed."
+
+- 16p5:"Tree experiments show that listeners are remarkably good at inferring meaning from variably intense nonverbal vocalizations. Yet their ability to do so is afected by the expressed emotional intensity. We demonstrate a complex relationship between intensity and inferred afective state. Whereas both intensity and arousal are perceived coherently over the range of expressed intensities, the facilitatory efect of increasing intensity on classifying valence and emotion category plateaus at strong emotions. Remarkably, peak emotions are the most ambiguous of all. We call this the ‘emotion intensity paradox’. Our results suggest that value (i.e., valence and emotion category) cannot be retrieved easily from peak emotion expressions. However, arousal and emotion intensity are clearly perceivable in peak expressions."
+
+- 16p6: "In line with previous research [3,4], the data underscore that emotion intensity constitutes a prominent property of vocal emotion communication."
+
+
+___
 4.2 Dados
+
+
+
+
+___
 4.3 Pré-processamento
+
+
+
+
+___
 4.3.1 Sinal
+
+
+
+
+___
 4.3.2 Transformação
+
+
+
+
+___
 4.3.3 Espectrograma
+
+- 6p7: "Techniques for feature extraction such as Mel-Spectrograms have been used extensively in the field of speech recognition systems [44][45][46][47]. Mel spectrogram is a non-linear transformation of frequency based on the waveform of the audio samples [48]. Mel-spectrograms are calculated based on logarithmic frequency spacing and frequency amplitude. On the spectrogram, magnitude will indicate the amplitude of the extracted frequencies [49][50]. However, when portrayed on a Mel-Spectrogram, the values representing amplitudes of each frequency domain (features) at a given time interval are often too subtle to distinguish. "
+
+- 12p18: "MFCC: Além de ser uma das formas de representação espectral do som, é uma das features mais aplicada para tarefas de reconhecimento de fala [30] [31] e de emoção na fala [11] [7]. Os MFCCs são compostos por um conjunto de coeficientes, que coletivamente formam um MFC, Mel-Frequency Cepstrum, que é uma representação da densidade espectral a curto prazo de um som. Para obter estes coeficientes, é realizado o processo chamado de Mel-Frequency Wrapping. Sua ideia é de transformar a saída da FFT em uma instância de uma escala Mel [32],"
+
+
+___
 4.4 Modelagem
+
+
+
+
+___
 4.4.1 Supervisionado
-4.4.2 N ̃ao supervisionado
+
+
+
+
+___
+4.4.2 Não supervisionado
+
+
+
+
+___
 4.4.3 Outras
+
+
+
+
+___
 4.4.4 Comparativo
+
+
+
+
+___
 4.5 Machine Learning
+
+
+
+
+___
 4.6 Deep Learning
-4.6.1 Caracter ́ısticas comuns
+
+- 12p15: "Dada a necessidade de exploração de modelos mais robustos, na bibliografia mais recente, alguns trabalhos optam por estudar o impacto de algoritmos de DL no reconhecimento de emoção na voz [12] [16]. Na pesquisa de Han, Yu e Tashev (2014) [12], objetiva a procura de modelos mais apropriados para a tarefa de reconhecimento de emoção na fala, que possam superar os considerados estado-da-arte da época, entre estes os SVM. Nesta busca, foram obtidos resultados que sugerem que a utilização de redes neurais, como as DNNs (Deep Neural Networks), alcança acurácias 20% melhores em comparação aos demais modelos de aprendizagem de máquina, como as SVM e as HMM."
+
+
+___
+4.6.1 Características comuns
+
+
+
+
+___
 4.6.2 NN
+
+
+
+
+___
 4.6.3 CNN
+
+- 5p5: "CNN uses a pooling operation, which makes them insensitive to the spatial information of the input features, i.e., the position information of features in the time-frequency axis. . The pooling function makes the CNN invariant and results in losing certain features."
+
+
+___
 4.6.4 RNN
+
+
+
+
+___
 4.6.5 Transfer Learning
+
+
+
+
+___
 4.7 Métricas
 
-5 Revisão Bibliográfica
+
+
+
+___
+
+## 5 Revisão Bibliográfica
+
 5.1 Voz
-5.2 Emoç̃oes
+
+
+
+
+___
+5.2 Emoções
+
+- 1p7: "Zhang et al. [32], Bhargava et al. [33], Krishnan et al. [34], and Venkataramanan et al. [29] proposed different machine learning and deep learning approaches to solve the speech emotion recognition under the scenario I (designing a model that used speech signal datasets after performing data preprocessing and feature extraction) approach. This approach requires less data transformation and feature extractions compared to the scenario II approaches.  However, these models were not considering the temporal information within the audio signal within their approaches"
+
+- 11p1: "Automatic emotion recognition from speech signal has become a major research topic in the field of Human computer Interaction (HCI) in the recent times due to its many potential applications. It is being applied to growingnumber of areas such as humanoid robots, car industry, call centers, mobile communication, computer tutorial applications etc. [1]."
+
+- 11p2: "The most commonly used acoustic features in literature are related to MFCC’s and prosody features like pitch, intensity and speaking rate"
+
+- 12p8: "A literatura relacionada apresenta diversas propostas de modelos para a realização da tarefa de reconhecimento de emoção na fala. Trabalhos como Dellaert et al. (1996) [6], Kwon et al. (2003) [7] e Pan, Shen (2012) [11], utilizam modelos mais tradicionais de IA, tais como K-nearest Neighbors (KNN), Support Vector Machines (SVM) e Hidden Markov Models (HMM). Em Dellaert et al. (1996) [6], são utilizadas apenas features prosódicas para o modelo, com o intuito de reconhecer emoções somente pelas características fonéticas e linguísticas do som. Já em Kwon et al. (2003) [7] e Pan, Shen (2012) [11], são incorporadas as features MFCC aos modelos, que, a partir deste momento, tornou-se a feature predominante em trabalhos da área. Contudo, Dellaert et al. (1996) [6], Kwon et al. (2003) [7] e Pan, Shen (2012) [11] utilizam, ainda, modelos de ML mais simplórios, como o HMM, o KNN e o SVM."
+
+- 17p2: "According to the research performed by Feidakis, Daradoumis and Cabella [21] where the classification of emotions based on fundamental models is presented, exist 66 emotions which can be divided into two groups: ten basic emotions (anger, anticipation, distrust, fear, happiness, joy, love, sadness, surprise, trust) and 56 secondary emotions. To evaluate such a huge amount of emotions, it is extremely difficult, especially if automated recognition and evaluation is required. Moreover, similar emotions can have overlapping parameters, which are measured. To handle this issue, the majority of studies of emotion evaluation focuse s on other classification s [3,21], which include dimensions of emotions, in most cases valence (activation—negative/positive) and arousal (high/low) [23,24], and analyses only basic emotions which can be defined more easily. A majority of researches use variations of Russel’s circumplex model of emotions (Figure 1) which provides a distribution of basic emotions in two-dimensional space in respect of valence and and arousal"
+
+- 17p7: "The term Valence refers to the feel of the person that transforms from positive to negative, pleasant to unpleasant. The term Arousal refers to amount of anticipation transforming from calm to excited. Valence can be considered in two different manner – intrinsic attractiveness and aversiveness (Positive and Negative). The level of arousal can be expressed as high or low. High arousal refers to the high energetic state and low arousal refers to state of tiredness or immobility. The combination of these four factors gives different emotions. Such that positive/high arousal (happy), positive/low arousal (pleasant), negative/high arousal (anger and fear), negative/low arousal (sad) [164]"
+
+
+
+
+___
 5.3 Intensidade
+
+- 17p3: "Moreover, the issue of emotion recognition and evaluation remains complicated by its interdisciplinary nature: emotion recognition and strength evaluation are the object of psychology sciences, while the measurement and evaluation of human body parameters are related with medical sciences and measurement engineering, and sensor data analysis and solution is the object of mechatronics"
+
+- 3p2: "The simplest emotion strength control method is to linearly scale the emotion representation vector [1]. The effect of such a linear scale is hardly interpretable. To obtain a meaningful strength descriptor, some followed the idea of “relative attributes” [2–4] and quantify the emotion strength by learning from the <neutral, emotional> speech pairs. Support-VectorMachine (SVM) based attribute ranking [4] learns the difference between two samples that are significantly different in a particular attribute, that has been widely studied in computer vision [5, 6]."
+
+- 3p3: "In speech processing, Zhu et al. [2] proposed to learn an emotion attribute ranking function R(·) from the <neutral, emotional> paired speech features. or of the emotion strength of one specific emotional speech. Lei et al. [3] further extended the utterance level emotion attribute ranking function to phoneme level and obtain a fine-grained ranking function. We note that a trained ranking function R(·) on specific data is not easily generalized to new domains."
+
+- 3p5: "The strategy of stacking more convolutional layers to expand the receptive field of a CNN has been widely used to model time series data and yield satisfactory performance [7]. The strength predictor then reads the high-level feature representation to predict the emotion strength. Recent studies have confirmed the effectiveness of combining CNN and BiLSTM for classification [7], and recognition [11] tasks"
+
+- 3p6: "As shown in Fig. 2, to improve the model generalization, we employ a domain fusion  strategy [12, 13], which mix multiple emotional speech datasets from various domains to train our StrengthNet."
+
+
+___
 5.4 Dados utilizados
+
+
+
+
+___
 5.5 Abordagens
+
+
+
+
+___
 5.6 Dados utilizados
+
+
+
+
+___
 5.6.1 VERBO
+
+- 12p17: "Tal objetivo só é possível devido à recente publicação do trabalho de Neto, José e Filho (2018) [21] que contempla a construção de uma base de dados de emoção na voz em língua portuguesa, o VERBO."
+
+
+
+___
 5.6.2 VIVAE
-5.7 Evolução Hist ́orica
+
+
+
+
+___
+5.7 Evolução Histórica
+
+
+
+
+___
 5.8 Comparativo: BRAVO
 
-6 Trabalho Proposto
+
+
+
+___
+
+## 6 Trabalho Proposto
+
 6.1 Proposta
+
+- 6p4: "For automatic speech recognition (ASR), the system will process vocal data (speech) into digital signals suitable for AI training and analysis [32]. Speakers have unique voice patterns due to the variation of personalities and body structure. Accordingly, ASR uses criteria such as speech size and speaking styles to classify voice samples into groups. Spectrograms and chroma feature techniques may potentially enhance the system in organizing voices [33]. Both techniques extract and present relevant features to the system, enabling the system to conduct more complex classification and evaluation [34][38][42][52]. The methods provided above allow AI to effectively perform speech and emotions recognition"
+
+- 6p5: "In many speech recognition projects, the analysis focuses on the distribution of acoustic patterns over time [43][48][51][58]"
+
+___
 6.2 Definição
+
+
+
+
+___
 6.2.1 Características
+
+
+
+
+___
 6.3 Funcionamento
+
+
+
+
+___
 6.4 Aplicabilidade
+
+
+
+
+___
 6.5 Viabilidade
 
-7 Cronograma
+
+
+
+___
+
+## 7 Cronograma
+
 7.1 Próximos passos
+
+
+
+
+___
