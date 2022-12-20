@@ -366,7 +366,7 @@ ___
 > algumas refs pra fund. teo caso necessário
 
 ___
-## 23. [StrengthNet: Deep Learning-based Emotion Strength Assessment for Emotional Speech Synthesis](https://arxiv.org/abs/2110.03156) -> [???]()
+## 23. [StrengthNet: Deep Learning-based Emotion Strength Assessment for Emotional Speech Synthesis](https://arxiv.org/abs/2110.03156) -> [Interspeech](https://www.isca-speech.org/archive/pdfs/interspeech_2022/liu22i_interspeech.pdf)
 
 > ref #3
 
@@ -376,22 +376,22 @@ ___
 > pulei
 
 ___
-## 25. [The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/) -> [???]()
+## 25. [The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/) -> [NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/)
 
 > TODO: voltar
 
 ___
-## 26. [Russell’s (1980) Circumplex Models](https://psu.pb.unizin.org/psych425/chapter/circumplex-models/) -> [???]()
+## 26. [Russell’s (1980) Circumplex Models](https://psu.pb.unizin.org/psych425/chapter/circumplex-models/) -> [Psychology of Human Emotion](https://psu.pb.unizin.org/psych425/)
 
 > TODO: voltar
 
 ___
-## 27. [O afeto sob a perspectiva do circumplexo: evidências de validade de construto](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005) -> [???]()
+## 27. [O afeto sob a perspectiva do circumplexo: evidências de validade de construto](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005) -> [PEP](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005)
 
 > TODO: valência e ativação <=> {prazer, desprazer} e {vigor e quietude}
 
 ___
-## 28. [All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework](https://www.cse.iitb.ac.in/~pb/papers/ieee-toac-sa.pdf) -> [???]()
+## 28. [All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework](https://www.cse.iitb.ac.in/~pb/papers/ieee-toac-sa.pdf) -> [IEEE](https://ieeexplore.ieee.org/document/8756111)
 
 "Emotion [1] and sentiment [3] are closely related and are often been used incorrectly in a similar sense. According to Munezero et al. [4], emotions and sentiments differ on the scale of duration on which they are experienced. Emotions are usually shorter in duration, whereas sentiments are more stable and valid for longer period of time [5]. Also, sentiments are normally expressed towards a target entity, whereas emotions are not always target-centric [6]"
 
@@ -400,7 +400,7 @@ ___
 "The classification of emotions and sentiments into coarsegrained classes does not always reflect exact state of opinion of a user, hence, do not serve the purpose completely. Recently, the attention has been shifted towards fine-grained analysis on the dimensional scale [10], [11], [12], [13], [14]. Arousal or intensity defines the degree of emotion and sentiment felt by the user and often differs on a case-to-case basis. Within a single class (e.g., Sadness) some emotions are gentle (e.g., ‘I lost my favorite pen today.’) while others can be evere (e.g., ‘my uncle died from cancer today...RIP’). Similarly, some sentiments are gentler than others within the same polarity, e.g., ‘happy to see you again’ v/s ‘can’t wait to see you again’."
 
 ___
-## 29. [A Multi-task Ensemble Framework for Emotion, Sentiment and Intensity Prediction](https://arxiv.org/abs/1808.01216) -> [???]()
+## 29. [A Multi-task Ensemble Framework for Emotion, Sentiment and Intensity Prediction](https://arxiv.org/abs/1808.01216) -> [arxiv](https://arxiv.org/abs/1808.01216)
 
 > ref #28
 
@@ -411,7 +411,7 @@ ___
 > pulei
 
 ___
-## 31. [Emotion Recognition from Speech: An Unsupervised Learning Approach](https://www.atlantis-press.com/journals/ijcis/125945494/view) -> [???]()
+## 31. [Emotion Recognition from Speech: An Unsupervised Learning Approach](https://www.atlantis-press.com/journals/ijcis/125945494/view) -> [IJCIS](https://www.atlantis-press.com/journals/ijcis/125945494/view)
 
 "Nowadays applications are more and more interactive, which requires an optimal human–machine interaction. One of the most obvious ways to achieve this goal is spoken communication. Since a few decades, speech processing has registered considerable progress in different applications, such as speech recognition, synthesis and enhancement, source separation, etc"
 
@@ -436,7 +436,7 @@ ___
 "[17] [52] [53]"
 
 ___
-## 32. [Deep Learning Techniques for Speech Emotion Recognition, from Databases to Models](https://www.mdpi.com/1424-8220/21/4/1249) -> [???]()
+## 32. [Deep Learning Techniques for Speech Emotion Recognition, from Databases to Models](https://www.mdpi.com/1424-8220/21/4/1249) -> [MDPI](https://www.mdpi.com/1424-8220/21/4/1249)
 
 "Speech emotion recognition can also be very instrumental in vehicles’ safety features. It can recognize the driver’s state of mind and help prevent accidents and disasters [8]. Another related application is in therapy sessions; by employing SER, therapists will understand their patients’ state and possibly underlying hidden emotions as well [9]. It has been proven that in stressful and noisy environments like aircraft cockpits,
 the application of SER can significantly help to increase the performance of automatic speech recognition systems [10]. The service industry and e-commerce can utilize speech emotion recognition in call centers to give early alerts to customer service and supervisors of the caller’s state of mind [11]. In addition, speech emotion recognition has been suggested to be implemented in interactive movies to understand viewers’ emotions. The interactive film could then go along different routes and have different endings [12]."
@@ -474,7 +474,7 @@ corpora and SVM as classifier method"
 "Another point that we can improve the robustness of SER models is to create models that classify continuous speech emotions. For this reason, we can design architectures that are keeping a sliding window and measure the emotional content of the slide and decide based on that."
 
 ___
-## 33. [A voice-based real-time emotion detection technique using recurrent neural network empowered feature modelling](https://link.springer.com/content/pdf/10.1007/s11042-022-13363-4.pdf) -> [???]()
+## 33. [A voice-based real-time emotion detection technique using recurrent neural network empowered feature modelling](https://link.springer.com/content/pdf/10.1007/s11042-022-13363-4.pdf) -> [Springer](https://link.springer.com/article/10.1007/s11042-022-13363-4)
 
 > n/a
 
@@ -484,7 +484,7 @@ ___
 "Unsupervised feature learning has been rarely explored in ASER beyond autoencoders (AE) [8] and denoising autoencoders (DAE) [6]. AE and DAE aim to learn features that are good for the reconstruction of the input. More advanced techniques, such as variational autoencoders (VAE) [9] and generative adversarial networks (GAN) [10], do not aim to reconstruct the input, but aim to generate data that come from the same distribution as the input. This relaxation tends to put more emphasis on the modeling of intrinsic structures of the data during feature learning [7, 9, 10]."
 
 ___
-## 35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.mdpi.com/2079-9292/10/17/2086) -> [???]()
+## 35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.mdpi.com/2079-9292/10/17/2086) -> [MDPI](https://www.mdpi.com/2079-9292/10/17/2086)
 
 "Speech carries a speaker’s semantic information and contains the emotional information the speaker wants to convey [1]. The same text may express opposite meanings in different emotional contexts. Emotional interaction is an indispensable part of human social activities, while emotional intelligence plays an important part in human computer interaction (HCI) [2]. The emotional states affect human interaction, such as facial expression [3,4], body posture [5], communication content [6], and speech mannerisms [7]. Influenced by multimodal features, recognizing emotions is vital to develop an automatic speech emotion recognition system for understanding of these interactions, and various speech recognition for pronunciation training and learning
 are developed [8,9]."
@@ -497,7 +497,7 @@ are developed [8,9]."
 target datasets for further studies"
 
 ___
-## 36. [Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms](https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9) -> [???]()
+## 36. [Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms](https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9) -> [Radioengineering](https://www.radioeng.cz/fulltexts/2020/20_02_0353_0364.pdf)
 
 > n/a
 
@@ -540,7 +540,7 @@ ___
 "Emotion analysis from the auditory signal of humans has become more prominent research due to (a) the availability of fast computing systems, (b) the effectiveness of various signal processing algorithms, and (c) the acoustic differences in speech signals that are naturally embedded in various emotional situations"
 
 ___
-## 39. [Emotion recognition from speech: a review](https://www.sci.brooklyn.cuny.edu/~levitan/nlp-psych/papers/koolagudi12.pdf) -> [???]()[]
+## 39. [Emotion recognition from speech: a review](https://www.sci.brooklyn.cuny.edu/~levitan/nlp-psych/papers/koolagudi12.pdf) -> [Springer](https://link.springer.com/article/10.1007/s10772-011-9125-1)
 
 ![](img/9_1.JPG)
 
@@ -588,7 +588,7 @@ perceive and understand things [7] [8] [9] [10]."
 "Emotions play an important role in human sphere of life [79]"
 
 ___
-## 42. [New approach in quantification of emotional intensity from the speech signal: emotional temperature](https://flab.k.hosei.ac.jp/pukiwiki/index.php?plugin=attach&pcmd=open&file=1-s2.0-S0957417415005229-main.pdf&refer=Hirano) -> [ELSEVIER]](https://www.sciencedirect.com/science/article/abs/pii/S0957417415005229)
+## 42. [New approach in quantification of emotional intensity from the speech signal: emotional temperature](https://flab.k.hosei.ac.jp/pukiwiki/index.php?plugin=attach&pcmd=open&file=1-s2.0-S0957417415005229-main.pdf&refer=Hirano) -> [ELSEVIER](https://www.sciencedirect.com/science/article/abs/pii/S0957417415005229)
 
 "The automatic SER systems identify the emotional state of human from the speech signal. In the state-of-art many researches are focused on the use of SER in applications of HCI for the real-world. One potential application is the detection of the emotional state in telephone call-center conversations, providing feedback to an operator or supervisor for monitoring purposes, or enter a specific mode designed to resolve problems"
 
@@ -637,24 +637,9 @@ ___
 
 ## TODO:
 
-- se for só axviv, não citar
-- arrumar os links `fonte -> og` para o parser e soltar em .bib
-    - revisar título das revistas/journals
-    - parser
-- [tabular](pesquisa-bib-dissert.xlsx) minhas refs:
-    - qnt citações google
-    - ano
-    - syrvey: s/n
-    - lang
-    - abordagem: sup, unsup
-    - arquitetura: ml, dnn, cnn, rnn, etc
-    - features: ...
-    - target: emoção, intensidade, ...?
-    - cross-corpus: s/n
-    - 
-- refs TODO
-- ?? refs das refs
-- 
+- revisar título das revistas/journals
+- parser
+- refs das refs
 
 ___
 <br><br>
