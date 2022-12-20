@@ -637,8 +637,8 @@ ___
 
 ## TODO:
 
+- parser para bib
 - revisar título das revistas/journals
-- parser
 - refs das refs
 
 ___
