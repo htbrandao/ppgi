@@ -18,7 +18,7 @@
 
     - Scenario II: designing a model that converts the speech signal to images (spectrograms) and then performing data preprocessing and feature extraction to fit the data to image-based models.
 
-Wani et al. [30] and Lotfidereshgi et al. [31] are examples of using the scenario II methodology to address the speech emotion recognition. The significant drawbacks of scenario II are that the data is processed without any consideration of temporal features in the speech signal, which significantly limits the ability of such models to recognize different emotions from the speech correctly. In addition, the data transformation and feature extraction require additional implementation costs from both hardware and software aspects. For the scenario I, Zhang et al. [32], Bhargava et al. [33], Krishnan et al. [34], and Venkataramanan et al. [29] proposed different machine learning and deep learning approaches to solve the speech emotion recognition under the scenario I approach. This approach requires less data transformation and feature extractions compared to the scenario II approaches.  However, these models were not considering the temporal information within the audio signal within their approaches"
+"Wani et al. [30] and Lotfidereshgi et al. [31] are examples of using the scenario II methodology to address the speech emotion recognition. The significant drawbacks of scenario II are that the data is processed without any consideration of temporal features in the speech signal, which significantly limits the ability of such models to recognize different emotions from the speech correctly. In addition, the data transformation and feature extraction require additional implementation costs from both hardware and software aspects. For the scenario I, Zhang et al. [32], Bhargava et al. [33], Krishnan et al. [34], and Venkataramanan et al. [29] proposed different machine learning and deep learning approaches to solve the speech emotion recognition under the scenario I approach. This approach requires less data transformation and feature extractions compared to the scenario II approaches.  However, these models were not considering the temporal information within the audio signal within their approaches"
 
 "This paper proposed a simple design hybrid model of the gated recurrent neural networks (GRU) with a 1D convolution neural network (1D-CNN) support."
 
@@ -637,81 +637,7 @@ ___
 
 ## TODO:
 
+- ordenar o fichamento de acordo com o índice
 - parser para bib
 - revisar título das revistas/journals
 - refs das refs
-
-___
-<br><br>
-
-    Conteúdo
-
-    1 Introdução
-    1.1 Voz
-    1.2 Fala
-    1.3 Emoção
-    1.4 Intensidade
-    1.5 Aprendizado de M ́aquina
-    1.5.1 Benchmark
-    1.6 Ideia (motivação)
-
-    2 Descrição do Problema
-    2.1 Definição
-    2.2 Objetivos
-    2.2.1 Geral
-    2.2.2 Espef ́ıfico
-    2.3 Metodologia
-    2.4 Estrutura do trabalho
-
-    3 Justificativa
-    3.1 Importâcia da pesquisa
-    3.2 Voz
-    3.3 Emoção
-    3.4 Intensidade
-    3.5 Poss ́ıveis  ́areas de atuação
-    3.6 Trabalhos correlatos
-    3.7 Poss ́ıveis ganhos
-
-    4 Fundamentação Teórica
-    4.1 Emoção
-    4.2 Dados
-    4.3 Pré-processamento
-    4.3.1 Sinal
-    4.3.2 Transformação
-    4.3.3 Espectrograma
-    4.4 Modelagem
-    4.4.1 Supervisionado
-    4.4.2 N ̃ao supervisionado
-    4.4.3 Outras
-    4.4.4 Comparativo
-    4.5 Machine Learning
-    4.6 Deep Learning
-    4.6.1 Caracter ́ısticas comuns
-    4.6.2 NN
-    4.6.3 CNN
-    4.6.4 RNN
-    4.6.5 Transfer Learning
-    4.7 Métricas
-
-    5 Revisão Bibliográfica
-    5.1 Voz
-    5.2 Emoç̃oes
-    5.3 Intensidade
-    5.4 Dados utilizados
-    5.5 Abordagens
-    5.6 Dados utilizados
-    5.6.1 VERBO
-    5.6.2 VIVAE
-    5.7 Evolução Hist ́orica
-    5.8 Comparativo: BRAVO
-
-    6 Trabalho Proposto
-    6.1 Proposta
-    6.2 Definição
-    6.2.1 Características
-    6.3 Funcionamento
-    6.4 Aplicabilidade
-    6.5 Viabilidade
-
-    7 Cronograma
-    7.1 Próximos passos
