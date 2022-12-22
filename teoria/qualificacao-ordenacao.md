@@ -2,6 +2,8 @@
 
 ## 1 Introdução
 
+- 0p1: "We have been researching a system for improving baby care by recognizing a baby's emotion from the baby's cry."
+
 - 41p1: "As John McCarthy said, the science of Artificial Intelligence aims at making intelligent machines [1]. It is an interdisciplinary field [2] [3] overlapping with the fields of robotics, emotion recognition, data mining, human computer interaction to name a few. The two main fields dealing with making computers capable of sensing human emotions are Human Computer Interaction (HCI) and Affective Computing. Affective computing [4] [5] is a science under which methods are being developed that can not only replicate but also process, identify and understand human emotions"
 
 1.1 Voz
@@ -104,6 +106,7 @@ ___
 - 1p6: "Speech emotion recognition is one of the complex problems to solve as the emotional expression is tightly reliant on the spoken language, dialect, accent, and individuals’ cultural background. In addition, the audio signal itself preserves the spatial and temporal features of the speech. There have been several attempts to solve the speech emotion recognition problem."
 
 - 19p1: "Intensity estimation has a lot of potential applications for human-robot interaction, patient monitoring, security surveillance and entertainment. If it is not possible to read the intensity of emotions during speech input, the possibility that responses given when humans and machines communicate are greatly misunderstood cannot be eliminated."
+
 ___
 3.2 Voz
 
@@ -118,7 +121,7 @@ ___
 - 3p1: "Accurate emotion classification of speech and assessment of its strength are essential to profile human behaviors, which has many potential applications, such as human-robot interface, human-machine dialogue, and social media. In recent years, there is an increasing interest in emotion control in expressive speech synthesis, such as emotional text-to-speech, emotional voice conversion, where accurate control of emotional strength in speech becomes critically important."
 
 
-
+.
 ___
 3.4 Intensidade
 
