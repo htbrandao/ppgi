@@ -1,4 +1,4 @@
-# Fichamento @ dissertação
+# Fichamento @ qualificação
 
 ## 1. [Speech Emotion Recognition using Supervised Deep Recurrent System for Mental Health Monitoring](https://arxiv.org/abs/2208.12812) -> [IEEE](https://wfiot2022.iot.ieee.org/)
 
@@ -458,14 +458,13 @@ ___
 ___
 ## 35. [Unsupervised Feature Learning for Speech Emotion Recognition Based on Autoencoder](https://www.mdpi.com/2079-9292/10/17/2086) -> [MDPI](https://www.mdpi.com/2079-9292/10/17/2086)
 
-"Speech carries a speaker’s semantic information and contains the emotional information the speaker wants to convey [1]. The same text may express opposite meanings in different emotional contexts. Emotional interaction is an indispensable part of human social activities, while emotional intelligence plays an important part in human computer interaction (HCI) [2]. The emotional states affect human interaction, such as facial expression [3,4], body posture [5], communication content [6], and speech mannerisms [7]. Influenced by multimodal features, recognizing emotions is vital to develop an automatic speech emotion recognition system for understanding of these interactions, and various speech recognition for pronunciation training and learning are developed [8,9]."
+- 35p1: "Speech carries a speaker’s semantic information and contains the emotional information the speaker wants to convey [1]. The same text may express opposite meanings in different emotional contexts. Emotional interaction is an indispensable part of human social activities, while emotional intelligence plays an important part in human computer interaction (HCI) [2]. The emotional states affect human interaction, such as facial expression [3,4], body posture [5], communication content [6], and speech mannerisms [7]. Influenced by multimodal features, recognizing emotions is vital to develop an automatic speech emotion recognition system for understanding of these interactions, and various speech recognition for pronunciation training and learning are developed [8,9]."
 
 "SER is an emerging field where quantities of researchers developed various techniques and approaches to strengthen this area [15]. Most research pays attention to making use of certain common speech signals for emotional identification. In the recent years, with the development of deep learning, many approaches are developed and employed for feature detection and emotional classification. However, challenges still exist, especially when lacking enough speech data, it is difficult to make a fair judgement with limited datasets."
 
-"Some researchers have noticed and focused on identifying features through various approaches especially with unsupervised learning techniques [16,17]. Unsupervised feature learning aims to use a large number of unlabeled data to train and extract features. A common method is the autoencoder method [18,19], which usually reduces the dimensions of the input information and reconstructs the information according to the reduced features, which tries to restore the input information."
+- 35p3: "Some researchers have noticed and focused on identifying features through various approaches especially with unsupervised learning techniques [16,17]. Unsupervised feature learning aims to use a large number of unlabeled data to train and extract features. A common method is the autoencoder method [18,19], which usually reduces the dimensions of the input information and reconstructs the information according to the reduced features, which tries to restore the input information."
 
-"We attempt to transform the speech information into the corresponding spectrogram, use a convolutional neural network to extract features widely and effectively, then transfer the pre-trained autoencoder model to
-target datasets for further studies"
+- 35p4: "We attempt to transform the speech information into the corresponding spectrogram, use a convolutional neural network to extract features widely and effectively, then transfer the pre-trained autoencoder model to target datasets for further studies"
 
 ___
 ## 36. [Speech Emotion Recognition Using Unsupervised Feature Selection Algorithms](https://www.semanticscholar.org/paper/Speech-Emotion-Recognition-using-Unsupervised-Bandela-Kumar/e8d637f9f02a8c4849e5af09e6b9f9edf5e76eb9) -> [Radioengineering](https://www.radioeng.cz/fulltexts/2020/20_02_0353_0364.pdf)
@@ -475,29 +474,26 @@ ___
 ___
 ## 37. [Survey of Deep Representation Learning for Speech Emotion Recognition](https://www.semanticscholar.org/paper/Survey-of-Deep-Representation-Learning-for-Speech-Latif-Rana/368e0844bbd3feb5ab17a271ad1663ca5a6fb7e7) -> [IEEE](https://ieeexplore.ieee.org/document/9543566)
 
-"Studies report that linguistic messages are rather unreliable means to predict and analyse human affective behaviour [1] because linguistic content is languagedependent, and the generalisation of emotions for multiple
-languages is very difficult to achieve.  People often choose different words to express emotion, making it hard to anticipate a speaker’s word choice and the associated affective expressions."
+- 37p1: "Studies report that linguistic messages are rather unreliable means to predict and analyse human affective behaviour [1] because linguistic content is languagedependent, and the generalisation of emotions for multiple languages is very difficult to achieve.  People often choose different words to express emotion, making it hard to anticipate a speaker’s word choice and the associated affective expressions."
 
-"The paralinguistic content of speech, on the other hand, provides an immense body of acoustic features that can
-be used to encode the emotional state of the speaker. These acoustic features are reliable indicators of basic emotions and have been explored by different machine learning (ML) [2][3][4] as well as deep learning (DL) models [5][6][7][8] for speech emotion recognition (SER)."
+- 37p2: "The paralinguistic content of speech, on the other hand, provides an immense body of acoustic features that can be used to encode the emotional state of the speaker. These acoustic features are reliable indicators of basic emotions and have been explored by different machine learning (ML) [2][3][4] as well as deep learning (DL) models [5][6][7][8] for speech emotion recognition (SER)."
 
-"For decades, Mel frequency cepstral coefficients (MFCCs) [18] has been used as the principal set of features for SER and other speech analysis tasks. The four steps involved in the extraction of MFCCs are: (1) computation of the Fourier transform, (2) projection of the powers of the spectrum onto the Mel scale, (3) taking the logarithm of the Mel frequencies, and (4) applying discrete cosine transformation (DCT) or other suited transformations for compressed representations. It is found that the last step loses information and destroys spatial relations; therefore, it is usually omitted, which results in the LogMel spectrum, a popular feature used by the speech community. It is also the most popular feature to train DL networks in the speech domain"
+- 37p3: "For decades, Mel frequency cepstral coefficients (MFCCs) [18] has been used as the principal set of features for SER and other speech analysis tasks. The four steps involved in the extraction of MFCCs are: (1) computation of the Fourier transform, (2) projection of the powers of the spectrum onto the Mel scale, (3) taking the logarithm of the Mel frequencies, and (4) applying discrete cosine transformation (DCT) or other suited transformations for compressed representations. It is found that the last step loses information and destroys spatial relations; therefore, it is usually omitted, which results in the LogMel spectrum, a popular feature used by the speech community. It is also the most popular feature to train DL networks in the speech domain"
 
-"Studies show that deep architectures can learn more complex relationships that greatly help improve performance
-[22]"
+"Studies show that deep architectures can learn more complex relationships that greatly help improve performance [22]"
 
-"In contrast to fully connected DNNs, the training process of CNNs is more straightforward due to fewer parameters [49]. CNNs are powerful at extracting low-level representations at the initial layers, and high-level features (textures and semantics) in the higher layers [50]."
+- 37p5: "In contrast to fully connected DNNs, the training process of CNNs is more straightforward due to fewer parameters [49]. CNNs are powerful at extracting low-level representations at the initial layers, and high-level features (textures and semantics) in the higher layers [50]."
 
-"Recurrent neural networks (RNNs) [52], [53] introduce recurrent connections within layers to enable parameters
+- 37p6: "Recurrent neural networks (RNNs) [52], [53] introduce recurrent connections within layers to enable parameters
 sharing across time. They create a memory in the network by using the information from all previous inputs."
 
-"Convolutional neural networks (CNNs) are also popular for emotional representation learning in SER [5], [125]–[128]. They can learn more generalised features from speech compared to DNNs, and other feature-based approaches [50]."
+- 37p7: "Convolutional neural networks (CNNs) are also popular for emotional representation learning in SER [5], [125]–[128]. They can learn more generalised features from speech compared to DNNs, and other feature-based approaches [50]."
 
 ![](img/8_1.JPG)
 
 ![](img/8_2.JPG)
 
-"Researchers achieved promising results using CNNs and CNN-RNNs to learn low-level speech representations from raw waveforms, allowing a network to capture important emotional  haracteristics better. However, the proper design of the feature extraction block is crucial to achieving this goal [50]. However, raw speech as input to deep models requires enormous data to achieve competitive performance. Researchers use data augmentation techniques to meet the data requirement [50], [225]. Log-Mel features and spectrograms are considered popular choices to alleviate this problem as they need less processing, fewer data samples, and training to achieve state-of-the-art classification performance compared to setups where raw audio is used"
+- 37p8: "Researchers achieved promising results using CNNs and CNN-RNNs to learn low-level speech representations from raw waveforms, allowing a network to capture important emotional  haracteristics better. However, the proper design of the feature extraction block is crucial to achieving this goal [50]. However, raw speech as input to deep models requires enormous data to achieve competitive performance. Researchers use data augmentation techniques to meet the data requirement [50], [225]. Log-Mel features and spectrograms are considered popular choices to alleviate this problem as they need less processing, fewer data samples, and training to achieve state-of-the-art classification performance compared to setups where raw audio is used"
 
 "LSTM/GRU-RNN-based architectures are mostly applied due to their ability to capture temporal context. However, RNNs use computationally expensive back-propagation through time (BPTT) [226] to learn temporal dependencies by sequentially processing the speech signal."
 
@@ -520,8 +516,7 @@ ___
 ___
 ## 40. [Speech Emotion Recognition Using Deep Learning Techniques: A Review](https://ieeexplore.ieee.org/abstract/document/8805181) -> [IEEE](https://ieeexplore.ieee.org/abstract/document/8805181)
 
-"Emotion recognition from speech has evolved from being a niche to an important component for Human-Computer
-Interaction (HCI) [1]–[3]. These systems aim to facilitate the natural interaction with machines by direct voice interaction instead of using traditional devices as input to understand verbal content and make it easy for human listeners to react [4]–[6]. Determining the emotional state of humans is an idiosyncratic task and may be used as a standard for any emotion recognition model [11]."
+"Emotion recognition from speech has evolved from being a niche to an important component for Human-Computer Interaction (HCI) [1]–[3]. These systems aim to facilitate the natural interaction with machines by direct voice interaction instead of using traditional devices as input to understand verbal content and make it easy for human listeners to react [4]–[6]. Determining the emotional state of humans is an idiosyncratic task and may be used as a standard for any emotion recognition model [11]."
 
 "Deep Learning has been considered as an emerging research field in machine learning and has gained more attention in recent years [18]."
 
@@ -535,8 +530,7 @@ Interaction (HCI) [1]–[3]. These systems aim to facilitate the natural interac
 
 ![](img/10_4.JPG)
 
-"For SER, many deep learning algorithms have been developed [79]–[84]. However, there exist meaningful prospects
-and fertile ground for future research opportunities not only in SER but many other domains [85]–[87]. The layer-wise structure of neural networks adaptively learns features from available raw data hierarchically [88], [89]."
+"For SER, many deep learning algorithms have been developed [79]–[84]. However, there exist meaningful prospects and fertile ground for future research opportunities not only in SER but many other domains [85]–[87]. The layer-wise structure of neural networks adaptively learns features from available raw data hierarchically [88], [89]."
 
 "Convolutional Neural Network (CNN) also uses the layerwise structure and can categorize the seven universal emotions from the defined speech spectrograms [111]. In [114], a technique for SER that is based on spectrograms and deep CNN is presented. The model consists of three fully connected convolutional layers for extracting emotional features from the spectrogram images of the speech signal."
 
@@ -544,14 +538,12 @@ and fertile ground for future research opportunities not only in SER but many ot
 
 ![](img/10_5.JPG)
 
-"A hybrid deep learning modality may inherit the underlying properties of RNN with CNN, with convolutional levels
-implanted with RNN [94], [105], [118]. This enables the model to obtain both frequency and temporal dependency
-in a given speech signal."
+"A hybrid deep learning modality may inherit the underlying properties of RNN with CNN, with convolutional levels implanted with RNN [94], [105], [118]. This enables the model to obtain both frequency and temporal dependency in a given speech signal."
 
 ___
 ## 41. [Emotion Recognition and Detection Methods: A Comprehensive Survey](https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf) -> [IEC](https://iecscience.org/uploads/jpapers/202003/dnQToaqdF8IRjhE62pfIovCkDJ2jXAcZdK6KHRzM.pdf)
 
-"As John McCarthy said, the science of Artificial Intelligence aims at making intelligent machines [1]. It is an interdisciplinary field [2] [3] overlapping with the fields of robotics, emotion recognition, data mining, human computer interaction to name a few. The two main fields dealing with making computers capable of sensing human emotions are Human Computer Interaction (HCI) and Affective Computing. Affective computing [4] [5] is a science under which methods are being developed that can not only replicate but also process, identify and understand human emotions"
+- 41p1: "As John McCarthy said, the science of Artificial Intelligence aims at making intelligent machines [1]. It is an interdisciplinary field [2] [3] overlapping with the fields of robotics, emotion recognition, data mining, human computer interaction to name a few. The two main fields dealing with making computers capable of sensing human emotions are Human Computer Interaction (HCI) and Affective Computing. Affective computing [4] [5] is a science under which methods are being developed that can not only replicate but also process, identify and understand human emotions"
 
 "Emotions are a vital part of human lives which play an integral role in how humans
 perceive and understand things [7] [8] [9] [10]."
@@ -563,8 +555,7 @@ ___
 
 "The automatic SER systems identify the emotional state of human from the speech signal. In the state-of-art many researches are focused on the use of SER in applications of HCI for the real-world. One potential application is the detection of the emotional state in telephone call-center conversations, providing feedback to an operator or supervisor for monitoring purposes, or enter a specific mode designed to resolve problems"
 
-"In the field of diagnostic and therapeutic tools, the SER systems can give support to traditional methods for treatment of mental disorders trough game-oriented interfaces with spoken interaction [Kostoulas et al., 2012](https://www.sciencedirect.com/science/article/abs/pii/S0957417412005908), detect mental illness using speech as
-a predictor of depression, suicidality and mood transitions [Cummins et al., 2015](https://www.sciencedirect.com/science/article/abs/pii/S0167639315000369) [Karam et al., 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5019119/); and may assistant in early diagnosis of patients with Parkinson’s disease [Zhao, Rudzicz, Carvalho, MárquezChin, & Livingstone, 2014](https://ieeexplore.ieee.org/abstract/document/6854516) and Alzheimer’s disease [Lopez-de-Ipiña et al., 2013](https://link.springer.com/article/10.1007/s12559-013-9229-9)."
+- 42p2: "In the field of diagnostic and therapeutic tools, the SER systems can give support to traditional methods for treatment of mental disorders trough game-oriented interfaces with spoken interaction [Kostoulas et al., 2012](https://www.sciencedirect.com/science/article/abs/pii/S0957417412005908), detect mental illness using speech as a predictor of depression, suicidality and mood transitions [Cummins et al., 2015](https://www.sciencedirect.com/science/article/abs/pii/S0167639315000369) [Karam et al., 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5019119/); and may assistant in early diagnosis of patients with Parkinson’s disease [Zhao, Rudzicz, Carvalho, MárquezChin, & Livingstone, 2014](https://ieeexplore.ieee.org/abstract/document/6854516) and Alzheimer’s disease [Lopez-de-Ipiña et al., 2013](https://link.springer.com/article/10.1007/s12559-013-9229-9)."
 
 ___
 ## 43. [Emotional speech recognition: Resources, features, and methods](https://sci-hub.se/10.1016/j.specom.2006.04.003) -> [Speech Communication](https://www.sciencedirect.com/science/article/abs/pii/S0167639306000422)
@@ -574,8 +565,7 @@ ___
 ___
 ## 44. [Emotion Recognition and Depression Diagnosis by Acoustic and Visual Features: A Multimodal Approach](https://sci-hub.se/10.1145/2661806.2661816) -> [Association for Computing Machinery](https://dl.acm.org/doi/abs/10.1145/2661806.2661816)
 
-"The Support Vector Machine (SVM) learned by the Sequential Minimal Optimization (SMO) algorithm [23] has
-been deployed for solving the affect and the depression regression tasks."
+"The Support Vector Machine (SVM) learned by the Sequential Minimal Optimization (SMO) algorithm [23] has been deployed for solving the affect and the depression regression tasks."
 
 ___
 ## 45. [Survey on speech emotion recognition: Features, classification schemes, and databases](https://sci-hub.se/10.1016/j.patcog.2010.09.020) -> [Elsevier](https://www.sciencedirect.com/science/article/abs/pii/S0031320310004619)
@@ -585,8 +575,7 @@ ___
 ___
 ## 46. [Evaluating deep learning architectures for Speech Emotion Recognition](https://e-tarjome.com/storage/panel/fileuploads/2019-03-05/1551778408_E10738-e-tarjome.pdf) -> [Elsevier](https://www.sciencedirect.com/science/article/abs/pii/S089360801730059X)
  
-"The proposed model is a deep multi-layered neural network. We experiment with several neural network architectures as presented in Section 6. It is important to note that the model is able to deal with utterances of variable length, independent of the choice of architecture since the model predicts p(yt|x), ∀t ∈
-{1, . . . , T }: this only requires the target frame xt and past l and future r context frames, which are fixed prior. Since emotions manifest in speech in a slow manner, one may not necessarily predict the class of every single frame in an utterance or speech stream but may rely on predicting the class of a frame sampled every few frames, depending on application requirements. The output of the model may be aggregated over the entire utterance to perform utterance-level classification if desired."
+"The proposed model is a deep multi-layered neural network. We experiment with several neural network architectures as presented in Section 6. It is important to note that the model is able to deal with utterances of variable length, independent of the choice of architecture since the model predicts p(yt|x), ∀t ∈ {1, . . . , T }: this only requires the target frame xt and past l and future r context frames, which are fixed prior. Since emotions manifest in speech in a slow manner, one may not necessarily predict the class of every single frame in an utterance or speech stream but may rely on predicting the class of a frame sampled every few frames, depending on application requirements. The output of the model may be aggregated over the entire utterance to perform utterance-level classification if desired."
 
 "Experiments conducted illuminate how feed-forward and recurrent neural network architectures and their variants could be employed for paralinguistic speech recognition, particularly emotion recognition. Convolutional Neural Networks (ConvNets) demonstrated better discriminative performance compared to other architectures. As a result of our exploration, the proposed SER system which relies on minimal speech processing and end-to-end deep learning, in a framebased formulation, yields state-of-the-art results on the IEMOCAP
 database for speaker-independent SER."
@@ -610,4 +599,7 @@ ___
 
 - parser para bib
 - revisar título das revistas/journals
-- refs das refs
+- refs das refs (1.x, 2.y, ...)
+- próximo batch de pesquisa: A1, A2, ..., An
+  - próximo batch de pesquisa: B1, B2, ..., Bn
+    - ...
