@@ -1,5 +1,10 @@
 # Fichamento @ qualificação
 
+## 0. [Recognition of a Baby's Emotional Cry towards Robotics Baby Caregiver](https://journals.sagepub.com/doi/epub/10.5772/55406) -> [SAGE](https://journals.sagepub.com/doi/full/10.5772/55406)
+
+- 0p1: "We have been researching a system for improving baby care by recognizing a baby's emotion from the baby's cry."
+
+___
 ## 1. [Speech Emotion Recognition using Supervised Deep Recurrent System for Mental Health Monitoring](https://arxiv.org/abs/2208.12812) -> [IEEE](https://wfiot2022.iot.ieee.org/)
 
 - 1p1: "Mental health is one of the crucial health aspects that must be monitored and treated for better physical health and a safer community and social life [1]."
@@ -164,7 +169,7 @@ ___
 "The three most widely used and most representative datasets were chosen in our experiments, which are IEMOCAP for SER, VoxCeleb1 for SV and SLURP for SLU"
 
 ___
-## 11. [Improving Automatic Emotion Recognition from speech using Rhythm and Temporal feature](https://arxiv.org/abs/1303.1761) -> [arxiv](https://arxiv.org/abs/1303.1761)
+## 11. [Improving Automatic Emotion Recognition from speech using Rhythm and Temporal feature](https://arxiv.org/ftp/arxiv/papers/1303/1303.1761.pdf) -> [arxiv](https://arxiv.org/abs/1303.1761)
 
 - 11p1: "Automatic emotion recognition from speech signal has become a major research topic in the field of  Human computer Interaction (HCI) in the recent times due to its many potential applications. It is being applied to growingnumber of areas such as humanoid robots, car industry, call centers, mobile communication, computer tutorial applications etc. [1]."
 
@@ -508,6 +513,9 @@ ___
 
 ___
 ## 39. [Emotion recognition from speech: a review](https://www.sci.brooklyn.cuny.edu/~levitan/nlp-psych/papers/koolagudi12.pdf) -> [Springer](https://link.springer.com/article/10.1007/s10772-011-9125-1)
+
+"In addition to the message conveyed through text, the manner in which the words are spoken, conveys essential non-linguistic information. The same textual message would be conveyed with different semantics (meaning) by incorporating appropriate emotions.
+Spoken text may have several interpretations, depending on how it is said. "
 
 ![](img/9_1.JPG)
 
