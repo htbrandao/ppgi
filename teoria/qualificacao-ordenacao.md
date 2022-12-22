@@ -2,6 +2,8 @@
 
 ## 1 Introdução
 
+- 41p1: "As John McCarthy said, the science of Artificial Intelligence aims at making intelligent machines [1]. It is an interdisciplinary field [2] [3] overlapping with the fields of robotics, emotion recognition, data mining, human computer interaction to name a few. The two main fields dealing with making computers capable of sensing human emotions are Human Computer Interaction (HCI) and Affective Computing. Affective computing [4] [5] is a science under which methods are being developed that can not only replicate but also process, identify and understand human emotions"
+
 1.1 Voz
 
 > pesquisar um artigo bom sobre voz (apenas para definir)
@@ -57,6 +59,7 @@ ___
 
 2.1 Definição
 
+- 35p1: "Speech carries a speaker’s semantic information and contains the emotional information the speaker wants to convey [1]. The same text may express opposite meanings in different emotional contexts. Emotional interaction is an indispensable part of human social activities, while emotional intelligence plays an important part in human computer interaction (HCI) [2]. The emotional states affect human interaction, such as facial expression [3,4], body posture [5], communication content [6], and speech mannerisms [7]. Influenced by multimodal features, recognizing emotions is vital to develop an automatic speech emotion recognition system for understanding of these interactions, and various speech recognition for pronunciation training and learning are developed [8,9]."
 
 
 
@@ -143,6 +146,7 @@ conditions, e.g., an emotional environment (J. H. L. Hansen & Patil, 2007), wher
 
 - 18p1: "Emotional Voice Conversion (EVC) is a technique that seeks to manipulate the emotional state of an utterance while keeping other vocal states unchanged [1]. It allows for the projection of the desired emotion into the synthesized voice. Emotional voice conversion poses a tremendous potential for human-computer interaction, such as enabling emotional intelligence into a dialogue system [2], [3], [4]."
 
+- 42p2: "In the field of diagnostic and therapeutic tools, the SER systems can give support to traditional methods for treatment of mental disorders trough game-oriented interfaces with spoken interaction [Kostoulas et al., 2012](https://www.sciencedirect.com/science/article/abs/pii/S0957417412005908), detect mental illness using speech as a predictor of depression, suicidality and mood transitions [Cummins et al., 2015](https://www.sciencedirect.com/science/article/abs/pii/S0167639315000369) [Karam et al., 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5019119/); and may assistant in early diagnosis of patients with Parkinson’s disease [Zhao, Rudzicz, Carvalho, MárquezChin, & Livingstone, 2014](https://ieeexplore.ieee.org/abstract/document/6854516) and Alzheimer’s disease [Lopez-de-Ipiña et al., 2013](https://link.springer.com/article/10.1007/s12559-013-9229-9)."
 
 
 ___
@@ -208,6 +212,8 @@ ___
 
 - 12p18: "MFCC: Além de ser uma das formas de representação espectral do som, é uma das features mais aplicada para tarefas de reconhecimento de fala [30] [31] e de emoção na fala [11] [7]. Os MFCCs são compostos por um conjunto de coeficientes, que coletivamente formam um MFC, Mel-Frequency Cepstrum, que é uma representação da densidade espectral a curto prazo de um som. Para obter estes coeficientes, é realizado o processo chamado de Mel-Frequency Wrapping. Sua ideia é de transformar a saída da FFT em uma instância de uma escala Mel [32],"
 
+- 37p3: "For decades, Mel frequency cepstral coefficients (MFCCs) [18] has been used as the principal set of features for SER and other speech analysis tasks. The four steps involved in the extraction of MFCCs are: (1) computation of the Fourier transform, (2) projection of the powers of the spectrum onto the Mel scale, (3) taking the logarithm of the Mel frequencies, and (4) applying discrete cosine transformation (DCT) or other suited transformations for compressed representations. It is found that the last step loses information and destroys spatial relations; therefore, it is usually omitted, which results in the LogMel spectrum, a popular feature used by the speech community. It is also the most popular feature to train DL networks in the speech domain"
+
 
 ___
 4.4 Modelagem
@@ -229,6 +235,8 @@ ___
 - 31p9: "Clustering techniques can be inventoried following several criteria, whether they are hierarchical, partition-based, density/neighborhood-based or model-based [8]. For instance, self-organizing maps (SOMs) were used by Szekely et al. to detect emotions in audiobooks [40], based on articulatory features" 
 
 - 34p1: "Unsupervised feature learning has been rarely explored in ASER beyond autoencoders (AE) [8] and denoising autoencoders (DAE) [6]. AE and DAE aim to learn features that are good for the reconstruction of the input. More advanced techniques, such as variational autoencoders (VAE) [9] and generative adversarial networks (GAN) [10], do not aim to reconstruct the input, but aim to generate data that come from the same distribution as the input. This relaxation tends to put more emphasis on the modeling of intrinsic structures of the data during feature learning [7, 9, 10]."
+
+- 35p3: "Some researchers have noticed and focused on identifying features through various approaches especially with unsupervised learning techniques [16,17]. Unsupervised feature learning aims to use a large number of unlabeled data to train and extract features. A common method is the autoencoder method [18,19], which usually reduces the dimensions of the input information and reconstructs the information according to the reduced features, which tries to restore the input information."
 
 
 ___
@@ -275,12 +283,16 @@ ___
 ___
 4.6.3 CNN
 
+- 37p5: "In contrast to fully connected DNNs, the training process of CNNs is more straightforward due to fewer parameters [49]. CNNs are powerful at extracting low-level representations at the initial layers, and high-level features (textures and semantics) in the higher layers [50]."
+
 - 5p5: "CNN uses a pooling operation, which makes them insensitive to the spatial information of the input features, i.e., the position information of features in the time-frequency axis. . The pooling function makes the CNN invariant and results in losing certain features."
 
+- 37p7: "Convolutional neural networks (CNNs) are also popular for emotional representation learning in SER [5], [125]–[128]. They can learn more generalised features from speech compared to DNNs, and other feature-based approaches [50]."
 
 ___
 4.6.4 RNN
 
+- 37p6: "Recurrent neural networks (RNNs) [52], [53] introduce recurrent connections within layers to enable parameters sharing across time. They create a memory in the network by using the information from all previous inputs."
 
 
 
@@ -355,7 +367,9 @@ ___
 ___
 5.5 Abordagens
 
+- 35p4: "We attempt to transform the speech information into the corresponding spectrogram, use a convolutional neural network to extract features widely and effectively, then transfer the pre-trained autoencoder model to target datasets for further studies"
 
+- 37p8: "Researchers achieved promising results using CNNs and CNN-RNNs to learn low-level speech representations from raw waveforms, allowing a network to capture important emotional  haracteristics better. However, the proper design of the feature extraction block is crucial to achieving this goal [50]. However, raw speech as input to deep models requires enormous data to achieve competitive performance. Researchers use data augmentation techniques to meet the data requirement [50], [225]. Log-Mel features and spectrograms are considered popular choices to alleviate this problem as they need less processing, fewer data samples, and training to achieve state-of-the-art classification performance compared to setups where raw audio is used"
 
 
 ___
@@ -363,7 +377,7 @@ ___
 
 - 32p7: "The main barrier is the availability of datasets well designed for deep learning tasks, meaning that they have a large enough pool of samples to be able to train deep architectures. In areas like image or speech recognition, there are databases with millions of samples such as ImageNet with 14 million and Google AudioSet with 2.1 Million samples. However, in SER, there are various databases, but with a limited number of samples. Additionally, in most modern SER systems, semi-natural and simulated datasets are utilized that are acted in nature, not noisy, and far from reality. The systems trained on these datasets cannot be successful in real-world scenarios. Although real datasets are also available under license, however, they are from TV shows and call centers that parties are informed of the recording; therefore, they do not contain all emotion categories. The other problem is the effect of culture and language on SER, where both factors affect the emotional feeling and receiving. A cross-language SER needs a set of features independent of these factors, and current feature extraction methods might not be successful. In a similar context, another challenge with emotional speech databases is uncertainty in the annotation. As discussed before, in a task such as image recognition, a bicycle is always a bicycle; however, in an emotional speech, one may label an utterance as angry. In contrast, the other marks the same utterance as excited. This subjectivity in labeling both makes the task more complex and limits the possibility of mixing the databases and creating supersets of emotional data."
 
-
+- 37p1: "Studies report that linguistic messages are rather unreliable means to predict and analyse human affective behaviour [1] because linguistic content is languagedependent, and the generalisation of emotions for multiple languages is very difficult to achieve.  People often choose different words to express emotion, making it hard to anticipate a speaker’s word choice and the associated affective expressions."
 
 ___
 5.6.1 VERBO
