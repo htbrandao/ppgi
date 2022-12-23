@@ -596,11 +596,44 @@ ___
 "Consider amount of research is going on about emotion detection, but a very small number of researchers are concentrating on intensity of the detected emotion. Each emotion may have diferent intensity level and detecting the intensity of an emotion can be benefcial for emotion analysis. For example, if a person writes “I am sad” or “I want to end my life, there is nothing left for me”, then the existing systems will label both of these declarations as ‘sad’ emotions. However, in reality, the intensity of sadness in both statements is diferent—the former represents normal sadness while the other refects severe depression or suicidal emotion."
 
 ___
-## 48. [Improvements in Brazilian Portuguese Speech Emotion Recognition and its extension to Latin Corpora]() -> [IEEE](https://ieeexplore.ieee.org/document/9892110)
+## 48. [Improvements in Brazilian Portuguese Speech Emotion Recognition and its extension to Latin Corpora](???) -> [IEEE](https://ieeexplore.ieee.org/document/9892110)
 
 > sem acesso
 
 ___
+## 49. [Si naciste incendiario, no te mueras bombero](https://sci-hub.se/10.1109/tbdata.2015.2465959) -> [IEEE](https://ieeexplore.ieee.org/document/7230259)
+
+
+___
+## 50. [Human voice perception](https://reader.elsevier.com/reader/sd/pii/S096098221001701X?token=A6344A0E6ECCE2571F00C27A9782583D5BA1F4B73628476E2F95852740A50253C3A04F8A38B48A282CE670FB796EB314&originRegion=us-east-1&originCreation=20221223023822) -> [elsevier](https://www.sciencedirect.com/science/article/pii/S096098221001701X)
+
+
+
+___
+
+## 51. [RESPOSTAS PARA PERGUNTAS FREQUENTES NA ÁREA DE VOZ](https://www.sbfa.org.br/campanhadavoz/FAQs2011.pdf) -> [SBFA](https://www.sbfa.org.br/campanhadavoz/FAQs2011.pdf)
+
+
+
+___
+## 52. [What are emotions? And how can they bemeasured?](https://sci-hub.se/10.1177/0539018405058216) -> [SAGE](https://journals.sagepub.com/doi/abs/10.1177/0539018405058216)
+
+
+____
+## 53 [Deep Learning](https://www.deeplearningbook.org/) -> [Deep Learning](https://www.deeplearningbook.org/)
+
+    @book{Goodfellow-et-al-2016,
+        title={Deep Learning},
+        author={Ian Goodfellow and Yoshua Bengio and Aaron Courville},
+        publisher={MIT Press},
+        note={\url{http://www.deeplearningbook.org}},
+        year={2016}
+    }
+___
+
+
+
+
 <br><br>
 
 ## TODO:
