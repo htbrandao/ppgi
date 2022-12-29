@@ -369,6 +369,7 @@ ___
 ## 26. [Russell’s (1980) Circumplex Models](https://psu.pb.unizin.org/psych425/chapter/circumplex-models/) -> [Psychology of Human Emotion](https://psu.pb.unizin.org/psych425/)
 
 > TODO: voltar
+> ref # 25
 
 ___
 ## 27. [O afeto sob a perspectiva do circumplexo: evidências de validade de construto](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005) -> [PEP](http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-04712017000200005)
@@ -607,17 +608,12 @@ ___
 ___
 ## 50. [Human voice perception](https://reader.elsevier.com/reader/sd/pii/S096098221001701X?token=A6344A0E6ECCE2571F00C27A9782583D5BA1F4B73628476E2F95852740A50253C3A04F8A38B48A282CE670FB796EB314&originRegion=us-east-1&originCreation=20221223023822) -> [elsevier](https://www.sciencedirect.com/science/article/pii/S096098221001701X)
 
-
-
 ___
 
 ## 51. [RESPOSTAS PARA PERGUNTAS FREQUENTES NA ÁREA DE VOZ](https://www.sbfa.org.br/campanhadavoz/FAQs2011.pdf) -> [SBFA](https://www.sbfa.org.br/campanhadavoz/FAQs2011.pdf)
 
-
-
 ___
 ## 52. [What are emotions? And how can they bemeasured?](https://sci-hub.se/10.1177/0539018405058216) -> [SAGE](https://journals.sagepub.com/doi/abs/10.1177/0539018405058216)
-
 
 ____
 ## 53 [Deep Learning](https://www.deeplearningbook.org/) -> [Deep Learning](https://www.deeplearningbook.org/)
@@ -630,7 +626,51 @@ ____
         year={2016}
     }
 ___
+## 54. [Video games in adolescence and emotional functioning: Emotion regulation, emotion intensity, emotion expression, and alexithymia](https://sci-hub.se/10.1016/j.chb.2016.03.027) -> [ELSEVIER](https://www.sciencedirect.com/science/article/abs/pii/S0747563216301947)
 
+___
+## 55. [Emotion sensitivity across the lifespan: Mapping clinical risk periods to sensitivity to facial emotion intensity](???) -> [APA](https://psycnet.apa.org/record/2019-08484-001?doi=1)
+
+___
+## 56. [WASSA-2017 Shared Task on Emotion Intensity](https://arxiv.org/pdf/1708.03700.pdf) -> [arxiv](https://arxiv.org/abs/1708.03700)
+
+___
+## 57. [The Nature of Emotions (Plutchik, 2001)](https://www.academia.edu/43620307/The_Nature_of_Emotions_Plutchik_2001_) -> [JSTOR](https://www.jstor.org/stable/27857503)
+
+
+___
+## 58. [Deep Learning](https://www.oreilly.com/library/view/deep-learning/9781491924570/?_gl=1*5isuuh*_ga*MTc2MTkyMzUxLjE2NzE5MTM2OTA.*_ga_092EL089CH*MTY3MTkxMzY5MC4xLjEuMTY3MTkxNTE3MC41Ny4wLjA.) - [O'Reilly](https://www.oreilly.com/library/view/deep-learning/9781491924570/?_gl=1*5isuuh*_ga*MTc2MTkyMzUxLjE2NzE5MTM2OTA.*_ga_092EL089CH*MTY3MTkxMzY5MC4xLjEuMTY3MTkxNTE3MC41Ny4wLjA.)
+
+@book{58,
+    title={Deep Learning},
+    author={ Josh Patterson and Adam Gibson},
+    publisher={ O'Reilly Media, Inc.},
+    note={\url{https://www.oreilly.com/library/view/deep-learning/9781491924570/?_gl=1*5isuuh*_ga*MTc2MTkyMzUxLjE2NzE5MTM2OTA.*_ga_092EL089CH*MTY3MTkxMzY5MC4xLjEuMTY3MTkxNTE3MC41Ny4wLjA.}},
+    year={2017}
+}
+
+___
+## 59. [Methodologies for Cross-Domain Data Fusion: An Overview](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/Methods20for20Cross-Domain20Data20fusion.pdf) -> [IEEE](https://ieeexplore.ieee.org/document/7230259)
+
+https://www.microsoft.com/en-us/research/project/cross-domain-data-fusion/
+
+___
+## 60. [Better latent spaces for better autoencoders](https://www.scipost.org/SciPostPhys.11.3.061?acad_field_slug=all) -> [SciPost](https://www.scipost.org/SciPostPhys.11.3.061/pdf)
+
+___
+## 61. [Comparing deep neural networks against humans:
+object recognition when the signal gets weaker](https://arxiv.org/pdf/1706.06969.pdf) -> [arxiv](https://arxiv.org/pdf/1706.06969)
+
+___
+## 62. [The Audible Spectrum](https://www.ncbi.nlm.nih.gov/books/NBK10924/) -> [The Audible Spectrum](https://www.ncbi.nlm.nih.gov/books/NBK10924/)
+
+___
+## 63. [Controlling Emotion Strength with Relative Attribute for End-to-End Speech Synthesis](https://sci-hub.se/10.1109/asru46091.2019.9003829) -> [IEEE](https://ieeexplore.ieee.org/document/9003829)
+
+___
+## . []() -> []()
+
+___
 
 
 
