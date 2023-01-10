@@ -1,0 +1,73 @@
+\documentclass[12pt]{report}
+
+\linespread{1.5}
+
+\usepackage[english,brazil]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{lscape}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{mathtools}
+\usepackage[graphicx]{realboxes}
+\usepackage[table,xcdraw]{xcolor}
+
+\title{BRAVO: Brazilian-portuguese Emotional Intensity Recognition Assistant for Voice}
+\author{Brandão, H. T.}
+
+% ==========================================================================================+
+% QUALIFICAÇÃO DE MESTRADO                                                                  |
+% ==========================================================================================+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A fala costuma ser a nossa primeira forma de comunicação e de expressão de emoções. O Reconhecimento de Emoção na Fala (Speech Emotion Recognition, SER) é um problema complexo, pois a expressão emocional depende da linguagem falada, dialeto, sotaque e histórico cultural dos indivíduos. Além disso, a intensidade dessa emoção pode afetar nossa percepção das emoções e nos induzir a interpretar a informação de forma inadequada. Embora sejam encontrados trabalhos de speech-to-text que investigam a intensidade das emoções, ao pesquisar o atual estado da arte, percebemos a escassez de trabalhos envolvendo SER e o idioma portugues. Mesmo com perspectivas de aplicabilidade em diversas áreas como monitoramento de pacientes, segurança, sistemas comerciais e entretenimento, parece haver uma ausência de trabalhos abordando a classificação da intensidade da emoção em português. Independente de formação enquanto profissionais de saúde mental, é natural que consigamos atribuir alguma espécie de métrica para comparar duas instâncias de uma mesma emoção que tenhamos sentido. Parece trivial quando atestamos que, entre dois momentos experimentando uma mesma emoção, um foi mais ou menos intenso do que o outro, ou até que ambos tiveram a mesma intensidade. Portanto, somos capazes de identificar emoções, quantificar sua intensidade e calcular uma distância para poder efetuar essa comparação. Conforme visto, trabalhos de \textit{ML} aplicados ao reconhecimento de emoções na fala vêm sendo publicados - ao menos - desde o início da década de 90 (1990), e se tornam menos frequentes quando buscamos por tarefas mais especializadas. Não tendo encontrado ocorrência na literatura, este trabalho se propõe a responder a seguinte pergunta: É possível realizar uma tarefa de aprendizado de máquina para inferir a intensidade das emoções na voz em português?\\
+
+\noindent \textbf{Palavras-chave:} Deep Learning, SER, Intensity, brazilian portuguese, VERBO, VIVAE
+\end{abstract}
+\clearpage
+
+\selectlanguage{english}
+\begin{abstract}
+Speech is usually our first form of communication and expression of emotions. Speech Emotion Recognition (SER) is a complex problem as emotional expression depends on the spoken language, dialect, accent and cultural background of individuals. In addition, the intensity of this emotion can affect our perception of emotions and lead us to interpret information inappropriately. Although there are speech-to-text works that investigate the emotional intensity, researching the current state of the art, we noticed the scarcity of works involving SER and the Portuguese language. Even with perspectives of applicability in several areas such as patient monitoring, security, commercial systems and entertainment, there seems to be a lack of studies addressing the classification of emotion intensity in Portuguese. Regardless of training as mental health professionals, it is natural that we are able to assign some kind of metric to compare two instances of the same emotion that we have felt. It seems trivial when we attest that, between two moments experiencing the same emotion, one was more or less intense than the other, or even that both had the same intensity. Therefore, we are able to identify emotions, quantify their intensity and calculate a distance to be able to make this comparison. As seen, works on \textit{ML} applied to the recognition of emotions in speech have been published - at least - since the beginning of the 90's (1990), and became less frequent when we look for more specialized tasks. Having not found occurrences in the literature, this work proposes to answer the following question: Is it possible to perform a machine learning task to infer the intensity of emotions in the brazilian Portuguese?\\
+
+\noindent \textbf{Keywords:} Deep Learning, SER, Intensity, brazilian portuguese, VERBO, VIVAE
+\end{abstract}
+\selectlanguage{brazil}
+
+% ==========================================================================================
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Sumário}
+\tableofcontents
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Lista de figuras}
+\listoffigures
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Lista de Tabelas}
+\listoftables
+
+\pagestyle{empty}
+\pagenumbering{arabic}
+
+% ==========================================================================================
+
+\include{01_introducao.tex}
+\include{02_fund_teo.tex}
+\include{03_trab_relac.tex}
+\include{04_proj_pesq.tex}
+
+% ==========================================================================================
+
+\bibliographystyle{ieeetr}
+\bibliography{100_refs}
+
+\end{document}
