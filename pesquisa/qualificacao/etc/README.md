@@ -26,6 +26,15 @@ ___
 <br>
 
 TODO:
-- organizar git
--
--
+
+- tcc do cap4 @geraldo
+
+- Qualificação:
+    - [] expandir o cap 4 detalhando os passos (técnicas, etc)
+    - [] proposta: como validaçar do resultado?
+    - [] documento da monografia @geraldo
+
+- Apresentação @Geraldo
+    - [] proposta: visão geral
+    - [] proposta: imagem espectrogama/mfcc
+    - [] proposta: como validaçar do resultado?
