@@ -1,24 +1,4 @@
-# # Abordagens:
-
-- semáforo while true
-- unsupervised para agrupamento
-  - modelo Circumplexo de Russel
-    - segundo o modelo, supresa tem uma ativação alta, então emoções agrupadas próximas a surpresa, poderiam ser mais intensas
-      - classificador softmax de intensidade: surpresa é 1. softmax no resto
-- dataset de intensidade
-  - transfer learning
-  - treinar em um e validar no outro
-    - gerar novo dataset a partir do VERBO, com classe & intensidade
-  - clusterizar VERBO e inferir intensidade de acordo com Circumplexo de Russel
-
-
-<br>
-<br>
-<br>
-<br>
-
-
-# # Roadmap
+# # Brainstorm
 
 - 1 - acessar os dados  <!-- resolver o #2 primeiro? -->
  
