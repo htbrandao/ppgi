@@ -9,7 +9,7 @@ A voz humana é produzida na laringe. Com a passagem do ar - oriundo dos pulmõe
 
 Nas emoções, temos três modelos bastante consolidados na literatura: Ekman, Russel, e Plutchik.
 
-O modelo de Ekman \cite{31.9} afirma existirem seis emoções básicas: Neutra, raiva, medo, surpresa, alegria e tristeza. E que estas são reconhecidas independentemente do idioma, da cultura ou dos meio de expressão (i.e.: fala, expressões faciais, etc.). Há o modelo de Russel \cite{31.10} (Figura \ref{fig:russel}), que sugere que as emoções podem ser representadas em um espaço bidimensional, onde o eixo horizontal representa a valência (positiva ou negativa) e o eixo vertical representa a ativação (alta ou baixa). Também podemos citar o modelo de Plutchik \cite{31.11} (Figura \ref{fig:plutchik}), que combina os dois modelos anteiores, criando emoções internas (básicas ou primárias) e externas (compostas ou secundárias).
+O modelo de Ekman \cite{31.9} afirma existirem seis emoções básicas: Neutra, raiva, medo, surpresa, alegria e tristeza. E que estas são reconhecidas independentemente do idioma, da cultura ou dos meio de expressão (i.e.: fala, expressões faciais, etc.). Há o modelo de Russel \cite{31.10} (Figura \ref{fig:russel}), que sugere que as emoções podem ser representadas em um espaço bidimensional, onde o eixo horizontal representa a valência (positiva ou negativa) e o eixo vertical representa a ativação (alta ou baixa). Também podemos citar o modelo de Plutchik \cite{57} (Figura \ref{fig:plutchik}), que combina os dois modelos anteiores, criando emoções internas (básicas ou primárias) e externas (compostas ou secundárias).
 
 No modelo de Russel, que dispõe as emoções ao longo desses dois eixos (valência e ativação), as
 emoções que se encontram mais próximas apresentam uma maior correlação de um desses atributos e no o seu centro fica representado um estado de neutralidade.
@@ -200,7 +200,7 @@ Outro problema é o efeito da cultura e da linguagem, onde ambos os fatores pode
 % ------------------------------------------------------------------------------------------
 \subsection{Fusão de Domínios}
 
-Dado esse cenário, podemos tentar utilizar uma ténica que permite fundir o conhecimento de vários conjuntos de dados organicamente para uma tarefa de aprendizado de máquina. Fusão de Domínios \cite{59}(\textit{Domain Fusion}) é uma técnica para aproveitar mais bases de dados e produzir informações mais robustas e úteis do que as fornecidas por uma única fonte de dados individualmente. Um exemplo de utilização de fusão de domínios pode ser observado em \cite{3} para tentar melhorar a generalização do seu modelo, e que percebeu uma melhora do desempenho em dados inéditos (distintos das amostras de treinamento e teste).
+Dado esse cenário, podemos tentar utilizar uma ténica que permite fundir o conhecimento de vários conjuntos de dados organicamente para uma tarefa de aprendizado de máquina. Fusão de Domínios \cite{49}(\textit{Domain Fusion}) é uma técnica para aproveitar mais bases de dados e produzir informações mais robustas e úteis do que as fornecidas por uma única fonte de dados individualmente. Um exemplo de utilização de fusão de domínios pode ser observado em \cite{3} para tentar melhorar a generalização do seu modelo, e que percebeu uma melhora do desempenho em dados inéditos (distintos das amostras de treinamento e teste).
 
 Uma vez que compreendemos, o processo de formação da fala, do seu emprego na tranmissão de emoções, formas de categorizá-las, como se dá um trabalho que envolve algoritmos de \textit{DL}, faz-se necessário conseguir uma massa de dados que possa ser utilizada para esta atividade. Neste trabalho, utilizaremos dois conjuntos de dados: VERBO e VIVAE.
 
@@ -320,7 +320,7 @@ Fazendo uma intersecção entre as classes dos \textit{datasets}, conforme Tabel
 
 Das amostras compreendidas pela combinação das bases de dados, 698 delas pertencem ao \textit{VIVAE}, o que significa que aproximadamente 51\% do nosso \textit{dataset}, tem, além das classes para emoções, classes para a intensidade.
 
-Uma das metodologias da Fusão de Domínios \cite{59} é a Fusão de Dados Baseada em Aprendizado de Transferência (\textit{Transfer Learning-Based Data Fusion}). Uma das possibilidades que essa metodologia aborda compreende a fusão de bases de dados de natureza semelhante (\textit{Transductive Learning}) quando a tarefa é a mesma mas o domínio (ponto de partida) e o contra domínio (ponto de chegada) são distintos. Como o nosso caso, onde vamos partir da voz para chegar na intensidade da emoção. Por mais que estejam relacionados, são distintos. Por exemplo, em uma tarefa de predição de tráfego urbano, pode-se utilizar os dados da cidade A para tentar uma previsão sobre o tráfego na cidade B, caso os dados sobre B sejam limitados. 
+Uma das metodologias da Fusão de Domínios \cite{49} é a Fusão de Dados Baseada em Aprendizado de Transferência (\textit{Transfer Learning-Based Data Fusion}). Uma das possibilidades que essa metodologia aborda compreende a fusão de bases de dados de natureza semelhante (\textit{Transductive Learning}) quando a tarefa é a mesma mas o domínio (ponto de partida) e o contra domínio (ponto de chegada) são distintos. Como o nosso caso, onde vamos partir da voz para chegar na intensidade da emoção. Por mais que estejam relacionados, são distintos. Por exemplo, em uma tarefa de predição de tráfego urbano, pode-se utilizar os dados da cidade A para tentar uma previsão sobre o tráfego na cidade B, caso os dados sobre B sejam limitados. 
 
 \begin{table}[]\label{table:totalporclasse}
 \centering
@@ -382,9 +382,9 @@ A normalização em questão, é a normalização pela escala de Mel (\textit{Me
     m(f) = 1127 * \log_e{(1 + \frac{f}{700})}
 \end{equation}
 
-\textit{Mel-Spectrogram} tem sido amplamente utilzada em problemas de \textit{SER}, como \cite{32.25} \cite{32.30}, e em \cite{32.31} e \cite{32.32}, que também utilizam \textit{CNN}s e ténicas de \textit{Autoencoder}. % 6p7: "Techniques for feature extraction such as Mel-Spectrograms have been used extensively in the field of speech recognition systems \cite{44}\cite{45}\cite{46}\cite{47}."
+\textit{Mel-Spectrogram} tem sido amplamente utilzada em problemas de \textit{SER}, como \cite{32.25} \cite{32.30}, e em \cite{32.31} e \cite{32.32}, que também utilizam \textit{CNN}s e ténicas de \textit{Autoencoder}.
 
-Outro atributo observado na literatura são os Coeficientes Cepstrais de Frequência Mel (\textit{Mel Frequency Cepstral Coefficients}, \textit{MFCCs}). Um \textit{MFC} é uma representação de curto prazo do espectro de potência de um som, assim, \textit{MFC}s são os coeficientes que formam um \textit{MFCC} coletivamente. Calcular o \textit{MFCC} consiste em aplicar a Transformada Discreta do Cosseno (\textit{Discrete Cosine Transform}, \textit{DCT}) ao \textit{Mel-Spectrogram}. Podemos compreender o \textit{MFCC} como uma compressão \cite{62} do \textit{Mel Spectrogram}. Podemos observar um comparativo entre o resultado de um Mel-Spectrogram e um MFCC para uma mesma amostra na Figura \ref{fig:melspecvsmfcc}. Também encontramos trabalhos que utilizam \textit{MFCC}s em \cite{32.79} e \cite{32.89}, cujas arquiteturas contém uma CNN e uma GAN, respectivamente.
+Outro atributo observado na literatura são os Coeficientes Cepstrais de Frequência Mel (\textit{Mel Frequency Cepstral Coefficients}, \textit{MFCCs}). Um \textit{MFC} é uma representação de curto prazo do espectro de potência de um som, assim, \textit{MFC}s são os coeficientes que formam um \textit{MFCC} coletivamente. Calcular o \textit{MFCC} consiste em aplicar a Transformada Discreta do Cosseno (\textit{Discrete Cosine Transform}, \textit{DCT}) ao \textit{Mel-Spectrogram}. Podemos compreender o \textit{MFCC} como uma compressão \cite{64} do \textit{Mel Spectrogram}. Podemos observar um comparativo entre o resultado de um Mel-Spectrogram e um MFCC para uma mesma amostra na Figura \ref{fig:melspecvsmfcc}. Também encontramos trabalhos que utilizam \textit{MFCC}s em \cite{32.79} e \cite{32.89}, cujas arquiteturas contém uma CNN e uma GAN, respectivamente.
 
 \clearpage
 
@@ -399,7 +399,7 @@ Outro atributo observado na literatura são os Coeficientes Cepstrais de Frequê
 \includegraphics[width=0.7\textwidth]{imagens/melspec-vs-mfcc.PNG}
 \caption{\label{fig:melspecvsmfcc}Espectrograma de Mel e MFCC de uma mesma amostra sonora}
 
-\author{Fonte: Imagem adaptada de \cite{62}}
+\author{Fonte: Imagem adaptada de \cite{64}}
 \end{figure}
 
 % ==========================================================================================
