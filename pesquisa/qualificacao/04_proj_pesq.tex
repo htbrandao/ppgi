@@ -14,11 +14,30 @@ Conforme visto, trabalhos de \textit{ML} aplicados ao reconhecimento de emoçõe
 Não tendo encontrado ocorrência na literatura, este trabalho se propõe a responder a seguinte pergunta: É possível realizar uma tarefa de aprendizado de máquina para inferir a intensidade das emoções na voz em português?
 
 % ==========================================================================================
-\section{Recapitulação}
+\section{\textit{BRAVO: Brazilian-portuguese Emotional Intensity Recognition Assistant for Voice}}
 
-Através do modelo de Russel sabemos que que é possível dispor as emoções em função da valência (prazer ou desprazer) e da ativação (vigor ou quietude) \cite{27}. Plutchik decompõe emoções básicas de acordo com a intensidade, chegando a emoções compostas, formadas a partir de duas emoções com intensidades menores.
+% ------------------------------------------------------------------------------------------
+\subsection{Visão Geral}
 
-Redes neurais constituem uma boa ferramenta para tarefas de \textit{SER}. CNNs como \textit{feature extractors}, mais ainda \textit{Autoencoders}, que podem criar uma representação de qualidade com dimensionalidade reduzida em seu espaço latente. \textit{DNNs} e \textit{SVM}s encotram espaço na literatura como bons discriminadores e algoritmos não supervisionados como \textit{PCA} e \textit{K-means} podem atuar como formadores de \textit{clusters} para avaliar o desempenho de geração de dados sintéticos.
+Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da proposta. Conforme a imagem, três etapas principais são necessáiras para o reconhecimento da intensidade das emoções: (A) Aquisição dos dados;
+(B) Extração de características; (C) Classificação da intensidade.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.750\textwidth]{imagens/arquitetura-visao-geral.png}
+\caption{\label{fig:visaogeralproposta}Visão geral da proposta}
+\end{figure}
+
+Na primeira etapa (A), 
+
+Na segunda etapa (B), 
+
+Na primeira etapa (C), 
+
+\clearpage
+
+% ------------------------------------------------------------------------------------------
+\subsection{Aquisição dos dados}
 
 Embora não tenhamos conhecimento de um \textit{dataset} ideal (idioma, emoções e intensidade) para esta proposta, graças a fusão de domínios, conseguimos o cenário da Tabela \ref{table:datasetideal}.
 
@@ -38,12 +57,6 @@ Conhecemos a miríade de informações que \textit{features} espectrais carregam
 \end{tabular}
 \end{table}
 
-\clearpage
-
-% ==========================================================================================
-% \section{\textit{BRAVO: Brazilian-portuguese Emotional Intensity Recognition Assistant for Voice}}
-\section{Proposta}
-
 Sejam os dois \textit{datasets} VERBO,VIVAE, de modo que VERBO é constituído por pares (amostra, classe) e VIVAE por (amostra, classe, intensidade), onde as classes são a emoção atribuída àquela amostra, e a intensidade é o rótulo da intensidade da classe daquela amostra. Vamos representar as amostras do VERBO por $X_{VERBO}$ e do VIVAE por $X_{VIVAE}$.
 
 Seja $Y_{VERBO}$ o conjunto das classes (emoções) $y_i \forall x_i \in X_{VERBO}$, analogamente para $Y_{VIVAE}$, vamos definir $Y = Y_{VERBO} \bigcap Y_{VIVAE}$. Vamos definir por por $Z$ o conjunto das intensidades. Sabemos das Tabelas \ref{table:vivaeintensidade} e \ref{table:totalporclasse} que
@@ -60,16 +73,6 @@ Vamos redefinir $X_{VERBO} = \{x_i \mid y_i \in Y\}$, analogamente para $X_{VIVA
     \item $\forall x_j \in X_{VIVAE}, \exists z_j \in Z$ tal que  $z_j$ é a intensidade de $x_j$
 \end{itemize}
 
-Os arquivos \textit{.wav} de $X$ serão lidos e iremos gerar seus respectivos \textit{Mel-spectrograms}, formando um mapa $M(x_i): spectrograma_i$.
-
-Vamos construir um \textit{Autoencoder}, $AE$, que tenta reproduzir uma função identendida, e por definição, é composto por uma função \textit{encoder} $f_e$ e uma função $decoder$ $f_d$, de modo que $AE: M \rightarrow M'$ faça
-
-\begin{equation}
-    AE(x) = f_d(f_e(x)) = x' \approx x
-\end{equation}
-
-O modelo $AE$ será treinado no dataset $X$.
-
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.40\textwidth]{imagens/p-yverbointeryvivae.png}
@@ -79,8 +82,23 @@ O modelo $AE$ será treinado no dataset $X$.
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.5\textwidth]{imagens/p-dominios-contradominos.png}
-\caption{\label{fig:dominioscontradominios}Domínios e contradomínios}
+\caption{\label{fig:dominioscontradominios}Domínio e contradomínios}
 \end{figure}
+
+% ------------------------------------------------------------------------------------------
+\subsection{Extração de características}
+
+Através do modelo de Russel sabemos que que é possível dispor as emoções em função da valência (prazer ou desprazer) e da ativação (vigor ou quietude) \cite{27}. Plutchik decompõe emoções básicas de acordo com a intensidade, chegando a emoções compostas, formadas a partir de duas emoções com intensidades menores.
+
+Redes neurais constituem uma boa ferramenta para tarefas de \textit{SER}. CNNs como \textit{feature extractors}, mais ainda \textit{Autoencoders}, que podem criar uma representação de qualidade com dimensionalidade reduzida em seu espaço latente. \textit{DNNs} e \textit{SVM}s encotram espaço na literatura como bons discriminadores e algoritmos não supervisionados como \textit{PCA} e \textit{K-means} podem atuar como formadores de \textit{clusters} para avaliar o desempenho de geração de dados sintéticos.
+
+Os arquivos \textit{.wav} de $X$ serão lidos e iremos gerar seus respectivos \textit{Mel-spectrograms}, formando um mapa $M(x_i): spectrograma_i$.
+
+Vamos construir um \textit{Autoencoder}, $AE$, que tenta reproduzir uma função identendida, e por definição, é composto por uma função \textit{encoder} $f_e$ e uma função $decoder$ $f_d$, de modo que $AE: M \rightarrow M'$ faça
+
+\begin{equation}
+    AE(x) = f_d(f_e(x)) = x' \approx x
+\end{equation}
 
 \begin{figure}[!h]
 \centering
@@ -88,7 +106,10 @@ O modelo $AE$ será treinado no dataset $X$.
 \caption{\label{fig:treinamentoae}Treinamento do \textit{AE}}
 \end{figure}
 
-Após o treinamento, vamos separar $X_{VIVAE}$ em três partes com proporções $0,8$, $0,1$ e $0,1$, que irão formar as amostras de treino ($X_{VIVAE_{treino}}$), teste ($X_{VIVAE_{teste}}$) e validação ($X_{VIVAE_{validacao}}$), respectivamente, do modelo supervisionado $j$ que iremos construir a seguir.
+O modelo $AE$ será treinado no dataset $X$. Após o treinamento, vamos separar $X_{VIVAE}$ em três partes com proporções $0,8$, $0,1$ e $0,1$, que irão formar as amostras de treino ($X_{VIVAE_{treino}}$), teste ($X_{VIVAE_{teste}}$) e validação ($X_{VIVAE_{validacao}}$), respectivamente, do modelo supervisionado $j$ que iremos construir a seguir.
+
+% ------------------------------------------------------------------------------------------
+\subsection{Classificação da Intensidade}
 
 Vamos construir e treinar um modelo $j$ supervisionado de classificação (e.g.: \textit{DNN}) que recebe como \textit{input} o \textit{encoding} do \textit{mel-spectrogram} dos $x_i \in X_{VIVAE_{treino}}$ Este modelo será construído para classificar a intensidade da emoção. Uma vez que os $x_i \in X_{VIVAE_{treino}}$ têm correspondentes em $Z$, contra domínio das intensidades, então, $j: M \rightarrow Z$, é tal que
 
@@ -106,6 +127,9 @@ Por ser tratar de um modelo supervisionado, podemos aplicar as méricas descrita
 
 Uma vez que o desempenho de $j$ seja satisfatório, vamos aplicar $j$ em $X_{VERBO}$, obtendo $Z' = \{j(x_i), \forall x_i \in X_{VERBO}\}$. Entretanto, como não existe correspondência entre $X_{VERBO} \rightarrow Z$, não podemos validar imediatamente as intensidades $z'$.
 
+% ------------------------------------------------------------------------------------------
+\subsection{Validação}
+
 Como sabemos as intensidades reais $z_i$ dos $x_i \in X_{VIVAE}$, vamos agregar as features e intensidades, formando vetores, $v_i, u_i$, onde
 
 \begin{itemize}
@@ -117,14 +141,13 @@ Portanto, devemos ter vetores $u,v$ que contêm em atributos representativos de 
 
 Podemos então aplicar técnicas de clusterização (e.g.: \textit{PCA}) para investigar se os vetores com classe ($y$) e intensidade ($z$) são agrupáveis de forma coerente com base em suas características $y, z$ e verificar a validade de $j$ em $X_{VERBO}$.
 
-\clearpage
-
 \begin{figure}[!h]
 \centering
 \includegraphics[width=1.0\textwidth]{imagens/p-naosupervisionado.png}
 \caption{\label{fig:clusterizacaoresults}Exemplo de clusterização de resultados}
 \end{figure}
 
+\clearpage
 % ==========================================================================================
 \section{Plano de Trabalho e Cronograma}
 
@@ -141,8 +164,6 @@ Atividades:
     \item Publicação dos resultados;
     \item Redação da dissertação e defesa do mestrado.
 \end{enumerate}
-
-% ------------------------------------------------------------------------------------------
 
 \begin{table}[!h]
 \centering

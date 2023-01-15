@@ -27,12 +27,13 @@ ___
 
 TODO:
 
-- tcc do cap4 @geraldo
+- [] tcc do cap4 @geraldo
+- [] documento da monografia @geraldo
 
 - Qualificação:
     - [] expandir o cap 4 detalhando os passos (técnicas, etc)
     - [] proposta: como validaçar do resultado?
-    - [] documento da monografia @geraldo
+
 
 - Apresentação @Geraldo
     - [] proposta: visão geral
