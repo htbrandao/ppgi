@@ -32,6 +32,7 @@ TODO:
 
 - Qualificação:
     - [] expandir o cap 4 detalhando os passos (técnicas, etc)
+        - [] corrigir imagem arquitetura RNN -> DNN
     - [] proposta: como validaçar do resultado?
 
 

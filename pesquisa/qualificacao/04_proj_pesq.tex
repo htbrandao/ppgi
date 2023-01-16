@@ -19,29 +19,32 @@ Não tendo encontrado ocorrência na literatura, este trabalho se propõe a resp
 % ------------------------------------------------------------------------------------------
 \subsection{Visão Geral}
 
-Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da proposta. Conforme a imagem, três etapas principais são necessáiras para o reconhecimento da intensidade das emoções: (A) Aquisição dos dados;
-(B) Extração de características; (C) Classificação da intensidade.
+Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da proposta. Conforme a imagem, três etapas principais são necessáiras para o reconhecimento da intensidade das emoções: (A) Aquisição dos dados; (B) Extração de características; e (C) Classificação da intensidade.
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.750\textwidth]{imagens/arquitetura-visao-geral.png}
+\includegraphics[width=0.75\textwidth]{imagens/arquitetura-visao-geral.png}
 \caption{\label{fig:visaogeralproposta}Visão geral da proposta}
 \end{figure}
 
-Na primeira etapa (A), 
+A primeira etapa (A) lida com a obtenção dos dados que serão utilizados no projeto e da sua conversão para uma interpretação passível de utilização por modelos de aprendizagem de máquina. Podemos descrever os dados como um conjunto de registros rotulados que serão utilizados para treinamento, teste e validação dos modelos implementados na proposta.
 
-Na segunda etapa (B), 
+A segunda etapa (B) lida com a extração de características dos dados convertidos. Essas \textit{features} serão obtidas através de um modelo não supervisionado para a redução de dimensionalidade e posteriormente utilizadas como entrada de um modelo supervisionado de classificação da intensidade da emoção.
 
-Na primeira etapa (C), 
-
-\clearpage
+A terceira e última etapa (C) é responsável pela inferência da intensidade. O modelo recebe as \textit{features} obtidas na etapa anterior e realiza o treinamento e testagem do modelo de classificação de acordo com quatro classes possíveis: (i) Baixa; (ii) Moderada; (iii) Forte; e (iv) Pico de intensidade.
 
 % ------------------------------------------------------------------------------------------
 \subsection{Aquisição dos dados}
 
-Embora não tenhamos conhecimento de um \textit{dataset} ideal (idioma, emoções e intensidade) para esta proposta, graças a fusão de domínios, conseguimos o cenário da Tabela \ref{table:datasetideal}.
+O primeiro passo para tarefas de \textit{machine learning} que envolvem \textit{SER} costuma ser a aquisição dos dados que serão utilizados na etapa de criação do modelo. Em virtude do escopo da proposta, necessitamos de um \textit{dataset} em português que possua as classes desejadas: Emoção e intensidade.
 
-Conhecemos a miríade de informações que \textit{features} espectrais carregam sobre o som e vimos formas para avaliar o desempenho dos modelos.
+Até o momento da escrita deste tabalho, não sabemos de nenhum \textit{dataset} que seja ideal (idioma, emoções e intensidade) para esta proposta. Então, conforme descrito na seção \ref{section:basesdedados}, este trabalho utilizará duas bases de dados: VERBO \cite{12.21} e VIVAE \cite{16}.
+
+O primeiro \textit{dataset}, VERBO, é composto por vocalizações verbais, acomodando todos os fonemas da língua portuguesa, com exemplos para seis emoções básicas (alegria, nojo, medo, raiva, surpresa, tristeza) e um estado emocional denominado de neutro.
+
+O segundo, VIVAE, é composto por vocalizações não verbais distribuidas em seis classes (conquista, prazer sexual, surpresa positiva, raiva, medo e dor física), com exemplos em quatro intensidades (baixa, moderada, fote e pico de intensidade). Graças a fusão de domínios \cite{49}, conseguimos o cenário da Tabela \ref{table:datasetideal}.
+
+Assim, sejam os dois \textit{datasets} VERBO e VIVAE, de modo que VERBO é constituído por pares \{amostra, classe\} e VIVAE por pares \{amostra, classe, intensidade\}, onde as classes são a emoção atribuída àquela amostra, e a intensidade é o rótulo da intensidade da classe daquela amostra. Vamos representar as amostras do VERBO por $X_{VERBO}$ e do VIVAE por $X_{VIVAE}$.
 
 \begin{table}[!h]
 \centering
@@ -57,14 +60,18 @@ Conhecemos a miríade de informações que \textit{features} espectrais carregam
 \end{tabular}
 \end{table}
 
-Sejam os dois \textit{datasets} VERBO,VIVAE, de modo que VERBO é constituído por pares (amostra, classe) e VIVAE por (amostra, classe, intensidade), onde as classes são a emoção atribuída àquela amostra, e a intensidade é o rótulo da intensidade da classe daquela amostra. Vamos representar as amostras do VERBO por $X_{VERBO}$ e do VIVAE por $X_{VIVAE}$.
-
 Seja $Y_{VERBO}$ o conjunto das classes (emoções) $y_i \forall x_i \in X_{VERBO}$, analogamente para $Y_{VIVAE}$, vamos definir $Y = Y_{VERBO} \bigcap Y_{VIVAE}$. Vamos definir por por $Z$ o conjunto das intensidades. Sabemos das Tabelas \ref{table:vivaeintensidade} e \ref{table:totalporclasse} que
 
 \begin{itemize}
     \item $Y = \{alegria, medo, raiva, supresa\}$
     \item $Z = \{baixa, moderada, forte, pico\}$
 \end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.40\textwidth]{imagens/p-yverbointeryvivae.png}
+\caption{\label{fig:yverbointeryvivae}Interseção entre rótulos de emoções de VERBO e VIVAE}
+\end{figure}
 
 Vamos redefinir $X_{VERBO} = \{x_i \mid y_i \in Y\}$, analogamente para $X_{VIVAE}$, e vamos definir nosso domínio $X = X_{VERBO} \bigcap X_{VIVAE}$, assim
 
@@ -75,15 +82,12 @@ Vamos redefinir $X_{VERBO} = \{x_i \mid y_i \in Y\}$, analogamente para $X_{VIVA
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.40\textwidth]{imagens/p-yverbointeryvivae.png}
-\caption{\label{fig:yverbointeryvivae}Interseção entre classes de VERBO e VIVAE}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
 \includegraphics[width=0.5\textwidth]{imagens/p-dominios-contradominos.png}
 \caption{\label{fig:dominioscontradominios}Domínio e contradomínios}
 \end{figure}
+
+Conhecemos a miríade de informações que \textit{features} espectrais carregam sobre o som e vimos formas para avaliar o desempenho dos modelos.
+
 
 % ------------------------------------------------------------------------------------------
 \subsection{Extração de características}

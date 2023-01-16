@@ -1,37 +1,191 @@
-\chapter{Introdução}\label{Cap:Introdução}
+\chapter{Projeto de Pesquisa}\label{Cap:Projeto de Pesquisa}
+
+%  https://bdm.unb.br/bitstream/10483/27583/1/2020_GabrielCampos_LucasMoutinho_tcc.pdf
+
+Neste capítulo é apresentada a proposta contida neste trabalho. O capítulo irá se desdobrar a partir do problema encontrado e proporá uma solução para sua realização. Adiante, irá expor a sua implementação em detalhes, tratando conhecimentos mais específicos que não estejam elucidados ao longo dos capítulos anteriores e conjecturando sobre possíveis aplicabilidades deste trabalho em áreas diversas. Finalmente, as atividades propostas para este projeto de pesquisa, juntamente com um cronograma de acompanhamento, de acordo com o estabelecido pelo Programa de Pós-Graduação em Informática da Universidade de Brasília (PPGI/UnB) para a obtenção do título de Mestre.\\
 
 % ==========================================================================================
-\section{Contextualização e Problema}
+\section{Motivação}
 
-A fala costuma ser nossa primeira forma de comunicação e de expressão de emoções \cite{1.5}. Desde a infância, antes mesmo de utilizarmos nosso idioma, já expressamos emoções através de sons não verbais mas que possuem significado para o emissor - havendo, inclusive, estudos investigando a emoção de bebês a partir do seu choro \cite{0} - e, ao longo da vida, continuamos a expressar emoções dessa maneira. Em um mundo moderno, estamos interagindo cada vez mais com, e através de, ferramentas tecnológicas (e.g.: assistentes virtuais como Alexa e Siri). Desse modo, a classificação das emoções e de sua intensidade toma um papel importante \cite{3} no desenvolvimento de ciência e tecnologia, uma vez que mensagem transmitida pode ter sua semântica alterada pelas emoções \cite{39}.
+Independente de formação enquanto profissionais de saúde mental, é natural que consigamos atribuir alguma espécie de métrica para comparar duas instâncias de uma mesma emoção que tenhamos sentido. Parece trivial quando atestamos que, entre dois momentos experimentando uma mesma emoção, um foi mais ou menos intenso do que o outro, ou até que ambos tiveram a mesma intensidade. Portanto, somos capazes de identificar emoções, quantificar sua intensidade e calcular uma distância para poder efetuar essa comparação.
 
-A emoção é um estado psicológico relacionado com o sistema sensorial, provocado por alterações hormonais que podem estar relacionadas a observações, sentimentos, iterações sociais ou algum nível de satisfação ou frustração, que causam uma alteração, distinguível, na fala \cite{8}. A intensidade dessa emoção pode afetar nossa percepção das emoções \cite{18.46} e nos induzir a interpretar de forma inadequada. A análise de emoções na voz se tornou um área de pesquisa proeminente, muito graças ao aumento da capacidade computacional e a eficiência de algorítmos \cite{38} \cite{20}.
+Conforme visto, trabalhos de \textit{ML} aplicados ao reconhecimento de emoções na fala vêm sendo publicados - ao menos - desde o início da década de 90 (1990), e se tornam menos frequentes quando buscamos por tarefas mais especializadas.
 
-O Reconhecimento de Emoção na Fala (\textit{Speech Emotion Recognition}, \textit{SER}) é um problema complexo, pois a expressão emocional depende da linguagem falada, dialeto, sotaque e histórico cultural dos indivíduos \cite{6}. O reconhecimento e avaliação de emoções apresenta dificuldades por sua natureza interdisciplinar: o reconhecimento de emoções e a avaliação de força são objeto das ciências da psicologia, a aferição e avaliação de dados fisiológicos estão relacionadas às ciências médicas, e a análise e solução de dados de sensores é o objeto da mecatrônica \cite{17}. No âmbito das Ciências da Computação, \textit{SER} é uma área de pesquisa ativa, com publicações datando desde o final do século XX \cite{12.27}.
-
-Pesquisando o estado da arte da literatura relacionada, encontramos diversos trabalhos lidando com \textit{SER}, como \cite{11} que investiga características rítmicas, \cite{34} que emprega uma abordagem (Não Supervisionada) menos comum na literatura, para tentar capturar estruturas intrínsecas dos dados, \cite{32.95} que utiliza um mecanismo de atenção\footnote{Introduzido em 2014 por Dzmitry Bahdanau, Kyunghyun Cho e Yoshua Bengio. Disponível em \url{https://arxiv.org/abs/1409.0473}}. Entretanto, encontrarmos menos trabalhos abordando a intensidade dessas emoções. Com esse escopo, podemos citar \cite{14}, \cite{15} e \cite{28}, embora utilizem dados textuais, e \cite{3}, \cite{18} e \cite{20} que utilizam voz. Nenhum destes trabalhos utiliza dados em português.
-
-Realizando \textit{SER} em nosso idioma nativo, temos \cite{12} que utiliza modelos especialistas para cada emoção abordada e \cite{21} que utiliza modelos tradicionais, como Máquinas de Vetores de Suporte. Ambos utilizam uma abordagem chamada de Supervisionada. Nenhum destes trabalhos tratam da itensidade das emoções.
-
-Portanto, haveria a possibilidade deste trabalho colaborar para o estado da arte de \textit{SER} em Português envolvendo a inferência da intensidade das emoções.
+Não tendo encontrado ocorrência na literatura, este trabalho se propõe a responder a seguinte pergunta: É possível realizar uma tarefa de aprendizado de máquina para inferir a intensidade das emoções na voz em português?
 
 % ==========================================================================================
-\section{Objetivos}
+\section{\textit{BRAVO: Brazilian-portuguese Emotional Intensity Recognition Assistant for Voice}}
 
-A estimativa de intensidade na emoção tem diversas aplicações potenciais para interações humano-máquina, como monitoramento de pacientes \cite{1}, segurança \cite{4}, comerciais\footnote{Behavioral Signals. Exemplo de empresa que utiliza atividades correlatas a este trabalho para fins comerciais. Disponível em \url{https://behavioralsignals.com/}} e de entretenimento. Este trabalho pretende criar uma arquitetura de aprendizado de máquina para classificaçar a intensidade de emoções no idioma Português Brasileiro. Até então não encontrada na literatura.
+% ------------------------------------------------------------------------------------------
+\subsection{Visão Geral}
 
-\subsection{Objetivos específicos}
+Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da proposta. Conforme a imagem, três etapas principais são necessáiras para o reconhecimento da intensidade das emoções: (A) Aquisição dos dados; (B) Extração de características; e (C) Classificação da intensidade.
 
-% Para estes objetivos, compreende-se como fala vocalizações verbais no idioma português brasileiro.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.75\textwidth]{imagens/arquitetura-visao-geral.png}
+\caption{\label{fig:visaogeralproposta}Visão geral da proposta}
+\end{figure}
+
+A primeira etapa (A) lida com a obtenção dos dados que serão utilizados no projeto e da sua conversão para uma interpretação passível de utilização por modelos de aprendizagem de máquina. Podemos descrever os dados como um conjunto de registros rotulados que serão utilizados para treinamento, teste e validação dos modelos implementados na proposta.
+
+A segunda etapa (B) lida com a extração de características dos dados convertidos. Essas \textit{features} serão obtidas através de um modelo não supervisionado para a redução de dimensionalidade e posteriormente utilizadas como entrada de um modelo supervisionado de classificação da intensidade da emoção.
+
+A terceira e última etapa (C) é responsável pela inferência da intensidade. O modelo recebe as \textit{features} obtidas na etapa anterior e realiza o treinamento e testagem do modelo de classificação de acordo com quatro classes possíveis: (i) Baixa; (ii) Moderada; (iii) Forte; e (iv) Pico de intensidade.
+
+% ------------------------------------------------------------------------------------------
+\subsection{Aquisição dos dados}
+
+O primeiro passo para tarefas de \textit{machine learning} que envolvem \textit{SER} costuma ser a aquisição dos dados que serão utilizados na etapa de criação do modelo. Em virtude do escopo da proposta, necessitamos de um \textit{dataset} em português que possua as classes desejadas: Emoção e intensidade.
+
+Até o momento da escrita deste tabalho, não sabemos de nenhum \textit{dataset} que seja ideal (idioma, emoções e intensidade) para esta proposta. Então, conforme descrito na seção \ref{section:basesdedados}, este trabalho utilizará duas bases de dados: VERBO \cite{12.21} e VIVAE \cite{16}.
+
+O primeiro \textit{dataset}, VERBO, é composto por vocalizações verbais, acomodando todos os fonemas da língua portuguesa, com exemplos para seis emoções básicas (alegria, nojo, medo, raiva, surpresa, tristeza) e um estado emocional denominado de neutro.
+
+O segundo, VIVAE, é composto por vocalizações não verbais distribuidas em seis classes (conquista, prazer sexual, surpresa positiva, raiva, medo e dor física), com exemplos em quatro intensidades (baixa, moderada, fote e pico de intensidade). Graças a fusão de domínios \cite{49}, conseguimos o cenário da Tabela \ref{table:datasetideal}.
+
+Assim, sejam os dois \textit{datasets} VERBO e VIVAE, de modo que VERBO é constituído por pares \{amostra, classe\} e VIVAE por pares \{amostra, classe, intensidade\}, onde as classes são a emoção atribuída àquela amostra, e a intensidade é o rótulo da intensidade da classe daquela amostra. Vamos representar as amostras do VERBO por $X_{VERBO}$ e do VIVAE por $X_{VIVAE}$.
+
+\begin{table}[!h]
+\centering
+\label{table:datasetideal}
+\caption{Atributos dos datasets VERBO, VIVAE, ideal e da fusão de domínios}
+\begin{tabular}{l|cccc|}
+\cline{2-5}
+ & \multicolumn{4}{c|}{Datasets} \\ \hline
+\multicolumn{1}{|l|}{Atributos} & \multicolumn{1}{c|}{VERBO} & \multicolumn{1}{c|}{VIVAE} & \multicolumn{1}{c|}{Ideal} & Data Fusion(VERBO,VIVAE) \\ \hline
+\multicolumn{1}{|l|}{Idioma} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{X} & X \\ \hline
+\multicolumn{1}{|l|}{Emoções} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{X} & X \\ \hline
+\multicolumn{1}{|l|}{Intensidade} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{X} & X \\ \hline
+\end{tabular}
+\end{table}
+
+Seja $Y_{VERBO}$ o conjunto das classes (emoções) $y_i \forall x_i \in X_{VERBO}$, analogamente para $Y_{VIVAE}$, vamos definir $Y = Y_{VERBO} \bigcap Y_{VIVAE}$. Vamos definir por por $Z$ o conjunto das intensidades. Sabemos das Tabelas \ref{table:vivaeintensidade} e \ref{table:totalporclasse} que
+
+\begin{itemize}
+    \item $Y = \{alegria, medo, raiva, supresa\}$
+    \item $Z = \{baixa, moderada, forte, pico\}$
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.40\textwidth]{imagens/p-yverbointeryvivae.png}
+\caption{\label{fig:yverbointeryvivae}Interseção entre rótulos de emoções de VERBO e VIVAE}
+\end{figure}
+
+Vamos redefinir $X_{VERBO} = \{x_i \mid y_i \in Y\}$, analogamente para $X_{VIVAE}$, e vamos definir nosso domínio $X = X_{VERBO} \bigcap X_{VIVAE}$, assim
+
+\begin{itemize}
+    \item $\forall x_i \in X, \exists y_i \in Y$ tal que  $y_i$ é a classe de $x_i$
+    \item $\forall x_j \in X_{VIVAE}, \exists z_j \in Z$ tal que  $z_j$ é a intensidade de $x_j$
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{imagens/p-dominios-contradominos.png}
+\caption{\label{fig:dominioscontradominios}Domínio e contradomínios}
+\end{figure}
+
+% ------------------------------------------------------------------------------------------
+\subsection{Extração de características}
+
+Redes neurais constituem uma boa ferramenta para tarefas de \textit{SER}. CNNs como \textit{feature extractors}, mais ainda \textit{Autoencoders}, que podem criar uma representação de qualidade com dimensionalidade reduzida em seu espaço latente. \textit{DNNs} e \textit{SVM}s encotram espaço na literatura como bons discriminadores e algoritmos não supervisionados como \textit{PCA} e \textit{K-means} podem atuar como formadores de \textit{clusters} para avaliar o desempenho de geração de dados sintéticos.
+
+Os arquivos \textit{.wav} de $X$ serão lidos e iremos gerar seus respectivos \textit{Mel-spectrograms}, formando um mapa $M(x_i): spectrograma_i$.
+
+Vamos construir um \textit{Autoencoder}, $AE$, que tenta reproduzir uma função identendida, e por definição, é composto por uma função \textit{encoder} $f_e$ e uma função $decoder$ $f_d$, de modo que $AE: M \rightarrow M'$ faça
+
+\begin{equation}
+    AE(x) = f_d(f_e(x)) = x' \approx x
+\end{equation}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.9\textwidth]{imagens/p-autoencoder.png}
+\caption{\label{fig:treinamentoae}Treinamento do \textit{AE}}
+\end{figure}
+
+O modelo $AE$ será treinado no dataset $X$. Após o treinamento, vamos separar $X_{VIVAE}$ em três partes com proporções $0,8$, $0,1$ e $0,1$, que irão formar as amostras de treino ($X_{VIVAE_{treino}}$), teste ($X_{VIVAE_{teste}}$) e validação ($X_{VIVAE_{validacao}}$), respectivamente, do modelo supervisionado $j$ que iremos construir a seguir.
+
+% ------------------------------------------------------------------------------------------
+\subsection{Classificação da Intensidade}
+
+Através do modelo de Russel sabemos que que é possível dispor as emoções em função da valência (prazer ou desprazer) e da ativação (vigor ou quietude) \cite{27}. Plutchik decompõe emoções básicas de acordo com a intensidade, chegando a emoções compostas, formadas a partir de duas emoções com intensidades menores.
+
+Conhecemos a miríade de informações que \textit{features} espectrais carregam sobre o som e vimos formas para avaliar o desempenho dos modelos.
+
+Vamos construir e treinar um modelo $j$ supervisionado de classificação (e.g.: \textit{DNN}) que recebe como \textit{input} o \textit{encoding} do \textit{mel-spectrogram} dos $x_i \in X_{VIVAE_{treino}}$ Este modelo será construído para classificar a intensidade da emoção. Uma vez que os $x_i \in X_{VIVAE_{treino}}$ têm correspondentes em $Z$, contra domínio das intensidades, então, $j: M \rightarrow Z$, é tal que
+
+\begin{equation}
+    j(f_e(m)) = z
+\end{equation}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1.0\textwidth]{imagens/p-supervisionado.png}
+\caption{\label{fig:jsupervisionado}Modelo supervisionado $j$}
+\end{figure}
+
+Por ser tratar de um modelo supervisionado, podemos aplicar as méricas descritas em \ref{sec:metricas}, utilizando $X_{VIVAE_{validacao}}$ e $X_{VIVAE_{teste}}$ para testar e validar seus resultados.
+
+Uma vez que o desempenho de $j$ seja satisfatório, vamos aplicar $j$ em $X_{VERBO}$, obtendo $Z' = \{j(x_i), \forall x_i \in X_{VERBO}\}$. Entretanto, como não existe correspondência entre $X_{VERBO} \rightarrow Z$, não podemos validar imediatamente as intensidades $z'$.
+
+% ------------------------------------------------------------------------------------------
+\subsection{Validação}
+
+Como sabemos as intensidades reais $z_i$ dos $x_i \in X_{VIVAE}$, vamos agregar as features e intensidades, formando vetores, $v_i, u_i$, onde
+
+\begin{itemize}
+    \item $v_i = [f_e(m_i), z_i]$, onde $x_i \in X_{VIVAE}$
+    \item $u_i = [f_e(m_i), j(m_i) = z'_i]$, onde $x_i \in X_{VERBO}$
+\end{itemize}
+
+Portanto, devemos ter vetores $u,v$ que contêm em atributos representativos de características relativas a emoção e a intensidade dessa emoção.
+
+Podemos então aplicar técnicas de clusterização (e.g.: \textit{PCA}) para investigar se os vetores com classe ($y$) e intensidade ($z$) são agrupáveis de forma coerente com base em suas características $y, z$ e verificar a validade de $j$ em $X_{VERBO}$.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1.0\textwidth]{imagens/p-naosupervisionado.png}
+\caption{\label{fig:clusterizacaoresults}Exemplo de clusterização de resultados}
+\end{figure}
+
+\clearpage
+% ==========================================================================================
+\section{Plano de Trabalho e Cronograma}
+
+Esta seção apresenta as atividades propostas para este projeto de pesquisa, juntamente com um cronograma de acompanhamento. Planeja-se finalizar o projeto em dois anos de atividades. Abaixo, temos enumeradas as atividades necessárias para a conclusão do Programa de Pós-Graduação em Informática da Universidade de Brasília (PPGI/UnB) e obtenção do título de Mestre. A Tabela \ref{table:cronogramaproposta} apresenta o cronograma de atividades deste plano de trabalho.\\
+
+Atividades:
 
 \begin{enumerate}
-    \item Criar uma arquitetura de aprendizado de máquina para classificação de intensidade da emoção na fala em português brasileiro;
-    \item Validar a solução criada no item anterior;
-    \item Confrontar os resultados obtidos com os possíveis modelos do estado da arte, e caso não seja possível, criar modelos simples (\textit{vanilla}) e comparar os desempenhos;
-    \item Especificar o conjunto de técnicas que sejam adequados para realizar a tarefa a que esse trabalho se propõe.
+    \item Obtenção dos créditos obrigatórios exigidos pelo programa de mestrado;
+    \item Obtenção da certificação de proficiência em idioma Inglês;
+    \item Revisão da literatura, fundamentação teórica e apresentações;
+    \item Redação e exame da qualificação;
+    \item Planejar, realizar e analisar os experimentos;
+    \item Publicação dos resultados;
+    \item Redação da dissertação e defesa do mestrado.
 \end{enumerate}
 
-% ==========================================================================================
-\section{Estrutura deste Trabalho}
-
-Esta proposta de trabalho está organizada como se segue. Os demais capítulos, enumerados de 2 a 5, apresentam, respectivamente: Fundamentação Teórica, Trabalhos Relacionados, Projeto de Pesquisa, Cronograma de Trabalho. No capítulo 2 é feita uma fundamentação para oferecer os conceitos necessários para a compreensão do texto. No capítulo 3, uma discussão e comparativo a respeito da literatura relacionada a esta pesquisa. No capítulo 4 o projeto proposto é apresentado e definido. No capítulo 5 é apresentado o cronograma de atividades desta pesquisa científica.
+\begin{table}[!h]
+\centering
+\label{table:cronogramaproposta}
+\caption{Cronograma proposto de atividades, onde \textbf{X} representa atividades finalizadas e \textbf{O} representa atividades a desenvolver}
+\label{tab:my-table}
+\begin{tabular}{ccccccccc}
+\cline{3-9}
+ & \multicolumn{1}{c|}{} & \multicolumn{7}{c|}{Atividade no trimestre} \\ \hline
+\multicolumn{2}{|c|}{Período} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{5} & \multicolumn{1}{c|}{6} & \multicolumn{1}{c|}{7} \\ \hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{2022}} & \multicolumn{1}{c|}{3o trimestre} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \cline{2-9} 
+\multicolumn{1}{|c|}{} & \multicolumn{1}{c|}{4o trimestre} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \hline
+\multicolumn{1}{|c|}{\multirow{4}{*}{2023}} & \multicolumn{1}{c|}{1o trimestre} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \cline{2-9} 
+\multicolumn{1}{|c|}{} & \multicolumn{1}{c|}{2o trimestre} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \cline{2-9} 
+\multicolumn{1}{|c|}{} & \multicolumn{1}{c|}{3o trimestre} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{} \\ \cline{2-9} 
+\multicolumn{1}{|c|}{} & \multicolumn{1}{c|}{4o trimestre} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{} \\ \hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{2024}} & \multicolumn{1}{c|}{1o trimestre} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{O} \\ \cline{2-9} 
+\multicolumn{1}{|c|}{} & \multicolumn{1}{c|}{2o trimestre} & \multicolumn{1}{c|}{X} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{O} & \multicolumn{1}{c|}{O} \\ \hline
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}
+\end{tabular}
+\end{table}
