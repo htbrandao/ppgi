@@ -5,9 +5,6 @@ Dataset | URL
 VERBO   | https://github.com/jrtorresneto/VERBO-emotional-speech-dataset; https://thescipub.com/pdf/jcssp.2018.1420.1430.pdf
 VIVAE   | https://zenodo.org/record/4066235#.Y2FyG99v-Ul
 
-<br>
-___
-<br>
 
 Emoção              | VERBO | VIVAE | [x]
 ------------------- | ----- | ----- | ----
@@ -21,22 +18,9 @@ tristeza / --       | [x]   | [ ]   |
 -- / pain           | [ ]   | [x]   |
 -- / achievement    | [ ]   | [x]   |
 
-<br>
-___
-<br>
 
 TODO:
 
-- [] tcc do cap4 @geraldo
 - [] documento da monografia @geraldo
-
-- Qualificação:
-    - [] expandir o cap 4 detalhando os passos (técnicas, etc)
-        - [] corrigir imagem arquitetura RNN -> DNN
-    - [] proposta: como validaçar do resultado?
-
-
-- Apresentação @Geraldo
-    - [] proposta: visão geral
-    - [] proposta: imagem espectrogama/mfcc
-    - [] proposta: como validaçar do resultado?
+- [] corrigir imagem arquitetura RNN -> DNN
+- [] proposta: como validar do resultado?

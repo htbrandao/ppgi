@@ -36,7 +36,7 @@ A terceira e última etapa (C) é responsável pela inferência da intensidade. 
 % ------------------------------------------------------------------------------------------
 \subsection{Aquisição dos dados}
 
-O primeiro passo para tarefas de \textit{machine learning} que envolvem \textit{SER} costuma ser a aquisição dos dados que serão utilizados na etapa de criação do modelo. Em virtude do escopo da proposta, necessitamos de um \textit{dataset} em português que possua as classes desejadas: Emoção e intensidade.
+O primeiro passo para tarefas de \textit{machine learning} que envolvem \textit{SER} costuma ser a aquisição dos dados que serão utilizados pelo modelo. Em virtude do escopo da proposta, necessitamos de um \textit{dataset} em português que possua as classes desejadas: Emoção e intensidade.
 
 Até o momento da escrita deste tabalho, não sabemos de nenhum \textit{dataset} que seja ideal (idioma, emoções e intensidade) para esta proposta. Então, conforme descrito na seção \ref{section:basesdedados}, este trabalho utilizará duas bases de dados: VERBO \cite{12.21} e VIVAE \cite{16}.
 
@@ -80,7 +80,7 @@ Vamos redefinir $X_{VERBO} = \{x_i \mid y_i \in Y\}$, analogamente para $X_{VIVA
     \item $\forall x_j \in X_{VIVAE}, \exists z_j \in Z$ tal que  $z_j$ é a intensidade de $x_j$
 \end{itemize}
 
-Ao realizar tarefas de \textit{DL}, precisamos transformar os dados de entrada em um formato passível de ingestão pelos modelos. Os arquivos \textit{.wav} de $X$ serão lidos e iremos gerar seus respectivos \textit{Mel-spectrograms}, convertendo o sinal de áudio ao longo do tempo para uma representação do sinal no domínio da frequência, que será utilizada pelos modelos. Então, teremos um mapa $M(x_i): spectrograma_i$.
+Ao realizar tarefas de \textit{DL}, precisamos transformar os dados de entrada em um formato passível de ingestão pelos modelos. Os arquivos \textit{.wav} de $X$ serão lidos e iremos gerar seus respectivos \textit{Mel-spectrograms}, convertendo o sinal de áudio ao longo do tempo para uma representação do sinal no domínio da frequência, que será utilizada pelos modelos. Então, teremos um mapa $M(x_i): espectrograma_i$.
 
 \begin{figure}[!h]
 \centering
@@ -91,7 +91,7 @@ Ao realizar tarefas de \textit{DL}, precisamos transformar os dados de entrada e
 % ------------------------------------------------------------------------------------------
 \subsection{Extração de características}
 
-De posse dos $spectrogramas_i$, podemos prosseguir para a etapa de extração de características. Apesar da representação visual, o espectrograma é dado por um vetor de alta dimensionalidade. Uma vez que $X$ é formado por dados de \textit{datasets} diferentes, buscamos uma forma de extrair características relevantes com boa capacidade de generalização ao ser aplicada em ambos $X_{VERBO}$ e $X_{VIVAE}$.
+De posse do mapa $M(x_i)$, podemos prosseguir para a etapa de extração de características. Apesar da representação visual, o espectrograma é dado por um vetor de alta dimensionalidade. Uma vez que $X$ é formado por dados de \textit{datasets} diferentes, buscamos uma forma de extrair características relevantes com boa capacidade de generalização ao ser aplicada em ambos $X_{VERBO}$ e $X_{VIVAE}$.
 
 Redes neurais constituem uma boa ferramenta para tarefas de \textit{SER}. CNNs como \textit{feature extractors}, mais ainda \textit{Autoencoders}, podem criar uma representação de qualidade com dimensionalidade reduzida em seu espaço latente, enquanto \textit{DNNs} encotram espaço na literatura como bons discriminadores ou classificadores.
 
@@ -118,9 +118,11 @@ Após o treinamento, vamos separar $X_{VIVAE}$ em três partes com proporções 
 
 Através do modelo de Russel sabemos que que é possível dispor as emoções em função da valência (prazer ou desprazer) e da ativação (vigor ou quietude) \cite{27}. Plutchik decompõe as emoções básicas de acordo com a intensidade, chegando a emoções compostas, formadas a partir de duas emoções com intensidades menores.
 
-Sabemos da relevância que \textit{features} espectrais carregam sobre a vocalização e vimos formas para avaliar o desempenho dos modelos, como o \textit{F1-Score}.
+Ao longo do Capítulo \ref{Cap:Trabalhos Relacionados}, observamos trabalhos relacionados, desafios pertinentes à pesquisa e o estado da arte na área de estudo deste trabalho, que se diferencia dos pares por, além de ser um dos poucos trabalhos a lidar com o idioma português, também aborda a questão da intensidade da emoção.
 
-Para a etapa de classificação da intensidade, vamos construir e treinar um modelo supervisionado $j$ (e.g.: \textit{CNN}) que recebe como \textit{input} o \textit{encoding} do \textit{mel-spectrogram} dos $x_i \in X_{VIVAE_{treino}}$. Este modelo será construído para classificar a intensidade da emoção de forma direta. Uma vez que os $x_i \in X_{VIVAE_{treino}}$ têm correspondentes em $Z$, contra domínio das intensidades, então, $j: M \rightarrow Z$, é tal que
+Sabemos da relevância que \textit{features} espectrais carregam sobre a vocalização e vimos formas para avaliar o desempenho dos modelos, como o \textit{F1-Score}. Para a etapa de classificação da intensidade, vamos construir e treinar um modelo supervisionado $j$ (e.g.: \textit{CNN-LSTM}) que recebe como \textit{input} o \textit{encoding} do \textit{mel-spectrogram} dos $x_i \in X_{VIVAE_{treino}}$.
+
+Este modelo será construído para classificar a intensidade da emoção de forma direta. Uma vez que os $x_i \in X_{VIVAE_{treino}}$ têm correspondentes em $Z$, contra domínio das intensidades, então, $j: M \rightarrow Z$, é tal que
 
 \begin{equation}
     j(f_e(m)) = z
@@ -139,22 +141,20 @@ Por ser tratar de um modelo supervisionado, podemos aplicar as méricas descrita
 % ------------------------------------------------------------------------------------------
 \subsection{Validação}
 
-Como não existe correspondência entre $X_{VERBO} \rightarrow Z$, não podemos validar imediatamente as intensidades $z'$.
-
-Como sabemos as intensidades reais $z_i$ dos $x_i \in X_{VIVAE}$, vamos agregar as features e intensidades, formando vetores, $v_i, u_i$, onde
+Como não existe correspondência entre $X_{VERBO} \rightarrow Z$, não podemos validar imediatamente as intensidades $z'$. Sabendo as intensidades reais $z_i$ dos $x_i \in X_{VIVAE}$, podemos agregar as features e intensidades, formando vetores, $v_i, u_i$, onde
 
 \begin{itemize}
-    \item $v_i = [f_e(m_i), z_i]$, onde $x_i \in X_{VIVAE}$
-    \item $u_i = [f_e(m_i), j(m_i) = z'_i]$, onde $x_i \in X_{VERBO}$
+    \item $v_i = [f_e(m_i), y_i, z_i]$, onde $x_i \in X_{VIVAE}$
+    \item $u_i = [f_e(m_i), y_i, j(m_i) = z'_i]$, onde $x_i \in X_{VERBO}$
 \end{itemize}
+
+Portanto, devemos ter vetores $u,v$ que contêm atributos representativos de características relativas a emoção, sua classe e a intensidade dessa emoção.
 
 Algoritmos não supervisionados como \textit{PCA} e \textit{K-means} podem atuar como formadores de \textit{clusters} para avaliar o desempenho de geração de dados sintéticos.
 
-Portanto, devemos ter vetores $u,v$ que contêm em atributos representativos de características relativas a emoção e a intensidade dessa emoção.
-
 Podemos então aplicar técnicas de clusterização (e.g.: \textit{PCA}) para investigar se os vetores com classe ($y$) e intensidade ($z$) são agrupáveis de forma coerente com base em suas características $y, z$ e verificar a validade de $j$ em $X_{VERBO}$.
 
-Uma forma de aferir o desempenho da clusterização é ...
+% Uma forma de aferir o desempenho da clusterização é ...
 
 \begin{figure}[!h]
 \centering
@@ -162,7 +162,9 @@ Uma forma de aferir o desempenho da clusterização é ...
 \caption{\label{fig:clusterizacaoresults}Exemplo de clusterização de resultados}
 \end{figure}
 
-\clearpage
+% ------------------------------------------------------------------------------------------
+% \section{Aplicabilidade da solução}
+
 % ==========================================================================================
 \section{Plano de Trabalho e Cronograma}
 
