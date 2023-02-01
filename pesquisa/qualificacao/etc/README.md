@@ -17,10 +17,3 @@ surpresa / surprise | [x]   | [x]   | surpresa
 tristeza / --       | [x]   | [ ]   |
 -- / pain           | [ ]   | [x]   |
 -- / achievement    | [ ]   | [x]   |
-
-
-TODO:
-
-- [] documento da monografia @geraldo
-- [] corrigir imagem arquitetura RNN -> DNN
-- [] proposta: como validar do resultado?
