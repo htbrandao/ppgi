@@ -1,7 +1,5 @@
 \chapter{Projeto de Pesquisa}\label{Cap:Projeto de Pesquisa}
 
-%  https://bdm.unb.br/bitstream/10483/27583/1/2020_GabrielCampos_LucasMoutinho_tcc.pdf
-
 Neste capítulo é apresentada a proposta contida neste trabalho. O capítulo irá se desdobrar a partir do problema encontrado e proporá uma solução para sua realização. Adiante, irá expor a sua implementação em detalhes, tratando conhecimentos mais específicos que não estejam elucidados ao longo dos capítulos anteriores e conjecturando sobre possíveis aplicabilidades deste trabalho em áreas diversas. Finalmente, as atividades propostas para este projeto de pesquisa, juntamente com um cronograma de acompanhamento, de acordo com o estabelecido pelo Programa de Pós-Graduação em Informática da Universidade de Brasília (PPGI/UnB) para a obtenção do título de Mestre.\\
 
 % ==========================================================================================
@@ -109,9 +107,22 @@ Vamos construir um \textit{Autoencoder} ($AE$) que tenta reproduzir uma função
 
 O modelo $AE$ será treinado em $X$, e em seu espaço latente teremos uma representação do dado de entrada com a dimensionalidade reduzida, preservando suas características de maneira suficiente para que possa ser reconstruído ($x'$) ao aplicar a função de \textit{decoding}.
 
+\subsubsection{Design da arquitetura}
+
+A definir.
+
+\subsubsection{Desempenho}
+
+Antes de seguir adiante, precisamos verificar a qualidade do modelo produzido, já que este irá prover os dados para o próximo modelo. Apesar de ser um modelo não supervisionado, podemos pensar em formas de aferir seu desempenho. Uma vez que o modelo \textit{AE} tenta reproduzir a função identidade, podemos calcular a diferença entre os atributos de entrada e os atributos de saída. Para isso, vamos utilizar o Erro Quadrático Médio (\textit{Mean Squared Error, MSE}):
+
+\begin{equation}
+    MSE = \frac{1}{n} * \sum^n_{i=1} (x_i - x'_i)^2
+\end{equation}
+
+É desejado que o \textit{MSE} para os atributos de $\{x, x'\}$ seja o mais próximo de zero, indicando que o modelo consegue reconstruir o \textit{input} com grande precisão.
+
 Após o treinamento, vamos separar $X_{VIVAE}$ em três partes com proporções $0,8$, $0,1$ e $0,1$, que irão formar as amostras de treino ($X_{VIVAE_{treino}}$), teste ($X_{VIVAE_{teste}}$) e validação ($X_{VIVAE_{validacao}}$), respectivamente, do modelo supervisionado $j$ que iremos construir a seguir.
 
-% \subsubsection{Design da arquitetura}
 
 % ------------------------------------------------------------------------------------------
 \subsection{Classificação da Intensidade}
@@ -120,7 +131,7 @@ Através do modelo de Russel sabemos que que é possível dispor as emoções em
 
 Ao longo do Capítulo \ref{Cap:Trabalhos Relacionados}, observamos trabalhos relacionados, desafios pertinentes à pesquisa e o estado da arte na área de estudo deste trabalho, que se diferencia dos pares por, além de ser um dos poucos trabalhos a lidar com o idioma português, também aborda a questão da intensidade da emoção.
 
-Sabemos da relevância que \textit{features} espectrais carregam sobre a vocalização e vimos formas para avaliar o desempenho dos modelos, como o \textit{F1-Score}. Para a etapa de classificação da intensidade, vamos construir e treinar um modelo supervisionado $j$ (e.g.: \textit{CNN-LSTM}) que recebe como \textit{input} o \textit{encoding} do \textit{mel-spectrogram} dos $x_i \in X_{VIVAE_{treino}}$.
+Sabemos da relevância que \textit{features} espectrais carregam sobre a vocalização e vimos formas para avaliar o desempenho dos modelos. Para a etapa de classificação da intensidade, vamos construir e treinar um modelo supervisionado $j$ (e.g.: \textit{CNN-LSTM}) que recebe como \textit{input} o \textit{encoding} do \textit{mel-spectrogram} dos $x_i \in X_{VIVAE_{treino}}$.
 
 Este modelo será construído para classificar a intensidade da emoção de forma direta. Uma vez que os $x_i \in X_{VIVAE_{treino}}$ têm correspondentes em $Z$, contra domínio das intensidades, então, $j: M \rightarrow Z$, é tal que
 
@@ -134,9 +145,18 @@ Este modelo será construído para classificar a intensidade da emoção de form
 \caption{\label{fig:jsupervisionado}Modelo supervisionado $j$}
 \end{figure}
 
-Por ser tratar de um modelo supervisionado, podemos aplicar as méricas descritas em \ref{sec:metricas}, utilizando $X_{VIVAE_{validacao}}$ e $X_{VIVAE_{teste}}$ para testar e validar seus resultados. Uma vez que o desempenho de $j$ seja satisfatório, vamos aplicar $j$ em $X_{VERBO}$, obtendo $Z' = \{z'{_i} = j(x_i), \forall x_i \in X_{VERBO}\}$, que serão os resultados para as intensidades das emoções de $X_{VERBO}$.
+\subsubsection{Design da arquitetura}
 
-% \subsubsection{Design da arquitetura}
+A definir.
+
+\subsubsection{Desempenho}
+
+Por ser tratar de um modelo supervisionado, podemos aplicar as méricas descritas em \ref{sec:metricas}, utilizando $X_{VIVAE_{validacao}}$ e $X_{VIVAE_{teste}}$ para testar e validar seus resultados.
+
+Podemos assumir um limiar de 50\% para a acurácia, análogo ao lançar de uma moeda, para considerar o modelo minimamente viável. Assim, que para cada intensidade, o modelo classifique corretamente, no mínimo, metade dos registros que pertencem àquela classe.
+
+Uma vez que o desempenho de $j$ seja satisfatório, vamos aplicar $j$ em $X_{VERBO}$, obtendo $Z' = \{z'{_i} = j(x_i), \forall x_i \in X_{VERBO}\}$, que serão os resultados para as intensidades das emoções de $X_{VERBO}$.
+
 
 % ------------------------------------------------------------------------------------------
 \subsection{Validação}
@@ -161,6 +181,14 @@ Podemos então aplicar técnicas de clusterização (e.g.: \textit{PCA}) para in
 \includegraphics[width=1.0\textwidth]{imagens/p-naosupervisionado.png}
 \caption{\label{fig:clusterizacaoresults}Exemplo de clusterização de resultados}
 \end{figure}
+
+\subsubsection{Design da arquitetura}
+
+A definir.
+
+\subsubsection{Desempenho}
+
+Podemos conjecturar, de forma ingênua, um limiar análogo ao do modelo supervisionado, considerando o resultado final minimamente válido caso o agrupamento dos \{u,v\} seja coerente - de acordo com os rótulos - para pelo menos 50\% dos registros de cada classe.
 
 % ------------------------------------------------------------------------------------------
 % \section{Aplicabilidade da solução}
