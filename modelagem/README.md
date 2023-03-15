@@ -9,13 +9,13 @@ VIVAE   | ["The Variably Intense Vocalizations of Affect and Emotion Corpus (VIV
 
 <br>
 
-Notebook | Descrição
--------- | ---------
-00_preproc.ipynb      | Leitura dos datasets
-01_eda.ipynb          | Análise dos dados
+Notebook              | Descrição
+--------------------- | ---------
+00_prep.ipynb         | Preparação
+01_eda.ipynb          | Extração de características e análise dos dados
 02_modelagem.ipynb    | Modelagem
-03_hyperoptm.ipynb    | Técnicas para otimização e melhora do desempenho dos modelos
-04_comparacao.ipynb   | Análise comparativa dos modelos
+03_optm.ipynb         | Técnicas para otimização e melhora do desempenho dos modelos
+04_comparacao.ipynb   | Análise comparativa entre modelos
 
 <br>
 
