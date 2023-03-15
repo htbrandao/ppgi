@@ -11,9 +11,9 @@ VIVAE   | ["The Variably Intense Vocalizations of Affect and Emotion Corpus (VIV
 
 Notebook | Descrição
 -------- | ---------
-00_preproc.ipynb      | Carregamento e pré-processamento de dados
-01_eda.ipynb          | Análise exploratória dos dados
-02_modelagem.ipynb    | Modelos de classificação vanilla
+00_preproc.ipynb      | Leitura dos datasets
+01_eda.ipynb          | Análise dos dados
+02_modelagem.ipynb    | Modelagem
 03_hyperoptm.ipynb    | Técnicas para otimização e melhora do desempenho dos modelos
 04_comparacao.ipynb   | Análise comparativa dos modelos
 
@@ -27,6 +27,5 @@ Notebook | Descrição
 
 # OBS
 
+- [VERBO audio storage pattern](https://thescipub.com/pdf/jcssp.2018.1420.1430.pdf)
 - 
-- 
-
