@@ -34,7 +34,7 @@ Notebook              | Descrição
     - https://www.kaggle.com/code/zygimantasmarma/2dcnn-for-speech-emotion-recognition-todo-vit
     - https://www.kaggle.com/code/quadeer15sh/audio-emotion-detection-using-autoencoders
     - https://blog.keras.io/building-autoencoders-in-keras.html
-  - 
+    - https://ieeexplore.ieee.org/abstract/document/9900738
 - 
 - 
 
