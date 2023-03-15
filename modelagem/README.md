@@ -30,14 +30,22 @@ Notebook              | Descrição
   - https://www.analyticsvidhya.com/blog/2022/03/implementing-audio-classification-project-using-deep-learning/
   - https://www.kaggle.com/pranavbelhekar/code
   - https://stackoverflow.com/questions/7833807/get-wav-file-length-or-duration
+  - https://www.kaggle.com/code/zainabsb/gender-emotional-recognition
+  - https://www.kaggle.com/code/zygimantasmarma/2dcnn-for-speech-emotion-recognition-todo-vit
+  - https://www.kaggle.com/code/quadeer15sh/audio-emotion-detection-using-autoencoders
+  - 
+  - 
 - 
 - 
 
 # OBS
 
 - [VERBO audio storage pattern](https://thescipub.com/pdf/jcssp.2018.1420.1430.pdf)
-- 
-- 
+- trabalhos futuros:
+  - data augumentation
+  - outras arquiteturas
+  - normalização
+  -  
 - 
 - 
 - 
