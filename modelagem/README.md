@@ -54,7 +54,7 @@ Notebook              | Descrição
     - [ ] https://dsp.stackexchange.com/questions/71241/how-to-handle-different-durations-of-audio-data
     - [ ] https://github.com/harmanpreet93/audio_classification
     - [ ] https://towardsdatascience.com/how-to-apply-machine-learning-and-deep-learning-methods-to-audio-analysis-615e286fcbbc
-    - [ ] 
+    - [ ] https://www.sciencedirect.com/science/article/pii/S1746809421005437
     - [ ] 
     - [ ] 
     - [ ] 
