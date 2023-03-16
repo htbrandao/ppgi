@@ -55,7 +55,7 @@ Notebook              | Descrição
     - [ ] https://github.com/harmanpreet93/audio_classification
     - [ ] https://towardsdatascience.com/how-to-apply-machine-learning-and-deep-learning-methods-to-audio-analysis-615e286fcbbc
     - [ ] https://www.sciencedirect.com/science/article/pii/S1746809421005437
-    - [ ] 
+    - [ ] https://stackoverflow.com/questions/52841335/how-can-i-pad-wav-file-to-specific-length
     - [ ] 
     - [ ] 
     - [ ] 
