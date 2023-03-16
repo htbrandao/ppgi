@@ -56,6 +56,11 @@ Notebook              | Descrição
     - [ ] https://towardsdatascience.com/how-to-apply-machine-learning-and-deep-learning-methods-to-audio-analysis-615e286fcbbc
     - [ ] https://www.sciencedirect.com/science/article/pii/S1746809421005437
     - [ ] https://stackoverflow.com/questions/52841335/how-can-i-pad-wav-file-to-specific-length
+    - [ ] https://stackoverflow.com/questions/68869516/confused-about-mfcc-processing
+    - [ ] https://musicinformationretrieval.com/mfcc.html
+    - [ ] 
+    - [ ] 
+    - [ ] 
     - [ ] 
     - [ ] 
     - [ ] 
