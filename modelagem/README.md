@@ -50,6 +50,16 @@ Notebook              | Descrição
     - [ ] https://ieeexplore.ieee.org/abstract/document/9900738
     - [ ] https://bdm.unb.br/bitstream/10483/27583/1/2020_GabrielCampos_LucasMoutinho_tcc.pdf
     - [ ] https://stackoverflow.com/questions/49290895/how-to-implement-a-1d-convolutional-auto-encoder-in-keras-for-vector-data
+    - [ ] https://github.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network
+    - [ ] https://dsp.stackexchange.com/questions/71241/how-to-handle-different-durations-of-audio-data
+    - [ ] https://github.com/harmanpreet93/audio_classification
+    - [ ] https://towardsdatascience.com/how-to-apply-machine-learning-and-deep-learning-methods-to-audio-analysis-615e286fcbbc
+    - [ ] 
+    - [ ] 
+    - [ ] 
+    - [ ] 
+    - [ ] 
+
 - 
 - 
 - 
