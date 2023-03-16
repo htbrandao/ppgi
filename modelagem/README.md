@@ -59,7 +59,7 @@ Notebook              | Descrição
     - [ ] https://stackoverflow.com/questions/68869516/confused-about-mfcc-processing
     - [ ] https://musicinformationretrieval.com/mfcc.html
     - [ ] https://www.kaggle.com/code/kashishnaqvi/auto-encoders-in-speech-recognition#Auto-Encoders-in-Speech-Recognition
-    - [ ] 
+    - [ ] https://www.kaggle.com/code/wasimkhan/ml-model-for-gender-age-detection-from-voice
     - [ ] 
     - [ ] 
     - [ ] 
