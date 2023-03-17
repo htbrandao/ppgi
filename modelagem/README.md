@@ -22,7 +22,7 @@ Notebook              | Descrição
 # TODO & FIXME
 
 -  modelagem
-    - gerar Xfusao_mfcc Xmfcc_mean Xmfcc_padded
+    - gerar Xfusao_mfcc Xmfcc_mean Xmfcc_zeropadded Xmfcc_stacked
 
 - trabalhos futuros:
     - feature engeneering
