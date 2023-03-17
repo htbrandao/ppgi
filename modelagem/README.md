@@ -22,7 +22,13 @@ Notebook              | Descrição
 # TODO & FIXME
 
 -  modelagem
-    - gerar Xfusao_mfcc Xmfcc_mean Xmfcc_zeropadded Xmfcc_stacked
+    - gerar features
+        - mfcc
+        - mfcc mean
+        - mfcc fix length (zero)
+        - mfcc time stretch
+        - mfcc tiled
+        - mfcc stretch
 
 - trabalhos futuros:
     - feature engeneering
