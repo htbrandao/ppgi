@@ -22,13 +22,9 @@ Notebook              | Descrição
 # TODO & FIXME
 
 -  modelagem
-    - gerar features
-        - mfcc
-        - mfcc mean
-        - mfcc fix length (zero)
-        - mfcc time stretch
-        - mfcc tiled
-        - mfcc stretch
+    - mfcc
+        - mfcc (mfcc*t) com t <- constante
+        - mfcc mean (mfcc*1)
 
 - trabalhos futuros:
     - feature engeneering
