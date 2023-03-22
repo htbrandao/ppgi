@@ -9,13 +9,14 @@ VIVAE   | ["The Variably Intense Vocalizations of Affect and Emotion Corpus (VIV
 
 <br>
 
-Notebook              | Descrição
---------------------- | ---------
-00_prep.ipynb         | Preparação
-01_eda.ipynb          | Análise dos dados e extração de características 
-02_modelagem.ipynb    | Modelagem
-03_optm.ipynb         | Técnicas para otimização e melhora do desempenho dos modelos
-04_comparacao.ipynb   | Análise comparativa entre modelos
+Notebook                | Descrição
+----------------------- | ---------
+00_prep.ipynb           | Preparação
+01_eda.ipynb            | Análise dos dados
+02_features.ipynb       | Extração de características 
+03_modelagem.ipynb      | Modelagem
+04_optm.ipynb           | Técnicas para otimização e melhora do desempenho dos modelos
+05_comparacao.ipynb     | Análise comparativa entre modelos
 
 <br>
 
@@ -23,8 +24,8 @@ Notebook              | Descrição
 
 -  modelagem
     - mfcc
-        - mfcc (mfcc*t) com t <- constante
-        - mfcc mean (mfcc*1)
+        - mfcc (mfcc x t)
+        - mfcc mean (mfcc x 1)
 
 - trabalhos futuros:
     - feature engeneering
