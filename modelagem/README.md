@@ -25,12 +25,16 @@ Notebook                    | Descrição
 
 <br>
 
-# TODO & FIXME
+# TODO
 
 - modelagem
     - mais refs trabalhos de intensidade
     - mais plots ao longo dos notebooks
-- trabalhos futuros:
+    
+# FIXME
+    - modelagem 01 #7 max mfcc
+
+# FUTURO
     - feature engeneering
     - data augumentation
     - data generation
