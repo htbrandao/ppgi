@@ -28,7 +28,8 @@ Notebook                    | Descrição
 # TODO & FIXME
 
 - modelagem
-    - - mais refs trabalhos de intensidade
+    - mais refs trabalhos de intensidade
+    - mais plots ao longo dos notebooks
 - trabalhos futuros:
     - feature engeneering
     - data augumentation
