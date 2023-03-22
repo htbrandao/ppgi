@@ -40,4 +40,5 @@ Notebook                    | Descrição
     - data generation
     - outras arquiteturas
         - rnn direto no sinal
+            - batch por grupo com len próxima
     - normalização
