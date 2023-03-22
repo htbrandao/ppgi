@@ -39,4 +39,5 @@ Notebook                    | Descrição
     - data augumentation
     - data generation
     - outras arquiteturas
+        - rnn direto no sinal
     - normalização
