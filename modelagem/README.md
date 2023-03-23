@@ -14,9 +14,13 @@ Notebook                    | Descrição
 00_prep.ipynb               | Preparação
 01_eda.ipynb                | Análise dos dados
 02_features.ipynb           | Extração de características 
-03_A_modelagem.ipynb        | Modelagem 1-dimensional
-03_B_64_modelagem.ipynb     | Modelagem 2-dimensional com 64 mfccs
-03_B_128_modelagem.ipynb    | Modelagem 2-dimensional com 128 mfccs
+03_A_64_modelagem.ipynb     | Modelagem 1-dim 64 mfccs
+03_A_128_modelagem.ipynb    | Modelagem 1-dim 128 mfccs
+03_B_64_modelagem.ipynb     | Modelagem 2-dim com 64 mfccs
+03_B_128_modelagem.ipynb    | Modelagem 2-dim com 128 mfccs
+...                         | ...
+03_R_64_modelagem.ipynb     | Modelagem 2-dim RNN len variável
+03_R_128_modelagem.ipynb    | Modelagem 2-dim RNN len variável
 ...                         | ...
 03_Z_modelagem.ipynb        | Transfer Learning direto
 04_optm.ipynb               | Técnicas para otimização
@@ -25,14 +29,13 @@ Notebook                    | Descrição
 
 <br>
 
+# FIXME
+
 # TODO
 
 - modelagem
     - mais refs trabalhos de intensidade
     - mais plots ao longo dos notebooks
-    
-# FIXME
-    - modelagem 01 #7 max mfcc
 
 # FUTURO
     - feature engeneering

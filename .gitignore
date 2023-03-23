@@ -22,3 +22,6 @@ venv/
 
 *.npy
 */*.npy
+
+*.hdf5
+*/*.hdf5
