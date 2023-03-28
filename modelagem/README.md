@@ -22,6 +22,7 @@ Notebook                    | Descrição
 03_R_64_modelagem.ipynb     | Modelagem 2-dim RNN len variável
 03_R_128_modelagem.ipynb    | Modelagem 2-dim RNN len variável
 ...                         | ...
+03_Y_modelagem.ipynb        | Sugestão de modelos especialistas
 03_Z_modelagem.ipynb        | Transfer Learning direto
 04_optm.ipynb               | Técnicas para otimização
 05_comparacao.ipynb         | Análise comparativa entre modelos
