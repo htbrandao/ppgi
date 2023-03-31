@@ -107,23 +107,6 @@ Vamos construir um \textit{Autoencoder} ($AE$) que tenta reproduzir uma função
 
 O modelo $AE$ será treinado em $X$, e em seu espaço latente teremos uma representação do dado de entrada com a dimensionalidade reduzida, preservando suas características de maneira suficiente para que possa ser reconstruído ($x'$) ao aplicar a função de \textit{decoding}.
 
-\subsubsection{Design da arquitetura}
-
-A definir.
-
-\subsubsection{Desempenho}
-
-Antes de seguir adiante, precisamos verificar a qualidade do modelo produzido, já que este irá prover os dados para o próximo modelo. Apesar de ser um modelo não supervisionado, podemos pensar em formas de aferir seu desempenho. Uma vez que o modelo \textit{AE} tenta reproduzir a função identidade, podemos calcular a diferença entre os atributos de entrada e os atributos de saída. Para isso, vamos utilizar o Erro Quadrático Médio (\textit{Mean Squared Error, MSE}):
-
-\begin{equation}
-    MSE = \frac{1}{n} * \sum^n_{i=1} (x_i - x'_i)^2
-\end{equation}
-
-É desejado que o \textit{MSE} para os atributos de $\{x, x'\}$ seja o mais próximo de zero, indicando que o modelo consegue reconstruir o \textit{input} com grande precisão.
-
-Após o treinamento, vamos separar $X_{VIVAE}$ em três partes com proporções $0,8$, $0,1$ e $0,1$, que irão formar as amostras de treino ($X_{VIVAE_{treino}}$), teste ($X_{VIVAE_{teste}}$) e validação ($X_{VIVAE_{validacao}}$), respectivamente, do modelo supervisionado $j$ que iremos construir a seguir.
-
-
 % ------------------------------------------------------------------------------------------
 \subsection{Classificação da Intensidade}
 
@@ -139,27 +122,46 @@ Este modelo será construído para classificar a intensidade da emoção de form
     j(f_e(m)) = z
 \end{equation}
 
-\begin{figure}[!h]
+\begin{figure}[h]
 \centering
 \includegraphics[width=1.0\textwidth]{imagens/p-supervisionado.png}
 \caption{\label{fig:jsupervisionado}Modelo supervisionado $j$}
 \end{figure}
 
-\subsubsection{Design da arquitetura}
+% ------------------------------------------------------------------------------------------
+\section{Validação}
 
-A definir.
+Modelos de classificação (ou regressão) precisam ser validados para que possamos avaliar o seu desempenho e gerar inferências a respeito do seu comportamento. Existe uma miríade de formas para atuar na coleta e interpretação dos seus resultados, sendo mais ou menos adequadas à natureza do modelo.
 
-\subsubsection{Desempenho}
+\subsubsection{Autoencoder}
 
-Por ser tratar de um modelo supervisionado, podemos aplicar as méricas descritas em \ref{sec:metricas}, utilizando $X_{VIVAE_{validacao}}$ e $X_{VIVAE_{teste}}$ para testar e validar seus resultados.
+Antes de seguir para a etapa de classificação (B), precisamos verificar a qualidade do modelo produzido, já que este irá prover os dados para o próximo modelo. Apesar de ser um modelo não supervisionado, podemos pensar em formas de aferir seu desempenho. Uma vez que o modelo \textit{AE} tenta reproduzir a função identidade, podemos calcular a diferença entre os atributos de entrada e os atributos de saída. Para isso, podemos utilizar o Erro Quadrático Médio (\textit{Mean Squared Error, MSE}):
 
-Podemos assumir um limiar de 50\% para a acurácia, análogo ao lançar de uma moeda, para considerar o modelo minimamente viável. Assim, que para cada intensidade, o modelo classifique corretamente, no mínimo, metade dos registros que pertencem àquela classe.
+\begin{equation}
+    MSE = \frac{1}{n} * \sum^n_{i=1} (x_i - x'_i)^2
+\end{equation}
+
+É desejado que o \textit{MSE} para os atributos de $\{x, x'\}$ seja o mais próximo de zero, indicando que o modelo consegue reconstruir o \textit{input} com grande precisão.
+
+Após o treinamento, vamos separar $X_{VIVAE}$ em três partes com proporções $0,8$, $0,1$ e $0,1$, que irão formar as amostras de treino ($X_{VIVAE_{treino}}$), teste ($X_{VIVAE_{teste}}$) e validação ($X_{VIVAE_{validacao}}$), respectivamente, do modelo supervisionado $j$ que iremos construir a seguir.
+
+\subsubsection{Classificador}
+
+Por ser tratar de um modelo supervisionado, podemos aplicar as méricas descritas em \ref{sec:metricas}, utilizando $X_{VIVAE_{validacao}}$ e $X_{VIVAE_{teste}}$ para testar e validar seus resultados. Podemos observar algumas dessas métricas na \ref{fig:exclassificationreport}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{imagens/ex_classification_report.png}
+\caption{\label{fig:exclassificationreport}Métricas de desempenho para modelo supervisionado}
+\end{figure}
+
+Vamos assumir um limiar de 50\% para a acurácia média ponderada, análogo ao lançar de uma moeda, para considerar o modelo minimamente viável. Assim, que para cada intensidade, o modelo classifique corretamente, no mínimo, metade dos registros que pertencem àquela classe.
 
 Uma vez que o desempenho de $j$ seja satisfatório, vamos aplicar $j$ em $X_{VERBO}$, obtendo $Z' = \{z'{_i} = j(x_i), \forall x_i \in X_{VERBO}\}$, que serão os resultados para as intensidades das emoções de $X_{VERBO}$.
 
+\subsubsection{Aplicação em $X_{VERBO}$}
 
-% ------------------------------------------------------------------------------------------
-\subsection{Validação}
+Podemos conjecturar, de forma ingênua, um limiar análogo ao do modelo supervisionado, considerando o resultado final minimamente válido caso o agrupamento dos \{u,v\} seja coerente - de acordo com os rótulos - para pelo menos 50\% dos registros de cada classe.
 
 Como não existe correspondência entre $X_{VERBO} \rightarrow Z$, não podemos validar imediatamente as intensidades $z'$. Sabendo as intensidades reais $z_i$ dos $x_i \in X_{VIVAE}$, podemos agregar as features e intensidades, formando vetores, $v_i, u_i$, onde
 
@@ -174,24 +176,11 @@ Algoritmos não supervisionados como \textit{PCA} e \textit{K-means} podem atuar
 
 Podemos então aplicar técnicas de clusterização (e.g.: \textit{PCA}) para investigar se os vetores com classe ($y$) e intensidade ($z$) são agrupáveis de forma coerente com base em suas características $y, z$ e verificar a validade de $j$ em $X_{VERBO}$.
 
-% Uma forma de aferir o desempenho da clusterização é ...
-
 \begin{figure}[!h]
 \centering
 \includegraphics[width=1.0\textwidth]{imagens/p-naosupervisionado.png}
 \caption{\label{fig:clusterizacaoresults}Exemplo de clusterização de resultados}
 \end{figure}
-
-\subsubsection{Design da arquitetura}
-
-A definir.
-
-\subsubsection{Desempenho}
-
-Podemos conjecturar, de forma ingênua, um limiar análogo ao do modelo supervisionado, considerando o resultado final minimamente válido caso o agrupamento dos \{u,v\} seja coerente - de acordo com os rótulos - para pelo menos 50\% dos registros de cada classe.
-
-% ------------------------------------------------------------------------------------------
-% \section{Aplicabilidade da solução}
 
 % ==========================================================================================
 \section{Plano de Trabalho e Cronograma}
