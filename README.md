@@ -13,6 +13,4 @@
 
 # FIXME
 - texto:
-    - remover design de arquiteturas
-    - mover validação para sessão autocontida
     - revisar
