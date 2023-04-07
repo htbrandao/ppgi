@@ -15,7 +15,9 @@ Notebook                    | Descrição
 01_eda.ipynb                | Análise dos dados
 02_features.ipynb           | Extração de características 
 03_A_64_modelagem.ipynb     | Modelagem 1-dim 64 mfccs
+03_A2_64_modelagem.ipynb    | Modelagem 1-dim 64 mfccs com duas classes
 03_A_128_modelagem.ipynb    | Modelagem 1-dim 128 mfccs
+03_A2_128_modelagem.ipynb   | Modelagem 1-dim 128 mfccs com duas classes
 03_B_64_modelagem.ipynb     | Modelagem 2-dim com 64 mfccs
 03_B_128_modelagem.ipynb    | Modelagem 2-dim com 128 mfccs
 ...                         | ...
