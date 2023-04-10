@@ -41,6 +41,7 @@ Notebook                    | Descrição
     - mais plots ao longo dos notebooks
 
 # FUTURO
+    - https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
     - feature engeneering
     - data augumentation
     - data generation
