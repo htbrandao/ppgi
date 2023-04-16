@@ -36,9 +36,7 @@ Notebook                    | Descrição
 
 # TODO
 
-- modelagem
-    - mais refs trabalhos de intensidade
-    - mais plots ao longo dos notebooks
+- apresentação qualificação
 
 # FUTURO
     - https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
