@@ -36,7 +36,8 @@ Notebook                    | Descrição
 
 # TODO
 
-- apresentação qualificação
+- apresentação qualificação @ 27/04
+    - apresentação seminário @ 05/05
 
 # FUTURO
     - https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
