@@ -48,4 +48,7 @@ Notebook                    | Descrição
     - outras arquiteturas
         - rnn direto no sinal
             - batch por grupo com len próxima
+    - modelos especialistas
+    - transfer learning
+    - mais dados
     - normalização
