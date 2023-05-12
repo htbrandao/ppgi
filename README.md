@@ -7,12 +7,4 @@
 ### BRAVO: **B**razilian-portuguese Emotional Intensity **R**ecognition **A**ssistant for **VO**ice
 
 # TODO
-
-- apresentação qualificação @ 27/04
-    - add resultados preliminares na qualif
-    - ensaiar
-- apresentação seminário @ 05/05
-
-# FIXME
-- texto:
-    - revisar
+- concluir dissetação

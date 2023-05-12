@@ -17,11 +17,11 @@ Não tendo encontrado ocorrência na literatura, este trabalho se propõe a resp
 % ------------------------------------------------------------------------------------------
 \subsection{Visão Geral}
 
-Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da proposta. Conforme a imagem, três etapas principais são necessáiras para o reconhecimento da intensidade das emoções: (A) Aquisição dos dados; (B) Extração de características; e (C) Classificação da intensidade.
+Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da proposta. Conforme a imagem, três etapas principais serão necessárias para o reconhecimento da intensidade das emoções: (A) Aquisição dos dados; (B) Extração de características; e (C) Classificação da intensidade.
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.75\textwidth]{imagens/arquitetura-visao-geral.png}
+\includegraphics[width=0.75\textwidth]{imagens/arquitetura-visao-geral-2.png}
 \caption{\label{fig:visaogeralproposta}Visão geral da proposta}
 \end{figure}
 
@@ -78,7 +78,7 @@ Vamos redefinir $X_{VERBO} = \{x_i \mid y_i \in Y\}$, analogamente para $X_{VIVA
     \item $\forall x_j \in X_{VIVAE}, \exists z_j \in Z$ tal que  $z_j$ é a intensidade de $x_j$
 \end{itemize}
 
-Ao realizar tarefas de \textit{DL}, precisamos transformar os dados de entrada em um formato passível de ingestão pelos modelos. Os arquivos \textit{.wav} de $X$ serão lidos e iremos gerar seus respectivos \textit{Mel-spectrograms}, convertendo o sinal de áudio ao longo do tempo para uma representação do sinal no domínio da frequência, que será utilizada pelos modelos. Então, teremos um mapa $M(x_i): espectrograma_i$.
+Ao realizar tarefas de \textit{DL}, precisamos transformar os dados de entrada em um formato passível de ingestão pelos modelos. Os arquivos \textit{.wav} de $X$ serão lidos e iremos gerar seus respectivos \textit{MFCCs}, convertendo o sinal de áudio ao longo do tempo para uma representação do sinal no domínio da frequência, que será utilizada pelos modelos. Então, teremos um mapa $M(x_i): MFCC_i$.
 
 \begin{figure}[!h]
 \centering
@@ -131,7 +131,7 @@ Este modelo será construído para classificar a intensidade da emoção de form
 % ------------------------------------------------------------------------------------------
 \section{Validação}
 
-Modelos de classificação (ou regressão) precisam ser validados para que possamos avaliar o seu desempenho e gerar inferências a respeito do seu comportamento. Existe uma miríade de formas para atuar na coleta e interpretação dos seus resultados, sendo mais ou menos adequadas à natureza do modelo.
+Modelos de classificação (ou regressão) precisam ser validados para que possamos avaliar o seu desempenho e gerar inferências a respeito do seu comportamento. Existem diversas formas para atuar na coleta e interpretação dos seus resultados, sendo mais ou menos adequadas à natureza do modelo.%, vide as méricas expostas em \ref{sec:metricas}.
 
 \subsubsection{Autoencoder}
 
@@ -147,7 +147,7 @@ Após o treinamento, vamos separar $X_{VIVAE}$ em três partes com proporções 
 
 \subsubsection{Classificador}
 
-Por ser tratar de um modelo supervisionado, podemos aplicar as méricas descritas em \ref{sec:metricas}, utilizando $X_{VIVAE_{validacao}}$ e $X_{VIVAE_{teste}}$ para testar e validar seus resultados. Podemos observar algumas dessas métricas na \ref{fig:exclassificationreport}.
+Por ser tratar de um modelo supervisionado, podemos aplicar as méricas descritas em \ref{sec:metricas}, utilizando $X_{VIVAE_{validacao}}$ e $X_{VIVAE_{teste}}$ para testar e validar seus resultados. Podemos observar algumas dessas métricas na figura \ref{fig:exclassificationreport}.
 
 \begin{figure}[h]
 \centering
