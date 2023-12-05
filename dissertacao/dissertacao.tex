@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classe do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Opções:
+%  - Graduação: bacharelado|engenharia|licenciatura
+%  - Pós-graduação: [qualificacao], mestrado|doutorado, ppca|ppginf
+
+% \documentclass[engenharia]{UnB-CIC}%
+\documentclass[qualificacao,mestrado,ppginf]{UnB-CIC}%
+
+\usepackage{pdfpages}% incluir PDFs, usado no apêndice
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Informações do Trabalho
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\orientador{\prof \dr Geraldo Pereira Rocha Filho}{CIC/UnB}%
+\coordenador{\prof \dr Ricardo Pezzuol Jacobi}{Universidade de Brasília}%
+\diamesano{99}{XPTO}{2024}%
+
+\membrobanca{\prof \dr Li Weigang}{Universidade de Brasília}%
+\membrobanca{\prof[a] \dr[a] Edna Dias Canedo}{Universidade de Brasília}%
+
+\autor{Henrique Tibério Brandão V.}{Augusto}%
+
+\titulo{Classificação de Intensidade das Emoções na Fala em Português Brasileiro por meio de Deep Learning}%
+
+\palavraschave{aprendizado de máquina, aprendizado profundo, reconhecimento de emoção na voz, intensidade da emoção, português brasileiro, verbo, vivae}%
+
+\keywords{machine learning, deep learning, speech emotion recognition, emotion intensity, brazilian portuguese, verbo, vivae}%
+
+
+
+\newcommand{\unbcic}{\texttt{UnB-CIC}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Texto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%
+    \capitulo{1_introducao}{Introdução}
+    \capitulo{2_fund_teo}{Fundamentação Teórica}
+    \capitulo{3_trab_relac}{Trabalhos Relacionados}
+    \capitulo{4_pesquisa}{Classificação de Intensidade das Emoções na Fala em Português Brasileiro por meio de Deep Learning}
+    \capitulo{5_resultados}{Resultados}
+    \capitulo{6_conclusoes}{Conclusões}
+\end{document}%

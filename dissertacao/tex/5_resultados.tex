@@ -10,13 +10,13 @@ Definida a arquitetura composta por um Autoencoder (\ref{sec:bravo_ae}) e uma Re
 
 % \begin{figure}[h]
 %     \centering
-%     \includegraphics[width=1.0\textwidth]{imagens/design.PNG}
+%     \includegraphics[width=1.0\textwidth]{img/design.PNG}
 %     \caption{\label{fig:design}\textcolor{blue}{\textit{Design} da proposta para o \textit{BRAVO}}}
 % \end{figure}
 
 Foram realizados dois cenários experimentais, utilizando 64 e 128 \textit{MFCCs}, respectivamente. Em ambos,  o \textit{Autoencoder} foi treinado com a totalidade desses registros; e então uma rede neural densa multicamada para classificar a intensidade, treinada e validada apenas na porção dos dados oriunda do $VIVAE$, uma vez quer o $VERBO$ não tem correspondência com o contradomínio ($Z$) das intensidades.
 
-Há de se observar que não há \textit{label} correspondente às intensidades par $X_{VERBO}$. Então precisamos investigar se há algum sentido nos resultados quando aplicarmos a classificação a esses dados, que até então ainda não foram vistos pelo classificador. Assim, faz-se necessária uma forma de analisar os registos de $X_{VIVAE}$ e$X_{VERBO}$ quanto às intensidades e a predição dessas intensidades, respectivamente. Podemos utilizar o \textit{PCA} (\textit{Principal Component Analysis}) para reduzir a dimensionalidade dos registros e observar o comportamento da classificação. A utilização \textit{PCA} encontra registros na literatura, tanto de \textit{ML} e \textit{DL} aplicados a voz e emoções. Temos \cite{pca1} que utilizou o PCA para gerar features de um modelo, observando que modelos treinados com as features obtidas a partir do PCA mantiveram sua performance quando comparados aos treinados com outros atributos; \cite{pca2} que apesar de fazer uma \textit{feature selection} prévia, optou por utilizar o \textit{PCA} para reduzir em quase três vezes a dimensionalidade do dado para conseguir uma visualização bidimensional dos registros; \cite{pca3} buscou desenvolver um sistema de reconhecimento de emoções para áudios com ruídos, utilizando dados $64$-dimensionais que seriam reduzidos para um espaço $6$-dimensional utilizando e comparando técnicas distintas, sendo uma delas o \textit{PCA}; e \cite{pca5} que aproxima o grau de \textit{encoding} de um \textit{Autoencoder} linear - em seu espaço latente $n$-dimensional - ao de um PCA com $n$ componentes. Assim, vemos o \textit{PCA} ser utilizado tanto para permitir a visualização de dados através da redução de dimensionalidade quanto para gerar as \textit{features} utilizadas em modelos de reconhecimento de emoções. O que nos diz que o \textit{PCA} seria uma solução adequada para reduzir a dimensionalidade dos dados enquanto preserva características relevantes das amostras.
+Há de se observar que não há \textit{label} correspondente às intensidades par $X_{VERBO}$. Então precisamos investigar se há algum sentido nos resultados quando aplicarmos a classificação a esses dados, que até então ainda não foram vistos pelo classificador. Assim, faz-se necessária uma forma de analisar os registos de $X_{VIVAE}$ e$X_{VERBO}$ quanto às intensidades e a predição dessas intensidades, respectivamente. Podemos utilizar o \textit{PCA} (\textit{Principal Component Analysis}) para reduzir a dimensionalidade dos registros e observar o comportamento da classificação. A utilização \textit{PCA} encontra registros na literatura, tanto de \textit{ML} e \textit{DL} aplicados a voz e emoções. Temos~\cite{pca1} que utilizou o PCA para gerar features de um modelo, observando que modelos treinados com as features obtidas a partir do PCA mantiveram sua performance quando comparados aos treinados com outros atributos;~\cite{pca2} que apesar de fazer uma \textit{feature selection} prévia, optou por utilizar o \textit{PCA} para reduzir em quase três vezes a dimensionalidade do dado para conseguir uma visualização bidimensional dos registros;~\cite{pca3} buscou desenvolver um sistema de reconhecimento de emoções para áudios com ruídos, utilizando dados $64$-dimensionais que seriam reduzidos para um espaço $6$-dimensional utilizando e comparando técnicas distintas, sendo uma delas o \textit{PCA}; e~\cite{pca5} que aproxima o grau de \textit{encoding} de um \textit{Autoencoder} linear - em seu espaço latente $n$-dimensional - ao de um PCA com $n$ componentes. Assim, vemos o \textit{PCA} ser utilizado tanto para permitir a visualização de dados através da redução de dimensionalidade quanto para gerar as \textit{features} utilizadas em modelos de reconhecimento de emoções. O que nos diz que o \textit{PCA} seria uma solução adequada para reduzir a dimensionalidade dos dados enquanto preserva características relevantes das amostras.
 
 % ------------------------------------------------------------------------------------------
 \subsection{Autoencoder}
@@ -34,13 +34,13 @@ A estrutura dos Autoencoders é análoga para ambos os experimentos. A Figura \r
     \centering
     \begin{minipage}[b]{0.4\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{imagens/ae64.png}
+        \includegraphics[width=\linewidth]{img/ae64.png}
         \caption{\label{fig:ae64}Arquitetura do Autoencoder para 64 \textit{MFCCS}}
     \end{minipage}
     % \hfill
     \begin{minipage}[b]{0.4\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{imagens/ae128.png}
+        \includegraphics[width=\linewidth]{img/ae128.png}
         \caption{\label{fig:ae128}Arquitetura do Autoencoder para 128 \textit{MFCCS}}
     \end{minipage}
 \end{figure}
@@ -61,13 +61,13 @@ A estrutura dos Classificadores é análoga para ambos os experimentos. A Figura
     \centering
     \begin{minipage}[b]{0.45\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{imagens/clf64.png}
+        \includegraphics[width=\linewidth]{img/clf64.png}
         \caption{\label{fig:clf64}Arquitetura do classificador do experimento com 64 \textit{MFCCs}}
     \end{minipage}
     % \hfill
     \begin{minipage}[b]{0.45\linewidth}
     \centering
-        \includegraphics[width=\linewidth]{imagens/clf128.png}
+        \includegraphics[width=\linewidth]{img/clf128.png}
         \caption{\label{fig:clf128}Arquitetura do classificador do experimento com 128 \textit{MFCCs}}
     \end{minipage}
 \end{figure}
@@ -75,11 +75,11 @@ A estrutura dos Classificadores é análoga para ambos os experimentos. A Figura
 % ==========================================================================================
 \section{Aplicabilidade}\label{sec:aplicabilidade}
 
-O \textit{BRAVO} foi desenvolvido com o intuito de explorar possibilidades para inferência da itensidade da emoção na voz em nosso idioma nativo, até então não encontrado na literatura. \textit{SER} é um problema complexo uma vez que a expressão emocional é afetada por vários fatores, incluindo a linguagem falada e o sotaque dos indivúdios \cite{6}.
+O \textit{BRAVO} foi desenvolvido com o intuito de explorar possibilidades para inferência da itensidade da emoção na voz em nosso idioma nativo, até então não encontrado na literatura. \textit{SER} é um problema complexo uma vez que a expressão emocional é afetada por vários fatores, incluindo a linguagem falada e o sotaque dos indivúdios~\cite{6}.
 
-Inferir a intensidade da emoção encontra aplicações potenciais em em diversas áreas, como saúde \cite{1}, segurança \cite{4}, entretenimento (através de \textit{smart enviromentes} \cite{alexa1} e \textit{smart assistants} \cite{alexa2}) e comercial\cite{bsignal1}\cite{bsignal2}. Trabalhos como \cite{63} buscam entender a intensidade da emoção para melhorar a performance da síntese de uma vocalização emocional oriunda de um mecanismo de \textit{speech to text}.
+Inferir a intensidade da emoção encontra aplicações potenciais em em diversas áreas, como saúde~\cite{1}, segurança~\cite{4}, entretenimento (através de \textit{smart enviromentes}~\cite{alexa1} e \textit{smart assistants}~\cite{alexa2}) e comercial\cite{bsignal1}\cite{bsignal2}. Trabalhos como~\cite{63} buscam entender a intensidade da emoção para melhorar a performance da síntese de uma vocalização emocional oriunda de um mecanismo de \textit{speech to text}.
 
-Desenvolver uma metodologia para classificar a intensidade da emoção poderia colaborar com a monitoração do estado de saúde de pacientes, com um modelo embarcado em assistentes virtuais inteligentes; auxiliar no antendimento ao público encaminhando chamadas de \textit{call centers} compreendidas como urgentes para fora do fluxo automatizado e para o atendimento humano; ser utilizado para melhorar o desempenho de sistemas de segurança baseados em reconhecimento de voz, reduzindo a alteração na voz causada por variações do estado emocional, assim como soluções que reduzem ruído; ou para uma fins comerciais no sistema financeiro, como uma empresa \cite{bsignal0} que alega possuir uma solução \textit{From Voice to Revenue} que aumentou em 20\% o sucesso da renegociação para recupração de crédito de liquidação duvidosa.
+Desenvolver uma metodologia para classificar a intensidade da emoção poderia colaborar com a monitoração do estado de saúde de pacientes, com um modelo embarcado em assistentes virtuais inteligentes; auxiliar no antendimento ao público encaminhando chamadas de \textit{call centers} compreendidas como urgentes para fora do fluxo automatizado e para o atendimento humano; ser utilizado para melhorar o desempenho de sistemas de segurança baseados em reconhecimento de voz, reduzindo a alteração na voz causada por variações do estado emocional, assim como soluções que reduzem ruído; ou para uma fins comerciais no sistema financeiro, como uma empresa~\cite{bsignal0} que alega possuir uma solução \textit{From Voice to Revenue} que aumentou em 20\% o sucesso da renegociação para recupração de crédito de liquidação duvidosa.
 
 
 \section{Experimentos}

@@ -1,4 +1,4 @@
-\chapter{Projeto de Pesquisa}\label{Cap:Projeto de Pesquisa}
+\chapter{Classificação de Intensidade das Emoções na Fala em Português Brasileiro por meio de Deep Learning}\label{Cap:Pesquisa}
 
 Neste capítulo é apresentada a proposta contida neste trabalho. O capítulo irá se desdobrar a partir do problema encontrado e proporá uma solução para sua realização. Adiante, irá expor a sua implementação em detalhes, tratando conhecimentos mais específicos que não estejam elucidados ao longo dos capítulos anteriores e conjecturando sobre possíveis aplicabilidades deste trabalho em áreas diversas.
 
@@ -18,7 +18,7 @@ Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da propos
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.60\textwidth]{imagens/arquitetura-visao-geral-2-eng.png}
+\includegraphics[width=0.60\textwidth]{img/arquitetura-visao-geral-2-eng.png}
 \caption{\label{fig:visaogeralproposta}Visão geral da proposta}
 \end{figure}
 
@@ -33,11 +33,11 @@ A terceira e última etapa (C) é responsável pela inferência da intensidade. 
 
 O primeiro passo para tarefas de \textit{machine learning} que envolvem \textit{SER} costuma ser a aquisição dos dados que serão utilizados pelo modelo. Em virtude do escopo da proposta, necessitamos de um \textit{dataset} em português que possua as classes desejadas: Emoção e intensidade.
 
-Até o momento da escrita deste tabalho, não conhecemos algumum \textit{dataset} que seja ideal (idioma, emoções e intensidade) para esta proposta. Então, conforme descrito na seção \ref{section:basesdedados}, este trabalho utilizará duas bases de dados: VERBO \cite{12.21} e VIVAE \cite{16}.
+Até o momento da escrita deste tabalho, não conhecemos algumum \textit{dataset} que seja ideal (idioma, emoções e intensidade) para esta proposta. Então, conforme descrito na seção \ref{section:basesdedados}, este trabalho utilizará duas bases de dados: VERBO~\cite{12.21} e VIVAE~\cite{16}.
 
 O primeiro \textit{dataset}, VERBO, é composto por vocalizações verbais, acomodando todos os fonemas da língua portuguesa, com exemplos para seis emoções básicas (alegria, nojo, medo, raiva, surpresa, tristeza) e um estado emocional denominado de neutro.
 
-O segundo, VIVAE, é composto por vocalizações não verbais distribuidas em seis classes (conquista, prazer sexual, surpresa positiva, raiva, medo e dor física), com exemplos em quatro intensidades (baixa, moderada, fote e pico de intensidade). Graças a fusão de domínios \cite{49}, conseguimos o cenário da Tabela \ref{table:datasetideal}.
+O segundo, VIVAE, é composto por vocalizações não verbais distribuidas em seis classes (conquista, prazer sexual, surpresa positiva, raiva, medo e dor física), com exemplos em quatro intensidades (baixa, moderada, fote e pico de intensidade). Graças a fusão de domínios~\cite{49}, conseguimos o cenário da Tabela \ref{table:datasetideal}.
 
 Assim, sejam os dois \textit{datasets} VERBO e VIVAE, de modo que VERBO é constituído por pares \{amostra, classe\} e VIVAE por pares \{amostra, classe, intensidade\}, onde as classes são a emoção atribuída àquela amostra, e a intensidade é o rótulo da intensidade da classe daquela amostra. Vamos representar as amostras do VERBO por $X_{VERBO}$ e do VIVAE por $X_{VIVAE}$.
 
@@ -63,7 +63,7 @@ Seja $Y_{VERBO}$ o conjunto das classes (emoções) $y_i \forall x_i \in X_{VERB
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.40\textwidth]{imagens/p-yverbointeryvivae.png}
+    \includegraphics[width=0.40\textwidth]{img/p-yverbointeryvivae.png}
     \caption{\label{fig:yverbointeryvivae}Interseção entre rótulos de emoções de VERBO e VIVAE}
 \end{figure}
 
@@ -78,7 +78,7 @@ Ao realizar tarefas de \textit{DL}, precisamos transformar os dados de entrada e
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.5\textwidth]{imagens/p-dominios-contradominos.png}
+    \includegraphics[width=0.5\textwidth]{img/p-dominios-contradominos.png}
     \caption{\label{fig:dominioscontradominios}Domínio e contradomínios}
 \end{figure}
 
@@ -97,7 +97,7 @@ Vamos construir um \textit{Autoencoder} ($AE$), exemplificado na Figura \ref{fig
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{imagens/p-autoencoder.png}
+    \includegraphics[width=0.9\textwidth]{img/p-autoencoder.png}
     \caption{\label{fig:composicaoae}Composição do \textit{AE}}
 \end{figure}
 
@@ -106,7 +106,7 @@ O modelo $AE$ será treinado em $X$, e em seu espaço latente teremos uma repres
 % ==========================================================================================
 \section{Classificação da Intensidade}\label{sec:bravo_clf}
 
-Através do modelo de Russel sabemos que que é possível dispor as emoções em função da valência (prazer ou desprazer) e da ativação (vigor ou quietude) \cite{27}. Plutchik decompõe as emoções básicas de acordo com a intensidade, chegando a emoções compostas, formadas a partir de duas emoções com intensidades menores.
+Através do modelo de Russel sabemos que que é possível dispor as emoções em função da valência (prazer ou desprazer) e da ativação (vigor ou quietude)~\cite{27}. Plutchik decompõe as emoções básicas de acordo com a intensidade, chegando a emoções compostas, formadas a partir de duas emoções com intensidades menores.
 
 Ao longo do Capítulo \ref{Cap:Trabalhos Relacionados}, observamos trabalhos relacionados, desafios pertinentes à pesquisa e o estado da arte na área de estudo deste trabalho, que se diferencia dos pares por, além de ser um dos poucos trabalhos a lidar com o idioma português, também aborda a questão da intensidade da emoção.
 
@@ -120,7 +120,7 @@ Este modelo (Figura \ref{fig:jsupervisionado}) será construído para classifica
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.75\textwidth]{imagens/p-supervisionado.png}
+    \includegraphics[width=0.75\textwidth]{img/p-supervisionado.png}
     \caption{\label{fig:jsupervisionado}Modelo supervisionado $j$}
 \end{figure}
 
