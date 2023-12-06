@@ -1,12 +1,14 @@
-\chapter{Resultados}\label{Cap:Resultados}
+% \chapter{Resultados}\label{Cap:Resultados}
 
-Neste capítulo serão apresentados os resultados experimentais, avaliações de desempenho e a metodologia utilizada na avaliação do \textit{BRAVO}.\\
+Neste capítulo serão apresentados os detalhes da implementação, resultados, métricas de desempenho e a metodologia utilizada na avaliação deste trabalho.\\
 
-\section{\textit{BRAVO: \textbf{B}razilian-portuguese Emotional Intensity \textbf{R}ecognition \textbf{A}ssistant for \textbf{VO}ice}}\label{sec:implementacao}
+\section{Classificação de Intensidade das Emoções na Fala em Português Brasileiro por meio de Deep Learning}\label{sec:implementacao}
 
-Esta seção detalha a implementação do \textit{BRAVO}, uma arquitetura para o reconhecimento da intensidade emoções na fala em nosso idioma nativo. Com este modelo, objetiva-se a aplicação de métodos de IA através aprendizagem supervisionadas e não supervisionada para uma tarefa de reconhecimento da intensidade da emoção expressa vocalmente. Para tanto, em virtude do desafio da demanda, ratificado pela escassez de dados, nos aproveitamos da Fusão de Dados  para criar, primeiramente, uma solução não supervisionada que consiga extrair características que sejam representativas o suficiente para que, mesmo com a dimensionalidade reduzida em comparação a original, consigamos reconstruir o dado de entrada; e posteriomente utilizar esses dados comprimidos, constituído de atributos suficientemente relevantes, para desenvolver um modelo supervisionado de inferência da intensidade.
+Esta seção detalha nossa implementação para o efetuar o reconhecimento da intensidade emoções na fala em nosso idioma nativo. Utilizando aprendizagem supervisionadas e não supervisionada para uma tarefa de reconhecimento da intensidade da emoção expressa vocalmente.
 
-Definida a arquitetura composta por um Autoencoder (\ref{sec:bravo_ae}) e uma Rede Neural (\ref{sec:bravo_clf}), tomamos apenas as emoções comuns (\ref{sec:bravo_dados}) entre as duas bases de dados (alegria, medo, raiva e surpresa), totalizando 1364 registros, onde 51\% apresentam a o \textit{label} relativo a intensidade. %A Figura \ref{fig:design} apresenta o \textit{design} do \textit{BRAVO}.
+Para tanto, em virtude do desafio da demanda, ratificado pela escassez de dados, nos aproveitamos da Fusão de Dados para criar, primeiramente, uma solução não supervisionada que consiga extrair características que sejam representativas o suficiente para que, mesmo com a dimensionalidade reduzida em comparação a original, consigamos reconstruir o dado de entrada; e posteriomente utilizar esses dados comprimidos, constituído de atributos suficientemente relevantes, para desenvolver um modelo supervisionado de inferência da intensidade.
+
+Definida a arquitetura composta por um Autoencoder (\ref{sec:bravo_ae}) e um Classificador (\ref{sec:bravo_clf}), tomamos apenas as emoções comuns (\ref{sec:bravo_dados}) entre as duas bases de dados (alegria, medo, raiva e surpresa), totalizando 1364 registros, onde 51\% apresentam a o \textit{label} relativo a intensidade. %A Figura \ref{fig:design} apresenta o \textit{design} do \textit{BRAVO}.
 
 % \begin{figure}[h]
 %     \centering
@@ -14,9 +16,9 @@ Definida a arquitetura composta por um Autoencoder (\ref{sec:bravo_ae}) e uma Re
 %     \caption{\label{fig:design}\textcolor{blue}{\textit{Design} da proposta para o \textit{BRAVO}}}
 % \end{figure}
 
-Foram realizados dois cenários experimentais, utilizando 64 e 128 \textit{MFCCs}, respectivamente. Em ambos,  o \textit{Autoencoder} foi treinado com a totalidade desses registros; e então uma rede neural densa multicamada para classificar a intensidade, treinada e validada apenas na porção dos dados oriunda do $VIVAE$, uma vez quer o $VERBO$ não tem correspondência com o contradomínio ($Z$) das intensidades.
+Foram realizados dois cenários experimentais, utilizando 64 e 128 \textit{MFCCs}, respectivamente. Em ambos,  o \textit{Autoencoder} foi treinado com a totalidade desses registros. Em seguida treinamos uma rede neural densa multicamada para classificar a intensidade, treinada e validada apenas na porção dos dados oriunda do $VIVAE$, uma vez quer o $VERBO$ não tem correspondência com o contradomínio ($Z$) das intensidades.
 
-Há de se observar que não há \textit{label} correspondente às intensidades par $X_{VERBO}$. Então precisamos investigar se há algum sentido nos resultados quando aplicarmos a classificação a esses dados, que até então ainda não foram vistos pelo classificador. Assim, faz-se necessária uma forma de analisar os registos de $X_{VIVAE}$ e$X_{VERBO}$ quanto às intensidades e a predição dessas intensidades, respectivamente. Podemos utilizar o \textit{PCA} (\textit{Principal Component Analysis}) para reduzir a dimensionalidade dos registros e observar o comportamento da classificação. A utilização \textit{PCA} encontra registros na literatura, tanto de \textit{ML} e \textit{DL} aplicados a voz e emoções. Temos~\cite{pca1} que utilizou o PCA para gerar features de um modelo, observando que modelos treinados com as features obtidas a partir do PCA mantiveram sua performance quando comparados aos treinados com outros atributos;~\cite{pca2} que apesar de fazer uma \textit{feature selection} prévia, optou por utilizar o \textit{PCA} para reduzir em quase três vezes a dimensionalidade do dado para conseguir uma visualização bidimensional dos registros;~\cite{pca3} buscou desenvolver um sistema de reconhecimento de emoções para áudios com ruídos, utilizando dados $64$-dimensionais que seriam reduzidos para um espaço $6$-dimensional utilizando e comparando técnicas distintas, sendo uma delas o \textit{PCA}; e~\cite{pca5} que aproxima o grau de \textit{encoding} de um \textit{Autoencoder} linear - em seu espaço latente $n$-dimensional - ao de um PCA com $n$ componentes. Assim, vemos o \textit{PCA} ser utilizado tanto para permitir a visualização de dados através da redução de dimensionalidade quanto para gerar as \textit{features} utilizadas em modelos de reconhecimento de emoções. O que nos diz que o \textit{PCA} seria uma solução adequada para reduzir a dimensionalidade dos dados enquanto preserva características relevantes das amostras.
+Há de se observar que não há \textit{label} correspondente às intensidades par $X_{VERBO}$. Então precisamos investigar se há algum sentido nos resultados quando aplicarmos a classificação a esses dados, que até então ainda não foram vistos pelo classificador. Assim, faz-se necessária uma forma de analisar os registos de $X_{VIVAE}$ e$X_{VERBO}$ quanto às intensidades e a predição dessas intensidades, respectivamente. Podemos utilizar o \textit{PCA} (\textit{Principal Component Analysis}) para reduzir a dimensionalidade dos registros e observar o comportamento da classificação. A utilização \textit{PCA} encontra registros na literatura, tanto de \textit{ML} e \textit{DL} aplicados a voz e emoções. Temos ~\cite{pca1} que utilizou o PCA para gerar features de um modelo, observando que modelos treinados com as features obtidas a partir do PCA mantiveram sua performance quando comparados aos treinados com outros atributos; ~\cite{pca2} que apesar de fazer uma \textit{feature selection} prévia, optou por utilizar o \textit{PCA} para reduzir em quase três vezes a dimensionalidade do dado para conseguir uma visualização bidimensional dos registros; ~\cite{pca3} buscou desenvolver um sistema de reconhecimento de emoções para áudios com ruídos, utilizando dados $64$-dimensionais que seriam reduzidos para um espaço $6$-dimensional utilizando e comparando técnicas distintas, sendo uma delas o \textit{PCA}; e ~\cite{pca5} que aproxima o grau de \textit{encoding} de um \textit{Autoencoder} linear - em seu espaço latente $n$-dimensional - ao de um PCA com $n$ componentes. Assim, vemos o \textit{PCA} ser utilizado tanto para permitir a visualização de dados através da redução de dimensionalidade quanto para gerar as \textit{features} utilizadas em modelos de reconhecimento de emoções. O que nos diz que o \textit{PCA} seria uma solução adequada para reduzir a dimensionalidade dos dados enquanto preserva características relevantes das amostras.
 
 % ------------------------------------------------------------------------------------------
 \subsection{Autoencoder}
@@ -57,7 +59,7 @@ A estrutura dos Classificadores é análoga para ambos os experimentos. A Figura
 \end{enumerate}
 
 % ---- Arquiteturas CLFs ---- %
-\begin{figure}[h]
+\begin{figure}[]
     \centering
     \begin{minipage}[b]{0.45\linewidth}
         \centering
@@ -75,19 +77,19 @@ A estrutura dos Classificadores é análoga para ambos os experimentos. A Figura
 % ==========================================================================================
 \section{Aplicabilidade}\label{sec:aplicabilidade}
 
-O \textit{BRAVO} foi desenvolvido com o intuito de explorar possibilidades para inferência da itensidade da emoção na voz em nosso idioma nativo, até então não encontrado na literatura. \textit{SER} é um problema complexo uma vez que a expressão emocional é afetada por vários fatores, incluindo a linguagem falada e o sotaque dos indivúdios~\cite{6}.
+Este trabalho foi desenvolvido com o intuito de explorar possibilidades para inferência da itensidade da emoção na voz em nosso idioma nativo, até então não encontrado na literatura. \textit{SER} é um problema complexo uma vez que a expressão emocional é afetada por vários fatores, incluindo a linguagem falada e o sotaque dos indivúdios ~\cite{6}.
 
-Inferir a intensidade da emoção encontra aplicações potenciais em em diversas áreas, como saúde~\cite{1}, segurança~\cite{4}, entretenimento (através de \textit{smart enviromentes}~\cite{alexa1} e \textit{smart assistants}~\cite{alexa2}) e comercial\cite{bsignal1}\cite{bsignal2}. Trabalhos como~\cite{63} buscam entender a intensidade da emoção para melhorar a performance da síntese de uma vocalização emocional oriunda de um mecanismo de \textit{speech to text}.
+Inferir a intensidade da emoção encontra aplicações potenciais em em diversas áreas, como saúde ~\cite{1}, segurança ~\cite{4}, entretenimento (através de \textit{smart enviromentes} ~\cite{alexa1} e \textit{smart assistants} ~\cite{alexa2}) e comercial\cite{bsignal1}\cite{bsignal2}. Trabalhos como ~\cite{63} buscam entender a intensidade da emoção para melhorar a performance da síntese de uma vocalização emocional oriunda de um mecanismo de \textit{speech to text}.
 
-Desenvolver uma metodologia para classificar a intensidade da emoção poderia colaborar com a monitoração do estado de saúde de pacientes, com um modelo embarcado em assistentes virtuais inteligentes; auxiliar no antendimento ao público encaminhando chamadas de \textit{call centers} compreendidas como urgentes para fora do fluxo automatizado e para o atendimento humano; ser utilizado para melhorar o desempenho de sistemas de segurança baseados em reconhecimento de voz, reduzindo a alteração na voz causada por variações do estado emocional, assim como soluções que reduzem ruído; ou para uma fins comerciais no sistema financeiro, como uma empresa~\cite{bsignal0} que alega possuir uma solução \textit{From Voice to Revenue} que aumentou em 20\% o sucesso da renegociação para recupração de crédito de liquidação duvidosa.
+Desenvolver uma metodologia para classificar a intensidade da emoção poderia colaborar com a monitoração do estado de saúde de pacientes, com um modelo embarcado em assistentes virtuais inteligentes; auxiliar no antendimento ao público encaminhando chamadas de \textit{call centers} compreendidas como urgentes para fora do fluxo automatizado e para o atendimento humano; ser utilizado para melhorar o desempenho de sistemas de segurança baseados em reconhecimento de voz, reduzindo a alteração na voz causada por variações do estado emocional, assim como soluções que reduzem ruído; ou para uma fins comerciais no sistema financeiro, como uma empresa ~\cite{bsignal0} que alega possuir uma solução \textit{From Voice to Revenue} que aumentou em 20\% o sucesso da renegociação para recupração de crédito de liquidação duvidosa.
 
 
 \section{Experimentos}
 
 Nesta seção apresentaremos, detalhadamente, os resultados dos dois experimentos realizados. Ambos foram submetidos à mesma metodologia e aferição de métrica, o que nos possibilita comparar diretamente o desempenho oriundo das execuções.\\
 
-\input{05A_resultado_64}
-\input{05B_resultado_128}
+\input{tex/5A_resultado_64}
+\input{tex/5B_resultado_128}
 
 \clearpage
 
@@ -102,32 +104,59 @@ Em ambos experimentos, a classe com pior resultado do classificador - de acordo 
 Na Tabela \ref{table:compexp} vemos um ganho de desempenho superior a 7 vezes para o valor da \textit{Loss} no segundo experimento, no qual utilizamos um número maior de \textit{MFCCs}. Embora a \textit{Loss} tenha apresentado uma queda significativa no segundo experimento, o que significa que o \textit{Autoencoder} apresenta um desempenho melhor para reproduzir o dado de entrada, preservando melhor as características e atributos do dado, essa melhora no desempenho de uma função identidade se mostra contraditória frente o desempenho do segundo classificador. Então, podemos supor que uma quantidade estritamente maior de \textit{MFCCs} colaborou para a reconstrução da amostra enquanto não demonstrou ganhos semelhantes na sua utilização para classificar a intensidade da emoção.
 
 
-\begin{table}[!h]
+% \begin{table}[!h]
+%     \centering
+%     \begin{tabular}{|l|cc|}
+%     \hline
+%         \multicolumn{1}{|c|}{\multirow{3}{*}{Intensidade}} & \multicolumn{2}{c|}{MFCCs}                                 \\ \cline{2-3} 
+%         \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{64}                & 128               \\ \cline{2-3} 
+%         \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\textit{F1-Score}} & \textit{F1-Score} \\ \hline
+%         Fraca                                              & \multicolumn{1}{c|}{\textbf{0,68}}     & 0,58              \\ \hline
+%         Moderada                                           & \multicolumn{1}{c|}{\textbf{0,53}}     & 0,51              \\ \hline
+%         Forte                                              & \multicolumn{1}{c|}{0,48}              & \textbf{0,49}     \\ \hline
+%         Pico                                               & \multicolumn{1}{c|}{\textbf{0,66}}     & 0,64              \\ \hline
+%     \end{tabular}
+%     \caption{\label{table:resultexp}Comparativo de \textit{F1-Score} entre os experimentos}
+% \end{table}
+
+\begin{table}[]
     \centering
-    \begin{tabular}{|l|cc|}
+    \begin{tabular}{|l|l|l|}
     \hline
-        \multicolumn{1}{|c|}{\multirow{3}{*}{Intensidade}} & \multicolumn{2}{c|}{MFCCs}                                 \\ \cline{2-3} 
-        \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{64}                & 128               \\ \cline{2-3} 
-        \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\textit{F1-Score}} & \textit{F1-Score} \\ \hline
-        Fraca                                              & \multicolumn{1}{c|}{\textbf{0,68}}     & 0,58              \\ \hline
-        Moderada                                           & \multicolumn{1}{c|}{\textbf{0,53}}     & 0,51              \\ \hline
-        Forte                                              & \multicolumn{1}{c|}{0,48}              & \textbf{0,49}     \\ \hline
-        Pico                                               & \multicolumn{1}{c|}{\textbf{0,66}}     & 0,64              \\ \hline
+        Intensidade & F1-Score para 64 MFCCs & F1-Score para 128 MFCCs \\ \hline
+        Fraca & 0,68 & 0,58 \\ \hline
+        Moderada & 0,53 & 0,51 \\ \hline
+        Forte & 0,48 & 0,49 \\ \hline
+        Pico & 0,66 & 0,64 \\ \hline
     \end{tabular}
-    \caption{\label{table:resultexp}Comparativo de \textit{F1-Score} entre os experimentos}
+     \caption{\label{table:resultexp}Comparativo de \textit{F1-Score} entre os experimentos}
 \end{table}
 
-\begin{table}[!h]
+% \begin{table}[!h]
+%     \centering
+%     \begin{tabular}{|l|cc|}
+%         \hline
+%         \multicolumn{1}{|c|}{\multirow{2}{*}{Atributo do experimento}} & \multicolumn{2}{c|}{MFCCs}         \\ \cline{2-3} 
+%         \multicolumn{1}{|c|}{}                                         & \multicolumn{1}{c|}{64}                & 128   \\ \hline
+%         Melhor \textit{F1-Score}                                       & \multicolumn{1}{c|}{\textbf{0,68}}     & 0,64  \\ \hline
+%         Classe com melhor \textit{F1-Score}                            & \multicolumn{1}{c|}{Fraca}             & Pico  \\ \hline
+%         Pior \textit{F1-Score}                                         & \multicolumn{1}{c|}{\textbf{0,48}}     & 0,49  \\ \hline
+%         Classe com pior \textit{F1-Score}                              & \multicolumn{1}{c|}{Forte}             & Forte \\ \hline
+%         \textit{Loss} de teste (MSE)                                   & \multicolumn{1}{c|}{6,4}               & \textbf{0,84}  \\ \hline
+%     \end{tabular}
+%     \caption{\label{table:compexp}Comparativo de atributos de desempenho dos experimentos}
+% \end{table}
+
+\begin{table}[]
     \centering
-    \begin{tabular}{|l|cc|}
-        \hline
-        \multicolumn{1}{|c|}{\multirow{2}{*}{Atributo do experimento}} & \multicolumn{2}{c|}{MFCCs}         \\ \cline{2-3} 
-        \multicolumn{1}{|c|}{}                                         & \multicolumn{1}{c|}{64}    & 128   \\ \hline
-        Melhor \textit{F1-Score}                                                & \multicolumn{1}{c|}{\textbf{0,68}}  & 0,64  \\ \hline
-        Classe com melhor \textit{F1-Score}                                     & \multicolumn{1}{c|}{Fraca} & Pico  \\ \hline
-        Pior \textit{F1-Score}                                                  & \multicolumn{1}{c|}{\textbf{0,48}}  & 0,49  \\ \hline
-        Classe com pior \textit{F1-Score}                                       & \multicolumn{1}{c|}{Forte} & Forte \\ \hline
-        \textit{Loss} de teste (MSE)                                            & \multicolumn{1}{c|}{6,4}   & \textbf{0,84}  \\ \hline
+    \begin{tabular}{|l|l|l|}
+    \hline
+        Resultado & MFCCs & ~ \\ \hline
+        ~ & 64 & 128 \\ \hline
+        Maior F1-Score & 0,68 & 0,64 \\ \hline
+        Classe com maior F1-Score & Fraca & Pico \\ \hline
+        Pior F1-Score & 0,48 & 0,49 \\ \hline
+        Classe com menor F1-Score & Forte & Forte \\ \hline
     \end{tabular}
     \caption{\label{table:compexp}Comparativo de atributos de desempenho dos experimentos}
 \end{table}

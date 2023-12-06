@@ -80,8 +80,8 @@ Capítulo 3:
 # @revisão
 
 - [ ] template
-- [ ] ortografia pré reorganização --- continuar em 4_pesquisa
-- [ ] estrageirismos/abreviaturas
+- [ ] ortografia pré reorganização
+- [ ] estrageirismos/abreviaturas --- cap 3 linha 27
 - [ ] reorganizar e adequar/atualizar texto
 - [ ] organizar figuras e tabelas
 - [ ] ortografia pós reorganização
