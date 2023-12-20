@@ -17,7 +17,7 @@ Comentário geral:
 - No sexto paragrafo primeira linha seria utilizam ao invés de utiliza. Por favor, revisar o texto.
     > não concordei
 
-- As sentenças do parágrafos estão bem longas! Há parágrafos com sentença de mais de 4 linhas. Reduzir as sentenças para no máximo 3 linhas para manter a fluidez no texto.
+- <s>As sentenças do parágrafos estão bem longas! Há parágrafos com sentença de mais de 4 linhas. Reduzir as sentenças para no máximo 3 linhas para manter a fluidez no texto.</s>
 
 - Todos os termos/palavras em inglês devem estar em itálico.
 
@@ -28,7 +28,7 @@ Comentário geral:
 - Evitar a repetição dos acrônimos após a definição inicial. Verificar isso em todo o texto.
     > ficar escrevendo por extenso sempre?
 
-- Em diversas partes do texto você escreve proposta! Você irá defender com uma proposta?
+- <s>Em diversas partes do texto você escreve proposta! Você irá defender com uma proposta?</s>
 
 Capítulo 1:
 
@@ -42,13 +42,13 @@ Capítulo 1:
     > na conclusão
 
 Capítulo 2:
-- No início, você se refere ao documento como "trabalho", mas na verdade é uma dissertação.
+- <s>No início, você se refere ao documento como "trabalho", mas na verdade é uma dissertação.</s>
 
-- No primeiro parágrafo, é importante fazer referência às seções que contêm as informações mencionadas.
+- <s>No primeiro parágrafo, é importante fazer referência às seções que contêm as informações mencionadas.</s>
 
-- Os títulos das seções precisam ser mais formais para seguir um padrão adequado.
+- <s>Os títulos das seções precisam ser mais formais para seguir um padrão adequado.</s>
 
-- Verifique todas as aspas ("") no LaTeX e corrija conforme necessário.
+- <s>Verifique todas as aspas ("") no LaTeX e corrija conforme necessário.</s>
 
 - Verifique se todas as figuras estão devidamente mencionadas no texto.
 
@@ -60,29 +60,25 @@ Capítulo 2:
 Capítulo 3:
 - <s>Corrigir a questão do termo 'proposta', que é mencionado logo no início do capítulo.</s>
 
-- O texto faz referência à Tabela 3.1, porém ela só é apresentada no final do capítulo.
+- <s>O texto faz referência à Tabela 3.1, porém ela só é apresentada no final do capítulo.</s>
 
 - <s>Verificar os espaços entre as citações das referências e o texto.</s>
 
 - Rever os erros de concordância, pois há muitos.
 
-- Refazer a Tabela 3.1.
+- <s>Refazer a Tabela 3.1.</s>
 
-- A palavra 'Bravo' é introduzida sem qualquer menção prévia, aparecendo apenas no título!
+- <s>A palavra 'Bravo' é introduzida sem qualquer menção prévia, aparecendo apenas no título!</s>
 
-- Na coluna 'Resultado' da Tabela 3.1, o que seria apresentado?
+-<s> Na coluna 'Resultado' da Tabela 3.1, o que seria apresentado?</s>
 
-- Quanto à coluna 'Features' na Tabela 3.1, qual seria a diferença entre 'Cromática' e 'Espectral'? Por exemplo, as características cromáticas (como as chroma features) representam a distribuição tonal na voz, sendo úteis para capturar aspectos melódicos e harmônicos. Elas podem ser mais sensíveis a variações emocionais relacionadas à entonação, modulação e variações tonais na voz.
+> - Quanto à coluna 'Features' na Tabela 3.1, qual seria a diferença entre 'Cromática' e 'Espectral'? Por exemplo, as características cromáticas (como as chroma features) representam a distribuição tonal na voz, sendo úteis para capturar aspectos melódicos e harmônicos. Elas podem ser mais sensíveis a variações emocionais relacionadas à entonação, modulação e variações tonais na voz.
 
-- Na Tabela 3.1 faltaram trabalhos do ano de 2022 e 2023.
+- <s>Na Tabela 3.1 faltaram trabalhos do ano de 2022 e 2023.</s>
 
 
 # @revisão
 
-- [ ] template
-- [ ] ortografia pré reorganização
-- [ ] estrageirismos/abreviaturas --- cap 3 linha 27
-- [ ] reorganizar e adequar/atualizar texto
-- [ ] organizar figuras e tabelas
-- [ ] ortografia pós reorganização
-- [ ] 
+- [ ] arrumar tabelas
+- [ ] arrumar figuras
+- [ ] estrageirismos/abreviaturas

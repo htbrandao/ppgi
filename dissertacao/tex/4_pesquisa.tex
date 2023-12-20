@@ -1,15 +1,11 @@
 % \chapter{Classificação de Intensidade das Emoções na Fala em Português Brasileiro por meio de Deep Learning}\label{Cap:Pesquisa}
 
-Este capítulo irá se desdobrar a partir do problema encontrado e proporá uma solução para sua realização. Adiante, irá expor a sua implementação em detalhes, tratando conhecimentos mais específicos que não estejam elucidados ao longo dos capítulos anteriores e conjecturando sobre possíveis aplicabilidades deste trabalho em áreas diversas.\\
+% Este capítulo irá se desdobrar a partir do problema encontrado e proporá uma solução para sua realização. Adiante, irá expor a sua implementação em detalhes, tratando conhecimentos mais específicos que não estejam elucidados ao longo dos capítulos anteriores e conjecturando sobre possíveis aplicabilidades deste trabalho em áreas diversas.\\
 
-% ==========================================================================================
-\section{Motivação}
+% % ==========================================================================================
+% \section{Motivação}
 
-Independente de formação enquanto profissionais de saúde mental, é natural que consigamos atribuir alguma espécie de métrica para comparar duas instâncias de uma mesma emoção que tenhamos sentido. Assim, conseguimos experienciar e comparar intensidades distintas para uma mesma emoção. Portanto, somos capazes de identificar emoções, quantificar sua intensidade e calcular uma distância para poder efetuar essa comparação.
-
-Conforme visto, trabalhos de \textit{ML} aplicados ao reconhecimento de emoções na fala vêm sendo publicados - ao menos - desde o início da década de 90 (1990), e se tornam menos frequentes quando buscamos por tarefas mais especializadas.
-
-Não tendo encontrado ocorrência na literatura, este trabalho se propõe a responder a seguinte pergunta: É possível realizar uma tarefa de aprendizado de máquina para inferir a intensidade das emoções na voz em português?
+Este capítulo irá se desdobrar a partir do problema encontrado e proporá uma solução para sua realização. Independente de formação enquanto profissionais de saúde mental, é natural que consigamos atribuir alguma espécie de métrica para comparar duas instâncias de uma mesma emoção que tenhamos sentido. Assim, conseguimos experienciar e comparar intensidades distintas para uma mesma emoção. Portanto, somos capazes de identificar emoções, quantificar sua intensidade e calcular uma distância para poder efetuar essa comparação. Conforme visto, trabalhos de \textit{ML} aplicados ao reconhecimento de emoções na fala vêm sendo publicados - ao menos - desde o início da década de 90 (1990), e se tornam menos frequentes quando buscamos por tarefas mais especializadas. Não tendo encontrado ocorrência na literatura, este trabalho se propõe a responder a seguinte pergunta: É possível realizar uma tarefa de aprendizado de máquina para inferir a intensidade das emoções na voz em português?\\
 
 % ==========================================================================================
 \section{Visão Geral}
@@ -29,15 +25,15 @@ A segunda etapa (B) lida com a extração de características dos dados converti
 A terceira e última etapa (C) é responsável pela inferência da intensidade. O modelo recebe as \textit{features} obtidas na etapa anterior e realiza o treinamento e testagem do modelo de classificação de acordo com quatro classes possíveis: (i) Baixa; (ii) Moderada; (iii) Forte; e (iv) Pico de intensidade.
 
 % ==========================================================================================
-\section{Aquisição dos dados}\label{sec:bravo_dados}
+\section{Aquisição dos dados}
 
 O primeiro passo para tarefas de \textit{machine learning} que envolvem \textit{SER} costuma ser a aquisição dos dados que serão utilizados pelo modelo. Em virtude do escopo da proposta, necessitamos de um \textit{dataset} em português que possua as classes desejadas: Emoção e intensidade.
 
-Até o momento da escrita deste trabalho, não conhecemos algum \textit{dataset} que seja ideal (idioma, emoções e intensidade) para esta proposta. Então, conforme descrito na seção \ref{section:basesdedados}, este trabalho utilizará duas bases de dados: VERBO ~\cite{12.21} e VIVAE ~\cite{16}.
+Até o momento da escrita deste trabalho, não conhecemos algum \textit{dataset} que seja ideal (idioma, emoções e intensidade) para esta proposta. Então, conforme descrito no Capítulo 2, este trabalho utilizará duas bases de dados: VERBO~\cite{12.21} e VIVAE~\cite{16}.
 
 O primeiro \textit{dataset}, VERBO, é composto por vocalizações verbais, acomodando todos os fonemas da língua portuguesa, com exemplos para seis emoções básicas (alegria, nojo, medo, raiva, surpresa, tristeza) e um estado emocional denominado de neutro.
 
-O segundo, VIVAE, é composto por vocalizações não verbais distribuídas em seis classes (conquista, prazer sexual, surpresa positiva, raiva, medo e dor física), com exemplos em quatro intensidades (baixa, moderada, forte e pico de intensidade). Graças a fusão de domínios ~\cite{49}, conseguimos o cenário da Tabela \ref{table:datasetideal}.
+O segundo, VIVAE, é composto por vocalizações não verbais distribuídas em seis classes (conquista, prazer sexual, surpresa positiva, raiva, medo e dor física), com exemplos em quatro intensidades (baixa, moderada, forte e pico de intensidade). Graças a fusão de domínios~\cite{49}, conseguimos o cenário da Tabela \ref{table:datasetideal}.
 
 Assim, sejam os dois \textit{datasets} VERBO e VIVAE, de modo que VERBO é constituído por pares \{amostra, classe\} e VIVAE por pares \{amostra, classe, intensidade\}, onde as classes são a emoção atribuída àquela amostra, e a intensidade é o rótulo da intensidade da classe daquela amostra. Vamos representar as amostras do VERBO por $X_{VERBO}$ e do VIVAE por $X_{VIVAE}$.
 
@@ -63,7 +59,7 @@ Seja $Y_{VERBO}$ o conjunto das classes (emoções) $y_i \forall x_i \in X_{VERB
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.40\textwidth]{img/p-yverbointeryvivae.png}
+    \includegraphics[width=0.60\textwidth]{img/p-yverbointeryvivae.png}
     \caption{\label{fig:yverbointeryvivae}Interseção entre rótulos de emoções de VERBO e VIVAE}
 \end{figure}
 
@@ -78,12 +74,12 @@ Ao realizar tarefas de \textit{DL}, precisamos transformar os dados de entrada e
 
 \begin{figure}[]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/p-dominios-contradominos.png}
+    \includegraphics[width=0.6\textwidth]{img/p-dominios-contradominos.png}
     \caption{\label{fig:dominioscontradominios}Domínio e contradomínios}
 \end{figure}
 
 % ==========================================================================================
-\section{Extração de características}\label{sec:bravo_ae}
+\section{Extração de características}
 
 De posse do mapa $M(x_i)$, podemos prosseguir para a etapa de extração de características. Apesar da representação visual, os \textit{MFCC}s formam um vetor de alta dimensionalidade. Uma vez que $X$ é formado por dados de \textit{datasets} diferentes, buscamos uma forma de extrair características relevantes com boa capacidade de generalização ao ser aplicada em ambos $X_{VERBO}$ e $X_{VIVAE}$.
 
@@ -97,27 +93,23 @@ Vamos construir um \textit{Autoencoder} ($AE$), exemplificado na Figura \ref{fig
 
 \begin{figure}[]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/p-autoencoder.png}
+    \includegraphics[width=0.6\textwidth]{img/p-autoencoder.png}
     \caption{\label{fig:composicaoae}Composição do \textit{AE}}
 \end{figure}
 
 O modelo $AE$ será treinado em $X$, e em seu espaço latente teremos uma representação do dado de entrada com a dimensionalidade reduzida, preservando suas características de maneira suficiente para que possa ser reconstruído ($x'$) ao aplicar a função de \textit{decoding}.
 
 % ==========================================================================================
-\section{Classificação da Intensidade}\label{sec:bravo_clf}
+\section{Classificação da Intensidade}
 
-Através do modelo de Russel sabemos que que é possível dispor as emoções em função da valência (prazer ou desprazer) e da ativação (vigor ou quietude) ~\cite{27}. Plutchik decompõe as emoções básicas de acordo com a intensidade, chegando a emoções compostas, formadas a partir de duas emoções com intensidades menores.
+                    % !!! por algum motivo esse parágravo causa erro de compilação !!! %
+% Através do modelo de Russel sabemos que que é possível dispor as emoções em função da valência (prazer ou desprazer) e da ativação (vigor ou quietude) \cite{27}. Plutchik decompõe as emoções básicas de acordo com a intensidade, chegando a emoções compostas, formadas a partir de duas emoções com intensidades menores.
 
-Ao longo do Capítulo \ref{Cap:Trabalhos Relacionados}, observamos trabalhos relacionados, desafios pertinentes à pesquisa e o estado da arte na área de estudo deste trabalho, que se diferencia dos pares por, além de ser um dos poucos trabalhos a lidar com o idioma português, também aborda a questão da intensidade da emoção.
+Ao longo do Capítulo 3, observamos trabalhos relacionados, desafios pertinentes à pesquisa e o estado da arte na área de estudo deste trabalho, que se diferencia dos pares por, além de ser um dos poucos trabalhos a lidar com o idioma português, também aborda a questão da intensidade da emoção.
 
-Sabemos da relevância que \textit{features} espectrais carregam sobre a vocalização e vimos formas para avaliar o desempenho dos modelos. Para a etapa de classificação da intensidade, vamos construir e treinar um modelo supervisionado, uma rede neural conexa $j$, que recebe como \textit{input} o \textit{encoding} da média dos \textit{MFC}s
- dos $x_i \in X_{VIVAE_{treino}}$.
+Sabemos da relevância que \textit{features} espectrais carregam sobre a vocalização e vimos formas para avaliar o desempenho dos modelos. Para a etapa de classificação da intensidade, vamos construir e treinar um modelo supervisionado, uma rede neural conexa $j$, que recebe como \textit{input} o \textit{encoding} da média dos \textit{MFC}s dos $x_i \in X_{VIVAE_{treino}}$.
 
-Este modelo (Figura \ref{fig:jsupervisionado}) será construído para classificar a intensidade da emoção de forma direta. Uma vez que os $x_i \in X_{VIVAE_{treino}}$ têm correspondentes em $Z$, contradomínio das intensidades, então, $j: M \rightarrow Z$, é tal que
-
-\begin{equation}
-    j(f_e(m)) = z
-\end{equation}
+Este modelo (Figura \ref{fig:jsupervisionado}) será construído para classificar a intensidade da emoção de forma direta. Uma vez que os $x_i \in X_{VIVAE_{treino}}$ têm correspondentes em $Z$, contradomínio das intensidades, então, $j: M \rightarrow Z$, é tal que $j(f_e(m)) = z$
 
 \begin{figure}[h]
     \centering
@@ -126,9 +118,9 @@ Este modelo (Figura \ref{fig:jsupervisionado}) será construído para classifica
 \end{figure}
 
 % ==========================================================================================
-\section{Validação}\label{sec:bravo_aval}
+\section{Validação}
 
-Modelos de classificação ou regressão precisam ser validados para que possamos avaliar o seu desempenho e gerar inferências a respeito do seu comportamento. Existem diversas formas, algumas expostas em \ref{sec:metricas}, para avaliar seus resultados, sendo esta mais ou menos adequadas à natureza do modelo.
+Modelos de classificação ou regressão precisam ser validados para que possamos avaliar o seu desempenho e gerar inferências a respeito do seu comportamento. Existem diversas formas, algumas expostas np Capítulo 2, para avaliar seus resultados, sendo esta mais ou menos adequadas à natureza do modelo.
 
 \subsection{Autoencoder}
 
@@ -144,4 +136,4 @@ Após o treinamento, vamos separar $X_{VIVAE}$ em duas partes, que irão formar 
 
 \subsection{Classificador}
 
-Por ser tratar de um modelo supervisionado, podemos aplicar as métricas descritas em \ref{sec:metricas}, utilizando $X_{VIVAE_{teste}}$ para testar e validar seus resultados. Neste trabalho, perceberemos um erro de  falso negativo com o mesmo peso de um erro de falso positivo. Portanto, não buscamos otimizar as métricas como \textit{Precision} ou \textit{Recall}. Assim, utilizaremos utilizaremos \textit{F1-Score} como parâmetro de desempenho para o modelo supervisionado.
+Por ser tratar de um modelo supervisionado, podemos aplicar as métricas descritas no Capítulo 2, utilizando $X_{VIVAE_{teste}}$ para testar e validar seus resultados. Neste trabalho, perceberemos um erro de  falso negativo com o mesmo peso de um erro de falso positivo. Portanto, não buscamos otimizar as métricas como \textit{Precision} ou \textit{Recall}. Assim, utilizaremos utilizaremos \textit{F1-Score} como parâmetro de desempenho para o modelo supervisionado.
