@@ -3,7 +3,7 @@
 Neste capítulo serão expostos conceitos necessários para a compreensão desta dissertação. Iniciando pelo processo de formação da voz e conceituando formas como as para catalogar as emoções (Seção \ref{sec:vozemoint}). Em seguida, é feita uma exposição de conceitos relativos a Aprendizado de Máquina (Seção \ref{sec:ml}) e Aprendizado Profundo (Seção \ref{sec:dl}), algumas de suas arquiteturas e abordagens (Seção \ref{sec:spvsup}) para iniciar tarefas com esse tipo de tecnologia. Também vamos discorrer sobre os dados (Seção \ref{section:basesdedados}), material essencial para trabalhos envolvendo aprendizado de máquina. Veremos formas forma de processar esses dados (Seção \ref{sec:procdados}) e, por fim, técnicas para aferir a eficiência (Seção \ref{sec:metricas}) de tarefas de Aprendizado de Máquina.\\
 
 % ==========================================================================================
-\section{Voz, Emoção e Intensidade}\label{sec:vozemoint}
+\section{Intensidade da Emocão na Voz}\label{sec:vozemoint}
 
 A voz humana é produzida na laringe. Com a passagem do ar oriundo dos pulmões pelas pregas vocais, estas vibram e geram um som. Com o auxílio de outras estruturas fisiológicas como língua, boca e lábios, esse som é transformado e nossa voz é produzida~\cite{51}. Nossa fala não é somente um ato de expressão de ideias e emoções por meio da vocalização~\cite{6.31}, como também é um componente indispensável para a comunicação entre os indivíduos de uma sociedade. Enquanto humanos, somos especialistas em voz, e conseguimos extrair uma gama de informações socialmente relevantes~\cite{49} dessas ondas sonoras.
 
@@ -17,14 +17,13 @@ Em~\cite{emoint1}, vemos que indivíduos que experimentam emoções positivas in
 
 Numa tentativa de resumir a natureza múltipla da intensidade emocional global,~\cite{emoint2.1} nos diz que um dos aspectos mais perceptíveis de uma emoção é a sua intensidade. Quando alguém descreve uma experiência emocional, esta pessoa quase sempre se referirá à sua intensidade. Portanto, é intrigante que esse aspecto da emoção tenha sido quase completamente ignorado como um objeto específico de pesquisa. Também propuseram a seguinte fórmula descritiva: $I_E = f(C, E, A_p, A, P, R)$ onde: $I_E$ denota a intensidade emocional sentida, $C$ a importância dos objetivos ou interesses envolvidos, $E$ a magnitude do acontecimento, $A_p$ uma componente de avaliação, $A$ o potencial de ação, $P$ componentes relevantes de personalidade, e $R$ uma componente de contenção, inibição ou regulação.
 
-Temos~\cite{emoint3}, uma publicação com experimento realizado no Brasil, que busca construir um instrumento de estudo de avaliação psicométrica para mensurar afetos positivos e negativos e confronta seu experimento com outros testes de avaliação de afetos, como a Escala de Afetos Positivos e Negativos \acrshort{PANAS} que também foi observada e validade para fins psicométricos, no Brasil, em~\cite{panas1} e~\cite{panas2}.
+Temos~\cite{emoint3}, uma publicação com experimento realizado no Brasil, que busca construir um instrumento de estudo de avaliação psicométrica para mensurar afetos positivos e negativos e confronta seu experimento com outros testes de avaliação de afetos, como a Escala de Afetos Positivos e Negativos \acrshort{PANAS} que também foi observada e validade para fins psicométricos, no Brasil, em~\cite{panas1} e~\cite{panas2}. Do ponto de vista do comportamento social,~\cite{16} diz que uma representação da ativação e da intensidade do estado emocional parecem essenciais, mesmo quando a valência não pode ser determinada.
 
-Do ponto de vista do comportamento social,~\cite{16} diz que uma representação da ativação e da intensidade do estado emocional parecem essenciais, mesmo quando a valência não pode ser determinada.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.6\textwidth]{img/russel.JPG}
-\caption{\label{fig:russel}Modelo de Russel~\cite{25}}
+\includegraphics[width=0.7\textwidth]{img/modeloderussel.png}
+\caption{\label{fig:russel}Modelo de Russel~\cite{img_russel}}
 \end{figure}
 
 \begin{figure}[!h]
@@ -45,7 +44,7 @@ Dentre as tarefas de \acrshort{ML}, duas tarefas comuns são a classificação e
 Dentre os algoritmos de \acrshort{ML} foram utilizados em trabalhos de SER~\cite{20.7}, encontramos: Floresta Aleatória \acrfull{RF} em~\cite{20.10}, Árvore de Decisão~\cite{20.11} \acrlong{DT}, \acrshort{SVM}~\cite{20.13} e K-vizinhos mais próximos~\cite{20.15} \acrlong{KNN}.% e Classificador de Aumento de Gradiente~\cite{20.16} \acrfull{GBC}.
 
 % ==========================================================================================
-\section{Deep Learning e Redes Neurais}\label{sec:dl}
+\section{Aprendizado Profundo}\label{sec:dl}
 
 Aprendizado Profundo \acrshort{DL} é um tipo específico de \acrshort{ML}~\cite{53}. Algoritmos de \acrshort{ML} citados no parágrafo anterior - conhecidos como algoritmos tradicionais - costumam funcionar bem em uma grande variedade de problemas importantes. Entretanto, não costumam ter desempenho tão bom em problemas que envolvem reconhecimento de fala ou de objetos. O desenvolvimento do \acrshort{DL} foi motivado, em parte, pela falha desses algoritmos tradicionais em generalizar bem para essas tarefas de Inteligência Artificial \acrlong{IA}.
 
@@ -53,8 +52,8 @@ Dada essa necessidade de explorar modelos mais robustos, alguns trabalhos estuda
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.6\textwidth]{img/ia-ml-dl.JPG}
-\caption{\label{fig:ia-ml-dl}Relação entre \acrshort{IA}, \acrshort{ML} e \acrshort{DL}}
+\includegraphics[width=0.4\textwidth]{img/ia-ml-dl-2.png}
+\caption{\label{fig:ia-ml-dl}Relação entre \acrshort{IA}, \acrshort{ML} e \acrshort{DL}~\cite{img_iavsmlvsdl}}
 
 \author{Fonte: Retirada de~\cite{58}}
 \end{figure}
@@ -113,7 +112,7 @@ Tradicionalmente, \textit{Autoencoder}s foram utilizados para reduzir a dimensio
 \end{figure}
 
 % ==========================================================================================
-\section{Abordagem: Supervisionada vs. Não Supervisionada}\label{sec:spvsup}
+\section{Abordagens Supervisionada e Não Supervisionada}\label{sec:spvsup}
 
 No processo de criação de modelos de \acrshort{ML}, uma vez definida a arquitetura, a rede irá começar a aprender com os dados de forma iterativa. A etapa onde o modelo começa a ver os \textit{inputs} e tentar inferir a classe é chamada de treinamento (\textit{training}). Duas abordagens tradicionais para esse momento são a Aprendizagem Supervisionada (Supervised Learning) e a Aprendizagem Não Supervisionada (Unsupervised Learning).
 
@@ -184,7 +183,7 @@ Uma das metodologias da Fusão de Domínios~\cite{49} é a Fusão de Dados Basea
 Uma vez que compreendemos, o processo de formação da fala, do seu emprego na transmissão de emoções, formas de categorizá-las, como se dá uma tarefa que envolve algoritmos de \acrshort{DL}, faz-se necessário conseguir uma massa de dados que possa ser utilizada para esta atividade. Para isso, \ref{subsection:verbo} e \ref{subsection:vivae} satisfazem nossa necessidade.
 
 % ------------------------------------------------------------------------------------------
-\subsection{VERBO}\label{subsection:verbo}
+\subsection{\textit{VERBO}}\label{subsection:verbo}
 
 \acrlong{VERBO}~\cite{12.21} é uma base de dados com 1176 arquivos em formato \textit{.wav}, publicada em 2018, criada no Instituto de Matemática e Ciências da Computação da Universidade de São Paulo, ICMC-USP, formada por arquivos de áudio na língua portuguesa do Brasil, rotulados com emoções. É o primeiro~\cite{21} dataset para \acrshort{SER} em português do Brasil.
 
@@ -207,7 +206,7 @@ Os áudios têm duração entre 2 e 5 segundos, gravados por doze atores brasile
 \end{table}
 
 % ------------------------------------------------------------------------------------------
-\subsection{VIVAE}\label{subsection:vivae}
+\subsection{\textit{VIVAE}}\label{subsection:vivae}
 
 \acrlong{VIVAE}~\cite{16} é uma base de dados com 1085 arquivos em formato \textit{.wav}, publicada em 2020, criada por pesquisadores alemães e estadunidenses, formada por vocalizações não verbais. Os áudios foram gravados por onze pessoas, compreendendo três sentimentos positivos e três negativos. Sendo os positivos: Conquista (\textit{achievment/triumph}), prazer sexual (\textit{sexual pleasure}) e surpresa (\textit{positive surprise}). E os negativos: Raiva (\textit{anger}), medo (\textit{fear}) e dor física (\textit{physical pain}).
 
@@ -299,7 +298,8 @@ Todos foram gravados com a intensidade variando entre baixa, moderada, forte e p
 \end{table}
 
 % ------------------------------------------------------------------------------------------
-\subsection{Comparativo entre VERBO e VIVAE}
+% \subsection{Comparativo entre \textit{VERBO} e \textit{VIVAE}}
+\subsection{Comparativo entre as bases de dados}
 
 Fazendo uma intersecção entre as classes dos \textit{datasets}, conforme Tabela \ref{table:verbovsvivae}, percebemos apenas quatro classes em comum: Alegria, medo, raiva e surpresa. Realizando uma contagem das classes em comum, em ambas bases de dados (Tabela \ref{table:totalporclasse}), teremos 1364 amostras, o que representa uma quantidade maior do que alguns dos \textit{datasets} em \ref{table:comparativodbs}.
 
@@ -409,7 +409,7 @@ Outro atributo observado na literatura são os Coeficientes Cepstrais de Frequê
 \end{figure}
 
 % ==========================================================================================
-\section{Métricas}\label{sec:metricas}
+\section{Métricas de Avaliação de Modelos}\label{sec:metricas}
 
 Na lista abaixo temos variáveis utilizadas para calcular métricas de avaliação do desempenho de modelos de \textit{ML}:
 

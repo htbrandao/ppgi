@@ -1,6 +1,6 @@
 % \chapter{Trabalhos Relacionados}\label{Cap:Trabalhos Relacionados}
 
-Neste capítulo serão discutidos trabalhos relacionados e utilizados como referencial teórico por este material. Trataremos sobre suas propostas, características, metodologias, possíveis limitações e possibilidades de melhoria. Posteriormente, será feita uma análise comparativa com esta dissertação, evidenciando pontos em comum e possíveis divergências e, por fim, como este trabalho se propõe a colaborar com a produção científica e o estado da arte na área de \acrshort{SER}.\\
+Neste capítulo discutiremos trabalhos relacionados a esta dissertação. Trataremos sobre suas propostas, características, metodologias, possíveis limitações e possibilidades de melhoria. Posteriormente, será feita uma análise comparativa com esta dissertação, evidenciando pontos em comum e possíveis divergências e, por fim, como este trabalho se propõe a colaborar com a produção científica e o estado da arte na área de \acrshort{SER}.\\
 
 % ------------------------------------------------------------------------------------------
 
@@ -22,14 +22,13 @@ Sefik Emre Eskimez, Zhiyao Duan e Wendi Heinzelman, em \textit{Unsupervised Lear
 
 Yuanchao Li, Tianyu Zhao e Tatsuya Kawahara, em \textit{Improved End-to-End Speech Emotion Recognition Using Self Attention Mechanism and Multitask Learning}~\cite{32.95}, propõem um modelo \textit{multitask} utilizando uma camada de autoatenção (\textit{self attention layer}) para classificar tanto a emoção quanto o sexo da pessoa, apesar das dificuldades em virtude da variabilidade em dados de fala e emoção. Utiliza os espectrogramas como \textit{input} para um modelo composto por uma Rede Neural Convolucional que alimenta uma rede \textit{Bidirectional Long Short-Term Memory} seguida pela camada de autoatenção para agregar informações da camada anterior ao longo do tempo. Utilizando a base de dados IEMOCAP, afirmou ter superado (à época, 2019) os melhores resultados de classificação relativos ao dataset.
 
-M. S. Akhtar et al., em \textit{All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework}~\cite{28}, propõe um \textit{ensemble} de modelos para a multitarefa de classificar emoção e intensidade em texto. Utilizando 3 modelos para feature extraction (\acrshort{CNN}, \acrlong{LSTM} e \acrshort{GRU}) e processamento de linguagem natural (\textit{NLP}) para adicionar mais uma dimensão ao vetor de entrada, observa que modelos multitarefa
- costumam ter desempenhos superiores em matéria de generalização. As bases de dados utilizadas apresentavam as emoções como classe, e a intensidade foi calculada a partir da técnica de Vader\footnote{Disponível em \url{https://ojs.aaai.org/index.php/ICWSM/article/view/14550}}. Akhtar avaliou tanto o desempenho dos modelos individuais quanto combinações (\textit{ensembles}) para concluir que os \textit{ensembles} propostos apresentaram desempenho superior aos modelos individuais.
+M. S. Akhtar et al., em \textit{All-in-One: Emotion, Sentiment and Intensity Prediction using a Multi-task Ensemble Framework}~\cite{28}, propõem um \textit{ensemble} de modelos para a multitarefa de classificar emoção e intensidade em texto. Utilizando três modelos para \textit{feature extraction} (\acrshort{CNN}, \acrlong{LSTM} e \acrshort{GRU}) e processamento de linguagem natural (\textit{NLP}) para adicionar mais uma dimensão ao vetor de entrada, observa que modelos multitarefa costumam ter desempenhos superiores em matéria de generalização. As bases de dados utilizadas apresentavam as emoções como classe, e a intensidade foi calculada a partir da técnica de Vader\footnote{Disponível em \url{https://ojs.aaai.org/index.php/ICWSM/article/view/14550}}. Akhtar avaliou tanto o desempenho dos modelos individuais quanto combinações (\textit{ensembles}) para concluir que os \textit{ensembles} propostos apresentaram desempenho superior aos modelos individuais.
 
 Zhu et al., em \textit{Controlling Emotion Strength with Relative Attribute for End-to-End Speech Synthesis}~\cite{63}, pretende melhorar a performance da síntese de uma vocalização emocional oriunda de um mecanismo de conversão de texto para fala (\textit{speech to text}, \textit{STT}). Focando apenas no controle sutil da intensidade da emoção, simplificando o controle da emoção e da intensidade através de um vetor e um escalar, respectivamente, para que consiga modular com facilidade a intensidade de uma amostra. A base de dados utilizada é composta por várias sentenças que são repetidas tendo sua classe (emoção) alterada. Embora não possua labels para a intensidade,~\cite{63} busca calcular uma função de ranqueamento de atributo (\textit{attribute ranking function}) entre pares formados por classes distintas de uma mesma amostra e utilizar esse atributo em combinação com uma amostra de uma classe para produzir a amostra pertencente outra classe, de acordo com o atributo. Uma vez calculada a \textit{ranking function}, um algoritmo não supervisionado de redução de dimensionalidade (\textit{PCA}) foi aplicado numa amostra da base de dados, onde foi observada a coerência entre as classes de dados dados de um mesmo conjunto (\textit{cluster}).
 
 Aggelina Chatziagapi et al., em \textit{Data Augmentation using GANs for Speech Emotion Recognition }\cite{32.89}, propõem um modelo de \textit{GAN} para atacar o problema de conjuntos de dados desbalanceados em tarefas de \textit{SER}. Fato que podemos observar em~\cite{32.32} e soma-se a um ponto descrito nesse trabalho, sobre a discrepância em volume de dados para tarefas de \textit{SER} com relação a outras tarefas, como reconhecimento de imagens, e mais ainda no contexto de intensidade das emoções. Busca produzir novas amostras de espectrogramas para classes menos representadas. Embora não seja propriamente uma proposta para reconhecimento de emoções ou de intensidade das emoções,~\cite{32.89} utiliza duas bases de dados, IEMOCAP e FEEL-25k, para validar o resultado do seu modelo. Uma vez que os espectrogramas gerados artificialmente são incluídos ao conjunto do dataset, calcula a distribuição das classes, e então passa a retirar amostras aleatoriamente, observando que as porcentagens das classes se mantém equilibrada ao longo da remoções.
 
-Campos e Moutinho, em DEEP: Uma arquitetura para reconhecer emoção com base no espectro sonoro da voz de falantes da língua portuguesa~\cite{12}, se propõem a criar um modelo mais robusto, com uma implementação híbrida. Observaram que a utilização de múltiplas redes neurais de maneira sequencial pode ocasionar a propagação de erros entre os modelos. Assim, seu modelo é composto por vários modelos especialistas, que combinam redes neurais convolucionais e redes neurais profundas, treinados de forma supervisionada. Campos e Coutinho treinaram um modelo especialista para cada uma das sete emoções presentes no dataset VERBO. Além de reiterar a usabilidade da base de dados, tiveram ganhos em sua taxa média de acerto acima de 10\% quando comparando sua implementação com uma CNN simples.
+Campos e Moutinho, em DEEP: Uma arquitetura para reconhecer emoção com base no espectro sonoro da voz de falantes da língua portuguesa~\cite{12}, propõem a criação de um modelo mais robusto, com uma implementação híbrida. Observaram que a utilização de múltiplas redes neurais de maneira sequencial pode ocasionar a propagação de erros entre os modelos. Assim, seu modelo é composto por vários modelos especialistas, que combinam redes neurais convolucionais e redes neurais profundas, treinados de forma supervisionada. Campos e Coutinho treinaram um modelo especialista para cada uma das sete emoções presentes no dataset VERBO. Além de reiterar a usabilidade da base de dados, tiveram ganhos em sua taxa média de acerto acima de 10\% quando comparando sua implementação com uma CNN simples.
 
 Neelakshi Josh, em \textit{Brazilian Portuguese emotional speech corpus analysis}~\cite{20}, se propôs a explorar diferentes features de um banco de dados em português brasileiro. Procurou explorar características espectrais, prosódicas e temporais numa tarefa de SER, afirmando que a utilização conjunta dessas características podem melhorar o seu índice de acerto. Totalizando 38 \textit{features} em um vetor, treinou quatro algoritmos, utilizando apenas a abordagem supervisionada: \textit{SVM}, \textit{MLP},\textit{RF} e \textit{KNN}. Utilizou a base de dados VERBO, também utilizada neste trabalho, colaborando com a evidência de que apesar de ser o primeiro dataset para SER em português brasileiro, este pode ser utilizado para trabalhos de \textit{SER} e que suas amostras possuem características suficientes para desenvolver tarefas de \textit{ML}. Embora tenha utilizado quatro modelos distintos, Neelakshi não se aprofundou em demais arquiteturas de \textit{Deep Learning}.
 
@@ -136,15 +135,42 @@ Analisando as informações expostas na Tabela \ref{table:discussao}, podemos no
 %     \end{tabular}\label{table:discussao}
 % \end{table}
 
+% \begin{table}[]
+%     \centering
+%     \caption{Comparativo entre este trabalho e a literatura correlata}
+%     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+%     \hline
+%     \textbf{Trabalho} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Features}\\Cromáticas}}}\end{tabular} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Features}\\Espectrais}}}\end{tabular} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Features}\\Prosódicas}}}\end{tabular} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Aprendizagem\\Supervisionada}}}\end{tabular} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.8cm}{Aprendizagem\\Não Supervisionada}}}\end{tabular} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Machine\\Learning}}}}\end{tabular} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Deep Learning}}}}\end{tabular} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Português}}}\end{tabular} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Emoção}}}\end{tabular} &
+%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Intensidade}}}\end{tabular} \\ \hline
+%     % Trabalho        & Cromática & Espectral & Prosódica & Superv.   & Não superv.   & ML    & DL    & Português     & Emoção    & Intensidade   \\ \hline
+%     \cite{32.32}    &  ~        &           & x         & x         &  ~            & x     & ~     & ~             & x     	& ~             \\ \hline
+%     \cite{11}       &  ~        & x         & x         & x         &  ~            & x     & x     & ~             & ~         & ~             \\ \hline
+%     \cite{32.31}    & x         & x         & x         & x         &  ~            & ~     & x     & ~             & x         & ~             \\ \hline
+%     \cite{32.25}    &  ~        & x         &  ~        & x         &  ~            & x     & ~     & ~             & x         & ~             \\ \hline
+%     \cite{34}       &  ~        & x         &  ~        & x         & x             & ~     & x     & ~             & x         & ~             \\ \hline
+%     \cite{32.95}    &  ~        & x         &  ~        & x         &  ~            & ~     & x     & ~             & x         & ~             \\ \hline
+%     \cite{12}       & x         & x         & x         & x         &  ~            & ~     & ~     & x             & x         & ~             \\ \hline
+%     \cite{21}       & x         & x         & x         & x         &  ~            & x     & x     & x             & x         & ~             \\ \hline
+%     \cite{pca6}    & ~         & x         & ~         & x         & x             & x     & x     & ~             & x         & ~             \\ \hline
+%     Dissertação     & ~         & x         & ~         & x         & x             & x     & x     & x             & ~         & x             \\ \hline
+%     \end{tabular}\label{table:discussao}
+% \end{table}
+
 \begin{table}[]
     \centering
     \caption{Comparativo entre este trabalho e a literatura correlata}
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{Trabalho} &
-    \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Features}\\Cromáticas}}}\end{tabular} &
-    \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Features}\\Espectrais}}}\end{tabular} &
-    \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Features}\\Prosódicas}}}\end{tabular} &
     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Aprendizagem\\Supervisionada}}}\end{tabular} &
     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.8cm}{Aprendizagem\\Não Supervisionada}}}\end{tabular} &
     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Machine\\Learning}}}}\end{tabular} &
@@ -152,17 +178,17 @@ Analisando as informações expostas na Tabela \ref{table:discussao}, podemos no
     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Português}}}\end{tabular} &
     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Emoção}}}\end{tabular} &
     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Intensidade}}}\end{tabular} \\ \hline
-    % Trabalho        & Cromática & Espectral & Prosódica & Superv.   & Não superv.   & ML    & DL    & Português     & Emoção    & Intensidade   \\ \hline
-    \cite{32.32}    &  ~        &           & x         & x         &  ~            & x     & ~     & ~             & x     	& ~             \\ \hline
-    \cite{11}       &  ~        & x         & x         & x         &  ~            & x     & x     & ~             & ~         & ~             \\ \hline
-    \cite{32.31}    & x         & x         & x         & x         &  ~            & ~     & x     & ~             & x         & ~             \\ \hline
-    \cite{32.25}    &  ~        & x         &  ~        & x         &  ~            & x     & ~     & ~             & x         & ~             \\ \hline
-    \cite{34}       &  ~        & x         &  ~        & x         & x             & ~     & x     & ~             & x         & ~             \\ \hline
-    \cite{32.95}    &  ~        & x         &  ~        & x         &  ~            & ~     & x     & ~             & x         & ~             \\ \hline
-    \cite{12}       & x         & x         & x         & x         &  ~            & ~     & ~     & x             & x         & ~             \\ \hline
-    \cite{21}       & x         & x         & x         & x         &  ~            & x     & x     & x             & x         & ~             \\ \hline
-    \cite{pca6}    & ~         & x         & ~         & x         & x             & x     & x     & ~             & x         & ~             \\ \hline
-    Dissertação     & ~         & x         & ~         & x         & x             & x     & x     & x             & ~         & x             \\ \hline
+    % Trabalho     & Superv.   & Não superv.   & ML    & DL    & Português     & Emoção    & Intensidade    \\ \hline
+    \cite{32.32}   & x         &  ~            & x     & ~     & ~             & x     	& ~                 \\ \hline
+    \cite{11}      & x         &  ~            & x     & x     & ~             & ~         & ~              \\ \hline
+    \cite{32.31}   & x         &  ~            & ~     & x     & ~             & x         & ~              \\ \hline
+    \cite{32.25}   & x         &  ~            & x     & ~     & ~             & x         & ~              \\ \hline
+    \cite{34}      & x         & x             & ~     & x     & ~             & x         & ~              \\ \hline
+    \cite{32.95}   & x         &  ~            & ~     & x     & ~             & x         & ~              \\ \hline
+    \cite{12}      & x         &  ~            & ~     & ~     & x             & x         & ~              \\ \hline
+    \cite{21}      & x         &  ~            & x     & x     & x             & x         & ~              \\ \hline
+    \cite{pca6}    & x         & x             & x     & x     & ~             & x         & ~              \\ \hline
+    Dissertação    & x         & x             & x     & x     & x             & ~         & x              \\ \hline
     \end{tabular}\label{table:discussao}
 \end{table}
 
