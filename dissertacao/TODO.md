@@ -18,7 +18,7 @@
 
 - <s>As sentenças do parágrafos estão bem longas! Há parágrafos com sentença de mais de 4 linhas. Reduzir as sentenças para no máximo 3 linhas para manter a fluidez no texto.</s>
 
-- Todos os termos/palavras em inglês devem estar em itálico.
+- <s>Todos os termos/palavras em inglês devem estar em itálico.</s>
 
 - Verificar como as figuras estão citadas.
 
@@ -51,10 +51,10 @@ ___
 
 - Objetivo: O objetivo tem que está coerente com o resumo, seção 1.2 e Cap. 4 (proposta.)
 
-- Faltou uma seção dedicada às contribuições do trabalho e uma de justificativa.
+- <s>Faltou uma seção dedicada às contribuições do trabalho e uma de justificativa.</s>
     > o de emerson não tem
 
-- No objetivo, você pode fazer um objetivo geral e os objetivos específicos.
+- <s>No objetivo, você pode fazer um objetivo geral e os objetivos específicos.</s>
     > o de emerson não tem
 
 - Senti falta tbm da hipótese da pesquisa e como tu validou a proposta
@@ -111,7 +111,7 @@ ___
 
 - <s>Primeiro parágrafo, pag. 24, corrigir a concordância. O mesmo para o primeiro parágrafo, pag. 25.</s>
 
-- Obs: Depois verifique os erros de concordância, ainda há.
+- <s>Obs: Depois verifique os erros de concordância, ainda há.</s>
 
 - <s>Seção 3.1, "Há parágrafos com apenas 1 sentença. O ideal é ter um parágrafo com 4, ou no máximo 5, sentença."</s>
 
@@ -129,7 +129,7 @@ no ano de 2022.</s>
 
 - <s>Verificar os espaços entre as citações das referências e o texto.</s>
 
-- Rever os erros de concordância, pois há muitos.
+- <s>Rever os erros de concordância, pois há muitos.</s>
 
 - <s>Refazer a Tabela 3.1.</s>
 
@@ -215,7 +215,7 @@ ___
 
 - <s>Notei que algumas das minhas sugestões do Cap. 4 estão no Cap. 5. Cada informação tem que estar no seu lugar. Por exemplo a questão da seção 5.1.1 e 5.1.2 ela faz parte do desenvolvimento da sua solução pq ela está no capitulo de resultados.</s>
 
-- Outro exemplo, a seção 5.2 pq ela ta no Cap. de resultados?
+- <s>Outro exemplo, a seção 5.2 pq ela ta no Cap. de resultados?</s>
     > movido para cap 1
 
 - Ponto que me preocupou nos resultados, vou deixar em perguntas para vc refletir:
@@ -237,9 +237,8 @@ https://www.researchgate.net/post/Why_we_take_only_12-13_MFCC_coefficients_in_fe
 
 
 - [ ] referências go ??
-- [ ] rodapés
-    - [ ] utilização das imagens
-- [ ] acronimos
+- [x] rodapés
+- [x] acronimos
 - [ ] imagens
     - [ ] tamanho
     - [ ] idioma
