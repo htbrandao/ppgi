@@ -34,8 +34,9 @@ Neelakshi Josh, em \textit{Brazilian Portuguese emotional speech corpus analysis
 
 Abbaschian, Sierra-Sosa e Elmaghraby, em \textit{Deep Learning Techniques for Speech Emotion Recognition from Databases to Models}~\cite{32}, revisam publicações que envolvem trabalhos de \textit{Deep Learning} para \textit{SER}, bem como as bases de dados utilizadas. Realiza um comparativo entre onze bases de dados amplamente utilizadas em trabalhos dessa natureza, dispostas em três categorias: Simuladas, seminaturais e naturais. Realizam um cruzamento entre 25 bases de dados e trabalhos que as utilizam, organizando essa relação ao longo do tempo, disposto num eixo horizontal que compreende os anos entre 2005 e 2020. Nessa relação podemos perceber a predominância de certos entes em determinados períodos do tempo, tanto com relação a datasets quanto a modelos. Quanto as bases de dados, a partir de 2018 percebemos a predominância do IEMOCAP, sendo utilizado o dobro de vezes em relação ao EMO-DB, segundo mais utilizado. Quanto aos modelos, percebemos a presença constante de \textit{CNNs} a partir de 2016 e de variações de \textit{Autoencoders} a partir de 2018, ambos permanecendo presentes até 2020, ano final da cobertura da pesquisa.
 
-%~\cite{18}-2022
-Kun Zhou et al., em \textit{Emotion Intensity and its Control for Emotional Voice Conversion}\cite{18}, comenta a parca presença de estudos relativos a intensidade da emoção, uma vez que têm um grande potencial para a conversão de voz. O trabalho consistem em conseguir controlar a intensidade da emoção em um modelo de sequência para sequência (\textit{seq2seq}) que converte texto para voz. De maneira análoga a~\cite{63}, Zhou também decide encontrar uma \textit{attribute ranking function} para operar com o dado de entrada e alterar a intensidade da emoção da maneira desejada. Kun~\cite{18} e Zhu~\cite{63} diferem na sua arquitetura, enquanto~\cite{63} utiliza um \textit{autoencoder} que recebe o escalar relativo a intensidade após a fase de \textit{encoding},~\cite{18} utiliza três modelos com funções distintas: (1) Extrair as features do \textit{input}; (2) Criar adicionar a emoção desejada para a saída; e (3) Adicionar a alteração na intensidade.  % ==========================================================================================
+Kun Zhou et al., em \textit{Emotion Intensity and its Control for Emotional Voice Conversion}\cite{18}, comenta a parca presença de estudos relativos a intensidade da emoção, uma vez que têm um grande potencial para a conversão de voz. O trabalho consistem em conseguir controlar a intensidade da emoção em um modelo de sequência para sequência (\textit{seq2seq}) que converte texto para voz. De maneira análoga a~\cite{63}, Zhou também decide encontrar uma \textit{attribute ranking function} para operar com o dado de entrada e alterar a intensidade da emoção da maneira desejada. Kun~\cite{18} e Zhu~\cite{63} diferem na sua arquitetura, enquanto~\cite{63} utiliza um \textit{autoencoder} que recebe o escalar relativo a intensidade após a fase de \textit{encoding},~\cite{18} utiliza três modelos com funções distintas: (1) Extrair as features do \textit{input}; (2) Criar adicionar a emoção desejada para a saída; e (3) Adicionar a alteração na intensidade.
+
+% ==========================================================================================
 
 \section{Considerações Paricais}
 
@@ -52,118 +53,6 @@ Características espectrais aparentam ser uma feature importante para os modelos
 Outro ponto a ser observado é que embora existam trabalhos utilizando mais de um \textit{dataset}, essa prática ainda não parece estar totalmente difundida entre as publicações de \textit{SER}, uma vez que os escopos e naturezas (simulada, seminatural ou natural) das bases de dados costumam ser bastante distintas.
 
 Analisando as informações expostas na Tabela \ref{table:discussao}, podemos notar que este trabalho se aproxima dos demais por utilizar features espectrais e envolver uma abordagem supervisionada. Também tem em comum o fato de utilizar técnicas consolidadas ("clássicas") de \textit{ML}, ao mesmo tempo que investiga arquiteturas de \textit{DL}, como DNNs, \textit{CNNs} e \textit{Autoencoders}. Entretanto, este trabalho começa a se distanciar dos demais quando resolver trabalhar com áudios para a língua portuguesa. Além disso, a abordagem não supervisionadas também será utilizada, o que não é tão comum em uma mesma tarefa de \textit{SER}. Outro ponto de inovação dá-se uma vez que os trabalhos que encontramos utilizando o dataset VERBO têm apenas utilizaram apenas aprendizagem supervisionado e não lidam com intensidade. Ademais, não foram encontrados trabalhos utilizando o dataset VIVAE (2020), possivelmente tornando este trabalho pioneiro.
-
-% \clearpage
-
-% -------------------------------------------------------------------------------------------
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% gerada em https://www.tablesgenerator.com/
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-% \begin{landscape}
-% \begin{table}[]
-% \centering
-% \caption{Comparativo entre BRAVO e literatura correlata}
-% \begin{tabular}{|
-% >{\columncolor[HTML]{FFFFFF}}c |
-% >{\columncolor[HTML]{FFFFFF}}l |
-% >{\columncolor[HTML]{FFFFFF}}c 
-% >{\columncolor[HTML]{FFFFFF}}c 
-% >{\columncolor[HTML]{FFFFFF}}c |
-% >{\columncolor[HTML]{FFFFFF}}c 
-% >{\columncolor[HTML]{FFFFFF}}c |
-% >{\columncolor[HTML]{FFFFFF}}c 
-% >{\columncolor[HTML]{FFFFFF}}c |
-% >{\columncolor[HTML]{FFFFFF}}c 
-% >{\columncolor[HTML]{FFFFFF}}c |
-% >{\columncolor[HTML]{FFFFFF}}c 
-% >{\columncolor[HTML]{FFFFFF}}c |}
-% \hline
-% \cellcolor[HTML]{FFFFFF} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFFFFF}Features} & \multicolumn{2}{c|}{\cellcolor[HTML]{FFFFFF}Abordagem} & \multicolumn{2}{c|}{\cellcolor[HTML]{FFFFFF}Arquitetura} & \multicolumn{2}{c|}{\cellcolor[HTML]{FFFFFF}Português} & \multicolumn{2}{c|}{\cellcolor[HTML]{FFFFFF}Resultado} \\ \cline{3-13} 
-% \multirow{-2}{*}{\cellcolor[HTML]{FFFFFF}ANO} & \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{FFFFFF}Referência}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Cromática} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Espectral} & Prosódica & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Superv.} & Não superv.& \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}ML} & DL & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Não} & Sim & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Emoção} & Intensidade \\ \hline
-% % 1995 & {\cite{12.28}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &  \\ \hline
-% 2007 & {\cite{32.32}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  \\ \hline
-% 2013 & {\cite{11}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &  \\ \hline
-% 2015 & {\cite{32.31}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  \\ \hline
-% 2018 & {\cite{32.25}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  \\ \hline
-% 2018 & {\cite{34}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  \\ \hline
-% 2019 & {\cite{32.95}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  \\ \hline
-% 2020 & {\cite{12}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  \\ \hline
-% 2021 & {\cite{21}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} & X & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}X} &  \\ \hline
-% \textit{\textbf{2023}} & \textit{\textbf{BRAVO}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}\textit{\textbf{}}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}\textit{\textbf{X}}} & \textit{\textbf{}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}\textit{\textbf{X}}} & \textit{\textbf{X}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}\textit{\textbf{X}}} & \textit{\textbf{X}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}\textit{\textbf{}}} & \textit{\textbf{X}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}\textit{\textbf{}}} & \textit{\textbf{X}} \\ \hline
-% \end{tabular}\label{table:discussao}
-% \end{table}
-% \end{landscape}
-
-% \begin{table}[]
-%     \centering
-%     \caption{Comparativo entre este trabalho e a literatura correlata}
-%     \begin{tabular}{|l|l|l|l|l|l|}
-%     \hline
-%         Trabalho & Abordagem & ~ & Emoção & Intensidade & Português \\ \hline
-%         ~ & Supervisionada & Não Supervisionada & ~ & ~ & ~ \\ \hline
-%         ~\cite{32.32} & x & ~ & x & ~ & ~ \\ \hline
-%         ~\cite{11} & x & ~ & ~ & ~ & ~ \\ \hline
-%         ~\cite{32.31} & x & ~ & x & ~ & ~ \\ \hline
-%         ~\cite{32.25} & x & ~ & x & ~ & ~ \\ \hline
-%         ~\cite{34} & x & x & x & ~ & ~ \\ \hline
-%         ~\cite{32.95} & x & ~ & x & ~ & ~ \\ \hline
-%         ~\cite{12} & x & ~ & x & ~ & ~ \\ \hline
-%         ~\cite{21} & x & ~ & x & ~ & x \\ \hline
-%         ~\cite{pca6} & x & ~ & x & ~ & ~ \\ \hline
-%         Dissertação & x & x & ~ & x & x \\ \hline
-%     \end{tabular}\label{table:discussao}
-% \end{table}
-
-% \begin{table}[]
-%     \centering
-%     \caption{Comparativo entre este trabalho e a literatura correlata}
-%     \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
-%     \hline
-%     Trabalho        & Cromática & Espectral & Prosódica & Superv.   & Não superv.   & ML    & DL    & Português     & Emoção    & Intensidade   \\ \hline
-%     \cite{32.32}    &  ~        &           & x         & x         &  ~            & x     & ~     & ~             & x     	& ~             \\ \hline
-%     \cite{11}       &  ~        & x         & x         & x         &  ~            & x     & x     & ~             & ~         & ~             \\ \hline
-%     \cite{32.31}    & x         & x         & x         & x         &  ~            & ~     & x     & ~             & x         & ~             \\ \hline
-%     \cite{32.25}    &  ~        & x         &  ~        & x         &  ~            & x     & ~     & ~             & x         & ~             \\ \hline
-%     \cite{34}       &  ~        & x         &  ~        & x         & x             & ~     & x     & ~             & x         & ~             \\ \hline
-%     \cite{32.95}    &  ~        & x         &  ~        & x         &  ~            & ~     & x     & ~             & x         & ~             \\ \hline
-%     \cite{12}       & x         & x         & x         & x         &  ~            & ~     & ~     & x             & x         & ~             \\ \hline
-%     \cite{21}       & x         & x         & x         & x         &  ~            & x     & x     & x             & x         & ~             \\ \hline
-%     \cite{pca6}    & ~         & x         & ~         & x         & ~             & x     & x     & ~             & x         & ~             \\ \hline
-%     Dissertação     & x         & x         & x         & x         & x             & x     & x     & x             & ~         & x             \\ \hline
-%     \end{tabular}\label{table:discussao}
-% \end{table}
-
-% \begin{table}[]
-%     \centering
-%     \caption{Comparativo entre este trabalho e a literatura correlata}
-%     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
-%     \hline
-%     \textbf{Trabalho} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Features}\\Cromáticas}}}\end{tabular} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Features}\\Espectrais}}}\end{tabular} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Features}\\Prosódicas}}}\end{tabular} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Aprendizagem\\Supervisionada}}}\end{tabular} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.8cm}{Aprendizagem\\Não Supervisionada}}}\end{tabular} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Machine\\Learning}}}}\end{tabular} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{\textit{Deep Learning}}}}\end{tabular} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Português}}}\end{tabular} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Emoção}}}\end{tabular} &
-%     \begin{tabular}[c]{@{}c@{}}{\rotatebox{90}{\parbox{3.5cm}{Intensidade}}}\end{tabular} \\ \hline
-%     % Trabalho        & Cromática & Espectral & Prosódica & Superv.   & Não superv.   & ML    & DL    & Português     & Emoção    & Intensidade   \\ \hline
-%     \cite{32.32}    &  ~        &           & x         & x         &  ~            & x     & ~     & ~             & x     	& ~             \\ \hline
-%     \cite{11}       &  ~        & x         & x         & x         &  ~            & x     & x     & ~             & ~         & ~             \\ \hline
-%     \cite{32.31}    & x         & x         & x         & x         &  ~            & ~     & x     & ~             & x         & ~             \\ \hline
-%     \cite{32.25}    &  ~        & x         &  ~        & x         &  ~            & x     & ~     & ~             & x         & ~             \\ \hline
-%     \cite{34}       &  ~        & x         &  ~        & x         & x             & ~     & x     & ~             & x         & ~             \\ \hline
-%     \cite{32.95}    &  ~        & x         &  ~        & x         &  ~            & ~     & x     & ~             & x         & ~             \\ \hline
-%     \cite{12}       & x         & x         & x         & x         &  ~            & ~     & ~     & x             & x         & ~             \\ \hline
-%     \cite{21}       & x         & x         & x         & x         &  ~            & x     & x     & x             & x         & ~             \\ \hline
-%     \cite{pca6}    & ~         & x         & ~         & x         & x             & x     & x     & ~             & x         & ~             \\ \hline
-%     Dissertação     & ~         & x         & ~         & x         & x             & x     & x     & x             & ~         & x             \\ \hline
-%     \end{tabular}\label{table:discussao}
-% \end{table}
 
 \begin{table}[]
     \centering
