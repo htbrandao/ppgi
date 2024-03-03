@@ -233,6 +233,7 @@ ___
 #### TODOs:
 
 "but peak emotions are maximally ambiguous"
+
 https://www.researchgate.net/post/Why_we_take_only_12-13_MFCC_coefficients_in_feature_extraction
 
 
@@ -241,4 +242,4 @@ https://www.researchgate.net/post/Why_we_take_only_12-13_MFCC_coefficients_in_fe
 - [x] acronimos
 - [ ] imagens
     - [ ] tamanho
-    - [ ] idioma
+    - [x] idioma

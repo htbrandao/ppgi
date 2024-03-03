@@ -10,11 +10,11 @@ Este capítulo apresenta uma arquitetura para classificação da intensidade da 
 % ==========================================================================================
 \section{Visão Geral}
 
-Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da arquitetura. Conforme a imagem, três etapas principais serão necessárias para o reconhecimento da intensidade das emoções: (A) Aquisição dos dados; (B) Extração de características; e (C) Classificação da intensidade.
+Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da arquitetura. Conforme a imagem, três etapas principais serão necessárias para o reconhecimento da intensidade das emoções: (A) Aquisição de informações; (B) Extração de características; e (C) Classificação da intensidade.
 
 \begin{figure}[]
 \centering
-\includegraphics[width=0.60\textwidth]{img/arquitetura-visao-geral-2-eng.png}
+\includegraphics[width=0.60\textwidth]{img/arquitetura-visao-geral-3.png}
 \caption{\label{fig:visaogeralproposta}Visão geral da arquitetura}
 \end{figure}
 
@@ -236,7 +236,7 @@ A normalização em questão, é a normalização pela Escala de Mel (\textit{Me
 
 O \textit{Mel-Spectrogram} tem sido amplamente utilizado em problemas de \acrshort{SER}, como~\cite{32.25, 32.30}, e em~\cite{32.31} e~\cite{32.32}, que também utilizam técnicas de \textit{Autoencoder}.
 
-Outro atributo observado na literatura são os Coeficientes Cepstrais de Frequência Mel (\acrshort{MFCC}s). Um \acrshort{MFC} é uma representação de curto prazo do espectro de potência de um som, assim, \acrshort{MFC}s são os coeficientes que formam os \acrshort{MFCC}s coletivamente. Calcular os \acrshort{MFCC}s consiste em aplicar a Transformada Discreta do Cosseno \acrlong{DCT} ao \textit{Mel-Spectrogram}. Podemos compreender os \acrshort{MFCC}s como uma compressão~\cite{64} do \textit{Mel Spectrogram}. Também encontramos trabalhos que utilizam \acrshort{MFCC}s em~\cite{32.79} e~\cite{32.89}, cujas arquiteturas contém uma Rede Neural Convolucional e uma \acrshort{GAN}, respectivamente.
+Outro atributo observado na literatura são os Coeficientes Cepstrais de Frequência Mel (\acrshort{MFCC}s). Um \acrshort{MFC} é uma representação de curto prazo do espectro de potência de um som, assim, \acrshort{MFC}s são os coeficientes que formam os \acrshort{MFCC}s coletivamente. Calcular os \acrshort{MFCC}s consiste em aplicar a Transformada Discreta do Cosseno ao \textit{Mel-Spectrogram}. Podemos compreender os \acrshort{MFCC}s como uma compressão~\cite{64} do \textit{Mel Spectrogram}. Também encontramos trabalhos que utilizam \acrshort{MFCC}s em~\cite{32.79} e~\cite{32.89}, cujas arquiteturas contém uma Rede Neural Convolucional e uma \acrshort{GAN}, respectivamente.
 
 % Podemos observar um comparativo entre o resultado de um Mel-Spectrogram e \acrshort{MFCC}s para uma mesma amostra na Figura \ref{fig:melspecvsmfcc}.
 
@@ -385,7 +385,7 @@ Antes de seguir para a etapa de classificação (B), precisamos verificar a qual
 
 Redes neurais são capazes de aprender relações complexas entre as características dos dados, o que pode ser especialmente benéfico para a tarefa de classificação. Ao contrário de métodos mais tradicionais, as redes neurais não estão limitadas por suposições lineares ou por características específicas pré-definidas, permitindo uma modelagem mais flexível e adaptativa dos dados.
 
-Com o \acrshort{Autoencoder} treinado, vamos aplicá-lo a todos os registros de $X_{VIVAE}$ e separar o resultado em dois conjuntos para treinamento ($X_{VIVAE_{treino}}$) e testes ($X_{VIVAE_{teste}}$), contendo 75\% e 25\% desses dados, respectivamente. Estes serão os dados utilizados pelo nosso modelo supervisionado.
+Com o \textit{Autoencoder} treinado, vamos aplicá-lo a todos os registros de $X_{VIVAE}$ e separar o resultado em dois conjuntos para treinamento ($X_{VIVAE_{treino}}$) e testes ($X_{VIVAE_{teste}}$), contendo 75\% e 25\% desses dados, respectivamente. Estes serão os dados utilizados pelo nosso modelo supervisionado.
 
 % Para a etapa de classificação da intensidade (C), construímos e treinamos uma rede neural $j$, que recebe como \textit{input} o \textit{encoding} da média dos \textit{MFC}s dos $x_i \in X_{VIVAE_{treino}}$.
 
