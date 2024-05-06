@@ -17,7 +17,7 @@ Em~\cite{emoint1}, vemos que indivíduos que experimentam emoções positivas in
 
 Numa tentativa de resumir a natureza múltipla da intensidade emocional global,~\cite{emoint2.1} nos diz que um dos aspectos mais perceptíveis de uma emoção é a sua intensidade. Quando alguém descreve uma experiência emocional, esta pessoa quase sempre se referirá à sua intensidade. Portanto, é intrigante que esse aspecto da emoção tenha sido quase completamente ignorado como um objeto específico de pesquisa. Também propuseram a seguinte fórmula descritiva: $I_E = f(C, E, A_p, A, P, R)$ onde: $I_E$ denota a intensidade emocional sentida, $C$ a importância dos objetivos ou interesses envolvidos, $E$ a magnitude do acontecimento, $A_p$ uma componente de avaliação, $A$ o potencial de ação, $P$ componentes relevantes de personalidade, e $R$ uma componente de contenção, inibição ou regulação.
 
-Temos~\cite{emoint3}, uma publicação com experimento realizado no Brasil, que busca construir um instrumento de estudo de avaliação psicométrica para mensurar afetos positivos e negativos e confronta seu experimento com outros testes de avaliação de afetos, como a Escala de Afetos Positivos e Negativos (\acrshort{PANAS}) que também foi observada e validade para fins psicométricos, no Brasil, em~\cite{panas1} e~\cite{panas2}. Do ponto de vista do comportamento social,~\cite{16} diz que uma representação da ativação e da intensidade do estado emocional parecem essenciais, mesmo quando a valência não pode ser determinada.
+Temos~\cite{emoint3}, uma publicação com experimento realizado no Brasil, que busca construir um instrumento de estudo de avaliação psicométrica para mensurar afetos positivos e negativos e confronta seu experimento com outros testes de avaliação de afetos, como a Escala de Afetos Positivos e Negativos (\acrlong{PANAS}, \acrshort{PANAS}) que também foi observada e validade para fins psicométricos, no Brasil, em~\cite{panas1} e~\cite{panas2}. Do ponto de vista do comportamento social,~\cite{16} diz que uma representação da ativação e da intensidade do estado emocional parecem essenciais, mesmo quando a valência não pode ser determinada.
 
 
 \begin{figure}[!ht]
@@ -35,20 +35,20 @@ Temos~\cite{emoint3}, uma publicação com experimento realizado no Brasil, que 
 % ==========================================================================================
 \section{Aprendizagem de Máquina}\label{sec:ml}
 
-Aprendizagem de Máquina (\acrshort{ML}) é uma subárea da Inteligência Artificial (\acrshort{AI}). Inteligência Artificial foi o nome estabelecido~\cite{12.23} para uma área denominada Inteligência Computacional, que consiste no estudo agentes inteligentes. Um agente é algo capaz de atuar num ambiente, enquanto um agente inteligente é um agente que atua no ambiente de forma inteligente, se apropriando de circunstâncias para alcançar um objetivo, possivelmente influenciando o ambiente, com capacidade para alterar esse objetivo, aprendendo com sua experiência e fazendo escolhas adequadas de acordo com suas limitações.
+Aprendizagem de Máquina é uma subárea da Inteligência Artificial (\acrlong{AI}, \acrshort{AI}). Inteligência Artificial foi o nome estabelecido~\cite{12.23} para uma área denominada Inteligência Computacional, que consiste no estudo agentes inteligentes. Um agente é algo capaz de atuar num ambiente, enquanto um agente inteligente é um agente que atua no ambiente de forma inteligente, se apropriando de circunstâncias para alcançar um objetivo, possivelmente influenciando o ambiente, com capacidade para alterar esse objetivo, aprendendo com sua experiência e fazendo escolhas adequadas de acordo com suas limitações.
 
 Tarefas de \acrshort{ML} costumam ser descritas em termos de como o sistema de Aprendizagem de Máquina deve processar um exemplo~\cite{53}. Um exemplo consiste numa coleção de recursos, de um objeto ou evento, que foram aferidos quantitativamente e que desejamos que seja processado por esse sistema. Costuma-se representar um exemplo como um vetor $x \in R^n$, onde cada coordenada $x_i$ do vetor $x$ é uma característica (\textit{feature}) desse vetor. Por exemplo, se $x$ representar uma imagem, cada $x_i$ pode ser o valor de um pixel dessa imagem.
 
 Dentre as tarefas de \acrshort{ML}, duas tarefas comuns são a classificação e a regressão. A classificação busca descobrir a qual de $k$ classes possíveis um vetor $x$ pertence, produzindo uma função $f: R^n \rightarrow \{1, ..., k\}$, de modo que quando $y = f(x)$, o modelo atribui a uma entrada (\textit{input}) $x$ uma saída (\textit{output}) numérica de valor $y$ que representa uma categoria (classe). Na regressão, o pensamento é análogo, porém, ao final, o modelo não tenta encontrar a qual classe $x$ pertence, e sim predizer um valor (contínuo) para $f(x)$.
 
-Dentre os algoritmos de \acrshort{ML} utilizados em trabalhos de \acrshort{SER}~\cite{20.7}, encontramos: Floresta Aleatória (\acrshort{RF}) em~\cite{20.10}, Árvore de Decisão (\acrshort{DT})~\cite{20.11}, Máquinas de Vetores de Suporte (\acrshort{SVM})~\cite{20.13} e K-vizinhos mais próximos (\acrshort{KNN})~\cite{20.15}.
+Dentre os algoritmos de \acrshort{ML} utilizados em trabalhos de \acrshort{SER}~\cite{20.7}, encontramos: Floresta Aleatória (\acrlong{RF}, \acrshort{RF}) em~\cite{20.10}, Árvore de Decisão (\acrlong{DT}, \acrshort{DT})~\cite{20.11}, Máquinas de Vetores de Suporte (\acrlong{SVM}, \acrshort{SVM})~\cite{20.13} e K-vizinhos mais próximos (\acrlong{KNN}, \acrshort{KNN})~\cite{20.15}.
 
 % ==========================================================================================
 \section{Aprendizado Profundo}\label{sec:dl}
 
-Aprendizado Profundo (\acrshort{DL}) é um tipo específico de \acrshort{ML}~\cite{53}. Algoritmos de \acrshort{ML} citados no parágrafo anterior - conhecidos como algoritmos tradicionais - costumam funcionar bem em uma grande variedade de problemas importantes. Entretanto, não costumam ter desempenho tão bom em problemas que envolvem reconhecimento de fala ou de objetos. O desenvolvimento do \acrshort{DL} foi motivado, em parte, pela falha desses algoritmos tradicionais em generalizar bem para essas tarefas de Inteligência Artificial.
+Aprendizado Profundo é um tipo específico de Aprendizado de Máquina~\cite{53}. Algoritmos de \acrshort{ML} citados no parágrafo anterior - conhecidos como algoritmos tradicionais - costumam funcionar bem em uma grande variedade de problemas importantes. Entretanto, não costumam ter desempenho tão bom em problemas que envolvem reconhecimento de fala ou de objetos. O desenvolvimento do Aprendizado Profundo foi motivado, em parte, pela falha desses algoritmos tradicionais em generalizar bem para essas tarefas de Inteligência Artificial.
 
-Dada essa necessidade de explorar modelos mais robustos, alguns trabalhos estudaram o impacto de algoritmos de \acrshort{DL} no reconhecimento de emoção na voz~\cite{12.12, 12.16}.
+Dada essa necessidade de explorar modelos mais robustos, alguns trabalhos estudaram o impacto de algoritmos de \acrlong{DL} no reconhecimento de emoção na voz~\cite{12.12, 12.16}.
 
 \begin{figure}[!h]
 \centering
@@ -57,7 +57,7 @@ Dada essa necessidade de explorar modelos mais robustos, alguns trabalhos estuda
 \author{Fonte: Retirada de~\cite{58}}
 \end{figure}
 
-Redes Multicamadas de Perceptrons (\acrshort{MLP}) são predecessoras da construção de modelos de \acrshort{DL}, conhecidos como Redes Neurais (\acrlong{NN}). O Perceptron é uma unidade (Figura \ref{fig:perceptron}) composta por valores (pesos) $wi$ e uma função de ativação $f$,  que recebe as \textit{fetures}, realiza uma operação matemática entre $wi,xi$, aplica a função de ativação $y = f(x,w)$ e emite esse resultado como \textit{output}.
+Redes Multicamadas de Perceptrons (\acrlong{MLP}, \acrshort{MLP}) são predecessoras da construção de modelos de \acrshort{DL}, conhecidos como Redes Neurais (\acrlong{NN}, \acrshort{NN}). O Perceptron é uma unidade (Figura \ref{fig:perceptron}) composta por valores (pesos) $wi$ e uma função de ativação $f$,  que recebe as \textit{fetures}, realiza uma operação matemática entre $wi,xi$, aplica a função de ativação $y = f(x,w)$ e emite esse resultado como \textit{output}.
 
 Podemos realizar o mapeamento de vários Perceptrons, recebendo as \textit{features} e produzindo \textit{outputs}, ao longo de camadas, onde cada camada atua como \textit{input} para a próxima camada, e assim sucessivamente, até chegar a
  um \textit{output} final, assim, temos uma \acrshort{MLP} (Figura \ref{fig:mlp}).
@@ -129,15 +129,15 @@ Cabe observar que $f$ não precisa ser injetora, uma vez que mais de um $x_i$ po
 
 Para uma abordagem não supervisionada, os modelos são apresentados a um conjunto de dados sem rótulos e tentam aprender características importantes da sua estrutura. A distinção entre supervisionado e não supervisionado costuma se dar pela presença ou não da classe (\textit{target}) daqueles dados. Note que é possível aplicar uma abordagem não supervisionada a um \textit{dataset} mesmo quando a classe é conhecida, basta excluí-la do processo de treinamento do modelo.
 
-Alguns casos de uso de \textit{Unsupervised Learning} incluem: (1) Formação de conjuntos (\textit{clustering}); (2) \textit{Feature Learning}; (3) Redução de dimensionalidade; (4) Automatizar a rotulação de amostras; (5) Aprender sobre o \textit{dataset} através de análise exploratória \acrlong{EDA}.
+Alguns casos de uso de \textit{Unsupervised Learning} incluem: (1) Formação de conjuntos (\textit{clustering}); (2) \textit{Feature Learning}; (3) Redução de dimensionalidade; (4) Automatizar a rotulação de amostras; (5) Aprender sobre o \textit{dataset} através de análise exploratória (\acrlong{EDA}, \acrshort{EDA}).
 
-Trabalhos envolvendo aprendizado não supervisionado apontam as capacidades de Autocodificadores (\acrshort{AE}) tanto para aprendizagem de características\textit{feature learning}~\cite{35.16, 35.17} quanto para redução de dimensionalidade~\cite{35.18, 35.19}.
+Trabalhos envolvendo aprendizado não supervisionado apontam as capacidades de Autocodificadores (\acrlong{AE}, \acrshort{AE}) tanto para aprendizagem de características\textit{feature learning}~\cite{35.16, 35.17} quanto para redução de dimensionalidade~\cite{35.18, 35.19}.
 
 
 % ==========================================================================================
 \section{Métricas de Avaliação de Modelos}\label{sec:metricas}
 
-Modelos de aprendizagem de máquina precisam ser validados para que possamos avaliar o seu desempenho e gerar inferências a respeito do seu comportamento. Existem diversas formas, para avaliar seus resultados, sendo esta mais ou menos adequadas à natureza do modelo. Na lista abaixo temos variáveis utilizadas para calcular métricas de avaliação do treinamento e teste de modelos de \textit{ML}:
+Modelos de aprendizagem de máquina precisam ser validados para que possamos avaliar o seu desempenho e gerar inferências a respeito do seu comportamento. Existem diversas formas, para avaliar seus resultados, sendo esta mais ou menos adequadas à natureza do modelo. Na lista abaixo temos variáveis utilizadas para calcular métricas de avaliação do treinamento e teste de modelos de \acrshort{ML}:
 
 \begin{itemize}
     \item Verdadeiros Positivos (VP) ou \acrlong{TP} (\acrshort{TP}): Classificação correta da classes positivas;

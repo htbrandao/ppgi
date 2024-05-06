@@ -4,7 +4,7 @@
 
 % Este capítulo irá se desdobrar a partir do problema encontrado e proporá uma solução para sua realização. Adiante, irá expor a sua implementação em detalhes, tratando conhecimentos mais específicos que não estejam elucidados ao longo dos capítulos anteriores e conjecturando sobre possíveis aplicabilidades deste trabalho em áreas diversas.\\
 
-Este capítulo apresenta uma arquitetura para classificação da intensidade da emoção na voz em Português. Para tal, foram criados dois modelos de \acrshort{DL}, a saber: (i) \acrshort{AE}, responsável pela redução de dimensionalidade e extração de características representativas dos dados; e (ii) Rede Neural, para efetuar a predição da classe relativa a intensidade da vocalização.\\
+Este capítulo apresenta uma arquitetura para classificação da intensidade da emoção na voz em Português. Para tal, foram criados dois modelos de \acrshort{DL}, a saber: (i) \acrlong{AE}, responsável pela redução de dimensionalidade e extração de características representativas dos dados; e (ii) Rede Neural, para efetuar a predição da classe relativa a intensidade da vocalização.\\
 
 
 % ==========================================================================================
@@ -202,7 +202,7 @@ No ato da fala, nossas pregas vocais oscilam um número de ciclos de acordo com 
 
 % Para transportar um sinal do domínio do tempo para o domínio da frequência, utiliza-se a Transformada de Fourier \acrlong{FT}), que irá decompor o sinal em seus componentes de frequências (Figura\footnote{Disponível em \url{https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53}} \ref{fig:fouriertransform}), realizada computacionalmente através da Transformada Rápida de Fourier \acrlong{FFT}. 
 
-Para transportar um sinal do domínio do tempo para o domínio da frequência, utiliza-se a Transformada de Fourier (\acrshort{TF}), que irá decompor o sinal em seus componentes de frequências, realizada computacionalmente através da Transformada Rápida de Fourier (\acrshort{TRF}).
+Para transportar um sinal do domínio do tempo para o domínio da frequência, utiliza-se a Transformada de Fourier (\acrlong{TF}, \acrshort{TF}), que irá decompor o sinal em seus componentes de frequências, realizada computacionalmente através da Transformada Rápida de Fourier (\acrlong{TRF}, \acrshort{TRF}).
 
 % Figura\footnote{Disponível em \url{https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53}}
 
@@ -296,7 +296,7 @@ De posse do mapa $M(x_i)$, podemos prosseguir para a etapa de extração de cara
 % ------------------------------------------------------------------------------------------
 \subsection{Codificador Automático}
 
-Um Codificador Automático (\acrshort{AE}) é uma rede neural criada para tentar reproduzir o seu \textit{input} no seu \textit{output}. Podemos descrever um \acrshort{AE} como um conjunto de funções $f, f'$ de modo que, dado um input $x$, queremos $f'(f(x)) = x' \approx x$, onde $f$ realiza a codificação (\textit{encoding}) de $x$ e $f'$ realiza a decodificação (\textit{decoding}) do resultado $f(x)$. Assim, um \acrshort{AE} é uma rede neural composta por um \textit{encoder} e um \textit{decoder} que tenta reproduzir uma função de identidade.
+Um Codificador Automático (\acrshort{AE}) é uma rede neural criada para tentar reproduzir o seu \textit{input} no seu \textit{output}. Podemos descrever um \acrshort{AE} como um conjunto de funções $f, f'$ de modo que, dado um input $x$, queremos $f'(f(x)) = x' \approx x$, onde $f$ realiza a codificação (\textit{encoding}) de $x$ e $f'$ realiza a decodificação (\textit{decoding}) do resultado $f(x)$. Assim, um \acrlong{AE} é uma rede neural composta por um \textit{encoder} e um \textit{decoder} que tenta reproduzir uma função de identidade.
 
 % (Figura\footnote{Imagem adaptada, gerada em \url{http://alexlenail.me/NN-SVG/LeNet.html}} \ref{fig:exarqae})
 
@@ -336,11 +336,11 @@ Para o treinamento do modelo $AE$ com os dados de $X$, este será dividido em um
 
 A estrutura dos Autoencoders é análoga para ambos os experimentos. A Figura \ref{fig:ae64} representa a arquitetura do modelo para 64 \acrshort{MFCC}s enquanto a \ref{fig:ae128} representa a arquitetura do modelo para 128 \acrshort{MFCC}s. Ambos seguem uma estrutura composta por três camadas, a serem detalhadas abaixo: Entrada, \textit{encoder} e \textit{decoder}.
 
-O treinamento foi realizado utilizando o Erro Quadratico Médio (\acrshort{MSE}) como função de Perda (\textit{Loss}) e \acrshort{ADAM} como função de otimização. Para efeitos de legibilidade, vamos definir $dim_{MFCCs}$ como a quantidade de \acrshort{MFCC}s utilizado em cada experimento.
+O treinamento foi realizado utilizando o Erro Quadratico Médio (\acrlong{MSE}, \acrshort{MSE}) como função de Perda (\textit{Loss}) e a Estimativa de Momento Adaptativo (\acrlong{ADAM}, \acrshort{ADAM}) como função de otimização. Para efeitos de legibilidade, vamos definir $dim_{MFCCs}$ como a quantidade de \acrshort{MFCC}s utilizado em cada experimento.
 
 \begin{enumerate}
     \item Entrada: Responsável por receber os dados com dimensão igual $(1, dim_{MFCCs})$.
-    \item \textit{Encoder}: Responsável por realizar a redução de dimensionalidade do dado oriundo da camada de entrada. Na camada de \textit{encoder}, o dado entra com dimensão $(1, dim_{MFCCs})$ e é comprimido para uma dimensionalidade $(1, dim_{MFCCs}/2)$. Assumimos que buscamos preservar apenas os atributos com maior relevância, então utilizamos uma função de ativação do tipo Unidade Linear Retificada (\acrshort{ReLU}).
+    \item \textit{Encoder}: Responsável por realizar a redução de dimensionalidade do dado oriundo da camada de entrada. Na camada de \textit{encoder}, o dado entra com dimensão $(1, dim_{MFCCs})$ e é comprimido para uma dimensionalidade $(1, dim_{MFCCs}/2)$. Assumimos que buscamos preservar apenas os atributos com maior relevância, então utilizamos uma função de ativação do tipo Unidade Linear Retificada (\acrlong{ReLU}, \acrshort{ReLU}).
     \item \textit{Decoder}: Responsável por receber os dados com dimensão reduzida e expândi-los para a dimensão de entrada $(1, dim_{MFCCs})$, tentando reproduzir os valores originais. Para isso, esta camada utilizou uma função de ativação do tipo Linear, que reproduzirá valores contítnuos oriundos das operações matriciais desta camada, não limitados ao intervalo $(0, max(0, x)$ como é o caso da \acrshort{ReLU}.
 \end{enumerate}
 
