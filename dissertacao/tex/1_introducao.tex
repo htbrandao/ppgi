@@ -1,7 +1,7 @@
 % \chapter{Introdução}\label{Cap:Introdução}
 
 % ==========================================================================================
-\section{Contextualização}
+% \section{Contextualização}
 
 A fala costuma ser nossa primeira forma de comunicação e de expressão de emoções~\cite{1.5}. Desde a infância, antes mesmo de utilizarmos nosso idioma, expressamos emoções através de sons não verbais que possuem significado para o emissor. Havendo, inclusive, estudos investigando a emoção de bebês por meio do choro~\cite{0}.
 
@@ -9,18 +9,31 @@ Continuamos a expressar emoções dessa maneira ao longo da vida. Em um mundo mo
 
 Nossa emoção é um estado psicológico relacionado com o sistema sensorial, provocado por alterações hormonais que podem estar relacionadas a observações, sentimentos, interações sociais ou algum nível de satisfação ou frustração, e que causam uma alteração, distinguível, na fala~\cite{8}. A intensidade dessa emoção pode afetar nossa percepção das emoções~\cite{18.46} e nos induzir a interpretá-las de forma inadequada.
 
-A análise de emoções na voz se tornou uma área de pesquisa proeminente, muito graças ao aumento da capacidade computacional e a eficiência de algoritmos~\cite{38}~\cite{20}. Desse modo, a classificação de emoções e de sua intensidade toma um papel importante~\cite{3} no desenvolvimento de ciência e tecnologia, uma vez que a mensagem transmitida pode ter sua semântica alterada pelas emoções~\cite{39}.
+A análise de emoções na voz se tornou uma área de pesquisa proeminente, muito graças ao aumento da capacidade computacional e a eficiência de algoritmos~\cite{38, 20}. Desse modo, a classificação de emoções e de sua intensidade toma um papel importante~\cite{3} no desenvolvimento de ciência e tecnologia, uma vez que a mensagem transmitida pode ter sua semântica alterada pelas emoções~\cite{39}.
 
-O Reconhecimento de Emoção na Fala é um problema complexo~\cite{complexidade1}, pois a expressão emocional depende da linguagem falada, dialeto, sotaque e histórico cultural dos indivíduos~\cite{6}. O reconhecimento e avaliação de emoções apresenta dificuldades por sua natureza interdisciplinar: O reconhecimento de emoções e a avaliação de intensidade são objeto das ciências da Psicologia, a aferição e avaliação de dados fisiológicos estão relacionadas às ciências médicas, e a análise e solução de dados de sensores é objeto da mecatrônica~\cite{17}.
+O Reconhecimento de Emoção na Fala (\acrlong{SER}, \acrshort{SER}) é um problema complexo~\cite{complexidade1}, pois a expressão emocional depende da linguagem falada, dialeto, sotaque e histórico cultural dos indivíduos~\cite{6}. O reconhecimento e avaliação de emoções apresenta dificuldades por sua natureza interdisciplinar: O reconhecimento de emoções e a avaliação de intensidade são objeto das ciências da Psicologia, a aferição e avaliação de dados fisiológicos estão relacionadas às ciências médicas, e a análise e solução de dados de sensores é objeto da mecatrônica~\cite{17}.
+
+% ==========================================================================================
+% \section{Aplicabilidade}\label{sec:aplicabilidade}
+
+Esta dissertação foi desenvolvida com o intuito de explorar possibilidades para inferência da itensidade da emoção na voz em nosso idioma nativo. Problemas de \acrshort{SER} são problemas complexos uma vez que a expressão emocional é afetada por vários fatores, incluindo a linguagem falada e o sotaque dos indivúdios~\cite{6}.
+
+Inferir a intensidade da emoção encontra aplicações potenciais em em diversas áreas, como saúde~\cite{1}, segurança~\cite{4}, entretenimento (através de \textit{smart enviromentes}~\cite{alexa1} e \textit{smart assistants}~\cite{alexa2}) e comercial~\cite{bsignal1, bsignal2}. Trabalhos como~\cite{63} buscam entender a intensidade da emoção para melhorar a performance da síntese de uma vocalização emocional oriunda de um mecanismo de \textit{speech to text}.
+
+Desenvolver uma metodologia para classificar a intensidade da emoção poderia colaborar com a monitoração do estado de saúde de pacientes, através de um modelo embarcado em assistentes virtuais inteligentes; auxiliar no antendimento ao público encaminhando chamadas de \textit{call centers} compreendidas como urgentes para fora do fluxo automatizado e para o atendimento humano; ser utilizado para melhorar o desempenho de sistemas de segurança baseados em reconhecimento de voz, reduzindo a alteração na voz causada por variações do estado emocional, assim como soluções que reduzem ruído; ou para uma fins comerciais no sistema financeiro, como uma empresa~\cite{bsignal0} que alega possuir uma solução \textit{From Voice to Revenue} que aumentou em 20\% o sucesso da renegociação para recupração de crédito de liquidação duvidosa.
+
+
 
 % ==========================================================================================
 \section{Objetivos}
 
-No âmbito das Ciências da Computação, \acrshort{SER} é uma área de pesquisa ativa, com publicações datando desde o final do século XX~\cite{12.27}. Uma vez que a estimativa de intensidade na emoção tem diversas aplicações potenciais para interações humano máquina, como: Monitoração de pacientes~\cite{1}, segurança~\cite{4}, fins comerciais\footnote{Behavioral Signals. Exemplo de empresa que utiliza atividades correlatas a esta para fins comerciais. Disponível em \url{https://behavioralsignals.com/}} e de entretenimento (\textit{e.g.}: Assistentes virtuais).
+No âmbito das Ciências da Computação, \acrshort{SER} é uma área de pesquisa ativa, com publicações datando desde o final do século XX~\cite{12.27}. Uma vez que a estimativa de intensidade na emoção tem diversas aplicações potenciais para interações humano máquina, como: Monitoração de pacientes~\cite{1}, segurança~\cite{4}, fins comerciais~\cite{bsignal0, bsignal1, bsignal2}.
 
-Este trabalho visa propor, desenvolver e avaliar uma solução de classificação da intensidade da emoção na voz Português. Para tanto, foram utilizadas técnicas de \acrlong{DL} para a solução de classificação e uma técnica de \acrlong{ML} para validação dos resultados.
+% \footnote{Behavioral Signals. Exemplo de empresa que utiliza atividades correlatas a esta para fins comerciais. Disponível em \url{https://behavioralsignals.com/}} e de entretenimento (\textit{e.g.}: Assistentes virtuais).
 
-Nesta dissertação, realizamos a tarefa supracitada, contando com duas bases de dados, a primeira composta por vocalizações verbais e a segunda por vocalizações não verbais, nas quais realizamos extração de características para posteriormente treinarmos dois modelos de \acrlong{DL}. Sendo o primeiro modelo responsável pela redução de dimensionalidade e extração de características representativas dos dados, e o segundo atuando na predição da classe da intensidade.
+Este trabalho visa propor, desenvolver e avaliar uma solução de classificação da intensidade da emoção na voz Português. Para tanto, foram utilizadas técnicas de Aprendizagem Profunda (\acrlong{DL}, \acrshort{DL}) para a solução de classificação e uma técnica de Aprendizagem de Máquina (\acrlong{ML}, \acrshort{ML}) para validação dos resultados.
+
+Nesta dissertação, realizamos a tarefa supracitada, contando com duas bases de dados, a primeira composta por vocalizações verbais e a segunda por vocalizações não verbais, nas quais realizamos extração de características para posteriormente treinarmos dois modelos de \acrshort{DL}. Sendo o primeiro modelo responsável pela redução de dimensionalidade e extração de características representativas dos dados, e o segundo atuando na predição da classe da intensidade.
 
 
 % Pesquisando o estado da arte da literatura relacionada, encontramos trabalhos lidando com \acrshort{SER}, como~\cite{11} que investiga características rítmicas~\cite{34} para tentar capturar estruturas intrínsecas dos dados e~\cite{32.95} que utiliza um mecanismo de atenção\footnote{Introduzido em 2014 por Dzmitry Bahdanau, Kyunghyun Cho e Yoshua Bengio. Disponível em \url{https://arxiv.org/abs/1409.0473}}. Encontrarmos trabalhos abordando a intensidade dessas emoções, dos quais podemos citar~\cite{14},~\cite{15} e~\cite{28}, embora utilizem dados textuais, e~\cite{3},~\cite{18} e~\cite{20} que utilizam voz. Mas nenhum destes trabalhos utiliza dados em português.

@@ -18,7 +18,7 @@
 
 - <s>As sentenças do parágrafos estão bem longas! Há parágrafos com sentença de mais de 4 linhas. Reduzir as sentenças para no máximo 3 linhas para manter a fluidez no texto.</s>
 
-- Todos os termos/palavras em inglês devem estar em itálico.
+- <s>Todos os termos/palavras em inglês devem estar em itálico.</s>
 
 - Verificar como as figuras estão citadas.
 
@@ -51,10 +51,10 @@ ___
 
 - Objetivo: O objetivo tem que está coerente com o resumo, seção 1.2 e Cap. 4 (proposta.)
 
-- Faltou uma seção dedicada às contribuições do trabalho e uma de justificativa.
+- <s>Faltou uma seção dedicada às contribuições do trabalho e uma de justificativa.</s>
     > o de emerson não tem
 
-- No objetivo, você pode fazer um objetivo geral e os objetivos específicos.
+- <s>No objetivo, você pode fazer um objetivo geral e os objetivos específicos.</s>
     > o de emerson não tem
 
 - Senti falta tbm da hipótese da pesquisa e como tu validou a proposta
@@ -99,10 +99,10 @@ ___
 
 - Esse comentário foi da revisão anterior para o Cap. 2, mas ele serve para o Cap. 4 e 5 tbm: "Padronize o tamanho das figuras para garantir proporções adequadas ao texto. Além disso, certifique-se de que os textos nas figuras sejam legíveis, ajustando o tamanho conforme necessário."
 
-- Na seção 2.1, vale a pena expandir mais! Ele é um ponto principal do seu trabalho para o entendimento e só há 1 pag.
-    - Esse comentário vale tbm para a seção 2.7
+- <s>Na seção 2.1, vale a pena expandir mais! Ele é um ponto principal do seu trabalho para o entendimento e só há 1 pag.</s>
+    - </s>Esse comentário vale tbm para a seção 2.7</s>
 
-- Obs: Dar uma pesquisada em dissertações sobre emoções para vc ter uma ideia.
+- <s>Obs: Dar uma pesquisada em dissertações sobre emoções para vc ter uma ideia.</s>
 
 ___
 #### Capítulo 3:
@@ -111,14 +111,15 @@ ___
 
 - <s>Primeiro parágrafo, pag. 24, corrigir a concordância. O mesmo para o primeiro parágrafo, pag. 25.</s>
 
-- Obs: Depois verifique os erros de concordância, ainda há.
+- <s>Obs: Depois verifique os erros de concordância, ainda há.</s>
 
 - <s>Seção 3.1, "Há parágrafos com apenas 1 sentença. O ideal é ter um parágrafo com 4, ou no máximo 5, sentença."</s>
 
-- Seção 3.1, dar para melhorar mais o texto e vender melhor o trabalho.
+- <s>Seção 3.1, dar para melhorar mais o texto e vender melhor o trabalho.</s>
 
-- É possível que eu tenha passado despercebido, mas não encontrei trabalhos publicados 
-no ano de 2022.
+- <s>É possível que eu tenha passado despercebido, mas não encontrei trabalhos publicados 
+no ano de 2022.</s>
+    > \cite{pca6}
 
 - <s>Sobre as colunas "Features cromáticas", "features prosódicas", e "Emoção" da Tabela 3.1, não entendi muito bem! Pois o seu trabalho não tem isso. A ideia dessa tabela é ter as principais características que o seu trabalho possui e demonstrar que os trabalhos não tratam isso. O principal ponto que vc tem que enfatizar é a questão da intensidade.</s>
 
@@ -128,7 +129,7 @@ no ano de 2022.
 
 - <s>Verificar os espaços entre as citações das referências e o texto.</s>
 
-- Rever os erros de concordância, pois há muitos.
+- <s>Rever os erros de concordância, pois há muitos.</s>
 
 - <s>Refazer a Tabela 3.1.</s>
 
@@ -136,7 +137,7 @@ no ano de 2022.
 
 - <s>Na coluna 'Resultado' da Tabela 3.1, o que seria apresentado?</s>
 
-> - Quanto à coluna 'Features' na Tabela 3.1, qual seria a diferença entre 'Cromática' e 'Espectral'? Por exemplo, as características cromáticas (como as chroma features) representam a distribuição tonal na voz, sendo úteis para capturar aspectos melódicos e harmônicos. Elas podem ser mais sensíveis a variações emocionais relacionadas à entonação, modulação e variações tonais na voz.
+- <s>Quanto à coluna 'Features' na Tabela 3.1, qual seria a diferença entre 'Cromática' e 'Espectral'? Por exemplo, as características cromáticas (como as chroma features) representam a distribuição tonal na voz, sendo úteis para capturar aspectos melódicos e harmônicos. Elas podem ser mais sensíveis a variações emocionais relacionadas à entonação, modulação e variações tonais na voz.</s>
 
 - <s>Na Tabela 3.1 faltaram trabalhos do ano de 2022 e 2023.</s>
 
@@ -166,63 +167,79 @@ ___
 - Seção 4.2
     - <s>Palavra “machine learning” vc já usou o acrônimo ML, então utilize ele.</s>
     - <s>Há o seguinte trecho do texto “Então, conforme descrito no Capítulo 2, este trabalho utilizará duas...” Mas onde no Capítulo 2? Não é ideal no Cap. 4 que seria a solução, ficar citando os capítulos. Se não dá para entender os motivos, então é melhor escrever as informações novamente para não precisar voltar. Esse é um dos principais capítulos da dissertação.</s>
-    - Citou as tabelas 2.3 e 2.6. Essas tabelas deveriam estar nessa seção, justamente no parágrafo que explica sobre o dataset VERBO e VIVAE.
+    - <s>Citou as tabelas 2.3 e 2.6. Essas tabelas deveriam estar nessa seção, justamente no parágrafo que explica sobre o dataset VERBO e VIVAE.</s>
     - <s>Qual o objetivo da Figura 4.2 e 4.3 e o que ela tem haver com a seção? Ela não foi apresentada no texto. Obs: Precisa melhorar a figura.</s>
-    - A seção é finalizada sem um gancho para a próxima seção. É necessário um gancho para finalizar a seção e para iniciar a próxima seção.
-    - Último parágrafo, você poderia adicionar informações para sanar essas perguntas: (i) Você poderia detalhar o processo de conversão dos arquivos .wav para os MFCCs? Quais técnicas específicas ou parâmetros foram empregados nessa transformação e como isso pode influenciar a eficácia dos modelos de Deep Learning na tarefa em questão?; (ii) Você considerou técnicas cromáticas e prosódicas para a extração de características dos arquivos .wav? Se sim, como essas técnicas se comparam aos MFCCs em termos de representação do sinal de áudio para tarefas de Deep Learning? E quais foram os critérios que levaram à preferência pelos MFCCs em detrimento das técnicas cromáticas e prosódicas?
+    - <s>A seção é finalizada sem um gancho para a próxima seção. É necessário um gancho para finalizar a seção e para iniciar a próxima seção.</s>
+    - Último parágrafo, você poderia adicionar informações para sanar essas perguntas:
+        - <s>(i) Você poderia detalhar o processo de conversão dos arquivos .wav para os MFCCs? Quais técnicas específicas ou parâmetros foram empregados nessa transformação e como isso pode influenciar a eficácia dos modelos de Deep Learning na tarefa em questão?;</s>
+            > movido do cap 2 para 4.2.5
+        - <s>(ii) Você considerou técnicas cromáticas e prosódicas para a extração de características dos arquivos .wav? Se sim, como essas técnicas se comparam aos MFCCs em termos de representação do sinal de áudio para tarefas de Deep Learning? E quais foram os critérios que levaram à preferência pelos MFCCs em detrimento das técnicas cromáticas e prosódicas?</s>
+            > 3.1 § 5o
 
     - O que ficou faltando nessa seção: 
-        - Descreva as fontes dos datasets originais que você utilizou. 
-        - Detalhe as características principais de cada conjunto de dado
-        - Apresente as características do novo dataset, como tamanho, formato, tipos de dados, etc. 
-        - Destaque eventuais modificações feitas nos dados originais para criar o dataset final.
-        - Aponte quaisquer limitações ou restrições do dataset criado.
+        - <s>Descreva as fontes dos datasets originais que você utilizou.</s>
+        - <s>Detalhe as características principais de cada conjunto de dado</s>
+        - <s>Apresente as características do novo dataset, como tamanho, formato, tipos de dados, etc.</s>
+        - <s>Destaque eventuais modificações feitas nos dados originais para criar o dataset final.</s>
+        - <s>Aponte quaisquer limitações ou restrições do dataset criado.</s>
 
 - Seção 4.3:
 
     - <s>Segundo parágrafo dar a entender que tu usou um Autoencoders. É necessário reescrever ele para deixar isso claro, ficou um pouco confuso.</s>
 
-    - Em relação a esse parágrafo fica o questionamento para justificar: Pq usou autoencoders?  Pq não usou uma rede híbrida (CNNs e RNNs), pq não uma LSTM ou GRU?
+    - <s>Em relação a esse parágrafo fica o questionamento para justificar: Pq usou autoencoders?  Pq não usou uma rede híbrida (CNNs e RNNs), pq não uma LSTM ou GRU?</s>
         > achei que tinha explicado no cap 2 e 3
-    - No terceiro parágrafo, vc tentar dar um exemplo de como funcionaria por meio da Figura 4.4. O texto não fica claro como funcionaria na sua solução. É interessante dar exemplo da solução para um melhor entendimento.
-        > tem a função logo abaixo
+        > movido para 4.3.1
+    - <s>No terceiro parágrafo, vc tentar dar um exemplo de como funcionaria por meio da Figura 4.4. O texto não fica claro como funcionaria na sua solução. É interessante dar exemplo da solução para um melhor entendimento.</s>
 
-- Figura 4.4 – Melhorar!
+- </s>Figura 4.4 – Melhorar!</s>
 
 - O que ficou faltando:
-
-- Descrição das camadas do autoencoder: encoder, decoder e a estrutura geral da rede.
-
-- Explicação de como os autoencoders podem ser aplicados para essa tarefa específica.
-
-- Raciocínio por trás da escolha do autoencoder para extrair características relevantes de dados de áudio em relação ao reconhecimento de emoções.
-
-- Detalhamento da arquitetura específica do autoencoder implementado
-
-- Número de camadas, funções de ativação, tamanho do código latente, entre outros detalhes arquiteturais relevantes.
+    - <s>Descrição das camadas do autoencoder: encoder, decoder e a estrutura geral da rede.</s>
+    - <s>Explicação de como os autoencoders podem ser aplicados para essa tarefa específica.</s>
+    - <s>Raciocínio por trás da escolha do autoencoder para extrair características relevantes de dados de áudio em relação ao reconhecimento de emoções.</s>
+    - <s>Detalhamento da arquitetura específica do autoencoder implementado</s>
+        > cap 5, já que são 2 experimentos
+    - <s>Número de camadas, funções de ativação, tamanho do código latente, entre outros detalhes arquiteturais relevantes.</s>
+        > cap5, já que são 2 experimentos
 
 - Seção 4.4:
-    - A forma como foi feita a classificação da intensidade está relacionado com a construção do dataset. Então, essa informação deveria tá lá. Essa seção ficou solta.
+    - <s>A forma como foi feita a classificação da intensidade está relacionado com a construção do dataset. Então, essa informação deveria tá lá. Essa seção ficou solta.</s>
  
 - Seção 4.5:
-    - Não entendi o motivo de tá explicando a validação aqui? Essa seção ficou solta.
+    - <s>Não entendi o motivo de tá explicando a validação aqui? Essa seção ficou solta.</s>
+        > movido para cap 4
 
 ___
 #### Capítulo 5:
 
-- Notei que algumas das minhas sugestões do Cap. 4 estão no Cap. 5. Cada informação tem que estar no seu lugar. Por exemplo a questão da seção 5.1.1 e 5.1.2 ela faz parte do desenvolvimento da sua solução pq ela está no capitulo de resultados. Outro exemplo, a seção 5.2 pq ela ta no Cap. de resultados?
+- <s>Notei que algumas das minhas sugestões do Cap. 4 estão no Cap. 5. Cada informação tem que estar no seu lugar. Por exemplo a questão da seção 5.1.1 e 5.1.2 ela faz parte do desenvolvimento da sua solução pq ela está no capitulo de resultados.</s>
 
-- Ponto que me preocupou nos resultados, vou deixar em perguntas para vc refletir: (i) O que os resultados obtidos validam o seu objetivo que tá descrito no Capítulo 1?; (ii) Quais insights, descobertas ou contribuições importantes foram revelados por meio dos resultados?; (iii) Como os resultados se comparam com teorias ou estudos anteriores na mesma área? e (iv) Que impacto os resultados têm no entendimento atual do problema de pesquisa?
+- <s>Outro exemplo, a seção 5.2 pq ela ta no Cap. de resultados?</s>
+    > movido para cap 1
 
-- Por que não comparar os seus resultados com outros algoritmos? Por exemplo, Random Forest? KNN? Que são os métodos tradicionais?
+- Ponto que me preocupou nos resultados, vou deixar em perguntas para vc refletir:
+    - (i) O que os resultados obtidos validam o seu objetivo que tá descrito no Capítulo 1?;
+    - (ii) Quais insights, descobertas ou contribuições importantes foram revelados por meio dos resultados?;
+    - (iii) Como os resultados se comparam com teorias ou estudos anteriores na mesma área? e
+    - (iv) Que impacto os resultados têm no entendimento atual do problema de pesquisa?
+
+- <s>Por que não comparar os seus resultados com outros algoritmos? Por exemplo, Random Forest? KNN? Que são os métodos tradicionais?</s>
+    > e.g.: modelos de DL são melhores para generalizar problemas complexos, qual seria a relação de cada feature de f_e{(x_i)}? não parece prudente tentar um knn/rf/etc
+
 
 
 ___
 #### TODOs:
 
-- [ ] rodapés
-    - [ ] referências das imagens
-- [ ] acronimos
+"but peak emotions are maximally ambiguous"
+
+https://www.researchgate.net/post/Why_we_take_only_12-13_MFCC_coefficients_in_feature_extraction
+
+
+- [ ] referências go ??
+- [x] rodapés
+- [x] acronimos
 - [ ] imagens
     - [ ] tamanho
-    - [ ] idioma
+    - [x] idioma

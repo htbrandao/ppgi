@@ -8,7 +8,7 @@ Esta seção detalha nossa implementação para o efetuar o reconhecimento da in
 
 Para tanto, em virtude do desafio da demanda, ratificado pela escassez de dados, nos aproveitamos da Fusão de Dados para criar, primeiramente, uma solução não supervisionada que consiga extrair características que sejam representativas o suficiente para que, mesmo com a dimensionalidade reduzida em comparação a original, consigamos reconstruir o dado de entrada; e posteriomente utilizar esses dados comprimidos, constituído de atributos suficientemente relevantes, para desenvolver um modelo supervisionado de inferência da intensidade.
 
-Definida a arquitetura composta por um Autoencoder e um Classificador, tomamos apenas as emoções comuns entre as duas bases de dados (alegria, medo, raiva e surpresa), totalizando 1364 registros, onde 51\% apresentam a o \textit{label} relativo a intensidade. %A Figura \ref{fig:design} apresenta o \textit{design} do \textit{BRAVO}.
+Definida a arquitetura composta por um \acrlong{AE}Autoencoder e um Classificador, tomamos apenas as emoções comuns entre as duas bases de dados (alegria, medo, raiva e surpresa), totalizando 1364 registros, onde 51\% apresentam a o \textit{label} relativo a intensidade. %A Figura \ref{fig:design} apresenta o \textit{design} do \textit{BRAVO}.
 
 % \begin{figure}[h]
 %     \centering
@@ -16,82 +16,15 @@ Definida a arquitetura composta por um Autoencoder e um Classificador, tomamos a
 %     \caption{\label{fig:design}\textcolor{blue}{\textit{Design} da proposta para o \textit{BRAVO}}}
 % \end{figure}
 
-Foram realizados dois cenários experimentais, utilizando 64 e 128 \textit{MFCCs}, respectivamente. Em ambos,  o \textit{Autoencoder} foi treinado com a totalidade desses registros. Em seguida treinamos uma rede neural densa multicamada para classificar a intensidade, treinada e validada apenas na porção dos dados oriunda do $VIVAE$, uma vez que o $VERBO$ não tem correspondência com o contradomínio ($Z$) das intensidades.
+Foram realizados dois cenários experimentais, utilizando 64 e 128 \acrshort{MFCC}s, respectivamente. Em ambos, o \acrlong{AEtextit{Autoencoder} foi treinado com dados de $X$. Em seguida treinamos uma rede neural densa multicamada para classificar a intensidade, treinada e validada apenas na porção dos dados resultantes da aplicação de $f$ em $X_{VIVAE}$, uma vez que $X_{VERBO}$ não tem correspondência com o contradomínio ($Z$) das intensidades.
 
-Há de se observar que não há \textit{label} correspondente às intensidades par $X_{VERBO}$. Então precisamos investigar se há algum sentido nos resultados quando aplicarmos a classificação a esses dados, que até então ainda não foram vistos pelo classificador.
+Uma vez que não há \textit{label} correspondente às intensidades par $X_{VERBO}$. Então precisamos investigar se há algum sentido nos resultados quando aplicarmos a classificação a esses dados, que até então ainda não foram vistos pelo classificador.
 
-Assim, faz-se necessária uma forma de analisar os registos de $X_{VIVAE}$ e$X_{VERBO}$ quanto às intensidades e a predição dessas intensidades, respectivamente. Podemos utilizar o \textit{PCA} (\textit{Principal Component Analysis}) para reduzir a dimensionalidade dos registros e observar o comportamento da classificação.
+Assim, faz-se necessária uma forma de analisar os registos de $X_{VIVAE}$ e$X_{VERBO}$ quanto às intensidades e a predição dessas intensidades, respectivamente. Podemos utilizar o \acrshort{PCA} para reduzir a dimensionalidade dos registros e observar o comportamento da classificação.
 
-A utilização \textit{PCA} encontra registros na literatura, tanto de \textit{ML} e \textit{DL} aplicados a voz e emoções. Temos~\cite{pca1} que utilizou o PCA para gerar features de um modelo, observando que modelos treinados com as features obtidas a partir do PCA mantiveram sua performance quando comparados aos treinados com outros atributos;~\cite{pca2} que apesar de fazer uma \textit{feature selection} prévia, optou por utilizar o \textit{PCA} para reduzir em quase três vezes a dimensionalidade do dado para conseguir uma visualização bidimensional dos registros;~\cite{pca3} buscou desenvolver um sistema de reconhecimento de emoções para áudios com ruídos, utilizando dados $64$-dimensionais que seriam reduzidos para um espaço $6$-dimensional utilizando e comparando técnicas distintas, sendo uma delas o \textit{PCA}; e~\cite{pca5} que aproxima o grau de \textit{encoding} de um \textit{Autoencoder} linear - em seu espaço latente $n$-dimensional - ao de um PCA com $n$ componentes.
+A utilização de \acrshort{PCA} encontra registros na literatura, tanto de \acrshort{ML} e \acrshort{DL} aplicados a voz e emoções. Temos~\cite{pca1} que utilizou o \acrshort{PCA} para gerar features de um modelo, observando que modelos treinados com as features obtidas a partir do \acrshort{PCA} mantiveram sua performance quando comparados aos treinados com outros atributos;~\cite{pca2} que apesar de fazer uma \textit{feature selection} prévia, optou por utilizar o \acrshort{PCA} para reduzir em quase três vezes a dimensionalidade do dado para conseguir uma visualização bidimensional dos registros;~\cite{pca3} buscou desenvolver um sistema de reconhecimento de emoções para áudios com ruídos, utilizando dados $64$-dimensionais que seriam reduzidos para um espaço $6$-dimensional utilizando e comparando técnicas distintas, sendo uma delas o \acrshort{PCA}; e~\cite{pca5} que aproxima o grau de \textit{encoding} de um \acrlong{textit{AEutoencoder} linear - em seu espaço latente $n$-dimensional - ao de um \acrshort{PCA} com $n$ componentes.
 
-Então, sabemos  da utilização do \textit{PCA} tanto para permitir a visualização de dados através da redução de dimensionalidade quanto para gerar as \textit{features} utilizadas em modelos de reconhecimento de emoções. O que nos diz que o \textit{PCA} seria uma solução adequada para reduzir a dimensionalidade dos dados enquanto preserva características relevantes das amostras.
-
-% ------------------------------------------------------------------------------------------
-\subsection{Autoencoder}
-
-A estrutura dos Autoencoders é análoga para ambos os experimentos. A Figura \ref{fig:ae64} representa a arquitetura do modelo para 64 \textit{MFCC}s enquanto a \ref{fig:ae128} representa a arquitetura do modelo para 128 \textit{MFCC}s. Ambos seguem uma estrutura composta por três camadas, a serem detalhadas abaixo: Entrada, \textit{encoder} e \textit{decoder}.
-
-O treinamento foi realizado utilizando \textit{MSE} como função de \textit{Loss} e \textit{ADAM} como função de otimização. Para efeitos de legibilidade, vamos definir $dim_{MFCCs}$ como a quantidade de \textit{MFCC}s utilizado em cada experimento.
-
-\begin{enumerate}
-    \item Entrada: Responsável por receber os dados com dimensão igual $(1, dim_{MFCCs})$.
-    \item \textit{Encoder}: Responsável por realizar a redução de dimensionalidade do dado oriundo da camada de entrada. Na camada de \textit{encoder}, o dado entra com dimensão $(1, dim_{MFCCs})$ e é comprimido para uma dimensionalidade $(1, dim_{MFCCs}/2)$. Assumimos que buscamos preservar apenas os atributos com maior relevância, então utilizamos uma função de ativação do tipo Unidade Linear Retificada (\textit{Linear Rectified Unit}, \textit{ReLU}).
-    \item \textit{Decoder}: Responsável por receber os dados com dimensão reduzida e expândi-los para a dimensão de entrada $(1, dim_{MFCCs})$, tentando reproduzir os valores originais. Para isso, esta camada utilizou uma função de ativação do tipo Linear, que reproduzirá valores contítnuos oriundos das operações matriciais desta camada, não limitados ao intervalo $(0, max(0, x)$ como é o caso da \textit{ReLU}.
-\end{enumerate}
-
-% ---- Arquiteturas AEs ---- %
-\begin{figure}[h]
-    \centering
-    \begin{minipage}[b]{0.4\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/ae64.png}
-        \caption{\label{fig:ae64}Arquitetura do Autoencoder para 64 \textit{MFCCS}}
-    \end{minipage}
-    % \hfill
-    \begin{minipage}[b]{0.4\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/ae128.png}
-        \caption{\label{fig:ae128}Arquitetura do Autoencoder para 128 \textit{MFCCS}}
-    \end{minipage}
-\end{figure}
-
-% ------------------------------------------------------------------------------------------
-\subsection{Classificador}
-
-A estrutura dos Classificadores é análoga para ambos os experimentos. A Figura \ref{fig:clf64} representa a arquitetura do modelo para 64 \textit{MFCC}s enquanto a \ref{fig:clf128} representa a arquitetura do modelo para 128 \textit{MFCC}s. Ambos seguem uma estrutura composta por cinco camadas, a serem detalhadas abaixo: Entrada, três camadas densas intermediárias e uma camada densa de saída.
-
-O treinamento foi realizado utilizando \textit{Categorical Cross Entropy} como função de \textit{Loss} e \textit{ADAM} como função de otimização. Uma vez que o \textit{AE} realiza a função de reduzir a dimensionalidade dos dados que serão utilizados como \textit{input} para os classificadores, para efeitos de legibilidade vamos definir $dim_{encode}$ como a dimensão do dado comprimido obtido nos \textit{Autoencoders} da etapa anterior, sendo estas 32 e 64, respectivamente.
-
-\begin{enumerate}
-    \item Entrada: Responsável por receber os dados com dimensão igual $(1, dim_{encode})$.
-    \item Densas intermediárias: As camadas posteriores (\textit{dense}, \textit{dense\_1} e \textit{dense\_2}) são camadas totalmente conectadas que utilizam a função de ativação \textit{ReLU} e cujo resultado é um vetor com dimensão $(1, 8)$.
-    \item Densa de saída: A camada \textit{dense\_3} é responsável por efetuar a ativação final da rede neural e entrega um vetor com dimensão $(1, 4)$. Utiliza uma função de ativação \textit{Softmax}, cujo resultado será interpretado para classificar a intensidade da emoção em uma de quatro categorias: Fraca, moderada, forte ou pico de intensidade.
-\end{enumerate}
-
-% ---- Arquiteturas CLFs ---- %
-\begin{figure}[]
-    \centering
-    \begin{minipage}[b]{0.45\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/clf64.png}
-        \caption{\label{fig:clf64}Arquitetura do classificador do experimento com 64 \textit{MFCCs}}
-    \end{minipage}
-    % \hfill
-    \begin{minipage}[b]{0.45\linewidth}
-    \centering
-        \includegraphics[width=\linewidth]{img/clf128.png}
-        \caption{\label{fig:clf128}Arquitetura do classificador do experimento com 128 \textit{MFCCs}}
-    \end{minipage}
-\end{figure}
-
-% ==========================================================================================
-\section{Aplicabilidade}\label{sec:aplicabilidade}
-
-Esta dissertação foi desenvolvida com o intuito de explorar possibilidades para inferência da itensidade da emoção na voz em nosso idioma nativo, até então não encontrado na literatura. \textit{SER} é um problema complexo uma vez que a expressão emocional é afetada por vários fatores, incluindo a linguagem falada e o sotaque dos indivúdios~\cite{6}.
-
-Inferir a intensidade da emoção encontra aplicações potenciais em em diversas áreas, como saúde~\cite{1}, segurança~\cite{4}, entretenimento (através de \textit{smart enviromentes}~\cite{alexa1} e \textit{smart assistants}~\cite{alexa2}) e comercial~\cite{bsignal1}~\cite{bsignal2}. Trabalhos como~\cite{63} buscam entender a intensidade da emoção para melhorar a performance da síntese de uma vocalização emocional oriunda de um mecanismo de \textit{speech to text}.
-
-Desenvolver uma metodologia para classificar a intensidade da emoção poderia colaborar com a monitoração do estado de saúde de pacientes, através de um modelo embarcado em assistentes virtuais inteligentes; auxiliar no antendimento ao público encaminhando chamadas de \textit{call centers} compreendidas como urgentes para fora do fluxo automatizado e para o atendimento humano; ser utilizado para melhorar o desempenho de sistemas de segurança baseados em reconhecimento de voz, reduzindo a alteração na voz causada por variações do estado emocional, assim como soluções que reduzem ruído; ou para uma fins comerciais no sistema financeiro, como uma empresa~\cite{bsignal0} que alega possuir uma solução \textit{From Voice to Revenue} que aumentou em 20\% o sucesso da renegociação para recupração de crédito de liquidação duvidosa.
+Então, sabemos  da utilização do \acrshort{PCA} tanto para permitir a visualização de dados através da redução de dimensionalidade quanto para gerar as \textit{features} utilizadas em modelos de reconhecimento de emoções. O que nos diz que o \acrshort{PCA} seria uma solução adequada para reduzir a dimensionalidade dos dados enquanto preserva características relevantes das amostras.
 
 
 \section{Experimentos}
@@ -111,23 +44,7 @@ Com base nos resultados da Tabela \ref{table:resultexp} verificamos que o primei
 
 Em ambos experimentos, a classe com pior resultado do classificador - de acordo a métrica definida na metodologia - foi semelhante, a classe Forte. E as classes com melhor desempenho são Fraca e Pico de intensidade, respectivamente.
 
-Na Tabela \ref{table:compexp} vemos um ganho de desempenho superior a 7 vezes para o valor da \textit{Loss} no segundo experimento, no qual utilizamos um número maior de \textit{MFCCs}. Embora a \textit{Loss} tenha apresentado uma queda significativa no segundo experimento, o que significa que o \textit{Autoencoder} apresenta um desempenho melhor para reproduzir o dado de entrada, preservando melhor as características e atributos do dado, essa melhora no desempenho de uma função identidade se mostra contraditória frente o desempenho do segundo classificador. Então, podemos supor que uma quantidade estritamente maior de \textit{MFCCs} colaborou para a reconstrução da amostra enquanto não demonstrou ganhos semelhantes na sua utilização para classificar a intensidade da emoção.
-
-
-% \begin{table}[!h]
-%     \centering
-%     \begin{tabular}{|l|cc|}
-%     \hline
-%         \multicolumn{1}{|c|}{\multirow{3}{*}{Intensidade}} & \multicolumn{2}{c|}{MFCCs}                                 \\ \cline{2-3} 
-%         \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{64}                & 128               \\ \cline{2-3} 
-%         \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\textit{F1-Score}} & \textit{F1-Score} \\ \hline
-%         Fraca                                              & \multicolumn{1}{c|}{\textbf{0,68}}     & 0,58              \\ \hline
-%         Moderada                                           & \multicolumn{1}{c|}{\textbf{0,53}}     & 0,51              \\ \hline
-%         Forte                                              & \multicolumn{1}{c|}{0,48}              & \textbf{0,49}     \\ \hline
-%         Pico                                               & \multicolumn{1}{c|}{\textbf{0,66}}     & 0,64              \\ \hline
-%     \end{tabular}
-%     \caption{\label{table:resultexp}Comparativo de \textit{F1-Score} entre os experimentos}
-% \end{table}
+Na Tabela \ref{table:compexp} vemos um ganho de desempenho superior a 7 vezes para o valor da \textit{Loss} no segundo experimento, no qual utilizamos um número maior de \acrshort{MFCC}s. Embora a \textit{Loss} tenha apresentado uma queda significativa no segundo experimento, o que significa que o \textit{Autoencoder} apresenta um desempenho melhor para reproduzir o dado de entrada, preservando melhor as características e atributos do dado, essa melhora no desempenho de uma função identidade se mostra contraditória frente o desempenho do segundo classificador. Então, podemos supor que uma quantidade estritamente maior de \acrshort{MFCC}s colaborou para a reconstrução da amostra enquanto não demonstrou ganhos semelhantes na sua utilização para classificar a intensidade da emoção.
 
 \begin{table}[]
     \centering
@@ -141,21 +58,6 @@ Na Tabela \ref{table:compexp} vemos um ganho de desempenho superior a 7 vezes pa
     \end{tabular}
      \caption{\label{table:resultexp}Comparativo de \textit{F1-Score} entre os experimentos}
 \end{table}
-
-% \begin{table}[!h]
-%     \centering
-%     \begin{tabular}{|l|cc|}
-%         \hline
-%         \multicolumn{1}{|c|}{\multirow{2}{*}{Atributo do experimento}} & \multicolumn{2}{c|}{MFCCs}         \\ \cline{2-3} 
-%         \multicolumn{1}{|c|}{}                                         & \multicolumn{1}{c|}{64}                & 128   \\ \hline
-%         Melhor \textit{F1-Score}                                       & \multicolumn{1}{c|}{\textbf{0,68}}     & 0,64  \\ \hline
-%         Classe com melhor \textit{F1-Score}                            & \multicolumn{1}{c|}{Fraca}             & Pico  \\ \hline
-%         Pior \textit{F1-Score}                                         & \multicolumn{1}{c|}{\textbf{0,48}}     & 0,49  \\ \hline
-%         Classe com pior \textit{F1-Score}                              & \multicolumn{1}{c|}{Forte}             & Forte \\ \hline
-%         \textit{Loss} de teste (MSE)                                   & \multicolumn{1}{c|}{6,4}               & \textbf{0,84}  \\ \hline
-%     \end{tabular}
-%     \caption{\label{table:compexp}Comparativo de atributos de desempenho dos experimentos}
-% \end{table}
 
 \begin{table}[]
     \centering
