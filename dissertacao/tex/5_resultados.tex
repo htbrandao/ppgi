@@ -16,7 +16,7 @@ Definida a arquitetura composta por um \acrlong{AE}Autoencoder e um Classificado
 %     \caption{\label{fig:design}\textcolor{blue}{\textit{Design} da proposta para o \textit{BRAVO}}}
 % \end{figure}
 
-Foram realizados dois cenários experimentais, utilizando 64 e 128 \acrshort{MFCC}s, respectivamente. Em ambos, o \acrlong{AEtextit{Autoencoder} foi treinado com dados de $X$. Em seguida treinamos uma rede neural densa multicamada para classificar a intensidade, treinada e validada apenas na porção dos dados resultantes da aplicação de $f$ em $X_{VIVAE}$, uma vez que $X_{VERBO}$ não tem correspondência com o contradomínio ($Z$) das intensidades.
+Foram realizados dois cenários experimentais, utilizando 64 e 128 \acrshort{MFCC}s, respectivamente. Em ambos, o \acrlong{AE} foi treinado com dados de $X$ e, em seguida, treinamos uma rede neural densa multicamada para classificar a intensidade, treinada e validada apenas na porção dos dados resultantes da aplicação de $f$ em $X_{VIVAE}$, uma vez que $X_{VERBO}$ não tem correspondência com o contradomínio ($Z$) das intensidades.
 
 Uma vez que não há \textit{label} correspondente às intensidades par $X_{VERBO}$. Então precisamos investigar se há algum sentido nos resultados quando aplicarmos a classificação a esses dados, que até então ainda não foram vistos pelo classificador.
 
@@ -27,14 +27,15 @@ A utilização de \acrshort{PCA} encontra registros na literatura, tanto de \acr
 Então, sabemos  da utilização do \acrshort{PCA} tanto para permitir a visualização de dados através da redução de dimensionalidade quanto para gerar as \textit{features} utilizadas em modelos de reconhecimento de emoções. O que nos diz que o \acrshort{PCA} seria uma solução adequada para reduzir a dimensionalidade dos dados enquanto preserva características relevantes das amostras.
 
 
-\section{Experimentos}
+% \section{Experimentos}
 
-Nesta seção apresentaremos, detalhadamente, os resultados dos dois experimentos realizados. Ambos foram submetidos à mesma metodologia e aferição de métrica, o que nos possibilita comparar diretamente o desempenho oriundo das execuções.\\
+% Nesta seção apresentaremos, detalhadamente, os resultados dos dois experimentos realizados. Ambos foram submetidos à mesma metodologia e aferição de métrica, o que nos possibilita comparar diretamente o desempenho oriundo das execuções.\\
+
+\section{Resultados dos experimentos}
 
 \input{tex/5A_resultado_64}
 \input{tex/5B_resultado_128}
 
-\clearpage
 
 \section{Discussão dos resultados}
 
@@ -43,6 +44,8 @@ Nesta seção iremos iniciar uma discussão sobre os resultados alcançados e ap
 Com base nos resultados da Tabela \ref{table:resultexp} verificamos que o primeiro experimento obteve desempenho superior no que tange a métrica selecionada para o modelo de classificação de intensidade, tendo um \textit{F1-Score} superior aos do primeiro experimento em três das quatro classes.
 
 Em ambos experimentos, a classe com pior resultado do classificador - de acordo a métrica definida na metodologia - foi semelhante, a classe Forte. E as classes com melhor desempenho são Fraca e Pico de intensidade, respectivamente.
+
+Dadas as Figuras \ref{fig:pca64} e \ref{fig:pca128}, conseguimos observar que as classes Fraca e Pico ocupam os extremos dos \textit{clusters}, o que pode tornar sua separação mais fácil frente às amostras das classes Moderada e Forte, as quais podemos notar mais amalgamadas na região central. Esta distruição parece estar de acordo com nossos resultados, uma vez que os dois melhores desempenhos - em ambos os cenários - foram das classes Fraca e Pico, e os piores das classes Moderada e Forte.
 
 Na Tabela \ref{table:compexp} vemos um ganho de desempenho superior a 7 vezes para o valor da \textit{Loss} no segundo experimento, no qual utilizamos um número maior de \acrshort{MFCC}s. Embora a \textit{Loss} tenha apresentado uma queda significativa no segundo experimento, o que significa que o \textit{Autoencoder} apresenta um desempenho melhor para reproduzir o dado de entrada, preservando melhor as características e atributos do dado, essa melhora no desempenho de uma função identidade se mostra contraditória frente o desempenho do segundo classificador. Então, podemos supor que uma quantidade estritamente maior de \acrshort{MFCC}s colaborou para a reconstrução da amostra enquanto não demonstrou ganhos semelhantes na sua utilização para classificar a intensidade da emoção.
 

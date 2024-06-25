@@ -2,20 +2,20 @@
 
 A Figura \ref{fig:ae128} apresenta a arquitetura do modelo Autoencoder, onde podemos observar que os vetores do espaço latente, portanto, o vetor comprimido para ser posteriormente reconstruído, terão $64$ posições.
 
-Para este modelo, o valor final da \textit{Loss} média ao aplicá-lo ao seu conjunto de teste foi de $0,84$. A Figura \ref{fig:predae128} ilustra uma predição feita pelo Autoencoder: A linha azul representa o dado original (\textit{input}); a linha tracejada laranja representa a predição (\textit{output}) daquele registro; e a linha verde foi calculada tomando a diferença entre os coeficientes do \textit{input} e do \textit{output}.
-
+Para este modelo, o valor final da \textit{Loss} média ao aplicá-lo ao seu conjunto de teste foi de $0,84$.
+% A Figura \ref{fig:predae128} ilustra uma predição feita pelo Autoencoder: A linha azul representa o dado original (\textit{input}); a linha tracejada laranja representa a predição (\textit{output}) daquele registro; e a linha verde foi calculada tomando a diferença entre os coeficientes do \textit{input} e do \textit{output}.
 A Figura \ref{fig:clf128} apresenta a arquitetura do modelo de classificação de intensidade, enquanto a Tabela \ref{table:metricasclf128} apresenta métricas de desempenho para sua aplicação no conjunto de teste. Podemos observar que o melhor resultado para do \textit{F1-Score} deu-se para a intensidade Pico, com o valor de $0,64$, ficando abaixo de $0,5$ apenas para a classe Forte.
 
 Aplicamos o classificador aos dados oriundos do $X_{VERBO}$ e anotamos o resultado. Então efetuamos um \acrshort{PCA} com 2 componentes ao resultado do \textit{encoding} de $X$ (Figura \ref{fig:pca128}), onde as cores representam a classe - original para os dados do $VIVAE$ e predição do classificador para os dados do $VERBO$ - e podemos observar a formação de 2 grandes \textit{clusters}, um a esquerda e outro a direita.
 
 Percebemos através dos \textit{labels}, que estes \textit{clusters} conseguiram distinguir bem as duas bases de dados, bem como um movimento descendente de aumento da intensidade da emoção em ambos os \textit{clusters}. Temos uma visualização mais simples na Figura \ref{fig:pca128-2}, onde agrupamos as classes Fraca e Moderada em uma nova classe denominada Baixa e as classes Forte e Pico em uma classe denominada Alta.
 
-% --- PRED AE 128 --- %
-    \begin{figure}%[t]
-    \centering
-    \includegraphics[width=0.6\textwidth]{img/_predae128.png}
-    \caption{\label{fig:predae128}Exemplo de predição (\textit{encoding e decoding}) do \acrshort{AE} para 128 \acrshort{MFCC}s}
-\end{figure}
+% % --- PRED AE 128 --- %
+%     \begin{figure}%[t]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{img/_predae128.png}
+%     \caption{\label{fig:predae128}Exemplo de predição (\textit{encoding e decoding}) do \acrshort{AE} para 128 \acrshort{MFCC}s}
+% \end{figure}
 
 % --- CLF 128 Metrics --- %
 \begin{table}%[h]
