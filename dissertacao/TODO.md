@@ -1,3 +1,12 @@
+# @orient 04/06/2024
+
+- <s>melhorar e sincronizar os objetivos (cap 1 e cap 4)</s>
+- <s>justificar de maneira sucinta a escolha dos AE e dos MFCC (cap 4)</s>
+- <s>ajustar/remover a seção de validação (cap 4)</s>
+- consolidar os dois experimentos em uma seção só (cap 5)
+- <s>discutir os F1-Score (cap 5) ao longo dos experimentos</s>
+
+
 # @qualif
 
 - P: O que seria intensidade da emoção em speech ? Apenas a frequência?
@@ -235,11 +244,3 @@ ___
 "but peak emotions are maximally ambiguous"
 
 https://www.researchgate.net/post/Why_we_take_only_12-13_MFCC_coefficients_in_feature_extraction
-
-
-- [ ] referências go ??
-- [x] rodapés
-- [x] acronimos
-- [ ] imagens
-    - [ ] tamanho
-    - [x] idioma
