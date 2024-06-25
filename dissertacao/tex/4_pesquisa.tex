@@ -234,9 +234,9 @@ A normalização em questão, é a normalização pela Escala de Mel (\textit{Me
     m(f) = 1127 * \log_e{(1 + \frac{f}{700})}
 \end{equation}
 
-O \textit{Mel-Spectrogram} tem sido amplamente utilizado em problemas de \acrshort{SER}, como~\cite{32.25, 32.30}, e em~\cite{32.31} e~\cite{32.32}, que também utilizam técnicas de \textit{Autoencoder}.
+O \textit{Mel-Spectrogram} tem sido amplamente utilizado em problemas de \acrshort{SER}, como~\cite{32.25, 32.30}, e em~\cite{32.31} e~\cite{32.32}, que também utilizam técnicas de \textit{Autoencoder}. 
 
-Outro atributo observado na literatura são os Coeficientes Cepstrais de Frequência Mel (\acrshort{MFCC}s). Um \acrshort{MFC} é uma representação de curto prazo do espectro de potência de um som, assim, \acrshort{MFC}s são os coeficientes que formam os \acrshort{MFCC}s coletivamente. Calcular os \acrshort{MFCC}s consiste em aplicar a Transformada Discreta do Cosseno ao \textit{Mel-Spectrogram}. Podemos compreender os \acrshort{MFCC}s como uma compressão~\cite{64} do \textit{Mel Spectrogram}. Também encontramos trabalhos que utilizam \acrshort{MFCC}s em~\cite{32.79} e~\cite{32.89}, cujas arquiteturas contém uma Rede Neural Convolucional e uma \acrshort{GAN}, respectivamente.
+Outro atributo observado na literatura são os Coeficientes Cepstrais de Frequência Mel (\acrshort{MFCC}s). Um \acrshort{MFC} é uma representação de curto prazo do espectro de potência de um som, assim, \acrshort{MFC}s são os coeficientes que formam os \acrshort{MFCC}s coletivamente. Calcular os \acrshort{MFCC}s consiste em aplicar a Transformada Discreta do Cosseno ao \textit{Mel-Spectrogram}. Podemos compreender os \acrshort{MFCC}s como uma compressão~\cite{64} do \textit{Mel Spectrogram}. Também encontramos trabalhos que utilizam \acrshort{MFCC}s em~\cite{32.79} e~\cite{32.89}, cujas arquiteturas contém uma Rede Neural Convolucional e uma \acrshort{GAN}, respectivamente. A relevância desse atributo também é encontrada em trabalhos como \cite{11}, que explorou a combinação de características espectrais, tonais e rítmicas para observar sua contribuição no desempenho de seus modelos de classificação, e concluiu que a utilização apenas de \acrshort{MFCC}s gerou resultados quase duas vezes superiores a combinação de mais características.
 
 % Podemos observar um comparativo entre o resultado de um Mel-Spectrogram e \acrshort{MFCC}s para uma mesma amostra na Figura \ref{fig:melspecvsmfcc}.
 
@@ -296,7 +296,7 @@ De posse do mapa $M(x_i)$, podemos prosseguir para a etapa de extração de cara
 % ------------------------------------------------------------------------------------------
 \subsection{Codificador Automático}
 
-Um Codificador Automático (\acrshort{AE}) é uma rede neural criada para tentar reproduzir o seu \textit{input} no seu \textit{output}. Podemos descrever um \acrshort{AE} como um conjunto de funções $f, f'$ de modo que, dado um input $x$, queremos $f'(f(x)) = x' \approx x$, onde $f$ realiza a codificação (\textit{encoding}) de $x$ e $f'$ realiza a decodificação (\textit{decoding}) do resultado $f(x)$. Assim, um \acrlong{AE} é uma rede neural composta por um \textit{encoder} e um \textit{decoder} que tenta reproduzir uma função de identidade.
+Um Codificador Automático (\acrshort{AE}) é uma rede neural criada para tentar reproduzir o seu \textit{input} no seu \textit{output}. Podemos descrever um \acrshort{AE} como um conjunto de funções $f, f'$ de modo que, dado um input $x$, queremos $f'(f(x)) = x' \approx x$, onde $f$ realiza a codificação (\textit{encoding}) de $x$ e $f'$ realiza a decodificação (\textit{decoding}) do resultado $f(x)$. Assim, um \acrlong{AE} é uma rede neural composta por um \textit{encoder} e um \textit{decoder} que tenta reproduzir uma função de identidade. Encontramos a utilização de modelos do tipo \acrshort{AE} em trabalhos como \cite{34} que o utilizou, juntamente com características espectrais, para aprender \textit{feature} de \textit{datasets} visando remediar a escassez de dados.
 
 % (Figura\footnote{Imagem adaptada, gerada em \url{http://alexlenail.me/NN-SVG/LeNet.html}} \ref{fig:exarqae})
 
