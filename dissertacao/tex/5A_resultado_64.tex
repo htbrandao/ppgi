@@ -4,7 +4,7 @@ A Figura \ref{fig:ae64} apresenta a arquitetura do modelo Autoencoder, onde pode
 
 Para este modelo, o valor final da \textit{Loss} média ao aplicá-lo ao seu conjunto de teste foi de $6,40$. 
 % A Figura \ref{fig:predae64} ilustra uma predição feita pelo Autoencoder: A linha azul representa o dado original (\textit{input}); a linha tracejada laranja representa a predição (\textit{output}) daquele registro; e a linha verde foi calculada tomando a diferença entre os coeficientes do \textit{input} e do \textit{output}.
-A Figura \ref{fig:clf64} apresenta a arquitetura do modelo de classificação de intensidade, enquanto a Tabela \ref{table:metricasclf64} apresenta métricas de desempenho para sua aplicação no conjunto de teste. Podemos observar que o melhor resultado para o \textit{F1-Score} deu-se para a intensidade Fraca, com o valor de $0,68$, e ficando abaixo de $0,5$ apenas para a classe Forte.
+A Figura \ref{fig:clf64} apresenta a arquitetura do modelo de classificação de intensidade, enquanto a Tabela \ref{table:metricasclf64} apresenta métricas de desempenho para sua aplicação no conjunto de teste. Podemos observar que o melhor resultado para o \textit{F1-Score} deu-se para a intensidade Fraca, com o valor de $0,68$, ficando abaixo de $0,5$ apenas para a classe Forte.
 
 Aplicamos o classificador aos dados oriundos do $X_{VERBO}$ e anotamos o resultado. Então efetuamos um \acrshort{PCA} com 2 componentes ao resultado do \textit{encoding} de $X$ (Figura \ref{fig:pca64}), onde as cores representam a classe - original para os dados do $VIVAE$ e predição do classificador para os dados do $VERBO$ - e podemos observar a formação de 2 grandes \textit{clusters}, um a esquerda e outro a direita.
 
@@ -35,12 +35,12 @@ Percebemos através dos \textit{labels}, que estes \textit{clusters} conseguiram
 % --- PCA 1o exp --- %
 \begin{figure}%[h]
     \centering
-    \includegraphics[angle=90, width=0.8\textwidth]{img/pca64.png}
+    \includegraphics[angle=90, width=0.8\textwidth]{img/pca64-re.png}
     \caption{\label{fig:pca64}\acrshort{PCA} com 2 componentes aplicado ao resultado do \textit{encoding} do primeiro experimento}
 \end{figure}
 
 \begin{figure}%[h]
     \centering
-    \includegraphics[angle=90, width=0.8\textwidth]{img/pca64-2.png}
+    \includegraphics[angle=90, width=0.8\textwidth]{img/pca64-2-re.png}
     \caption{\label{fig:pca64-2}Agrupamento em 2 classes para \acrshort{PCA} com 2 componentes aplicado ao resultado do \textit{encoding} do primeiro experimento}
 \end{figure}

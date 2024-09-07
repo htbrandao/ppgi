@@ -1,4 +1,5 @@
-% \chapter{Classificação de Intensidade das Emoções na Fala em Português Brasileiro por meio de Deep Learning}\label{Cap:Pesquisa}
+% \chapter{Classificação de Intensidade das Emoções na Fala em Português Brasileiro por meio de Deep Learning}
+\label{Cap:Pesquisa}
 
 % Este capítulo irá se desdobrar a partir do problema encontrado e proporá uma solução para sua realização. Independente de formação enquanto profissionais de saúde mental, é natural que consigamos atribuir alguma espécie de métrica para comparar duas instâncias de uma mesma emoção que tenhamos sentido. Assim, conseguimos experienciar e comparar intensidades distintas para uma mesma emoção. Portanto, somos capazes de identificar emoções, quantificar sua intensidade e calcular uma distância para poder efetuar essa comparação. Conforme visto, trabalhos de \textit{ML} aplicados ao reconhecimento de emoções na fala vêm sendo publicados - ao menos - desde o início da década de 90 (1990), e se tornam menos frequentes quando buscamos por tarefas mais especializadas.\\
 
@@ -18,13 +19,13 @@ Na Figura \ref{fig:visaogeralproposta} é apresentada uma visão geral da arquit
 \caption{\label{fig:visaogeralproposta}Visão geral da arquitetura}
 \end{figure}
 
-A primeira etapa (A) lida com a obtenção dos dados que serão utilizados no dissertação e da sua conversão para uma interpretação passível de utilização por modelos de aprendizagem de máquina. Podemos descrever os dados como um conjunto de registros rotulados que serão utilizados para treinamento e teste dos modelos implementados na proposta.
+A primeira etapa (A) lida com a obtenção dos dados que serão utilizados na dissertação e da sua conversão para uma interpretação passível de utilização por modelos de aprendizagem de máquina. Podemos descrever os dados como um conjunto de registros rotulados que serão utilizados para treinamento e teste dos modelos implementados na proposta.
 
 A segunda etapa (B) lida com a extração de características dos dados convertidos. Essas características serão obtidas através de um modelo não supervisionado para a redução de dimensionalidade e posteriormente utilizadas como entrada de um modelo supervisionado de classificação da intensidade da emoção.
 
 A terceira e última etapa (C) é responsável pela inferência da intensidade. O modelo recebe as características obtidas na etapa anterior e realiza o treinamento e testagem do modelo de classificação de acordo com quatro classes possíveis: (i) Baixa; (ii) Moderada; (iii) Forte; e (iv) Pico de intensidade.
 
-Este projeto aplicará esta arquitetura em dois cenários modelados a serem detalhados no capítulo posterior, juntamente com os resultados obtidos.
+Este trabalho aplicará esta arquitetura em dois cenários modelados a serem detalhados no capítulo posterior (\ref{Cap:Resultados}), juntamente com os resultados obtidos.
 
 % ==========================================================================================
 % \section{Aquisição dos dados}
@@ -59,20 +60,20 @@ Não obstante nenhum destes apresentar a intensidade da emoção, ou ser em port
 
 Neste trabalho, utilizaremos dois conjuntos de dados, VERBO e VIVAE, que satisfazem requisitos de ser em português e apresentar emoções catalogadas (VERBO); e ter \textit{labels} para emoções e intensidades (VIVAE). A serem detalhados nas subseções \ref{subsection:verbo} e \ref{subsection:vivae}, respectivamente.
 
-Os \textit{datasets} da Tabela \ref{table:comparativodbs} são simulados (\textit{simulated}), ou seja, os áudios são gravados a partir de pessoas treinadas lendo um texto e interpretando com emoções diferentes. Existem também datasets seminaturais (\textit{semi-natural}), composto tanto por atores como pessoas comuns lendo um roteiro; e os dito naturais (\textit{natural}), com áudios extraídos de programas de TV, centrais telefônicas, vídeos da internet e outros meios.
+Os \textit{datasets} da Tabela \ref{table:comparativodbs} são simulados (\textit{simulated}), ou seja, os áudios são gravados a partir de pessoas treinadas realizando a leitura de um texto e interpretando com emoções diferentes. Existem também datasets seminaturais (\textit{semi-natural}), compostos tanto por atores como pessoas comuns lendo um roteiro; e os dito naturais (\textit{natural}), com áudios extraídos de programas de TV, centrais telefônicas, vídeos da internet e outros meios.
 
-Também é comum que as amostras não apresentem ruídos ou alguma poluição sonora, o que as distancia de situações reais. Sistemais treinados nesses datasets podem não ser bem sucedidos em situações reais~\cite{32}. Há também \textit{datasets} gerados a partir da participação de um usuário ou cliente de algum serviço, entretanto, este é informado da gravação, o que pode comprometer a qualidade do dado.
+Também é comum que as amostras não apresentem ruídos ou alguma poluição sonora, o que as distancia de situações reais. Sistemais treinados nesses datasets podem não ser bem sucedidos em situações reais~\cite{32}. Há também \textit{datasets} gerados a partir da participação de um usuário ou cliente de algum serviço, entretanto, este cliente é informado da gravação, o que pode comprometer a qualidade do dado.
 
-Outro fator é o efeito da cultura e da linguagem, já que ambos podem afetar a percepção do sentimento na fala~\cite{32}. A incerteza na anotação (categorização dos dados) representa mais um desafio para \textit{datasets} de \acrshort{SER}, uma vez que num discurso emocional, um participante pode rotular um enunciado com eufórico e outro como raivoso. Essa subjetividade torna a tarefa mais complexa e pode limitar a possibilidade de misturar os bancos de dados para criar superconjuntos de dados emocionais.
+Outro fator é o efeito da cultura e da linguagem, já que ambos podem afetar a percepção do sentimento na fala~\cite{32}. A incerteza na anotação (categorização dos dados) representa mais um desafio para \textit{datasets} de \acrshort{SER}, uma vez que num discurso emocional, um participante pode rotular um enunciado com eufórico e outro como raivoso. Essa subjetividade torna a tarefa mais complexa e pode limitar a possibilidade de combinar os bancos de dados para criar superconjuntos de dados emocionais.
 
 % ------------------------------------------------------------------------------------------
 \subsection{Fusão de Domínios}
 
-Dado esse cenário, podemos utilizar uma técnica que permite fundir o conhecimento de vários conjuntos de dados organicamente para uma tarefa de aprendizado de máquina. Fusão de Domínios~\cite{49}(\textit{Domain Fusion}) é uma técnica para aproveitar mais bases de dados e produzir informações mais robustas e úteis do que as fornecidas por uma única fonte de dados individualmente. Um exemplo de utilização de fusão de domínios pode ser observado em~\cite{3} para tentar melhorar a generalização do seu modelo, e que percebeu uma melhora do desempenho em dados inéditos (distintos das amostras de treinamento e teste).
+Dado esse cenário, podemos utilizar uma técnica que permite fundir o conhecimento de vários conjuntos de dados organicamente para uma tarefa de aprendizado de máquina. A Fusão de Domínios~\cite{49}(\textit{Domain Fusion}) é uma técnica para aproveitar mais bases de dados e produzir informações mais robustas e úteis do que as fornecidas por uma única fonte de dados individualmente. Um exemplo de utilização da Fusão de Domínios pode ser observado em~\cite{3} para tentar melhorar a generalização do seu modelo, e que percebeu uma melhora do desempenho em dados inéditos (distintos das amostras de treinamento e teste).
 
-Uma das metodologias da Fusão de Domínios~\cite{49} é a Fusão de Dados Baseada em Aprendizado de Transferência (\textit{Transfer Learning-Based Data Fusion}). Uma das possibilidades que essa metodologia aborda compreende a fusão de bases de dados de natureza semelhante (\textit{Transductive Learning}) quando a tarefa é a mesma mas o domínio (ponto de partida) e o contra domínio (ponto de chegada) são distintos. Como o nosso caso, onde vamos partir da voz para chegar na intensidade da emoção. Por mais que estejam relacionados, são distintos. Por exemplo: Em uma tarefa de predição de tráfego urbano, pode-se utilizar os dados da cidade $A$ para tentar uma previsão sobre o tráfego na cidade $B$, caso os dados sobre $B$ sejam limitados. 
+Uma das metodologias da Fusão de Domínios~\cite{49} é a Fusão de Dados Baseada em Aprendizado de Transferência (\textit{Transfer Learning-Based Data Fusion}). Uma das possibilidades que essa metodologia aborda compreende a fusão de bases de dados de natureza semelhante (\textit{Transductive Learning}) quando a tarefa é a mesma mas o domínio (ponto de partida) e o contra domínio (ponto de chegada) são distintos. Como o nosso caso, onde partimos da voz para chegar na intensidade da emoção. Por mais que estejam relacionados, são distintos. Por exemplo: Em uma tarefa de predição de tráfego urbano, pode-se utilizar os dados da cidade $A$ para tentar uma previsão sobre o tráfego na cidade $B$, caso os dados sobre $B$ sejam limitados. 
 
-Uma vez que compreendemos, o processo de formação da fala, do seu emprego na transmissão de emoções, formas de categorizá-las, como se dá uma tarefa que envolve algoritmos de \acrshort{DL}, faz-se necessário conseguir uma massa de dados que possa ser utilizada para esta atividade. Para isso, \ref{subsection:verbo} e \ref{subsection:vivae} satisfazem nossa necessidade.
+Uma vez que compreendemos, o processo de formação da fala, do seu emprego na transmissão de emoções, formas de categorizá-las, e como se dá uma tarefa que envolve algoritmos de \acrshort{DL}, faz-se necessário conseguir uma massa de dados que possa ser utilizada para esta atividade. Para isso, \ref{subsection:verbo} e \ref{subsection:vivae} satisfazem nossa necessidade.
 
 % ------------------------------------------------------------------------------------------
 \subsection{\textit{VERBO}}\label{subsection:verbo}
@@ -194,7 +195,7 @@ Das amostras compreendidas pela combinação das bases de dados, 698 delas perte
 % ==========================================================================================
 \subsection{Processamento de Dados}\label{sec:procdados}
 
-Para realizar tarefas de \acrshort{ML} a partir de arquivos de áudio, faz-se necessário convertê-los para uma forma passível de ingestão pelo modelo. Os arquivos das bases de dados estão em formato \textit{.wav} (encurtamento de \textit{WAVEform}), que não realiza compressão do som digital, mantendo-o mais próximo da expressão do som natural. Precisamos de uma forma de transformar os dados em uma representação que preserve suas características.
+Para realizar tarefas de \acrshort{ML} a partir de arquivos de áudio, faz-se necessário convertê-los para uma forma passível de ingestão pelo modelo. Os arquivos das bases de dados estão em formato \textit{.wav} (encurtamento de \textit{WAVEform}), que não realiza compressão do som digital, mantendo-o mais próximo da expressão do som natural. Então precisamos de uma forma de transformar os dados em uma representação que preserve suas características.
 
 Podemos compreender um sinal como a variação de uma quantidade ao longo do tempo. No caso da voz, a variação da pressão do ar. Amostras da pressão do ar são aferidas ao longo do tempo, com uma determinada frequência. Temos um sinal unidimensional, ou seja, com uma única variável, a amplitude do som, distribuída ao longo do tempo (Figura \ref{fig:exsinalsom}).
 
@@ -228,7 +229,7 @@ Com o resultado da \acrshort{TRF} de uma amostra, podemos calcular o seu espectr
 
 % https://towardsdatascience.com/learning-from-audio-the-mel-scale-mel-spectrograms-and-mel-frequency-cepstral-coefficients-f5752b6324a8
 
-A normalização em questão, é a normalização pela Escala de Mel (\textit{Mel Scale}). Uma escala construída para tornar tons equidistantes perceptivelmente equidistantes ao ouvido humano. A Escala de Mel é dada por:
+A normalização em questão é a normalização pela Escala de Mel (\textit{Mel Scale}). Uma escala construída para tornar tons equidistantes perceptivelmente equidistantes ao ouvido humano. A Escala de Mel é dada por:
 
 \begin{equation}
     m(f) = 1127 * \log_e{(1 + \frac{f}{700})}
@@ -254,7 +255,7 @@ Outro atributo observado na literatura são os Coeficientes Cepstrais de Frequê
 % \end{figure}
 
 
-Assim, sejam os dois \textit{datasets} VERBO e VIVAE, de modo que VERBO é constituído por pares \{amostra, classe\} e VIVAE por pares \{amostra, classe, intensidade\}, onde as classes são a emoção atribuída àquela amostra, e a intensidade é o rótulo da intensidade da classe daquela amostra. Vamos representar as amostras do VERBO por $X_{VERBO}$ e do VIVAE por $X_{VIVAE}$.
+Assim, sejam os dois \textit{datasets} VERBO e VIVAE, de modo que VERBO é constituído por pares \{amostra, classe\} e VIVAE por pares \{amostra, classe, intensidade\}, onde as classes são a emoção atribuída àquela amostra, e a intensidade é o rótulo da intensidade da classe daquela amostra. Vamos denotar as amostras do VERBO por $X_{VERBO}$ e do VIVAE por $X_{VIVAE}$.
 
 \begin{table}[]
 \centering
@@ -362,26 +363,19 @@ O treinamento foi realizado utilizando o Erro Quadratico Médio (\acrlong{MSE}, 
 
 
 % ------------------------------------------------------------------------------------------
-\subsection{Validação}
+% \subsection{Validação}
 
-Antes de seguir para a etapa de classificação (B), precisamos verificar a qualidade do modelo produzido, já que este irá prover os dados para o próximo modelo. Apesar de ser um modelo não supervisionado, podemos pensar em formas de aferir seu desempenho. Uma vez que o modelo \acrshort{AE} tenta reproduzir a função identidade, podemos calcular a diferença entre os atributos de entrada e os atributos de saída. Para isso, podemos utilizar o Erro Quadrático Médio (\acrshort{MSE}):
+% Antes de seguir para a etapa de classificação (B), precisamos verificar a qualidade do modelo produzido, já que este irá prover os dados para o próximo modelo. Apesar de ser um modelo não supervisionado, podemos pensar em formas de aferir seu desempenho. Uma vez que o modelo \acrshort{AE} tenta reproduzir a função identidade, podemos calcular a diferença entre os atributos de entrada e os atributos de saída. Para isso, podemos utilizar o Erro Quadrático Médio (\acrshort{MSE}):
 
-\begin{equation}
-    MSE = \frac{1}{n} * \sum^n_{i=1} (x_i - x'_i)^2
-\end{equation}
+% \begin{equation}
+%     MSE = \frac{1}{n} * \sum^n_{i=1} (x_i - x'_i)^2
+% \end{equation}
 
-É desejado que o \acrshort{MSE} para os atributos de $\{x, x'\}$ seja o mais próximo de zero, indicando que o modelo consegue reconstruir o \textit{input} com grande precisão.
+% É desejado que o \acrshort{MSE} para os atributos de $\{x, x'\}$ seja o mais próximo de zero, indicando que o modelo consegue reconstruir o \textit{input} com grande precisão.
 
 
 % ==========================================================================================
 \section{Classificação da Intensidade}
-
-                    % !!! por algum motivo esse parágravo causa erro de compilação !!! %
-% Através do modelo de Russel sabemos que que é possível dispor as emoções em função da valência (prazer ou desprazer) e da ativação (vigor ou quietude) \cite{27}. Plutchik decompõe as emoções básicas de acordo com a intensidade, chegando a emoções compostas, formadas a partir de duas emoções com intensidades menores.
-
-% Ao longo do Capítulo 3, observamos trabalhos relacionados, desafios pertinentes à pesquisa e o estado da arte na área de estudo deste trabalho, que se diferencia dos pares por, além de ser um dos poucos trabalhos a lidar com o idioma português, também aborda a questão da intensidade da emoção.
-
-% Sabemos da relevância que \textit{features} espectrais carregam sobre a vocalização e vimos formas para avaliar o desempenho dos modelos.
 
 Redes neurais são capazes de aprender relações complexas entre as características dos dados, o que pode ser especialmente benéfico para a tarefa de classificação. Ao contrário de métodos mais tradicionais, as redes neurais não estão limitadas por suposições lineares ou por características específicas pré-definidas, permitindo uma modelagem mais flexível e adaptativa dos dados.
 
@@ -400,7 +394,7 @@ Este modelo (Figura \ref{fig:jsupervisionado}) foi construído para classificar 
 
 A estrutura dos Classificadores é análoga para ambos os experimentos. A Figura \ref{fig:clf64} representa a arquitetura do modelo para 64 \acrshort{MFCC}s enquanto a \ref{fig:clf128} representa a arquitetura do modelo para 128 \acrshort{MFCC}s. Ambos seguem uma estrutura composta por cinco camadas, a serem detalhadas abaixo: Entrada, três camadas densas intermediárias e uma camada densa de saída.
 
-O treinamento foi realizado utilizando \textit{Categorical Cross Entropy} como função de \textit{Loss} e \acrshort{ADAM} como função de otimização. Uma vez que o \acrshort{AE} realiza a função de reduzir a dimensionalidade dos dados que serão utilizados como \textit{input} para os classificadores, para efeitos de legibilidade vamos definir $dim_{encode}$ como a dimensão do dado comprimido obtido nos \textit{Autoencoders} da etapa anterior, sendo estas 32 e 64, respectivamente.
+O treinamento foi realizado utilizando \textit{Categorical Cross Entropy} como função de \textit{Loss} e \acrshort{ADAM} como função de otimização. Uma vez que o \acrshort{AE} realiza a função de reduzir a dimensionalidade dos dados que serão utilizados como \textit{input} para os classificadores, para efeitos de legibilidade vamos definir $dim_{encode}$ como a dimensão do dado comprimido obtido via os \textit{Autoencoders} da etapa anterior, sendo estas 32 e 64, respectivamente.
 
 \begin{enumerate}
     \item Entrada: Responsável por receber os dados com dimensão igual $(1, dim_{encode})$.
@@ -426,6 +420,6 @@ O treinamento foi realizado utilizando \textit{Categorical Cross Entropy} como f
 
 
 % ------------------------------------------------------------------------------------------
-\subsection{Validação}
+% \subsection{Validação}
 
-Por ser tratar de um modelo supervisionado, podemos aplicar as métricas descritas no Capítulo 2, utilizando $X_{VIVAE_{teste}}$ para observar seus resultados. Neste trabalho, perceberemos um erro de  falso negativo de maneira equivalente a um erro de falso positivo. Portanto, não buscamos otimizar as métricas como \textit{Precision} ou \textit{Recall}. Assim, utilizaremos utilizaremos \textit{F1-Score} como parâmetro de desempenho para o modelo supervisionado.
+% Por ser tratar de um modelo supervisionado, podemos aplicar as métricas descritas no Capítulo 2, utilizando $X_{VIVAE_{teste}}$ para observar seus resultados. Neste trabalho, perceberemos um erro de  falso negativo de maneira equivalente a um erro de falso positivo. Portanto, não buscamos otimizar as métricas como \textit{Precision} ou \textit{Recall}. Assim, utilizaremos utilizaremos \textit{F1-Score} como parâmetro de desempenho para o modelo supervisionado.
